@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel_login = new System.Windows.Forms.Panel();
-            this.pictureBox_login = new System.Windows.Forms.PictureBox();
-            this.maskedTextBox_registro = new System.Windows.Forms.MaskedTextBox();
-            this.lbl_registro = new System.Windows.Forms.Label();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_confirmar = new System.Windows.Forms.Button();
             this.btn_cadastrar = new System.Windows.Forms.Button();
+            this.btn_confirmar = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.lbl_registro = new System.Windows.Forms.Label();
+            this.maskedTextBox_registro = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox_login = new System.Windows.Forms.PictureBox();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_login)).BeginInit();
             this.SuspendLayout();
@@ -55,47 +55,19 @@
             this.panel_login.Size = new System.Drawing.Size(559, 279);
             this.panel_login.TabIndex = 0;
             // 
-            // pictureBox_login
+            // btn_cadastrar
             // 
-            this.pictureBox_login.Image = global::Trabalgo_LP2.Properties.Resources.logo;
-            this.pictureBox_login.Location = new System.Drawing.Point(3, 12);
-            this.pictureBox_login.Name = "pictureBox_login";
-            this.pictureBox_login.Size = new System.Drawing.Size(305, 255);
-            this.pictureBox_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_login.TabIndex = 0;
-            this.pictureBox_login.TabStop = false;
-            // 
-            // maskedTextBox_registro
-            // 
-            this.maskedTextBox_registro.Location = new System.Drawing.Point(357, 87);
-            this.maskedTextBox_registro.Mask = "0000000000";
-            this.maskedTextBox_registro.Name = "maskedTextBox_registro";
-            this.maskedTextBox_registro.Size = new System.Drawing.Size(181, 20);
-            this.maskedTextBox_registro.TabIndex = 1;
-            // 
-            // lbl_registro
-            // 
-            this.lbl_registro.AutoSize = true;
-            this.lbl_registro.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_registro.Location = new System.Drawing.Point(353, 64);
-            this.lbl_registro.Name = "lbl_registro";
-            this.lbl_registro.Size = new System.Drawing.Size(73, 18);
-            this.lbl_registro.TabIndex = 2;
-            this.lbl_registro.Text = "Registro:";
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.DimGray;
-            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_cancelar.Location = new System.Drawing.Point(356, 128);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancelar.TabIndex = 3;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cadastrar.BackColor = System.Drawing.Color.DimGray;
+            this.btn_cadastrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cadastrar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_cadastrar.Location = new System.Drawing.Point(357, 174);
+            this.btn_cadastrar.Name = "btn_cadastrar";
+            this.btn_cadastrar.Size = new System.Drawing.Size(181, 23);
+            this.btn_cadastrar.TabIndex = 5;
+            this.btn_cadastrar.Text = "Cadastrar";
+            this.btn_cadastrar.UseVisualStyleBackColor = false;
             // 
             // btn_confirmar
             // 
@@ -111,19 +83,47 @@
             this.btn_confirmar.Text = "Confirmar";
             this.btn_confirmar.UseVisualStyleBackColor = false;
             // 
-            // btn_cadastrar
+            // btn_cancelar
             // 
-            this.btn_cadastrar.BackColor = System.Drawing.Color.DimGray;
-            this.btn_cadastrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cadastrar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_cadastrar.Location = new System.Drawing.Point(357, 174);
-            this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(181, 23);
-            this.btn_cadastrar.TabIndex = 5;
-            this.btn_cadastrar.Text = "Cadastrar";
-            this.btn_cadastrar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.BackColor = System.Drawing.Color.DimGray;
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_cancelar.Location = new System.Drawing.Point(356, 128);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
+            this.btn_cancelar.TabIndex = 3;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            // 
+            // lbl_registro
+            // 
+            this.lbl_registro.AutoSize = true;
+            this.lbl_registro.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_registro.Location = new System.Drawing.Point(353, 64);
+            this.lbl_registro.Name = "lbl_registro";
+            this.lbl_registro.Size = new System.Drawing.Size(73, 18);
+            this.lbl_registro.TabIndex = 2;
+            this.lbl_registro.Text = "Registro:";
+            // 
+            // maskedTextBox_registro
+            // 
+            this.maskedTextBox_registro.Location = new System.Drawing.Point(357, 87);
+            this.maskedTextBox_registro.Mask = "0000000000";
+            this.maskedTextBox_registro.Name = "maskedTextBox_registro";
+            this.maskedTextBox_registro.Size = new System.Drawing.Size(181, 20);
+            this.maskedTextBox_registro.TabIndex = 1;
+            // 
+            // pictureBox_login
+            // 
+            this.pictureBox_login.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_login.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox_login.Name = "pictureBox_login";
+            this.pictureBox_login.Size = new System.Drawing.Size(305, 255);
+            this.pictureBox_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_login.TabIndex = 0;
+            this.pictureBox_login.TabStop = false;
             // 
             // Login
             // 
