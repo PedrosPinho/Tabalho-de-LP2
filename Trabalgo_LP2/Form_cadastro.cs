@@ -21,5 +21,10 @@ namespace Trabalgo_LP2
         {
 
         }
+
+        private void panel_cadastro_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
