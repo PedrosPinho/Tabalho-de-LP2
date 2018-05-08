@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.panel_cadastro = new System.Windows.Forms.Panel();
+            this.lbl_funcao = new System.Windows.Forms.Label();
+            this.lbl_data = new System.Windows.Forms.Label();
+            this.lbl_telefone = new System.Windows.Forms.Label();
+            this.txt_funcao = new System.Windows.Forms.TextBox();
+            this.maskedTextBox_data = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_telefone = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_cpf = new System.Windows.Forms.MaskedTextBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_confirmar = new System.Windows.Forms.Button();
             this.txt_registro = new System.Windows.Forms.TextBox();
@@ -38,20 +45,13 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.lbl_Cadastro = new System.Windows.Forms.Label();
             this.pictureBox_cadastro = new System.Windows.Forms.PictureBox();
-            this.maskedTextBox_cpf = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox_telefone = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox_data = new System.Windows.Forms.MaskedTextBox();
-            this.txt_funcao = new System.Windows.Forms.TextBox();
-            this.lbl_telefone = new System.Windows.Forms.Label();
-            this.lbl_data = new System.Windows.Forms.Label();
-            this.lbl_funcao = new System.Windows.Forms.Label();
             this.panel_cadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_cadastro
             // 
-            this.panel_cadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel_cadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
             this.panel_cadastro.Controls.Add(this.lbl_funcao);
             this.panel_cadastro.Controls.Add(this.lbl_data);
             this.panel_cadastro.Controls.Add(this.lbl_telefone);
@@ -75,9 +75,70 @@
             this.panel_cadastro.TabIndex = 0;
             this.panel_cadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_cadastro_Paint);
             // 
+            // lbl_funcao
+            // 
+            this.lbl_funcao.AutoSize = true;
+            this.lbl_funcao.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_funcao.Location = new System.Drawing.Point(12, 278);
+            this.lbl_funcao.Name = "lbl_funcao";
+            this.lbl_funcao.Size = new System.Drawing.Size(64, 16);
+            this.lbl_funcao.TabIndex = 16;
+            this.lbl_funcao.Text = "Função:";
+            // 
+            // lbl_data
+            // 
+            this.lbl_data.AutoSize = true;
+            this.lbl_data.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_data.Location = new System.Drawing.Point(12, 232);
+            this.lbl_data.Name = "lbl_data";
+            this.lbl_data.Size = new System.Drawing.Size(107, 16);
+            this.lbl_data.TabIndex = 15;
+            this.lbl_data.Text = "Data de inicio:";
+            // 
+            // lbl_telefone
+            // 
+            this.lbl_telefone.AutoSize = true;
+            this.lbl_telefone.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_telefone.Location = new System.Drawing.Point(12, 186);
+            this.lbl_telefone.Name = "lbl_telefone";
+            this.lbl_telefone.Size = new System.Drawing.Size(73, 16);
+            this.lbl_telefone.TabIndex = 14;
+            this.lbl_telefone.Text = "Telefone:";
+            // 
+            // txt_funcao
+            // 
+            this.txt_funcao.Location = new System.Drawing.Point(12, 299);
+            this.txt_funcao.Name = "txt_funcao";
+            this.txt_funcao.Size = new System.Drawing.Size(185, 20);
+            this.txt_funcao.TabIndex = 13;
+            // 
+            // maskedTextBox_data
+            // 
+            this.maskedTextBox_data.Location = new System.Drawing.Point(12, 253);
+            this.maskedTextBox_data.Mask = "00/00/0000";
+            this.maskedTextBox_data.Name = "maskedTextBox_data";
+            this.maskedTextBox_data.Size = new System.Drawing.Size(185, 20);
+            this.maskedTextBox_data.TabIndex = 12;
+            // 
+            // maskedTextBox_telefone
+            // 
+            this.maskedTextBox_telefone.Location = new System.Drawing.Point(12, 207);
+            this.maskedTextBox_telefone.Mask = "0000-0000";
+            this.maskedTextBox_telefone.Name = "maskedTextBox_telefone";
+            this.maskedTextBox_telefone.Size = new System.Drawing.Size(185, 20);
+            this.maskedTextBox_telefone.TabIndex = 11;
+            // 
+            // maskedTextBox_cpf
+            // 
+            this.maskedTextBox_cpf.Location = new System.Drawing.Point(12, 115);
+            this.maskedTextBox_cpf.Mask = "000.000.000-00";
+            this.maskedTextBox_cpf.Name = "maskedTextBox_cpf";
+            this.maskedTextBox_cpf.Size = new System.Drawing.Size(185, 20);
+            this.maskedTextBox_cpf.TabIndex = 10;
+            // 
             // btn_cancelar
             // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.DimGray;
+            this.btn_cancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
@@ -90,7 +151,7 @@
             // 
             // btn_confirmar
             // 
-            this.btn_confirmar.BackColor = System.Drawing.Color.DimGray;
+            this.btn_confirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
             this.btn_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_confirmar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirmar.ForeColor = System.Drawing.Color.White;
@@ -165,67 +226,6 @@
             this.pictureBox_cadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_cadastro.TabIndex = 0;
             this.pictureBox_cadastro.TabStop = false;
-            // 
-            // maskedTextBox_cpf
-            // 
-            this.maskedTextBox_cpf.Location = new System.Drawing.Point(12, 115);
-            this.maskedTextBox_cpf.Mask = "000.000.000-00";
-            this.maskedTextBox_cpf.Name = "maskedTextBox_cpf";
-            this.maskedTextBox_cpf.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_cpf.TabIndex = 10;
-            // 
-            // maskedTextBox_telefone
-            // 
-            this.maskedTextBox_telefone.Location = new System.Drawing.Point(12, 207);
-            this.maskedTextBox_telefone.Mask = "0000-0000";
-            this.maskedTextBox_telefone.Name = "maskedTextBox_telefone";
-            this.maskedTextBox_telefone.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_telefone.TabIndex = 11;
-            // 
-            // maskedTextBox_data
-            // 
-            this.maskedTextBox_data.Location = new System.Drawing.Point(12, 253);
-            this.maskedTextBox_data.Mask = "00/00/0000";
-            this.maskedTextBox_data.Name = "maskedTextBox_data";
-            this.maskedTextBox_data.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_data.TabIndex = 12;
-            // 
-            // txt_funcao
-            // 
-            this.txt_funcao.Location = new System.Drawing.Point(12, 299);
-            this.txt_funcao.Name = "txt_funcao";
-            this.txt_funcao.Size = new System.Drawing.Size(185, 20);
-            this.txt_funcao.TabIndex = 13;
-            // 
-            // lbl_telefone
-            // 
-            this.lbl_telefone.AutoSize = true;
-            this.lbl_telefone.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefone.Location = new System.Drawing.Point(12, 186);
-            this.lbl_telefone.Name = "lbl_telefone";
-            this.lbl_telefone.Size = new System.Drawing.Size(73, 16);
-            this.lbl_telefone.TabIndex = 14;
-            this.lbl_telefone.Text = "Telefone:";
-            // 
-            // lbl_data
-            // 
-            this.lbl_data.AutoSize = true;
-            this.lbl_data.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_data.Location = new System.Drawing.Point(12, 232);
-            this.lbl_data.Name = "lbl_data";
-            this.lbl_data.Size = new System.Drawing.Size(107, 16);
-            this.lbl_data.TabIndex = 15;
-            this.lbl_data.Text = "Data de inicio:";
-            // 
-            // lbl_funcao
-            // 
-            this.lbl_funcao.AutoSize = true;
-            this.lbl_funcao.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_funcao.Location = new System.Drawing.Point(12, 278);
-            this.lbl_funcao.Name = "lbl_funcao";
-            this.lbl_funcao.Size = new System.Drawing.Size(64, 16);
-            this.lbl_funcao.TabIndex = 16;
-            this.lbl_funcao.Text = "Função:";
             // 
             // Form_cadastro
             // 

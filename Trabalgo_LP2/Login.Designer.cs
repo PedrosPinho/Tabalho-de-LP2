@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.panel_login = new System.Windows.Forms.Panel();
-            this.btn_cadastrar = new System.Windows.Forms.Button();
-            this.btn_confirmar = new System.Windows.Forms.Button();
-            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_login = new System.Windows.Forms.Button();
             this.lbl_registro = new System.Windows.Forms.Label();
             this.maskedTextBox_registro = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox_login = new System.Windows.Forms.PictureBox();
@@ -41,10 +39,8 @@
             // 
             // panel_login
             // 
-            this.panel_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel_login.Controls.Add(this.btn_cadastrar);
-            this.panel_login.Controls.Add(this.btn_confirmar);
-            this.panel_login.Controls.Add(this.btn_cancelar);
+            this.panel_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel_login.Controls.Add(this.btn_login);
             this.panel_login.Controls.Add(this.lbl_registro);
             this.panel_login.Controls.Add(this.maskedTextBox_registro);
             this.panel_login.Controls.Add(this.pictureBox_login);
@@ -55,53 +51,25 @@
             this.panel_login.Size = new System.Drawing.Size(559, 279);
             this.panel_login.TabIndex = 0;
             // 
-            // btn_cadastrar
+            // btn_login
             // 
-            this.btn_cadastrar.BackColor = System.Drawing.Color.DimGray;
-            this.btn_cadastrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cadastrar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cadastrar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_cadastrar.Location = new System.Drawing.Point(357, 174);
-            this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(181, 23);
-            this.btn_cadastrar.TabIndex = 5;
-            this.btn_cadastrar.Text = "Cadastrar";
-            this.btn_cadastrar.UseVisualStyleBackColor = false;
-            // 
-            // btn_confirmar
-            // 
-            this.btn_confirmar.BackColor = System.Drawing.Color.DimGray;
-            this.btn_confirmar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_confirmar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_confirmar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_confirmar.Location = new System.Drawing.Point(463, 128);
-            this.btn_confirmar.Name = "btn_confirmar";
-            this.btn_confirmar.Size = new System.Drawing.Size(75, 23);
-            this.btn_confirmar.TabIndex = 4;
-            this.btn_confirmar.Text = "Confirmar";
-            this.btn_confirmar.UseVisualStyleBackColor = false;
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.DimGray;
-            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_cancelar.Location = new System.Drawing.Point(356, 128);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.btn_cancelar.TabIndex = 3;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_login.BackColor = System.Drawing.Color.Black;
+            this.btn_login.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_login.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_login.Location = new System.Drawing.Point(357, 151);
+            this.btn_login.Name = "btn_login";
+            this.btn_login.Size = new System.Drawing.Size(181, 28);
+            this.btn_login.TabIndex = 4;
+            this.btn_login.Text = "Login";
+            this.btn_login.UseVisualStyleBackColor = false;
             // 
             // lbl_registro
             // 
             this.lbl_registro.AutoSize = true;
             this.lbl_registro.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_registro.Location = new System.Drawing.Point(353, 64);
+            this.lbl_registro.Location = new System.Drawing.Point(354, 85);
             this.lbl_registro.Name = "lbl_registro";
             this.lbl_registro.Size = new System.Drawing.Size(73, 18);
             this.lbl_registro.TabIndex = 2;
@@ -109,7 +77,7 @@
             // 
             // maskedTextBox_registro
             // 
-            this.maskedTextBox_registro.Location = new System.Drawing.Point(357, 87);
+            this.maskedTextBox_registro.Location = new System.Drawing.Point(357, 106);
             this.maskedTextBox_registro.Mask = "0000000000";
             this.maskedTextBox_registro.Name = "maskedTextBox_registro";
             this.maskedTextBox_registro.Size = new System.Drawing.Size(181, 20);
@@ -144,11 +112,9 @@
 
         private System.Windows.Forms.Panel panel_login;
         private System.Windows.Forms.PictureBox pictureBox_login;
-        private System.Windows.Forms.Button btn_confirmar;
-        private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label lbl_registro;
         private System.Windows.Forms.MaskedTextBox maskedTextBox_registro;
-        private System.Windows.Forms.Button btn_cadastrar;
     }
 }
 
