@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Trabalgo_LP2
 {
-    public partial class Form_mesa : Form
+    public partial class Form_fechar : Form
     {
-        public Form_mesa()
+        public Form_fechar()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Form_fechar_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void txt_mesa_Click(object sender, EventArgs e)
+        private void lbl_cpf_fechar_Click(object sender, EventArgs e)
         {
 
         }

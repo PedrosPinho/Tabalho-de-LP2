@@ -54,6 +54,18 @@
     <Compile Include="Form_cadastro.Designer.cs">
       <DependentUpon>Form_cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_contas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_contas.Designer.cs">
+      <DependentUpon>Form_contas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_fechar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_fechar.Designer.cs">
+      <DependentUpon>Form_fechar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +91,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_cadastro.resx">
       <DependentUpon>Form_cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_contas.resx">
+      <DependentUpon>Form_contas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_fechar.resx">
+      <DependentUpon>Form_fechar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_menu.resx">
       <DependentUpon>Form_menu.cs</DependentUpon>

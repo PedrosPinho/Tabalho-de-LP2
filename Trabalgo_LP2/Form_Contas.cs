@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Trabalgo_LP2
 {
-    public partial class Form_mesa : Form
+    public partial class Form_contas : Form
     {
-        public Form_mesa()
+        public Form_contas()
         {
             InitializeComponent();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void txt_mesa_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

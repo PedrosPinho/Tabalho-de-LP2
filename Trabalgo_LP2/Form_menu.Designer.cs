@@ -28,30 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_logoff = new System.Windows.Forms.Button();
             this.lbl_home = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btn_fornecedor = new System.Windows.Forms.Button();
             this.btn_fidelidade = new System.Windows.Forms.Button();
             this.btn_cardapio = new System.Windows.Forms.Button();
             this.btn_mesa = new System.Windows.Forms.Button();
             this.btn_cliente = new System.Windows.Forms.Button();
             this.btn_funcionario = new System.Windows.Forms.Button();
-            this.pictureBox_home = new System.Windows.Forms.PictureBox();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
-            this.btn_fornecedor = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_home)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
-            this.panel1.Controls.Add(this.btn_logoff);
             this.panel1.Controls.Add(this.lbl_home);
-            this.panel1.Controls.Add(this.pictureBox_home);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btn_logoff);
             this.panel1.Controls.Add(this.pictureBox_logo);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -74,10 +75,10 @@
             // lbl_home
             // 
             this.lbl_home.AutoSize = true;
-            this.lbl_home.Font = new System.Drawing.Font("Arial", 25.25F);
-            this.lbl_home.Location = new System.Drawing.Point(305, 31);
+            this.lbl_home.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_home.Location = new System.Drawing.Point(292, 31);
             this.lbl_home.Name = "lbl_home";
-            this.lbl_home.Size = new System.Drawing.Size(105, 39);
+            this.lbl_home.Size = new System.Drawing.Size(99, 42);
             this.lbl_home.TabIndex = 2;
             this.lbl_home.Text = "Home";
             // 
@@ -97,6 +98,20 @@
             this.panel2.Size = new System.Drawing.Size(610, 470);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btn_fornecedor
+            // 
+            this.btn_fornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_fornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_fornecedor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_fornecedor.ForeColor = System.Drawing.Color.White;
+            this.btn_fornecedor.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btn_fornecedor.Location = new System.Drawing.Point(312, 374);
+            this.btn_fornecedor.Name = "btn_fornecedor";
+            this.btn_fornecedor.Size = new System.Drawing.Size(164, 65);
+            this.btn_fornecedor.TabIndex = 6;
+            this.btn_fornecedor.Text = "Fornecedor";
+            this.btn_fornecedor.UseVisualStyleBackColor = false;
             // 
             // btn_fidelidade
             // 
@@ -168,39 +183,25 @@
             this.btn_funcionario.Text = "Funcionário";
             this.btn_funcionario.UseVisualStyleBackColor = false;
             // 
-            // pictureBox_home
-            // 
-            this.pictureBox_home.Image = global::Trabalgo_LP2.Properties.Resources.home;
-            this.pictureBox_home.Location = new System.Drawing.Point(233, 12);
-            this.pictureBox_home.Name = "pictureBox_home";
-            this.pictureBox_home.Size = new System.Drawing.Size(66, 77);
-            this.pictureBox_home.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_home.TabIndex = 1;
-            this.pictureBox_home.TabStop = false;
-            // 
             // pictureBox_logo
             // 
             this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
-            this.pictureBox_logo.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
             this.pictureBox_logo.Name = "pictureBox_logo";
             this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
             this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_logo.TabIndex = 0;
             this.pictureBox_logo.TabStop = false;
             // 
-            // btn_fornecedor
+            // pictureBox1
             // 
-            this.btn_fornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_fornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_fornecedor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_fornecedor.ForeColor = System.Drawing.Color.White;
-            this.btn_fornecedor.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btn_fornecedor.Location = new System.Drawing.Point(312, 374);
-            this.btn_fornecedor.Name = "btn_fornecedor";
-            this.btn_fornecedor.Size = new System.Drawing.Size(164, 65);
-            this.btn_fornecedor.TabIndex = 6;
-            this.btn_fornecedor.Text = "Fornecedor";
-            this.btn_fornecedor.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(240, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // Form_menu
             // 
@@ -213,8 +214,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_home)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,7 +226,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.Label lbl_home;
-        private System.Windows.Forms.PictureBox pictureBox_home;
         private System.Windows.Forms.Button btn_fidelidade;
         private System.Windows.Forms.Button btn_cardapio;
         private System.Windows.Forms.Button btn_mesa;
@@ -233,5 +233,6 @@
         private System.Windows.Forms.Button btn_funcionario;
         private System.Windows.Forms.Button btn_logoff;
         private System.Windows.Forms.Button btn_fornecedor;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
