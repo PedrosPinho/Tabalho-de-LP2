@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Trabalgo_LP2
 {
-    public partial class Form_contas : Form
+    public partial class Form_cardapio : Form
     {
-        public Form_contas()
+        public Form_cardapio()
         {
             InitializeComponent();
         }
 
-        private void Form_contas_Load(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_adicao_Click(object sender, EventArgs e)
         {
 
         }

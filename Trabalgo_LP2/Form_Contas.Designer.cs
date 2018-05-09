@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_contas));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.lbl_contas = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.grid_contas = new System.Windows.Forms.DataGridView();
+            this.id_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_id_item = new System.Windows.Forms.Label();
             this.txt_id_item = new System.Windows.Forms.TextBox();
             this.lbl_qtd = new System.Windows.Forms.Label();
@@ -41,15 +46,10 @@
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
-            this.id_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_contas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_contas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -63,6 +63,16 @@
             this.panel3.Size = new System.Drawing.Size(610, 104);
             this.panel3.TabIndex = 2;
             // 
+            // pictureBox_logo
+            // 
+            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 7);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 3;
+            this.pictureBox_logo.TabStop = false;
+            // 
             // lbl_contas
             // 
             this.lbl_contas.AutoSize = true;
@@ -72,6 +82,16 @@
             this.lbl_contas.Size = new System.Drawing.Size(134, 41);
             this.lbl_contas.TabIndex = 0;
             this.lbl_contas.Text = "Contas";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(236, 13);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(58, 58);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // grid_contas
             // 
@@ -93,6 +113,23 @@
             this.grid_contas.Name = "grid_contas";
             this.grid_contas.Size = new System.Drawing.Size(344, 294);
             this.grid_contas.TabIndex = 3;
+            // 
+            // id_item
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_item.DefaultCellStyle = dataGridViewCellStyle2;
+            this.id_item.HeaderText = "Id ";
+            this.id_item.Name = "id_item";
+            // 
+            // nome_item
+            // 
+            this.nome_item.HeaderText = "Nome";
+            this.nome_item.Name = "nome_item";
+            // 
+            // preco_item
+            // 
+            this.preco_item.HeaderText = "Preço";
+            this.preco_item.Name = "preco_item";
             // 
             // lbl_id_item
             // 
@@ -169,43 +206,6 @@
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(236, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(58, 58);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox_logo
-            // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 7);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 3;
-            this.pictureBox_logo.TabStop = false;
-            // 
-            // id_item
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_item.DefaultCellStyle = dataGridViewCellStyle2;
-            this.id_item.HeaderText = "Id ";
-            this.id_item.Name = "id_item";
-            // 
-            // nome_item
-            // 
-            this.nome_item.HeaderText = "Nome";
-            this.nome_item.Name = "nome_item";
-            // 
-            // preco_item
-            // 
-            this.preco_item.HeaderText = "Preço";
-            this.preco_item.Name = "preco_item";
-            // 
             // Form_contas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -222,11 +222,12 @@
             this.Controls.Add(this.panel3);
             this.Name = "Form_contas";
             this.Text = "Form_Contas";
+            this.Load += new System.EventHandler(this.Form_contas_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_contas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_contas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
