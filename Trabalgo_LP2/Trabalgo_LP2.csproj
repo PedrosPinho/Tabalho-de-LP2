@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cardapio.cs" />
+    <Compile Include="Cliente.cs" />
     <Compile Include="Form_cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,12 +60,21 @@
     <Compile Include="Form_menu.Designer.cs">
       <DependentUpon>Form_menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_mesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_mesa.Designer.cs">
+      <DependentUpon>Form_mesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fornecedor.cs" />
+    <Compile Include="Funcionario.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mesa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_cadastro.resx">
@@ -71,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_menu.resx">
       <DependentUpon>Form_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_mesa.resx">
+      <DependentUpon>Form_mesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
