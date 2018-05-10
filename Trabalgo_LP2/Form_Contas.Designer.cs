@@ -95,6 +95,8 @@
             // 
             // grid_contas
             // 
+            this.grid_contas.AllowUserToAddRows = false;
+            this.grid_contas.AllowUserToDeleteRows = false;
             this.grid_contas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -111,6 +113,7 @@
             this.grid_contas.GridColor = System.Drawing.Color.Black;
             this.grid_contas.Location = new System.Drawing.Point(44, 129);
             this.grid_contas.Name = "grid_contas";
+            this.grid_contas.ReadOnly = true;
             this.grid_contas.Size = new System.Drawing.Size(344, 294);
             this.grid_contas.TabIndex = 3;
             // 
@@ -120,16 +123,19 @@
             this.id_item.DefaultCellStyle = dataGridViewCellStyle2;
             this.id_item.HeaderText = "Id ";
             this.id_item.Name = "id_item";
+            this.id_item.ReadOnly = true;
             // 
             // nome_item
             // 
             this.nome_item.HeaderText = "Nome";
             this.nome_item.Name = "nome_item";
+            this.nome_item.ReadOnly = true;
             // 
             // preco_item
             // 
             this.preco_item.HeaderText = "Preço";
             this.preco_item.Name = "preco_item";
+            this.preco_item.ReadOnly = true;
             // 
             // lbl_id_item
             // 

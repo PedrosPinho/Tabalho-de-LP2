@@ -54,11 +54,23 @@
     <Compile Include="Form_cadastro.Designer.cs">
       <DependentUpon>Form_cadastro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_cadastroCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_cadastroCliente.Designer.cs">
+      <DependentUpon>Form_cadastroCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_cardapio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_cardapio.Designer.cs">
       <DependentUpon>Form_cardapio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_cliente.Designer.cs">
+      <DependentUpon>Form_cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_contas.cs">
       <SubType>Form</SubType>
@@ -71,6 +83,18 @@
     </Compile>
     <Compile Include="Form_fechar.Designer.cs">
       <DependentUpon>Form_fechar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_fidelidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_fidelidade.Designer.cs">
+      <DependentUpon>Form_fidelidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_funcionario.Designer.cs">
+      <DependentUpon>Form_funcionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_menu.cs">
       <SubType>Form</SubType>
@@ -98,14 +122,26 @@
     <EmbeddedResource Include="Form_cadastro.resx">
       <DependentUpon>Form_cadastro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_cadastroCliente.resx">
+      <DependentUpon>Form_cadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_cardapio.resx">
       <DependentUpon>Form_cardapio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_cliente.resx">
+      <DependentUpon>Form_cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_contas.resx">
       <DependentUpon>Form_contas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_fechar.resx">
       <DependentUpon>Form_fechar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_fidelidade.resx">
+      <DependentUpon>Form_fidelidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_funcionario.resx">
+      <DependentUpon>Form_funcionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_menu.resx">
       <DependentUpon>Form_menu.cs</DependentUpon>
