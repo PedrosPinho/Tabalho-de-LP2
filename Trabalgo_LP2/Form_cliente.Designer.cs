@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_cliente = new System.Windows.Forms.Label();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbl_cliente = new System.Windows.Forms.Label();
             this.dataGridView_cliente = new System.Windows.Forms.DataGridView();
+            this.Column_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_frequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_alterar = new System.Windows.Forms.Button();
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.txt_filtrar = new System.Windows.Forms.TextBox();
             this.lbl_filtrar = new System.Windows.Forms.Label();
             this.btn_pesquisar = new System.Windows.Forms.Button();
-            this.Column_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_frequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -58,16 +58,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(610, 103);
             this.panel2.TabIndex = 2;
-            // 
-            // lbl_cliente
-            // 
-            this.lbl_cliente.AutoSize = true;
-            this.lbl_cliente.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cliente.Location = new System.Drawing.Point(280, 30);
-            this.lbl_cliente.Name = "lbl_cliente";
-            this.lbl_cliente.Size = new System.Drawing.Size(131, 41);
-            this.lbl_cliente.TabIndex = 0;
-            this.lbl_cliente.Text = "Cliente";
             // 
             // pictureBox_logo
             // 
@@ -88,6 +78,16 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
+            // lbl_cliente
+            // 
+            this.lbl_cliente.AutoSize = true;
+            this.lbl_cliente.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cliente.Location = new System.Drawing.Point(280, 30);
+            this.lbl_cliente.Name = "lbl_cliente";
+            this.lbl_cliente.Size = new System.Drawing.Size(131, 41);
+            this.lbl_cliente.TabIndex = 0;
+            this.lbl_cliente.Text = "Cliente";
+            // 
             // dataGridView_cliente
             // 
             this.dataGridView_cliente.AllowUserToAddRows = false;
@@ -105,6 +105,30 @@
             this.dataGridView_cliente.TabIndex = 3;
             this.dataGridView_cliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Column_Nome
+            // 
+            this.Column_Nome.HeaderText = "Nome";
+            this.Column_Nome.Name = "Column_Nome";
+            this.Column_Nome.ReadOnly = true;
+            // 
+            // Column_cpf
+            // 
+            this.Column_cpf.HeaderText = "CPF";
+            this.Column_cpf.Name = "Column_cpf";
+            this.Column_cpf.ReadOnly = true;
+            // 
+            // Column_telefone
+            // 
+            this.Column_telefone.HeaderText = "Telefone";
+            this.Column_telefone.Name = "Column_telefone";
+            this.Column_telefone.ReadOnly = true;
+            // 
+            // Column_frequencia
+            // 
+            this.Column_frequencia.HeaderText = "Frequência";
+            this.Column_frequencia.Name = "Column_frequencia";
+            this.Column_frequencia.ReadOnly = true;
+            // 
             // btn_alterar
             // 
             this.btn_alterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
@@ -117,6 +141,7 @@
             this.btn_alterar.TabIndex = 10;
             this.btn_alterar.Text = "Alterar";
             this.btn_alterar.UseVisualStyleBackColor = false;
+            this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
             // btn_adicionar
             // 
@@ -130,6 +155,7 @@
             this.btn_adicionar.TabIndex = 11;
             this.btn_adicionar.Text = "Adicionar";
             this.btn_adicionar.UseVisualStyleBackColor = false;
+            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
             // 
             // txt_filtrar
             // 
@@ -160,30 +186,6 @@
             this.btn_pesquisar.TabIndex = 14;
             this.btn_pesquisar.Text = "Pesquisar";
             this.btn_pesquisar.UseVisualStyleBackColor = false;
-            // 
-            // Column_Nome
-            // 
-            this.Column_Nome.HeaderText = "Nome";
-            this.Column_Nome.Name = "Column_Nome";
-            this.Column_Nome.ReadOnly = true;
-            // 
-            // Column_cpf
-            // 
-            this.Column_cpf.HeaderText = "CPF";
-            this.Column_cpf.Name = "Column_cpf";
-            this.Column_cpf.ReadOnly = true;
-            // 
-            // Column_telefone
-            // 
-            this.Column_telefone.HeaderText = "Telefone";
-            this.Column_telefone.Name = "Column_telefone";
-            this.Column_telefone.ReadOnly = true;
-            // 
-            // Column_frequencia
-            // 
-            this.Column_frequencia.HeaderText = "Frequência";
-            this.Column_frequencia.Name = "Column_frequencia";
-            this.Column_frequencia.ReadOnly = true;
             // 
             // Form_cliente
             // 

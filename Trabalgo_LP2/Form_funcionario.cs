@@ -16,5 +16,19 @@ namespace Trabalgo_LP2
         {
             InitializeComponent();
         }
+
+        private void btn_adicionar_Click(object sender, EventArgs e)
+        {
+            Form_cadastroFuncionario form = new Form_cadastroFuncionario();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog(this);
+        }
+
+        private void btn_alterar_Click(object sender, EventArgs e)
+        {
+            Form_cadastroFuncionario form = new Form_cadastroFuncionario();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog(this);
+        }
     }
 }

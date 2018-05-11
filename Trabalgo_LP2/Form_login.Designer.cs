@@ -1,6 +1,6 @@
 ﻿namespace Trabalgo_LP2
 {
-    partial class Login
+    partial class Form_login
     {
         /// <summary>
         /// Required designer variable.
@@ -33,6 +33,7 @@
             this.lbl_registro = new System.Windows.Forms.Label();
             this.maskedTextBox_registro = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox_login = new System.Windows.Forms.PictureBox();
+            this.linklbl_cadastrar = new System.Windows.Forms.LinkLabel();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_login)).BeginInit();
             this.SuspendLayout();
@@ -40,6 +41,7 @@
             // panel_login
             // 
             this.panel_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel_login.Controls.Add(this.linklbl_cadastrar);
             this.panel_login.Controls.Add(this.btn_login);
             this.panel_login.Controls.Add(this.lbl_registro);
             this.panel_login.Controls.Add(this.maskedTextBox_registro);
@@ -64,6 +66,7 @@
             this.btn_login.TabIndex = 4;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // lbl_registro
             // 
@@ -93,13 +96,27 @@
             this.pictureBox_login.TabIndex = 0;
             this.pictureBox_login.TabStop = false;
             // 
-            // Login
+            // linklbl_cadastrar
+            // 
+            this.linklbl_cadastrar.AutoSize = true;
+            this.linklbl_cadastrar.Font = new System.Drawing.Font("Arial", 10F);
+            this.linklbl_cadastrar.LinkColor = System.Drawing.Color.Black;
+            this.linklbl_cadastrar.Location = new System.Drawing.Point(467, 195);
+            this.linklbl_cadastrar.Name = "linklbl_cadastrar";
+            this.linklbl_cadastrar.Size = new System.Drawing.Size(71, 16);
+            this.linklbl_cadastrar.TabIndex = 5;
+            this.linklbl_cadastrar.TabStop = true;
+            this.linklbl_cadastrar.Text = "Cadastrar";
+            this.linklbl_cadastrar.VisitedLinkColor = System.Drawing.Color.Black;
+            this.linklbl_cadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbl_cadastrar_LinkClicked);
+            // 
+            // Form_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 279);
             this.Controls.Add(this.panel_login);
-            this.Name = "Login";
+            this.Name = "Form_login";
             this.Text = "Form_Login";
             this.panel_login.ResumeLayout(false);
             this.panel_login.PerformLayout();
@@ -115,6 +132,7 @@
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label lbl_registro;
         private System.Windows.Forms.MaskedTextBox maskedTextBox_registro;
+        private System.Windows.Forms.LinkLabel linklbl_cadastrar;
     }
 }
 

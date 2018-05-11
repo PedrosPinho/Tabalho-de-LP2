@@ -19,7 +19,9 @@ namespace Trabalgo_LP2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            Form_contas form = new Form_contas();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog(this);
         }
 
         private void txt_mesa_Click(object sender, EventArgs e)

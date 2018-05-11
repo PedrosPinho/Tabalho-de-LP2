@@ -21,5 +21,12 @@ namespace Trabalgo_LP2
         {
 
         }
+
+        private void btn_fechar_Click(object sender, EventArgs e)
+        {
+            Form_fechar form = new Form_fechar();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog(this);
+        }
     }
 }

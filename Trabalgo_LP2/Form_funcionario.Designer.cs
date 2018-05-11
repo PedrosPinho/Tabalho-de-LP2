@@ -33,16 +33,16 @@
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
             this.dataGridView_funcionario = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lbl_funcionario = new System.Windows.Forms.Label();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbl_filtrar = new System.Windows.Forms.Label();
             this.Column_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_funcao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbl_funcionario = new System.Windows.Forms.Label();
+            this.lbl_filtrar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_funcionario)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -81,6 +81,7 @@
             this.btn_adicionar.TabIndex = 18;
             this.btn_adicionar.Text = "Adicionar";
             this.btn_adicionar.UseVisualStyleBackColor = false;
+            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
             // 
             // btn_alterar
             // 
@@ -94,6 +95,7 @@
             this.btn_alterar.TabIndex = 17;
             this.btn_alterar.Text = "Alterar";
             this.btn_alterar.UseVisualStyleBackColor = false;
+            this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
             // dataGridView_funcionario
             // 
@@ -111,56 +113,6 @@
             this.dataGridView_funcionario.ReadOnly = true;
             this.dataGridView_funcionario.Size = new System.Drawing.Size(534, 288);
             this.dataGridView_funcionario.TabIndex = 16;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
-            this.panel2.Controls.Add(this.pictureBox_logo);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.lbl_funcionario);
-            this.panel2.Location = new System.Drawing.Point(0, 1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(666, 103);
-            this.panel2.TabIndex = 15;
-            // 
-            // lbl_funcionario
-            // 
-            this.lbl_funcionario.AutoSize = true;
-            this.lbl_funcionario.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_funcionario.Location = new System.Drawing.Point(282, 28);
-            this.lbl_funcionario.Name = "lbl_funcionario";
-            this.lbl_funcionario.Size = new System.Drawing.Size(211, 41);
-            this.lbl_funcionario.TabIndex = 0;
-            this.lbl_funcionario.Text = "Funcionario";
-            // 
-            // pictureBox_logo
-            // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 4;
-            this.pictureBox_logo.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(218, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(58, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // lbl_filtrar
-            // 
-            this.lbl_filtrar.AutoSize = true;
-            this.lbl_filtrar.Font = new System.Drawing.Font("Arial", 13F);
-            this.lbl_filtrar.Location = new System.Drawing.Point(12, 124);
-            this.lbl_filtrar.Name = "lbl_filtrar";
-            this.lbl_filtrar.Size = new System.Drawing.Size(61, 21);
-            this.lbl_filtrar.TabIndex = 21;
-            this.lbl_filtrar.Text = "Filtrar:";
             // 
             // Column_Nome
             // 
@@ -191,6 +143,56 @@
             this.Column_funcao.HeaderText = "Função";
             this.Column_funcao.Name = "Column_funcao";
             this.Column_funcao.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel2.Controls.Add(this.pictureBox_logo);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.lbl_funcionario);
+            this.panel2.Location = new System.Drawing.Point(0, 1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(666, 103);
+            this.panel2.TabIndex = 15;
+            // 
+            // pictureBox_logo
+            // 
+            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 4;
+            this.pictureBox_logo.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(218, 11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(58, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // lbl_funcionario
+            // 
+            this.lbl_funcionario.AutoSize = true;
+            this.lbl_funcionario.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_funcionario.Location = new System.Drawing.Point(282, 28);
+            this.lbl_funcionario.Name = "lbl_funcionario";
+            this.lbl_funcionario.Size = new System.Drawing.Size(211, 41);
+            this.lbl_funcionario.TabIndex = 0;
+            this.lbl_funcionario.Text = "Funcionario";
+            // 
+            // lbl_filtrar
+            // 
+            this.lbl_filtrar.AutoSize = true;
+            this.lbl_filtrar.Font = new System.Drawing.Font("Arial", 13F);
+            this.lbl_filtrar.Location = new System.Drawing.Point(12, 124);
+            this.lbl_filtrar.Name = "lbl_filtrar";
+            this.lbl_filtrar.Size = new System.Drawing.Size(61, 21);
+            this.lbl_filtrar.TabIndex = 21;
+            this.lbl_filtrar.Text = "Filtrar:";
             // 
             // Form_funcionario
             // 

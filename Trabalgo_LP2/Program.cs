@@ -16,7 +16,7 @@ namespace Trabalgo_LP2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_mesa());
+            Application.Run(new Form_login());
         }
     }
 }

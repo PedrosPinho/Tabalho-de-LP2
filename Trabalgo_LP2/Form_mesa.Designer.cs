@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_mesa));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_mesa = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_mesa = new System.Windows.Forms.Label();
             this.grid_mesas = new System.Windows.Forms.DataGridView();
             this.Mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pessoas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txt_mesa = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_mesas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_mesas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,6 +61,17 @@
             this.panel1.Size = new System.Drawing.Size(609, 468);
             this.panel1.TabIndex = 0;
             // 
+            // txt_mesa
+            // 
+            this.txt_mesa.AutoSize = true;
+            this.txt_mesa.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mesa.Location = new System.Drawing.Point(41, 116);
+            this.txt_mesa.Name = "txt_mesa";
+            this.txt_mesa.Size = new System.Drawing.Size(534, 29);
+            this.txt_mesa.TabIndex = 4;
+            this.txt_mesa.Text = "Para acessar, clique sob o número da mesa que desejar";
+            this.txt_mesa.Click += new System.EventHandler(this.txt_mesa_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
@@ -71,6 +82,26 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(610, 103);
             this.panel2.TabIndex = 1;
+            // 
+            // pictureBox_logo
+            // 
+            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 4;
+            this.pictureBox_logo.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(232, 13);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(58, 58);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // lbl_mesa
             // 
@@ -84,6 +115,7 @@
             // 
             // grid_mesas
             // 
+            this.grid_mesas.AllowUserToAddRows = false;
             this.grid_mesas.AllowUserToDeleteRows = false;
             this.grid_mesas.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
             this.grid_mesas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -94,6 +126,7 @@
             this.grid_mesas.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.grid_mesas.Location = new System.Drawing.Point(46, 159);
             this.grid_mesas.Name = "grid_mesas";
+            this.grid_mesas.ReadOnly = true;
             this.grid_mesas.Size = new System.Drawing.Size(244, 283);
             this.grid_mesas.StandardTab = true;
             this.grid_mesas.TabIndex = 2;
@@ -103,32 +136,13 @@
             // 
             this.Mesa.HeaderText = "Mesa";
             this.Mesa.Name = "Mesa";
+            this.Mesa.ReadOnly = true;
             // 
             // Pessoas
             // 
             this.Pessoas.HeaderText = "Pessoas";
             this.Pessoas.Name = "Pessoas";
-            // 
-            // txt_mesa
-            // 
-            this.txt_mesa.AutoSize = true;
-            this.txt_mesa.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_mesa.Location = new System.Drawing.Point(41, 116);
-            this.txt_mesa.Name = "txt_mesa";
-            this.txt_mesa.Size = new System.Drawing.Size(534, 29);
-            this.txt_mesa.TabIndex = 4;
-            this.txt_mesa.Text = "Para acessar, clique sob o número da mesa que desejar";
-            this.txt_mesa.Click += new System.EventHandler(this.txt_mesa_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(232, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(58, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.Pessoas.ReadOnly = true;
             // 
             // pictureBox2
             // 
@@ -139,16 +153,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox_logo
-            // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 4;
-            this.pictureBox_logo.TabStop = false;
             // 
             // Form_mesa
             // 
@@ -162,10 +166,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_mesas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_mesas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

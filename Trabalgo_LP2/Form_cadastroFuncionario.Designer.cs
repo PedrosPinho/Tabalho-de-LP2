@@ -1,6 +1,6 @@
 ﻿namespace Trabalgo_LP2
 {
-    partial class Form_cadastro
+    partial class Form_cadastroFuncionario
     {
         /// <summary>
         /// Required designer variable.
@@ -148,6 +148,7 @@
             this.btn_cancelar.TabIndex = 9;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_confirmar
             // 
@@ -161,6 +162,7 @@
             this.btn_confirmar.TabIndex = 8;
             this.btn_confirmar.Text = "Confirmar";
             this.btn_confirmar.UseVisualStyleBackColor = false;
+            this.btn_confirmar.Click += new System.EventHandler(this.btn_confirmar_Click);
             // 
             // txt_registro
             // 
@@ -227,13 +229,13 @@
             this.pictureBox_cadastro.TabIndex = 0;
             this.pictureBox_cadastro.TabStop = false;
             // 
-            // Form_cadastro
+            // Form_cadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 332);
             this.Controls.Add(this.panel_cadastro);
-            this.Name = "Form_cadastro";
+            this.Name = "Form_cadastroFuncionario";
             this.Text = "Form_cadastro";
             this.panel_cadastro.ResumeLayout(false);
             this.panel_cadastro.PerformLayout();

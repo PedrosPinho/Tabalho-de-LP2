@@ -16,5 +16,15 @@ namespace Trabalgo_LP2
         {
             InitializeComponent();
         }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_confirmar_Click(object sender, EventArgs e)
+        {
+            //CRIAR CLIENTE OK?
+        }
     }
 }

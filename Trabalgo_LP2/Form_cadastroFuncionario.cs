@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Trabalgo_LP2
 {
-    public partial class Form_cadastro : Form
+    public partial class Form_cadastroFuncionario : Form
     {
-        public Form_cadastro()
+        public Form_cadastroFuncionario()
         {
             InitializeComponent();
         }
@@ -25,6 +25,16 @@ namespace Trabalgo_LP2
         private void panel_cadastro_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_confirmar_Click(object sender, EventArgs e)
+        {
+            //CADASTRAR FUNCIONARIO FAZER OK?
         }
     }
 }

@@ -211,6 +211,7 @@
             this.btn_fechar.TabIndex = 11;
             this.btn_fechar.Text = "Fechar";
             this.btn_fechar.UseVisualStyleBackColor = false;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
             // Form_contas
             // 

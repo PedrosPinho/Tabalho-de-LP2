@@ -10,28 +10,25 @@ using System.Windows.Forms;
 
 namespace Trabalgo_LP2
 {
-    public partial class Form_cliente : Form
+    public partial class Form_login : Form
     {
-        public Form_cliente()
+        public Form_login()
         {
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btn_login_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btn_adicionar_Click(object sender, EventArgs e)
-        {
-            Form_cadastroCliente form = new Form_cadastroCliente();
+            this.Hide();
+            Form_menu form = new Form_menu();
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
+            Close();
         }
 
-        private void btn_alterar_Click(object sender, EventArgs e)
+        private void linklbl_cadastrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form_cadastroCliente form = new Form_cadastroCliente();
+            Form_cadastroFuncionario form = new Form_cadastroFuncionario();
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
         }

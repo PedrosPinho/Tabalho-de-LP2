@@ -48,11 +48,11 @@
   <ItemGroup>
     <Compile Include="Cardapio.cs" />
     <Compile Include="Cliente.cs" />
-    <Compile Include="Form_cadastro.cs">
+    <Compile Include="Form_cadastroFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_cadastro.Designer.cs">
-      <DependentUpon>Form_cadastro.cs</DependentUpon>
+    <Compile Include="Form_cadastroFuncionario.Designer.cs">
+      <DependentUpon>Form_cadastroFuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_cadastroCliente.cs">
       <SubType>Form</SubType>
@@ -110,17 +110,17 @@
     </Compile>
     <Compile Include="Fornecedor.cs" />
     <Compile Include="Funcionario.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="Form_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Form_login.Designer.cs">
+      <DependentUpon>Form_login.cs</DependentUpon>
     </Compile>
     <Compile Include="Mesa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form_cadastro.resx">
-      <DependentUpon>Form_cadastro.cs</DependentUpon>
+    <EmbeddedResource Include="Form_cadastroFuncionario.resx">
+      <DependentUpon>Form_cadastroFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_cadastroCliente.resx">
       <DependentUpon>Form_cadastroCliente.cs</DependentUpon>
@@ -149,8 +149,8 @@
     <EmbeddedResource Include="Form_mesa.resx">
       <DependentUpon>Form_mesa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Form_login.resx">
+      <DependentUpon>Form_login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

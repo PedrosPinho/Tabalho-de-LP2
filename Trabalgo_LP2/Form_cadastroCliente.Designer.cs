@@ -79,6 +79,7 @@
             this.btn_cancelar.TabIndex = 24;
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_confirmar
             // 
@@ -92,6 +93,7 @@
             this.btn_confirmar.TabIndex = 23;
             this.btn_confirmar.Text = "Confirmar";
             this.btn_confirmar.UseVisualStyleBackColor = false;
+            this.btn_confirmar.Click += new System.EventHandler(this.btn_confirmar_Click);
             // 
             // txt_nome
             // 
