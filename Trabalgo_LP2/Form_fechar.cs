@@ -36,17 +36,23 @@ namespace Trabalgo_LP2
         {
             float total, por_pessoa;
             int num_pessoas;
-
-            total = float.Parse(txt_total.Text);
-            num_pessoas = int.Parse(txt_num_pessoas.Text);
-            por_pessoa = float.Parse(txt_val_pessoa.Text);
-
-            txt_total.Text = (total - por_pessoa).ToString();
-            txt_num_pessoas.Text = (num_pessoas - 1).ToString();
-            if (int.Parse(txt_num_pessoas.Text) == 0)
+            try
             {
-                MessageBox.Show("Conta foi paga com sucesso!", "Aviso", MessageBoxButtons.OK);
-                Close();
+                total = float.Parse(txt_total.Text);
+                num_pessoas = int.Parse(txt_num_pessoas.Text);
+                por_pessoa = float.Parse(txt_val_pessoa.Text);
+
+                txt_total.Text = (total - por_pessoa).ToString();
+                txt_num_pessoas.Text = (num_pessoas - 1).ToString();
+                if (int.Parse(txt_num_pessoas.Text) == 0)
+                {
+                    MessageBox.Show("Conta foi paga com sucesso!", "Aviso", MessageBoxButtons.OK);
+                    Close();
+                }
+            }
+            catch (System.Exception)
+            {
+                MessageBox.Show("Certifique que os campos 'Total' e 'Dividir conta' estão preenchidos", "Aviso!", MessageBoxButtons.OK);
             }
 
         }
@@ -55,11 +61,18 @@ namespace Trabalgo_LP2
         {
             float total;
             int num_pessoas;
+            try
+            {
+                total = float.Parse(txt_total.Text);
+                num_pessoas = int.Parse(txt_num_pessoas.Text);
 
-            total = float.Parse(txt_total.Text);
-            num_pessoas = int.Parse(txt_num_pessoas.Text);
-
-            txt_val_pessoa.Text = (total / num_pessoas).ToString();
+                txt_val_pessoa.Text = (total / num_pessoas).ToString();
+                btn_calcular.Hide();
+            }
+            catch (System.Exception)
+            {
+                MessageBox.Show("Certifique que os campos 'Total' e 'Dividir conta' estão preenchidos", "Aviso!", MessageBoxButtons.OK);
+            }
         }
     }
 }
