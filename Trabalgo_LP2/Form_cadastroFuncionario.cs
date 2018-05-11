@@ -36,5 +36,10 @@ namespace Trabalgo_LP2
         {
             //CADASTRAR FUNCIONARIO FAZER OK?
         }
+
+        private void pictureBox_cadastro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

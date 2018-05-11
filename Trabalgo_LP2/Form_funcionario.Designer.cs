@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_funcionario));
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.txt_filtrar = new System.Windows.Forms.TextBox();
-            this.btn_adicionar = new System.Windows.Forms.Button();
-            this.btn_alterar = new System.Windows.Forms.Button();
             this.dataGridView_funcionario = new System.Windows.Forms.DataGridView();
             this.Column_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,11 +38,13 @@
             this.Column_registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_funcao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_funcionario = new System.Windows.Forms.Label();
             this.lbl_filtrar = new System.Windows.Forms.Label();
+            this.btn_adicionar = new System.Windows.Forms.Button();
+            this.btn_alterar = new System.Windows.Forms.Button();
             this.btn_voltar = new System.Windows.Forms.Button();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_funcionario)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -56,47 +57,20 @@
             this.btn_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_pesquisar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_pesquisar.ForeColor = System.Drawing.Color.White;
-            this.btn_pesquisar.Location = new System.Drawing.Point(370, 145);
+            this.btn_pesquisar.Location = new System.Drawing.Point(422, 115);
             this.btn_pesquisar.Name = "btn_pesquisar";
-            this.btn_pesquisar.Size = new System.Drawing.Size(103, 24);
+            this.btn_pesquisar.Size = new System.Drawing.Size(99, 26);
             this.btn_pesquisar.TabIndex = 20;
             this.btn_pesquisar.Text = "Pesquisar";
             this.btn_pesquisar.UseVisualStyleBackColor = false;
             // 
             // txt_filtrar
             // 
-            this.txt_filtrar.Location = new System.Drawing.Point(16, 148);
+            this.txt_filtrar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_filtrar.Location = new System.Drawing.Point(63, 115);
             this.txt_filtrar.Name = "txt_filtrar";
-            this.txt_filtrar.Size = new System.Drawing.Size(334, 20);
+            this.txt_filtrar.Size = new System.Drawing.Size(353, 26);
             this.txt_filtrar.TabIndex = 19;
-            // 
-            // btn_adicionar
-            // 
-            this.btn_adicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_adicionar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_adicionar.ForeColor = System.Drawing.Color.White;
-            this.btn_adicionar.Location = new System.Drawing.Point(556, 235);
-            this.btn_adicionar.Name = "btn_adicionar";
-            this.btn_adicionar.Size = new System.Drawing.Size(99, 46);
-            this.btn_adicionar.TabIndex = 18;
-            this.btn_adicionar.Text = "Adicionar";
-            this.btn_adicionar.UseVisualStyleBackColor = false;
-            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
-            // 
-            // btn_alterar
-            // 
-            this.btn_alterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_alterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_alterar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_alterar.ForeColor = System.Drawing.Color.White;
-            this.btn_alterar.Location = new System.Drawing.Point(556, 356);
-            this.btn_alterar.Name = "btn_alterar";
-            this.btn_alterar.Size = new System.Drawing.Size(99, 46);
-            this.btn_alterar.TabIndex = 17;
-            this.btn_alterar.Text = "Alterar";
-            this.btn_alterar.UseVisualStyleBackColor = false;
-            this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
             // dataGridView_funcionario
             // 
@@ -109,10 +83,10 @@
             this.Column_telefone,
             this.Column_registro,
             this.Column_funcao});
-            this.dataGridView_funcionario.Location = new System.Drawing.Point(16, 174);
+            this.dataGridView_funcionario.Location = new System.Drawing.Point(16, 147);
             this.dataGridView_funcionario.Name = "dataGridView_funcionario";
             this.dataGridView_funcionario.ReadOnly = true;
-            this.dataGridView_funcionario.Size = new System.Drawing.Size(534, 288);
+            this.dataGridView_funcionario.Size = new System.Drawing.Size(505, 315);
             this.dataGridView_funcionario.TabIndex = 16;
             // 
             // Column_Nome
@@ -157,25 +131,6 @@
             this.panel2.Size = new System.Drawing.Size(666, 103);
             this.panel2.TabIndex = 15;
             // 
-            // pictureBox_logo
-            // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 4;
-            this.pictureBox_logo.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(218, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(58, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
             // lbl_funcionario
             // 
             this.lbl_funcionario.AutoSize = true;
@@ -189,26 +144,83 @@
             // lbl_filtrar
             // 
             this.lbl_filtrar.AutoSize = true;
-            this.lbl_filtrar.Font = new System.Drawing.Font("Arial", 13F);
-            this.lbl_filtrar.Location = new System.Drawing.Point(12, 124);
+            this.lbl_filtrar.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_filtrar.Location = new System.Drawing.Point(12, 115);
             this.lbl_filtrar.Name = "lbl_filtrar";
-            this.lbl_filtrar.Size = new System.Drawing.Size(61, 21);
+            this.lbl_filtrar.Size = new System.Drawing.Size(54, 23);
             this.lbl_filtrar.TabIndex = 21;
-            this.lbl_filtrar.Text = "Filtrar:";
+            this.lbl_filtrar.Text = "Filtrar";
+            // 
+            // btn_adicionar
+            // 
+            this.btn_adicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_adicionar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_adicionar.BackgroundImage")));
+            this.btn_adicionar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_adicionar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_adicionar.ForeColor = System.Drawing.Color.White;
+            this.btn_adicionar.Location = new System.Drawing.Point(537, 234);
+            this.btn_adicionar.Name = "btn_adicionar";
+            this.btn_adicionar.Size = new System.Drawing.Size(118, 46);
+            this.btn_adicionar.TabIndex = 18;
+            this.btn_adicionar.Text = "Adicionar";
+            this.btn_adicionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_adicionar.UseVisualStyleBackColor = false;
+            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
+            // 
+            // btn_alterar
+            // 
+            this.btn_alterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_alterar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_alterar.BackgroundImage")));
+            this.btn_alterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_alterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_alterar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_alterar.ForeColor = System.Drawing.Color.White;
+            this.btn_alterar.Location = new System.Drawing.Point(537, 335);
+            this.btn_alterar.Name = "btn_alterar";
+            this.btn_alterar.Size = new System.Drawing.Size(118, 46);
+            this.btn_alterar.TabIndex = 17;
+            this.btn_alterar.Text = "Alterar";
+            this.btn_alterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_alterar.UseVisualStyleBackColor = false;
+            this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
             // btn_voltar
             // 
             this.btn_voltar.BackColor = System.Drawing.Color.Black;
+            this.btn_voltar.BackgroundImage = global::Trabalgo_LP2.Properties.Resources._2018_05_11_11_13_45_Quant_UX___Prototype__Test_and_Learn___1_6;
+            this.btn_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(556, 28);
+            this.btn_voltar.Location = new System.Drawing.Point(559, 28);
             this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(89, 34);
+            this.btn_voltar.Size = new System.Drawing.Size(67, 34);
             this.btn_voltar.TabIndex = 22;
             this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_voltar.UseVisualStyleBackColor = false;
             this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
+            // pictureBox_logo
+            // 
+            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 4;
+            this.pictureBox_logo.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(243, 24);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(44, 45);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // Form_funcionario
             // 

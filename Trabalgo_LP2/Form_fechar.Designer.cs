@@ -30,13 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_fechar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_voltar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_fechar = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.lbl_total = new System.Windows.Forms.Label();
             this.txt_total = new System.Windows.Forms.TextBox();
             this.lbl_div_contas = new System.Windows.Forms.Label();
@@ -45,17 +42,20 @@
             this.lbl_valor_por_pessoa = new System.Windows.Forms.Label();
             this.txt_val_pessoa = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btn_nao_quer_cadastrar = new System.Windows.Forms.Button();
             this.txt_cpf_fechar = new System.Windows.Forms.TextBox();
             this.lbl_cpf_fechar = new System.Windows.Forms.Label();
             this.btn_cadastrado = new System.Windows.Forms.Button();
             this.lbl_pergunta = new System.Windows.Forms.Label();
             this.btn_nao_cadastrado = new System.Windows.Forms.Button();
-            this.btn_nao_quer_cadastrar = new System.Windows.Forms.Button();
+            this.btn_voltar = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,20 +71,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(610, 104);
             this.panel1.TabIndex = 0;
-            // 
-            // btn_voltar
-            // 
-            this.btn_voltar.BackColor = System.Drawing.Color.Black;
-            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(471, 29);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(89, 34);
-            this.btn_voltar.TabIndex = 15;
-            this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.UseVisualStyleBackColor = false;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // panel3
             // 
@@ -118,26 +104,6 @@
             this.lbl_fechar.Size = new System.Drawing.Size(130, 41);
             this.lbl_fechar.TabIndex = 4;
             this.lbl_fechar.Text = "Fechar";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(233, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(58, 58);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox_logo
-            // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 7);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 1;
-            this.pictureBox_logo.TabStop = false;
             // 
             // lbl_total
             // 
@@ -220,8 +186,22 @@
             this.panel5.Controls.Add(this.btn_nao_cadastrado);
             this.panel5.Location = new System.Drawing.Point(389, 145);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(199, 252);
+            this.panel5.Size = new System.Drawing.Size(199, 258);
             this.panel5.TabIndex = 13;
+            // 
+            // btn_nao_quer_cadastrar
+            // 
+            this.btn_nao_quer_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_nao_quer_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_nao_quer_cadastrar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nao_quer_cadastrar.ForeColor = System.Drawing.Color.White;
+            this.btn_nao_quer_cadastrar.Location = new System.Drawing.Point(44, 195);
+            this.btn_nao_quer_cadastrar.Name = "btn_nao_quer_cadastrar";
+            this.btn_nao_quer_cadastrar.Size = new System.Drawing.Size(112, 38);
+            this.btn_nao_quer_cadastrar.TabIndex = 15;
+            this.btn_nao_quer_cadastrar.Text = "Pagar sem cadastro";
+            this.btn_nao_quer_cadastrar.UseVisualStyleBackColor = false;
+            this.btn_nao_quer_cadastrar.Click += new System.EventHandler(this.btn_nao_quer_cadastrar_Click);
             // 
             // txt_cpf_fechar
             // 
@@ -278,19 +258,42 @@
             this.btn_nao_cadastrado.Text = "Não Cadastrado";
             this.btn_nao_cadastrado.UseVisualStyleBackColor = false;
             // 
-            // btn_nao_quer_cadastrar
+            // btn_voltar
             // 
-            this.btn_nao_quer_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_nao_quer_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_nao_quer_cadastrar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nao_quer_cadastrar.ForeColor = System.Drawing.Color.White;
-            this.btn_nao_quer_cadastrar.Location = new System.Drawing.Point(44, 195);
-            this.btn_nao_quer_cadastrar.Name = "btn_nao_quer_cadastrar";
-            this.btn_nao_quer_cadastrar.Size = new System.Drawing.Size(112, 38);
-            this.btn_nao_quer_cadastrar.TabIndex = 15;
-            this.btn_nao_quer_cadastrar.Text = "Pagar sem cadastro";
-            this.btn_nao_quer_cadastrar.UseVisualStyleBackColor = false;
-            this.btn_nao_quer_cadastrar.Click += new System.EventHandler(this.btn_nao_quer_cadastrar_Click);
+            this.btn_voltar.BackColor = System.Drawing.Color.Black;
+            this.btn_voltar.BackgroundImage = global::Trabalgo_LP2.Properties.Resources._2018_05_11_11_13_45_Quant_UX___Prototype__Test_and_Learn___1_6;
+            this.btn_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.ForeColor = System.Drawing.Color.White;
+            this.btn_voltar.Location = new System.Drawing.Point(521, 29);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(66, 34);
+            this.btn_voltar.TabIndex = 15;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_voltar.UseVisualStyleBackColor = false;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(233, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(58, 58);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox_logo
+            // 
+            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 7);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 1;
+            this.pictureBox_logo.TabStop = false;
             // 
             // Form_fechar
             // 
@@ -314,10 +317,10 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

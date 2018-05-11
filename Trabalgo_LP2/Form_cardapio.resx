@@ -120,19 +120,31 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAC4AAAAwCAYAAABuZUjcAAAAAXNSR0ICQMB9xQAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAZdEVYdFNvZnR3YXJlAE1pY3Jvc29mdCBPZmZpY2V/7TVx
-        AAAB6UlEQVRoQ+2ZTVLDMAyFHYd7MKwYuucQ7NkXwhnYsMtJ2LPnEOy5D0TKOJUV1ZXrn4lnsvg8jSrp
-        vWZsp3XNOI5NsgoMxhwGc/NYFnPgurF4F4OxT4Ptv166/qckoAFaVDuW5QU0euu676Hr/6qA5q+/8zjg
-        9IBGkkAh8M5P04Yb0oIDNMBGgkApduPc+GtnfyHmgGv6/sf9wyonBOS+394t9RDLbhxNGnuE+Al7pObl
-        nBB+fRHjUlNNTojUeg4Omqapwqn1HBx402anijMGMQcVPZcTgtdDrIjx0uzGufEmpwqKtLg4paaanBCp
-        9RwcNE1ThVPrOTjwps1OFWcMYg4qCmzyS1YNduPc+KWpIuVEYfvPDL85ayxOTtoRBQ7QiBrH11OMJmpy
-        aoLDbrwiOHBTmjkuf7jSx3endSEad+Yh5qCmAW4cmsJOQWuyQ3ais8Yvgfme8fgesVDN5W7FHsFtwvgs
-        HHfouRnjs7je/KaMzwaUZ+TskV3DOD2aXhkHcM5PRsL4j+xr1kkMuMsZ++z0FuEcxK6TKMjdBlbiqZQw
-        j/2mvlTHE81FTvOSacC7yEmqeXxS4/SQ/+RaBXICoqodioE100LkGwBFDOZEt0Nxzht2iMEWEIMtIAZb
-        QAy2gBhsATG4fUbzD1o6aNsRa7CjAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAC4AAAAwCAYAAABuZUjcAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wgAADsIBFShKgAAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAAHpSURBVGhD7ZlN
+        UsMwDIUdh3swrBi65xDs2RfCGdiwy0nYs+cQ7LkPRMo4lRXVleufiWey+DyNKum9Zmyndc04jk2yCgzG
+        HAZz81gWc+C6sXgXg7FPg+2/Xrr+pySgAVpUO5blBTR667rvoev/qoDmr7/zOOD0gEaSQCHwzk/ThhvS
+        ggM0wEaCQCl249z4a2d/IeaAa/r+x/3DKicE5L7f3i31EMtuHE0ae4T4CXuk5uWcEH59EeNSU01OiNR6
+        Dg6apqnCqfUcHHjTZqeKMwYxBxU9lxOC10OsiPHS7Ma58SanCoq0uDilppqcEKn1HBw0TVOFU+s5OPCm
+        zU4VZwxiDioKbPJLVg1249z4paki5URh+88MvzlrLE5O2hEFDtCIGsfXU4wmanJqgsNuvCI4cFOaOS5/
+        uNLHd6d1IRp35iHmoKYBbhyawk5Ba7JDdqKzxi+B+Z7x+B6xUM3lbsUewW3C+Cwcd+i5GeOzuN78pozP
+        BpRn5OyRXcM4PZpeGQdwzk9GwviP7GvWSQy4yxn77PQW4RzErpMoyN0GVuKplDCP/aa+VMcTzUVO85Jp
+        wLvISap5fFLj9JD/5FoFcgKiqh2KgTXTQuQbAEUM5kS3Q3HOG3aIwRYQgy0gBltADLaAGGwBMbh9RvMP
+        Wjpo2xFrsKMAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="id_item_cardapio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="nome_item_cardapio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="preco_item_cardapio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="descricao_item_cardapio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="id_item_cardapio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

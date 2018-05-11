@@ -181,6 +181,12 @@
   <ItemGroup>
     <None Include="Properties\Sem título.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2018-05-11 11_13_45-Quant-UX - Prototype, Test and Learn - 1.6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

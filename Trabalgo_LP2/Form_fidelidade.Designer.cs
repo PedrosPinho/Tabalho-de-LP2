@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_fidelidade));
             this.dataGridView_fidelidade = new System.Windows.Forms.DataGridView();
             this.Column_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_frequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.lbl_fidelidade = new System.Windows.Forms.Label();
             this.panel_fidelidade = new System.Windows.Forms.Panel();
-            this.btn_voltar = new System.Windows.Forms.Button();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fidelidade)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -89,24 +90,22 @@
             this.panel2.Size = new System.Drawing.Size(610, 103);
             this.panel2.TabIndex = 4;
             // 
-            // pictureBox_logo
+            // btn_voltar
             // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 4;
-            this.pictureBox_logo.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(217, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(58, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            this.btn_voltar.BackColor = System.Drawing.Color.Black;
+            this.btn_voltar.BackgroundImage = global::Trabalgo_LP2.Properties.Resources._2018_05_11_11_13_45_Quant_UX___Prototype__Test_and_Learn___1_6;
+            this.btn_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.ForeColor = System.Drawing.Color.White;
+            this.btn_voltar.Location = new System.Drawing.Point(516, 30);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(69, 34);
+            this.btn_voltar.TabIndex = 15;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_voltar.UseVisualStyleBackColor = false;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // lbl_fidelidade
             // 
@@ -126,19 +125,25 @@
             this.panel_fidelidade.Size = new System.Drawing.Size(218, 319);
             this.panel_fidelidade.TabIndex = 6;
             // 
-            // btn_voltar
+            // pictureBox_logo
             // 
-            this.btn_voltar.BackColor = System.Drawing.Color.Black;
-            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(496, 30);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(89, 34);
-            this.btn_voltar.TabIndex = 15;
-            this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.UseVisualStyleBackColor = false;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 4;
+            this.pictureBox_logo.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(217, 27);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(55, 37);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
             // 
             // Form_fidelidade
             // 

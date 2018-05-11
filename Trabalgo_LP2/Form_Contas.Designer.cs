@@ -68,14 +68,17 @@
             // btn_voltar
             // 
             this.btn_voltar.BackColor = System.Drawing.Color.Black;
+            this.btn_voltar.BackgroundImage = global::Trabalgo_LP2.Properties.Resources._2018_05_11_11_13_45_Quant_UX___Prototype__Test_and_Learn___1_6;
+            this.btn_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(489, 30);
+            this.btn_voltar.Location = new System.Drawing.Point(517, 30);
             this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(89, 34);
+            this.btn_voltar.Size = new System.Drawing.Size(67, 34);
             this.btn_voltar.TabIndex = 15;
             this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_voltar.UseVisualStyleBackColor = false;
             this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
@@ -95,9 +98,9 @@
             this.lbl_contas.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_contas.Location = new System.Drawing.Point(289, 30);
             this.lbl_contas.Name = "lbl_contas";
-            this.lbl_contas.Size = new System.Drawing.Size(134, 41);
+            this.lbl_contas.Size = new System.Drawing.Size(115, 41);
             this.lbl_contas.TabIndex = 0;
-            this.lbl_contas.Text = "Contas";
+            this.lbl_contas.Text = "Conta";
             // 
             // pictureBox2
             // 
