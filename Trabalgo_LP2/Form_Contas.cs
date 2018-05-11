@@ -28,5 +28,10 @@ namespace Trabalgo_LP2
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
         }
+
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -46,6 +46,7 @@
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -55,6 +56,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel3.Controls.Add(this.btn_voltar);
             this.panel3.Controls.Add(this.pictureBox_logo);
             this.panel3.Controls.Add(this.lbl_contas);
             this.panel3.Controls.Add(this.pictureBox2);
@@ -213,6 +215,20 @@
             this.btn_fechar.UseVisualStyleBackColor = false;
             this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
             // 
+            // btn_voltar
+            // 
+            this.btn_voltar.BackColor = System.Drawing.Color.Black;
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.ForeColor = System.Drawing.Color.White;
+            this.btn_voltar.Location = new System.Drawing.Point(489, 30);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(89, 34);
+            this.btn_voltar.TabIndex = 15;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = false;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
             // Form_contas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,5 +273,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id_item;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome_item;
         private System.Windows.Forms.DataGridViewTextBoxColumn preco_item;
+        private System.Windows.Forms.Button btn_voltar;
     }
 }

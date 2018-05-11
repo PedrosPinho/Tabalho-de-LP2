@@ -26,5 +26,10 @@ namespace Trabalgo_LP2
         {
 
         }
+
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

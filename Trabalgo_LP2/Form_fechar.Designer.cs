@@ -30,9 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_fechar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_fechar = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.lbl_total = new System.Windows.Forms.Label();
             this.txt_total = new System.Windows.Forms.TextBox();
             this.lbl_div_contas = new System.Windows.Forms.Label();
@@ -40,25 +43,24 @@
             this.btn_calcular = new System.Windows.Forms.Button();
             this.lbl_val_final = new System.Windows.Forms.Label();
             this.txt_val_final = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btn_nao_cadastrado = new System.Windows.Forms.Button();
-            this.lbl_pergunta = new System.Windows.Forms.Label();
-            this.btn_cadastrado = new System.Windows.Forms.Button();
-            this.lbl_cpf_fechar = new System.Windows.Forms.Label();
             this.txt_cpf_fechar = new System.Windows.Forms.TextBox();
+            this.lbl_cpf_fechar = new System.Windows.Forms.Label();
+            this.btn_cadastrado = new System.Windows.Forms.Button();
+            this.lbl_pergunta = new System.Windows.Forms.Label();
+            this.btn_nao_cadastrado = new System.Windows.Forms.Button();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel1.Controls.Add(this.btn_voltar);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lbl_fechar);
@@ -69,15 +71,38 @@
             this.panel1.Size = new System.Drawing.Size(610, 104);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox_logo
+            // panel3
             // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 7);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 1;
-            this.pictureBox_logo.TabStop = false;
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Location = new System.Drawing.Point(405, 103);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(201, 315);
+            this.panel3.TabIndex = 6;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel4.Location = new System.Drawing.Point(3, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(198, 315);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(432, 103);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(177, 315);
+            this.panel2.TabIndex = 5;
+            // 
+            // lbl_fechar
+            // 
+            this.lbl_fechar.AutoSize = true;
+            this.lbl_fechar.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fechar.Location = new System.Drawing.Point(287, 29);
+            this.lbl_fechar.Name = "lbl_fechar";
+            this.lbl_fechar.Size = new System.Drawing.Size(130, 41);
+            this.lbl_fechar.TabIndex = 4;
+            this.lbl_fechar.Text = "Fechar";
             // 
             // pictureBox2
             // 
@@ -89,15 +114,15 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // lbl_fechar
+            // pictureBox_logo
             // 
-            this.lbl_fechar.AutoSize = true;
-            this.lbl_fechar.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fechar.Location = new System.Drawing.Point(287, 29);
-            this.lbl_fechar.Name = "lbl_fechar";
-            this.lbl_fechar.Size = new System.Drawing.Size(130, 41);
-            this.lbl_fechar.TabIndex = 4;
-            this.lbl_fechar.Text = "Fechar";
+            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 7);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 1;
+            this.pictureBox_logo.TabStop = false;
             // 
             // lbl_total
             // 
@@ -168,29 +193,6 @@
             this.txt_val_final.Size = new System.Drawing.Size(134, 63);
             this.txt_val_final.TabIndex = 12;
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(432, 103);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(177, 315);
-            this.panel2.TabIndex = 5;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(405, 103);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(201, 315);
-            this.panel3.TabIndex = 6;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
-            this.panel4.Location = new System.Drawing.Point(3, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(198, 315);
-            this.panel4.TabIndex = 7;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
@@ -204,28 +206,24 @@
             this.panel5.Size = new System.Drawing.Size(199, 252);
             this.panel5.TabIndex = 13;
             // 
-            // btn_nao_cadastrado
+            // txt_cpf_fechar
             // 
-            this.btn_nao_cadastrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_nao_cadastrado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_nao_cadastrado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_nao_cadastrado.ForeColor = System.Drawing.Color.White;
-            this.btn_nao_cadastrado.Location = new System.Drawing.Point(44, 189);
-            this.btn_nao_cadastrado.Name = "btn_nao_cadastrado";
-            this.btn_nao_cadastrado.Size = new System.Drawing.Size(112, 34);
-            this.btn_nao_cadastrado.TabIndex = 10;
-            this.btn_nao_cadastrado.Text = "Não Cadastrado";
-            this.btn_nao_cadastrado.UseVisualStyleBackColor = false;
+            this.txt_cpf_fechar.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cpf_fechar.Location = new System.Drawing.Point(28, 78);
+            this.txt_cpf_fechar.Name = "txt_cpf_fechar";
+            this.txt_cpf_fechar.Size = new System.Drawing.Size(144, 32);
+            this.txt_cpf_fechar.TabIndex = 14;
             // 
-            // lbl_pergunta
+            // lbl_cpf_fechar
             // 
-            this.lbl_pergunta.AutoSize = true;
-            this.lbl_pergunta.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pergunta.Location = new System.Drawing.Point(-3, 0);
-            this.lbl_pergunta.Name = "lbl_pergunta";
-            this.lbl_pergunta.Size = new System.Drawing.Size(10, 46);
-            this.lbl_pergunta.TabIndex = 11;
-            this.lbl_pergunta.Text = "\r\n\r\n";
+            this.lbl_cpf_fechar.AutoSize = true;
+            this.lbl_cpf_fechar.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cpf_fechar.Location = new System.Drawing.Point(23, 50);
+            this.lbl_cpf_fechar.Name = "lbl_cpf_fechar";
+            this.lbl_cpf_fechar.Size = new System.Drawing.Size(51, 25);
+            this.lbl_cpf_fechar.TabIndex = 14;
+            this.lbl_cpf_fechar.Text = "CPF:\r\n";
+            this.lbl_cpf_fechar.Click += new System.EventHandler(this.lbl_cpf_fechar_Click);
             // 
             // btn_cadastrado
             // 
@@ -240,24 +238,42 @@
             this.btn_cadastrado.Text = " Cadastrado";
             this.btn_cadastrado.UseVisualStyleBackColor = false;
             // 
-            // lbl_cpf_fechar
+            // lbl_pergunta
             // 
-            this.lbl_cpf_fechar.AutoSize = true;
-            this.lbl_cpf_fechar.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cpf_fechar.Location = new System.Drawing.Point(23, 50);
-            this.lbl_cpf_fechar.Name = "lbl_cpf_fechar";
-            this.lbl_cpf_fechar.Size = new System.Drawing.Size(51, 25);
-            this.lbl_cpf_fechar.TabIndex = 14;
-            this.lbl_cpf_fechar.Text = "CPF:\r\n";
-            this.lbl_cpf_fechar.Click += new System.EventHandler(this.lbl_cpf_fechar_Click);
+            this.lbl_pergunta.AutoSize = true;
+            this.lbl_pergunta.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pergunta.Location = new System.Drawing.Point(-3, 0);
+            this.lbl_pergunta.Name = "lbl_pergunta";
+            this.lbl_pergunta.Size = new System.Drawing.Size(10, 46);
+            this.lbl_pergunta.TabIndex = 11;
+            this.lbl_pergunta.Text = "\r\n\r\n";
             // 
-            // txt_cpf_fechar
+            // btn_nao_cadastrado
             // 
-            this.txt_cpf_fechar.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cpf_fechar.Location = new System.Drawing.Point(28, 78);
-            this.txt_cpf_fechar.Name = "txt_cpf_fechar";
-            this.txt_cpf_fechar.Size = new System.Drawing.Size(144, 32);
-            this.txt_cpf_fechar.TabIndex = 14;
+            this.btn_nao_cadastrado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_nao_cadastrado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_nao_cadastrado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nao_cadastrado.ForeColor = System.Drawing.Color.White;
+            this.btn_nao_cadastrado.Location = new System.Drawing.Point(44, 189);
+            this.btn_nao_cadastrado.Name = "btn_nao_cadastrado";
+            this.btn_nao_cadastrado.Size = new System.Drawing.Size(112, 34);
+            this.btn_nao_cadastrado.TabIndex = 10;
+            this.btn_nao_cadastrado.Text = "Não Cadastrado";
+            this.btn_nao_cadastrado.UseVisualStyleBackColor = false;
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.BackColor = System.Drawing.Color.Black;
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.ForeColor = System.Drawing.Color.White;
+            this.btn_voltar.Location = new System.Drawing.Point(471, 29);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(89, 34);
+            this.btn_voltar.TabIndex = 15;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = false;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // Form_fechar
             // 
@@ -280,9 +296,9 @@
             this.Load += new System.EventHandler(this.Form_fechar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.ResumeLayout(false);
@@ -312,5 +328,6 @@
         private System.Windows.Forms.Label lbl_pergunta;
         private System.Windows.Forms.Button btn_nao_cadastrado;
         private System.Windows.Forms.TextBox txt_cpf_fechar;
+        private System.Windows.Forms.Button btn_voltar;
     }
 }
