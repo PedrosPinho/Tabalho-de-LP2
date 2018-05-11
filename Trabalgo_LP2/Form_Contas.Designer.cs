@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.lbl_contas = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,6 @@
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
-            this.btn_voltar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -64,6 +64,20 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(610, 104);
             this.panel3.TabIndex = 2;
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.BackColor = System.Drawing.Color.Black;
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.ForeColor = System.Drawing.Color.White;
+            this.btn_voltar.Location = new System.Drawing.Point(489, 30);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(89, 34);
+            this.btn_voltar.TabIndex = 15;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = false;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // pictureBox_logo
             // 
@@ -211,23 +225,9 @@
             this.btn_fechar.Name = "btn_fechar";
             this.btn_fechar.Size = new System.Drawing.Size(89, 34);
             this.btn_fechar.TabIndex = 11;
-            this.btn_fechar.Text = "Fechar";
+            this.btn_fechar.Text = "Fechar conta";
             this.btn_fechar.UseVisualStyleBackColor = false;
             this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
-            // 
-            // btn_voltar
-            // 
-            this.btn_voltar.BackColor = System.Drawing.Color.Black;
-            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(489, 30);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(89, 34);
-            this.btn_voltar.TabIndex = 15;
-            this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.UseVisualStyleBackColor = false;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // Form_contas
             // 

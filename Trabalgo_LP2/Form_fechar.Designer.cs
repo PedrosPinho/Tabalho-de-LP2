@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_fechar));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -39,17 +40,17 @@
             this.lbl_total = new System.Windows.Forms.Label();
             this.txt_total = new System.Windows.Forms.TextBox();
             this.lbl_div_contas = new System.Windows.Forms.Label();
-            this.txt_div_conta = new System.Windows.Forms.TextBox();
+            this.txt_num_pessoas = new System.Windows.Forms.TextBox();
             this.btn_calcular = new System.Windows.Forms.Button();
-            this.lbl_val_final = new System.Windows.Forms.Label();
-            this.txt_val_final = new System.Windows.Forms.TextBox();
+            this.lbl_valor_por_pessoa = new System.Windows.Forms.Label();
+            this.txt_val_pessoa = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txt_cpf_fechar = new System.Windows.Forms.TextBox();
             this.lbl_cpf_fechar = new System.Windows.Forms.Label();
             this.btn_cadastrado = new System.Windows.Forms.Button();
             this.lbl_pergunta = new System.Windows.Forms.Label();
             this.btn_nao_cadastrado = new System.Windows.Forms.Button();
-            this.btn_voltar = new System.Windows.Forms.Button();
+            this.btn_nao_quer_cadastrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -70,6 +71,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(610, 104);
             this.panel1.TabIndex = 0;
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.BackColor = System.Drawing.Color.Black;
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.ForeColor = System.Drawing.Color.White;
+            this.btn_voltar.Location = new System.Drawing.Point(471, 29);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(89, 34);
+            this.btn_voltar.TabIndex = 15;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = false;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // panel3
             // 
@@ -127,7 +142,7 @@
             // lbl_total
             // 
             this.lbl_total.AutoSize = true;
-            this.lbl_total.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_total.Font = new System.Drawing.Font("Arial Narrow", 36F);
             this.lbl_total.Location = new System.Drawing.Point(12, 151);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(124, 57);
@@ -138,7 +153,7 @@
             // 
             this.txt_total.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_total.ForeColor = System.Drawing.Color.Green;
-            this.txt_total.Location = new System.Drawing.Point(129, 145);
+            this.txt_total.Location = new System.Drawing.Point(138, 145);
             this.txt_total.Name = "txt_total";
             this.txt_total.Size = new System.Drawing.Size(223, 63);
             this.txt_total.TabIndex = 2;
@@ -146,20 +161,20 @@
             // lbl_div_contas
             // 
             this.lbl_div_contas.AutoSize = true;
-            this.lbl_div_contas.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_div_contas.Font = new System.Drawing.Font("Arial Narrow", 15.75F);
             this.lbl_div_contas.Location = new System.Drawing.Point(17, 240);
             this.lbl_div_contas.Name = "lbl_div_contas";
             this.lbl_div_contas.Size = new System.Drawing.Size(245, 25);
             this.lbl_div_contas.TabIndex = 3;
             this.lbl_div_contas.Text = "Dividir conta (nº de pessoas):";
             // 
-            // txt_div_conta
+            // txt_num_pessoas
             // 
-            this.txt_div_conta.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_div_conta.Location = new System.Drawing.Point(22, 268);
-            this.txt_div_conta.Name = "txt_div_conta";
-            this.txt_div_conta.Size = new System.Drawing.Size(189, 32);
-            this.txt_div_conta.TabIndex = 4;
+            this.txt_num_pessoas.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_num_pessoas.Location = new System.Drawing.Point(22, 268);
+            this.txt_num_pessoas.Name = "txt_num_pessoas";
+            this.txt_num_pessoas.Size = new System.Drawing.Size(189, 32);
+            this.txt_num_pessoas.TabIndex = 4;
             // 
             // btn_calcular
             // 
@@ -167,35 +182,37 @@
             this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_calcular.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_calcular.ForeColor = System.Drawing.Color.White;
-            this.btn_calcular.Location = new System.Drawing.Point(263, 268);
+            this.btn_calcular.Location = new System.Drawing.Point(272, 268);
             this.btn_calcular.Name = "btn_calcular";
             this.btn_calcular.Size = new System.Drawing.Size(89, 32);
             this.btn_calcular.TabIndex = 10;
             this.btn_calcular.Text = "Calcular";
             this.btn_calcular.UseVisualStyleBackColor = false;
+            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
             // 
-            // lbl_val_final
+            // lbl_valor_por_pessoa
             // 
-            this.lbl_val_final.AutoSize = true;
-            this.lbl_val_final.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_val_final.Location = new System.Drawing.Point(12, 340);
-            this.lbl_val_final.Name = "lbl_val_final";
-            this.lbl_val_final.Size = new System.Drawing.Size(212, 57);
-            this.lbl_val_final.TabIndex = 11;
-            this.lbl_val_final.Text = "Valor final:";
+            this.lbl_valor_por_pessoa.AutoSize = true;
+            this.lbl_valor_por_pessoa.Font = new System.Drawing.Font("Arial Narrow", 22F);
+            this.lbl_valor_por_pessoa.Location = new System.Drawing.Point(12, 355);
+            this.lbl_valor_por_pessoa.Name = "lbl_valor_por_pessoa";
+            this.lbl_valor_por_pessoa.Size = new System.Drawing.Size(209, 35);
+            this.lbl_valor_por_pessoa.TabIndex = 11;
+            this.lbl_valor_por_pessoa.Text = "Valor por pessoa:";
             // 
-            // txt_val_final
+            // txt_val_pessoa
             // 
-            this.txt_val_final.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_val_final.ForeColor = System.Drawing.Color.Green;
-            this.txt_val_final.Location = new System.Drawing.Point(218, 334);
-            this.txt_val_final.Name = "txt_val_final";
-            this.txt_val_final.Size = new System.Drawing.Size(134, 63);
-            this.txt_val_final.TabIndex = 12;
+            this.txt_val_pessoa.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_val_pessoa.ForeColor = System.Drawing.Color.Green;
+            this.txt_val_pessoa.Location = new System.Drawing.Point(227, 340);
+            this.txt_val_pessoa.Name = "txt_val_pessoa";
+            this.txt_val_pessoa.Size = new System.Drawing.Size(134, 63);
+            this.txt_val_pessoa.TabIndex = 12;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel5.Controls.Add(this.btn_nao_quer_cadastrar);
             this.panel5.Controls.Add(this.txt_cpf_fechar);
             this.panel5.Controls.Add(this.lbl_cpf_fechar);
             this.panel5.Controls.Add(this.btn_cadastrado);
@@ -209,7 +226,7 @@
             // txt_cpf_fechar
             // 
             this.txt_cpf_fechar.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cpf_fechar.Location = new System.Drawing.Point(28, 78);
+            this.txt_cpf_fechar.Location = new System.Drawing.Point(28, 42);
             this.txt_cpf_fechar.Name = "txt_cpf_fechar";
             this.txt_cpf_fechar.Size = new System.Drawing.Size(144, 32);
             this.txt_cpf_fechar.TabIndex = 14;
@@ -217,8 +234,8 @@
             // lbl_cpf_fechar
             // 
             this.lbl_cpf_fechar.AutoSize = true;
-            this.lbl_cpf_fechar.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cpf_fechar.Location = new System.Drawing.Point(23, 50);
+            this.lbl_cpf_fechar.Font = new System.Drawing.Font("Arial Narrow", 15.75F);
+            this.lbl_cpf_fechar.Location = new System.Drawing.Point(23, 14);
             this.lbl_cpf_fechar.Name = "lbl_cpf_fechar";
             this.lbl_cpf_fechar.Size = new System.Drawing.Size(51, 25);
             this.lbl_cpf_fechar.TabIndex = 14;
@@ -231,9 +248,9 @@
             this.btn_cadastrado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cadastrado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cadastrado.ForeColor = System.Drawing.Color.White;
-            this.btn_cadastrado.Location = new System.Drawing.Point(44, 138);
+            this.btn_cadastrado.Location = new System.Drawing.Point(44, 99);
             this.btn_cadastrado.Name = "btn_cadastrado";
-            this.btn_cadastrado.Size = new System.Drawing.Size(112, 34);
+            this.btn_cadastrado.Size = new System.Drawing.Size(112, 38);
             this.btn_cadastrado.TabIndex = 12;
             this.btn_cadastrado.Text = " Cadastrado";
             this.btn_cadastrado.UseVisualStyleBackColor = false;
@@ -254,26 +271,26 @@
             this.btn_nao_cadastrado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_nao_cadastrado.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nao_cadastrado.ForeColor = System.Drawing.Color.White;
-            this.btn_nao_cadastrado.Location = new System.Drawing.Point(44, 189);
+            this.btn_nao_cadastrado.Location = new System.Drawing.Point(44, 147);
             this.btn_nao_cadastrado.Name = "btn_nao_cadastrado";
-            this.btn_nao_cadastrado.Size = new System.Drawing.Size(112, 34);
+            this.btn_nao_cadastrado.Size = new System.Drawing.Size(112, 38);
             this.btn_nao_cadastrado.TabIndex = 10;
             this.btn_nao_cadastrado.Text = "Não Cadastrado";
             this.btn_nao_cadastrado.UseVisualStyleBackColor = false;
             // 
-            // btn_voltar
+            // btn_nao_quer_cadastrar
             // 
-            this.btn_voltar.BackColor = System.Drawing.Color.Black;
-            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(471, 29);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(89, 34);
-            this.btn_voltar.TabIndex = 15;
-            this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.UseVisualStyleBackColor = false;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            this.btn_nao_quer_cadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_nao_quer_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_nao_quer_cadastrar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_nao_quer_cadastrar.ForeColor = System.Drawing.Color.White;
+            this.btn_nao_quer_cadastrar.Location = new System.Drawing.Point(44, 195);
+            this.btn_nao_quer_cadastrar.Name = "btn_nao_quer_cadastrar";
+            this.btn_nao_quer_cadastrar.Size = new System.Drawing.Size(112, 38);
+            this.btn_nao_quer_cadastrar.TabIndex = 15;
+            this.btn_nao_quer_cadastrar.Text = "Pagar sem cadastro";
+            this.btn_nao_quer_cadastrar.UseVisualStyleBackColor = false;
+            this.btn_nao_quer_cadastrar.Click += new System.EventHandler(this.btn_nao_quer_cadastrar_Click);
             // 
             // Form_fechar
             // 
@@ -282,10 +299,10 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(612, 437);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.txt_val_final);
-            this.Controls.Add(this.lbl_val_final);
+            this.Controls.Add(this.txt_val_pessoa);
+            this.Controls.Add(this.lbl_valor_por_pessoa);
             this.Controls.Add(this.btn_calcular);
-            this.Controls.Add(this.txt_div_conta);
+            this.Controls.Add(this.txt_num_pessoas);
             this.Controls.Add(this.lbl_div_contas);
             this.Controls.Add(this.txt_total);
             this.Controls.Add(this.lbl_total);
@@ -315,13 +332,13 @@
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.TextBox txt_total;
         private System.Windows.Forms.Label lbl_div_contas;
-        private System.Windows.Forms.TextBox txt_div_conta;
+        private System.Windows.Forms.TextBox txt_num_pessoas;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btn_calcular;
-        private System.Windows.Forms.Label lbl_val_final;
-        private System.Windows.Forms.TextBox txt_val_final;
+        private System.Windows.Forms.Label lbl_valor_por_pessoa;
+        private System.Windows.Forms.TextBox txt_val_pessoa;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lbl_cpf_fechar;
         private System.Windows.Forms.Button btn_cadastrado;
@@ -329,5 +346,6 @@
         private System.Windows.Forms.Button btn_nao_cadastrado;
         private System.Windows.Forms.TextBox txt_cpf_fechar;
         private System.Windows.Forms.Button btn_voltar;
+        private System.Windows.Forms.Button btn_nao_quer_cadastrar;
     }
 }
