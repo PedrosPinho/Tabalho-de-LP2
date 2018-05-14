@@ -99,7 +99,7 @@
             this.btn_logoff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_logoff.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logoff.ForeColor = System.Drawing.Color.White;
-            this.btn_logoff.Location = new System.Drawing.Point(1333, 38);
+            this.btn_logoff.Location = new System.Drawing.Point(1245, 33);
             this.btn_logoff.Name = "btn_logoff";
             this.btn_logoff.Size = new System.Drawing.Size(113, 36);
             this.btn_logoff.TabIndex = 3;
