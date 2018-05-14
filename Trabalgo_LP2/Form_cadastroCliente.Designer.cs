@@ -59,7 +59,7 @@
             // maskedTextBox_telefone
             // 
             this.maskedTextBox_telefone.Location = new System.Drawing.Point(15, 201);
-            this.maskedTextBox_telefone.Mask = "0000-0000";
+            this.maskedTextBox_telefone.Mask = "(00) 00000-0000";
             this.maskedTextBox_telefone.Name = "maskedTextBox_telefone";
             this.maskedTextBox_telefone.Size = new System.Drawing.Size(185, 20);
             this.maskedTextBox_telefone.TabIndex = 26;

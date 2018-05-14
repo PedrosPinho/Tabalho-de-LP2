@@ -150,7 +150,7 @@
             // maskedTextBox_telefone
             // 
             this.maskedTextBox_telefone.Location = new System.Drawing.Point(15, 215);
-            this.maskedTextBox_telefone.Mask = "0000-0000";
+            this.maskedTextBox_telefone.Mask = "(00) 00000-0000";
             this.maskedTextBox_telefone.Name = "maskedTextBox_telefone";
             this.maskedTextBox_telefone.Size = new System.Drawing.Size(185, 20);
             this.maskedTextBox_telefone.TabIndex = 11;
@@ -162,6 +162,7 @@
             this.maskedTextBox_cpf.Name = "maskedTextBox_cpf";
             this.maskedTextBox_cpf.Size = new System.Drawing.Size(185, 20);
             this.maskedTextBox_cpf.TabIndex = 10;
+            this.maskedTextBox_cpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox_cpf_MaskInputRejected);
             // 
             // btn_cancelar
             // 

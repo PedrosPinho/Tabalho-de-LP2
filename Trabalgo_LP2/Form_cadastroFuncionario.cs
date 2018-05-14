@@ -41,5 +41,10 @@ namespace Trabalgo_LP2
         {
 
         }
+
+        private void maskedTextBox_cpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
