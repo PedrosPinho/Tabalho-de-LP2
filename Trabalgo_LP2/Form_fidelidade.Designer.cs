@@ -35,10 +35,10 @@
             this.Column_frequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_voltar = new System.Windows.Forms.Button();
-            this.lbl_fidelidade = new System.Windows.Forms.Label();
-            this.panel_fidelidade = new System.Windows.Forms.Panel();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lbl_fidelidade = new System.Windows.Forms.Label();
+            this.panel_fidelidade = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fidelidade)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -49,6 +49,7 @@
             // 
             this.dataGridView_fidelidade.AllowUserToAddRows = false;
             this.dataGridView_fidelidade.AllowUserToDeleteRows = false;
+            this.dataGridView_fidelidade.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_fidelidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_fidelidade.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column_Nome,
@@ -85,9 +86,9 @@
             this.panel2.Controls.Add(this.pictureBox_logo);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.lbl_fidelidade);
-            this.panel2.Location = new System.Drawing.Point(1, 1);
+            this.panel2.Location = new System.Drawing.Point(-1, -2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(610, 103);
+            this.panel2.Size = new System.Drawing.Size(612, 106);
             this.panel2.TabIndex = 4;
             // 
             // btn_voltar
@@ -106,24 +107,6 @@
             this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_voltar.UseVisualStyleBackColor = false;
             this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
-            // 
-            // lbl_fidelidade
-            // 
-            this.lbl_fidelidade.AutoSize = true;
-            this.lbl_fidelidade.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fidelidade.Location = new System.Drawing.Point(265, 30);
-            this.lbl_fidelidade.Name = "lbl_fidelidade";
-            this.lbl_fidelidade.Size = new System.Drawing.Size(186, 41);
-            this.lbl_fidelidade.TabIndex = 0;
-            this.lbl_fidelidade.Text = "Fidelidade";
-            // 
-            // panel_fidelidade
-            // 
-            this.panel_fidelidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
-            this.panel_fidelidade.Location = new System.Drawing.Point(12, 137);
-            this.panel_fidelidade.Name = "panel_fidelidade";
-            this.panel_fidelidade.Size = new System.Drawing.Size(218, 319);
-            this.panel_fidelidade.TabIndex = 6;
             // 
             // pictureBox_logo
             // 
@@ -145,6 +128,24 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
+            // lbl_fidelidade
+            // 
+            this.lbl_fidelidade.AutoSize = true;
+            this.lbl_fidelidade.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fidelidade.Location = new System.Drawing.Point(265, 30);
+            this.lbl_fidelidade.Name = "lbl_fidelidade";
+            this.lbl_fidelidade.Size = new System.Drawing.Size(186, 41);
+            this.lbl_fidelidade.TabIndex = 0;
+            this.lbl_fidelidade.Text = "Fidelidade";
+            // 
+            // panel_fidelidade
+            // 
+            this.panel_fidelidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
+            this.panel_fidelidade.Location = new System.Drawing.Point(12, 137);
+            this.panel_fidelidade.Name = "panel_fidelidade";
+            this.panel_fidelidade.Size = new System.Drawing.Size(218, 319);
+            this.panel_fidelidade.TabIndex = 6;
+            // 
             // Form_fidelidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -153,6 +154,7 @@
             this.Controls.Add(this.panel_fidelidade);
             this.Controls.Add(this.dataGridView_fidelidade);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_fidelidade";
             this.Text = "Form_fidelidade";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fidelidade)).EndInit();

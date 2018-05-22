@@ -67,9 +67,9 @@
             // txt_filtrar
             // 
             this.txt_filtrar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_filtrar.Location = new System.Drawing.Point(63, 115);
+            this.txt_filtrar.Location = new System.Drawing.Point(66, 115);
             this.txt_filtrar.Name = "txt_filtrar";
-            this.txt_filtrar.Size = new System.Drawing.Size(353, 26);
+            this.txt_filtrar.Size = new System.Drawing.Size(350, 26);
             this.txt_filtrar.TabIndex = 19;
             // 
             // dataGridView_funcionario
@@ -121,14 +121,16 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
             this.panel2.Controls.Add(this.btn_voltar);
             this.panel2.Controls.Add(this.pictureBox_logo);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.lbl_funcionario);
-            this.panel2.Location = new System.Drawing.Point(0, 1);
+            this.panel2.Location = new System.Drawing.Point(0, -2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(666, 103);
+            this.panel2.Size = new System.Drawing.Size(669, 106);
             this.panel2.TabIndex = 15;
             // 
             // btn_voltar
@@ -182,7 +184,7 @@
             // 
             this.lbl_filtrar.AutoSize = true;
             this.lbl_filtrar.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_filtrar.Location = new System.Drawing.Point(12, 115);
+            this.lbl_filtrar.Location = new System.Drawing.Point(12, 118);
             this.lbl_filtrar.Name = "lbl_filtrar";
             this.lbl_filtrar.Size = new System.Drawing.Size(54, 23);
             this.lbl_filtrar.TabIndex = 21;
@@ -234,6 +236,7 @@
             this.Controls.Add(this.btn_alterar);
             this.Controls.Add(this.dataGridView_funcionario);
             this.Controls.Add(this.panel2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_funcionario";
             this.Text = "Form_funcionario";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_funcionario)).EndInit();

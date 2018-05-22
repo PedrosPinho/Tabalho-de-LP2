@@ -39,11 +39,11 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.lbl_Cadastro = new System.Windows.Forms.Label();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox_cadastro = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_telefone
@@ -130,10 +130,10 @@
             // lbl_Cadastro
             // 
             this.lbl_Cadastro.AutoSize = true;
-            this.lbl_Cadastro.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cadastro.Location = new System.Drawing.Point(197, 18);
+            this.lbl_Cadastro.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cadastro.Location = new System.Drawing.Point(171, 13);
             this.lbl_Cadastro.Name = "lbl_Cadastro";
-            this.lbl_Cadastro.Size = new System.Drawing.Size(205, 24);
+            this.lbl_Cadastro.Size = new System.Drawing.Size(269, 32);
             this.lbl_Cadastro.TabIndex = 32;
             this.lbl_Cadastro.Text = "Cadastro de cliente";
             // 
@@ -147,16 +147,6 @@
             this.pictureBox_logo.TabIndex = 34;
             this.pictureBox_logo.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(156, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(41, 33);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 33;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox_cadastro
             // 
             this.pictureBox_cadastro.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cadastro.Image")));
@@ -167,15 +157,25 @@
             this.pictureBox_cadastro.TabIndex = 17;
             this.pictureBox_cadastro.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(130, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(44, 45);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
+            // 
             // Form_cadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
             this.ClientSize = new System.Drawing.Size(553, 282);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txt_nome);
             this.Controls.Add(this.pictureBox_logo);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lbl_Cadastro);
             this.Controls.Add(this.lbl_telefone);
             this.Controls.Add(this.maskedTextBox_telefone);
@@ -185,11 +185,12 @@
             this.Controls.Add(this.lbl_cpf);
             this.Controls.Add(this.lbl_nome);
             this.Controls.Add(this.pictureBox_cadastro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_cadastroCliente";
             this.Text = "Form_cadastroCliente";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,7 +207,7 @@
         private System.Windows.Forms.Label lbl_nome;
         private System.Windows.Forms.PictureBox pictureBox_cadastro;
         private System.Windows.Forms.Label lbl_Cadastro;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox_logo;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

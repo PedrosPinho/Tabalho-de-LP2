@@ -116,6 +116,7 @@
             // 
             this.grid_contas.AllowUserToAddRows = false;
             this.grid_contas.AllowUserToDeleteRows = false;
+            this.grid_contas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_contas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -125,6 +126,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grid_contas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grid_contas.ColumnHeadersHeight = 25;
             this.grid_contas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_item,
             this.nome_item,
@@ -133,7 +135,7 @@
             this.grid_contas.Location = new System.Drawing.Point(44, 129);
             this.grid_contas.Name = "grid_contas";
             this.grid_contas.ReadOnly = true;
-            this.grid_contas.Size = new System.Drawing.Size(344, 294);
+            this.grid_contas.Size = new System.Drawing.Size(361, 294);
             this.grid_contas.TabIndex = 3;
             // 
             // id_item
@@ -246,6 +248,7 @@
             this.Controls.Add(this.lbl_id_item);
             this.Controls.Add(this.grid_contas);
             this.Controls.Add(this.panel3);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_contas";
             this.Text = "Form_Contas";
             this.Load += new System.EventHandler(this.Form_contas_Load);

@@ -56,7 +56,7 @@
             this.panel1.Controls.Add(this.btn_logoff);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 103);
+            this.panel1.Size = new System.Drawing.Size(1213, 103);
             this.panel1.TabIndex = 7;
             // 
             // pictureBox2
@@ -72,7 +72,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(556, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(522, 15);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 72);
             this.pictureBox1.TabIndex = 4;
@@ -84,7 +84,7 @@
             this.lbl_home.AutoSize = true;
             this.lbl_home.Font = new System.Drawing.Font("Arial Narrow", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_home.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_home.Location = new System.Drawing.Point(620, 9);
+            this.lbl_home.Location = new System.Drawing.Point(582, 15);
             this.lbl_home.Name = "lbl_home";
             this.lbl_home.Size = new System.Drawing.Size(178, 75);
             this.lbl_home.TabIndex = 2;
@@ -99,7 +99,7 @@
             this.btn_logoff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_logoff.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logoff.ForeColor = System.Drawing.Color.White;
-            this.btn_logoff.Location = new System.Drawing.Point(1245, 33);
+            this.btn_logoff.Location = new System.Drawing.Point(1069, 31);
             this.btn_logoff.Name = "btn_logoff";
             this.btn_logoff.Size = new System.Drawing.Size(113, 36);
             this.btn_logoff.TabIndex = 3;
@@ -118,7 +118,7 @@
             this.btn_fidelidade.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_fidelidade.ForeColor = System.Drawing.Color.White;
             this.btn_fidelidade.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btn_fidelidade.Location = new System.Drawing.Point(391, 402);
+            this.btn_fidelidade.Location = new System.Drawing.Point(312, 402);
             this.btn_fidelidade.Name = "btn_fidelidade";
             this.btn_fidelidade.Size = new System.Drawing.Size(245, 108);
             this.btn_fidelidade.TabIndex = 12;
@@ -137,7 +137,7 @@
             this.btn_cardapio.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cardapio.ForeColor = System.Drawing.Color.White;
             this.btn_cardapio.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btn_cardapio.Location = new System.Drawing.Point(714, 269);
+            this.btn_cardapio.Location = new System.Drawing.Point(635, 269);
             this.btn_cardapio.Name = "btn_cardapio";
             this.btn_cardapio.Size = new System.Drawing.Size(245, 108);
             this.btn_cardapio.TabIndex = 11;
@@ -156,7 +156,7 @@
             this.btn_mesa.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_mesa.ForeColor = System.Drawing.Color.White;
             this.btn_mesa.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btn_mesa.Location = new System.Drawing.Point(391, 269);
+            this.btn_mesa.Location = new System.Drawing.Point(312, 269);
             this.btn_mesa.Name = "btn_mesa";
             this.btn_mesa.Size = new System.Drawing.Size(245, 108);
             this.btn_mesa.TabIndex = 10;
@@ -175,7 +175,7 @@
             this.btn_cliente.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cliente.ForeColor = System.Drawing.Color.White;
             this.btn_cliente.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btn_cliente.Location = new System.Drawing.Point(714, 135);
+            this.btn_cliente.Location = new System.Drawing.Point(635, 135);
             this.btn_cliente.Name = "btn_cliente";
             this.btn_cliente.Size = new System.Drawing.Size(245, 108);
             this.btn_cliente.TabIndex = 9;
@@ -190,10 +190,12 @@
             this.btn_funcionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
             this.btn_funcionario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_funcionario.BackgroundImage")));
             this.btn_funcionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_funcionario.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btn_funcionario.FlatAppearance.BorderSize = 10;
             this.btn_funcionario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_funcionario.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_funcionario.ForeColor = System.Drawing.Color.White;
-            this.btn_funcionario.Location = new System.Drawing.Point(391, 135);
+            this.btn_funcionario.Location = new System.Drawing.Point(312, 135);
             this.btn_funcionario.Margin = new System.Windows.Forms.Padding(1);
             this.btn_funcionario.Name = "btn_funcionario";
             this.btn_funcionario.Size = new System.Drawing.Size(245, 108);
@@ -213,7 +215,7 @@
             this.btn_fornecedor.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_fornecedor.ForeColor = System.Drawing.Color.White;
             this.btn_fornecedor.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btn_fornecedor.Location = new System.Drawing.Point(714, 402);
+            this.btn_fornecedor.Location = new System.Drawing.Point(635, 402);
             this.btn_fornecedor.Name = "btn_fornecedor";
             this.btn_fornecedor.Size = new System.Drawing.Size(245, 108);
             this.btn_fornecedor.TabIndex = 13;
@@ -223,11 +225,14 @@
             // 
             // Form_menu
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 571);
+            this.ClientSize = new System.Drawing.Size(1213, 571);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_fidelidade);
             this.Controls.Add(this.btn_cardapio);
@@ -236,11 +241,11 @@
             this.Controls.Add(this.btn_funcionario);
             this.Controls.Add(this.btn_fornecedor);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_menu";
             this.Text = "Form_menu";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_menu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

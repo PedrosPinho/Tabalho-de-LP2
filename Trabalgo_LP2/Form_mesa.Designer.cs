@@ -33,18 +33,18 @@
             this.txt_mesa = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_voltar = new System.Windows.Forms.Button();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_mesa = new System.Windows.Forms.Label();
             this.grid_mesas = new System.Windows.Forms.DataGridView();
             this.Mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pessoas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_mesas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_mesas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,47 +102,6 @@
             this.btn_voltar.UseVisualStyleBackColor = false;
             this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
-            // lbl_mesa
-            // 
-            this.lbl_mesa.AutoSize = true;
-            this.lbl_mesa.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mesa.Location = new System.Drawing.Point(280, 30);
-            this.lbl_mesa.Name = "lbl_mesa";
-            this.lbl_mesa.Size = new System.Drawing.Size(123, 41);
-            this.lbl_mesa.TabIndex = 0;
-            this.lbl_mesa.Text = "Mesas";
-            // 
-            // grid_mesas
-            // 
-            this.grid_mesas.AllowUserToAddRows = false;
-            this.grid_mesas.AllowUserToDeleteRows = false;
-            this.grid_mesas.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
-            this.grid_mesas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.grid_mesas.ColumnHeadersHeight = 25;
-            this.grid_mesas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Mesa,
-            this.Pessoas});
-            this.grid_mesas.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.grid_mesas.Location = new System.Drawing.Point(46, 159);
-            this.grid_mesas.Name = "grid_mesas";
-            this.grid_mesas.ReadOnly = true;
-            this.grid_mesas.Size = new System.Drawing.Size(244, 283);
-            this.grid_mesas.StandardTab = true;
-            this.grid_mesas.TabIndex = 2;
-            this.grid_mesas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Mesa
-            // 
-            this.Mesa.HeaderText = "Mesa";
-            this.Mesa.Name = "Mesa";
-            this.Mesa.ReadOnly = true;
-            // 
-            // Pessoas
-            // 
-            this.Pessoas.HeaderText = "Pessoas";
-            this.Pessoas.Name = "Pessoas";
-            this.Pessoas.ReadOnly = true;
-            // 
             // pictureBox_logo
             // 
             this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
@@ -163,10 +122,54 @@
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
+            // lbl_mesa
+            // 
+            this.lbl_mesa.AutoSize = true;
+            this.lbl_mesa.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mesa.Location = new System.Drawing.Point(280, 30);
+            this.lbl_mesa.Name = "lbl_mesa";
+            this.lbl_mesa.Size = new System.Drawing.Size(123, 41);
+            this.lbl_mesa.TabIndex = 0;
+            this.lbl_mesa.Text = "Mesas";
+            // 
+            // grid_mesas
+            // 
+            this.grid_mesas.AllowUserToAddRows = false;
+            this.grid_mesas.AllowUserToDeleteRows = false;
+            this.grid_mesas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grid_mesas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid_mesas.BackgroundColor = System.Drawing.SystemColors.ButtonShadow;
+            this.grid_mesas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            this.grid_mesas.ColumnHeadersHeight = 25;
+            this.grid_mesas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Mesa,
+            this.Pessoas});
+            this.grid_mesas.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.grid_mesas.Location = new System.Drawing.Point(46, 159);
+            this.grid_mesas.Name = "grid_mesas";
+            this.grid_mesas.ReadOnly = true;
+            this.grid_mesas.Size = new System.Drawing.Size(301, 283);
+            this.grid_mesas.StandardTab = true;
+            this.grid_mesas.TabIndex = 2;
+            this.grid_mesas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Mesa
+            // 
+            this.Mesa.HeaderText = "Mesa";
+            this.Mesa.Name = "Mesa";
+            this.Mesa.ReadOnly = true;
+            // 
+            // Pessoas
+            // 
+            this.Pessoas.HeaderText = "Pessoas";
+            this.Pessoas.Name = "Pessoas";
+            this.Pessoas.ReadOnly = true;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(325, 202);
+            this.pictureBox2.Location = new System.Drawing.Point(365, 255);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(222, 187);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -179,15 +182,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 468);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_mesa";
             this.Text = "Form_mesa";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_mesas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_mesas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 

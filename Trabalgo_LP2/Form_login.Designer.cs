@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel_login = new System.Windows.Forms.Panel();
+            this.linklbl_cadastrar = new System.Windows.Forms.LinkLabel();
             this.btn_login = new System.Windows.Forms.Button();
             this.lbl_registro = new System.Windows.Forms.Label();
             this.maskedTextBox_registro = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox_login = new System.Windows.Forms.PictureBox();
-            this.linklbl_cadastrar = new System.Windows.Forms.LinkLabel();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_login)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +53,20 @@
             this.panel_login.Size = new System.Drawing.Size(559, 279);
             this.panel_login.TabIndex = 0;
             // 
+            // linklbl_cadastrar
+            // 
+            this.linklbl_cadastrar.AutoSize = true;
+            this.linklbl_cadastrar.Font = new System.Drawing.Font("Arial", 10F);
+            this.linklbl_cadastrar.LinkColor = System.Drawing.Color.Black;
+            this.linklbl_cadastrar.Location = new System.Drawing.Point(467, 175);
+            this.linklbl_cadastrar.Name = "linklbl_cadastrar";
+            this.linklbl_cadastrar.Size = new System.Drawing.Size(71, 16);
+            this.linklbl_cadastrar.TabIndex = 5;
+            this.linklbl_cadastrar.TabStop = true;
+            this.linklbl_cadastrar.Text = "Cadastrar";
+            this.linklbl_cadastrar.VisitedLinkColor = System.Drawing.Color.Black;
+            this.linklbl_cadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbl_cadastrar_LinkClicked);
+            // 
             // btn_login
             // 
             this.btn_login.BackColor = System.Drawing.Color.Black;
@@ -60,7 +74,7 @@
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_login.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_login.Location = new System.Drawing.Point(357, 151);
+            this.btn_login.Location = new System.Drawing.Point(357, 132);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(181, 28);
             this.btn_login.TabIndex = 4;
@@ -96,26 +110,13 @@
             this.pictureBox_login.TabIndex = 0;
             this.pictureBox_login.TabStop = false;
             // 
-            // linklbl_cadastrar
-            // 
-            this.linklbl_cadastrar.AutoSize = true;
-            this.linklbl_cadastrar.Font = new System.Drawing.Font("Arial", 10F);
-            this.linklbl_cadastrar.LinkColor = System.Drawing.Color.Black;
-            this.linklbl_cadastrar.Location = new System.Drawing.Point(467, 195);
-            this.linklbl_cadastrar.Name = "linklbl_cadastrar";
-            this.linklbl_cadastrar.Size = new System.Drawing.Size(71, 16);
-            this.linklbl_cadastrar.TabIndex = 5;
-            this.linklbl_cadastrar.TabStop = true;
-            this.linklbl_cadastrar.Text = "Cadastrar";
-            this.linklbl_cadastrar.VisitedLinkColor = System.Drawing.Color.Black;
-            this.linklbl_cadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklbl_cadastrar_LinkClicked);
-            // 
             // Form_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 279);
             this.Controls.Add(this.panel_login);
+            this.MaximizeBox = false;
             this.Name = "Form_login";
             this.Text = "Form_Login";
             this.panel_login.ResumeLayout(false);
