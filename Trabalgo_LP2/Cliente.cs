@@ -9,15 +9,23 @@ namespace Trabalgo_LP2
     class Cliente
     {
         private string nome;
-        private long cpf, telefone;
+        private string cpf, telefone;
         private int frequencia;
 
-        public Cliente(string nome, long cpf, long telefone, int frequencia)
+        public Cliente()
+        { }
+        public Cliente(string nome, string cpf, string telefone, int frequencia)
         {
             this.nome = nome;
             this.cpf = cpf;
             this.telefone = telefone;
             this.frequencia = frequencia;
+        }
+        public Cliente(string nome, string cpf, string telefone)
+        {
+            this.nome = nome;
+            this.cpf = cpf;
+            this.telefone = telefone;
         }
 
         public string Nome
@@ -33,7 +41,7 @@ namespace Trabalgo_LP2
             }
         }
 
-        public long Cpf
+        public string Cpf
         {
             get
             {
@@ -46,7 +54,7 @@ namespace Trabalgo_LP2
             }
         }
 
-        public long Telefone
+        public string Telefone
         {
             get
             {

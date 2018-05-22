@@ -22,39 +22,49 @@ namespace Trabalgo_LP2
             InitializeComponent();
         }
 
+        private Cliente GetDTO()
+        {
+            Cliente cliente = new Cliente();
+
+            cliente.Cpf = maskedTextBox_cpf.Text;
+            cliente.Nome = txt_nome.Text;
+            cliente.Telefone = maskedTextBox_telefone.Text;
+                
+            return cliente;
+        }
+        
+        private void SetDTO(Cliente c)
+        {
+            txt_nome.Text = c.Nome;
+            maskedTextBox_telefone.Text = c.Telefone.ToString();
+            maskedTextBox_cpf.Text = c.Cpf.ToString();
+        }
+
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Close();
         }
 
         private void Form_cadastroCliente_Load(object sender, EventArgs e)
         {
-            if (!File.Exists(nomebanco))
-            {
-                SQLiteConnection.CreateFile(nomebanco);
-                SQLiteConnection conn = new SQLiteConnection(conexao);
-                conn.Open();
 
-                StringBuilder sql = new StringBuilder();
-                sql.AppendLine("CREATE TABLE IF NOT EXISTS Cliente ([Cpf] INTEGER PRIMARY KEY NOT NULL UNIQUE,");
-                sql.AppendLine("[Nome] TEXT, [Telefone] INTEGER)");
-
-                SQLiteCommand cmd = new SQLiteCommand(sql.ToString(), conn);
-                try
-                {
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro ao criar banco de dados: " + ex.Message);
-                }
-            }
         }
 
         private void btn_confirmar_Click(object sender, EventArgs e)
         {
-            //CRIAR CLIENTE OK?
-
+            //ADICIONAR EXCESSÃO AQUI, VLW
+            if (txt_nome.Text.Equals("") || maskedTextBox_cpf.Text.Equals("") ||
+                maskedTextBox_telefone.Text.Equals(""))
+                MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                ClienteDAO clienteDAO = new ClienteDAO();
+                Cliente cliente = GetDTO();
+                clienteDAO.Create(cliente);
+                this.Close();
+            }
+            
         }
     }
 }
