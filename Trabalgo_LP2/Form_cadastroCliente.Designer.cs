@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_cadastroCliente));
             this.lbl_telefone = new System.Windows.Forms.Label();
-            this.maskedTextBox_telefone = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox_cpf = new System.Windows.Forms.MaskedTextBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_confirmar = new System.Windows.Forms.Button();
             this.txt_nome = new System.Windows.Forms.TextBox();
@@ -41,6 +39,8 @@
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.pictureBox_cadastro = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.txt_cpf = new System.Windows.Forms.TextBox();
+            this.txt_telefone = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -55,22 +55,6 @@
             this.lbl_telefone.Size = new System.Drawing.Size(73, 16);
             this.lbl_telefone.TabIndex = 29;
             this.lbl_telefone.Text = "Telefone:";
-            // 
-            // maskedTextBox_telefone
-            // 
-            this.maskedTextBox_telefone.Location = new System.Drawing.Point(15, 201);
-            this.maskedTextBox_telefone.Mask = "(00) 00000-0000";
-            this.maskedTextBox_telefone.Name = "maskedTextBox_telefone";
-            this.maskedTextBox_telefone.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_telefone.TabIndex = 26;
-            // 
-            // maskedTextBox_cpf
-            // 
-            this.maskedTextBox_cpf.Location = new System.Drawing.Point(15, 146);
-            this.maskedTextBox_cpf.Mask = "000.000.000-00";
-            this.maskedTextBox_cpf.Name = "maskedTextBox_cpf";
-            this.maskedTextBox_cpf.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_cpf.TabIndex = 25;
             // 
             // btn_cancelar
             // 
@@ -167,19 +151,33 @@
             this.pictureBox3.TabIndex = 35;
             this.pictureBox3.TabStop = false;
             // 
+            // txt_cpf
+            // 
+            this.txt_cpf.Location = new System.Drawing.Point(18, 147);
+            this.txt_cpf.Name = "txt_cpf";
+            this.txt_cpf.Size = new System.Drawing.Size(142, 20);
+            this.txt_cpf.TabIndex = 36;
+            // 
+            // txt_telefone
+            // 
+            this.txt_telefone.Location = new System.Drawing.Point(18, 202);
+            this.txt_telefone.Name = "txt_telefone";
+            this.txt_telefone.Size = new System.Drawing.Size(142, 20);
+            this.txt_telefone.TabIndex = 37;
+            // 
             // Form_cadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
             this.ClientSize = new System.Drawing.Size(553, 282);
+            this.Controls.Add(this.txt_telefone);
+            this.Controls.Add(this.txt_cpf);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txt_nome);
             this.Controls.Add(this.pictureBox_logo);
             this.Controls.Add(this.lbl_Cadastro);
             this.Controls.Add(this.lbl_telefone);
-            this.Controls.Add(this.maskedTextBox_telefone);
-            this.Controls.Add(this.maskedTextBox_cpf);
             this.Controls.Add(this.btn_cancelar);
             this.Controls.Add(this.btn_confirmar);
             this.Controls.Add(this.lbl_cpf);
@@ -199,8 +197,6 @@
 
         #endregion
         private System.Windows.Forms.Label lbl_telefone;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_telefone;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_cpf;
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_confirmar;
         private System.Windows.Forms.TextBox txt_nome;
@@ -210,5 +206,7 @@
         private System.Windows.Forms.Label lbl_Cadastro;
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox txt_cpf;
+        private System.Windows.Forms.TextBox txt_telefone;
     }
 }

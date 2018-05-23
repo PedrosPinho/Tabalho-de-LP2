@@ -13,12 +13,12 @@ namespace Trabalgo_LP2
     {
         private static SQLiteConnection conexao;
         private static Database instance;
-        private const string URL = "Data Source=VannerDB.db";
+        private const string URL = "Data Source=VannerBD.db";
 
         private Database()
         {
             // se o arquivo não existe, vamos criar
-            if (!File.Exists("VannerDB.db"))
+            if (!File.Exists("VannerBD.db"))
                 GerarBD();
 
             conexao = new SQLiteConnection(URL);
@@ -50,7 +50,7 @@ namespace Trabalgo_LP2
 
         private void GerarBD()
         {
-            SQLiteConnection.CreateFile("VannerDB.db");
+            SQLiteConnection.CreateFile("VannerBD.db");
             SQLiteConnection conn = new SQLiteConnection(URL);
             conn.Open();
 
@@ -76,9 +76,9 @@ namespace Trabalgo_LP2
 
             sql.Clear();
             sql.AppendLine("CREATE TABLE IF NOT EXISTS Funcionario (");
-            sql.AppendLine("[Registro] INTEGER PRIMARY KEY NOT NULL UNIQUE,");
+            sql.AppendLine("[Registro] TEXT PRIMARY KEY NOT NULL UNIQUE,");
             sql.AppendLine("[Nome] TEXT,");
-            sql.AppendLine("[Cpf] INTEGER UNIQUE,");
+            sql.AppendLine("[Cpf] TEXT UNIQUE,");
             sql.AppendLine("[Funcao] TEXT,");
             sql.AppendLine("[Data_inicio] DATE,");
             sql.AppendLine("[Telefone] TEXT);");

@@ -10,12 +10,12 @@ namespace Trabalgo_LP2
     {
         public void Create(Funcionario f)
         {
-            Database VannerDB = Database.GetInstance();
+            Database VannerBD = Database.GetInstance();
 
             string qry =
-            string.Format("INSERT INTO Funcionario (REGISTRO, NOME, CPF, FUNCAO, DATAINICIO, TELEFONE) VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}')",
+            string.Format("INSERT INTO Funcionario (REGISTRO, NOME, CPF, FUNCAO, DATA_INICIO, TELEFONE) VALUES ('{0}','{1}', '{2}', '{3}', '{4}', '{5}')",
                 f.Registro, f.Nome, f.Cpf, f.Funcao, f.Data_inicio, f.Telefone);
-            VannerDB.ExecuteSQL(qry);
+            VannerBD.ExecuteSQL(qry);
         }
     }
 }

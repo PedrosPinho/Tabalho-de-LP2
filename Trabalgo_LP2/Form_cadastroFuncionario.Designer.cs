@@ -37,9 +37,6 @@
             this.txt_registroFunc = new System.Windows.Forms.TextBox();
             this.btn_confirmar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            this.maskedTextBox_cpfFunc = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox_telefoneFunc = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox_dataFunc = new System.Windows.Forms.MaskedTextBox();
             this.txt_funcaoFunc = new System.Windows.Forms.TextBox();
             this.lbl_telefone = new System.Windows.Forms.Label();
             this.lbl_data = new System.Windows.Forms.Label();
@@ -48,6 +45,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel_cadastro = new System.Windows.Forms.Panel();
             this.lbl_Cadastro = new System.Windows.Forms.Label();
+            this.txt_cpfFunc = new System.Windows.Forms.TextBox();
+            this.txt_telefoneFunc = new System.Windows.Forms.TextBox();
+            this.txt_dataFunc = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -137,31 +137,6 @@
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
-            // maskedTextBox_cpfFunc
-            // 
-            this.maskedTextBox_cpfFunc.Location = new System.Drawing.Point(15, 131);
-            this.maskedTextBox_cpfFunc.Mask = "000.000.000-00";
-            this.maskedTextBox_cpfFunc.Name = "maskedTextBox_cpfFunc";
-            this.maskedTextBox_cpfFunc.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_cpfFunc.TabIndex = 10;
-            this.maskedTextBox_cpfFunc.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox_cpf_MaskInputRejected);
-            // 
-            // maskedTextBox_telefoneFunc
-            // 
-            this.maskedTextBox_telefoneFunc.Location = new System.Drawing.Point(15, 215);
-            this.maskedTextBox_telefoneFunc.Mask = "(00) 00000-0000";
-            this.maskedTextBox_telefoneFunc.Name = "maskedTextBox_telefoneFunc";
-            this.maskedTextBox_telefoneFunc.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_telefoneFunc.TabIndex = 11;
-            // 
-            // maskedTextBox_dataFunc
-            // 
-            this.maskedTextBox_dataFunc.Location = new System.Drawing.Point(15, 257);
-            this.maskedTextBox_dataFunc.Mask = "00/00/0000";
-            this.maskedTextBox_dataFunc.Name = "maskedTextBox_dataFunc";
-            this.maskedTextBox_dataFunc.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_dataFunc.TabIndex = 12;
-            // 
             // txt_funcaoFunc
             // 
             this.txt_funcaoFunc.Location = new System.Drawing.Point(15, 299);
@@ -222,6 +197,9 @@
             // panel_cadastro
             // 
             this.panel_cadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel_cadastro.Controls.Add(this.txt_dataFunc);
+            this.panel_cadastro.Controls.Add(this.txt_telefoneFunc);
+            this.panel_cadastro.Controls.Add(this.txt_cpfFunc);
             this.panel_cadastro.Controls.Add(this.lbl_Cadastro);
             this.panel_cadastro.Controls.Add(this.pictureBox3);
             this.panel_cadastro.Controls.Add(this.pictureBox_logo);
@@ -229,9 +207,6 @@
             this.panel_cadastro.Controls.Add(this.lbl_data);
             this.panel_cadastro.Controls.Add(this.lbl_telefone);
             this.panel_cadastro.Controls.Add(this.txt_funcaoFunc);
-            this.panel_cadastro.Controls.Add(this.maskedTextBox_dataFunc);
-            this.panel_cadastro.Controls.Add(this.maskedTextBox_telefoneFunc);
-            this.panel_cadastro.Controls.Add(this.maskedTextBox_cpfFunc);
             this.panel_cadastro.Controls.Add(this.btn_cancelar);
             this.panel_cadastro.Controls.Add(this.btn_confirmar);
             this.panel_cadastro.Controls.Add(this.txt_registroFunc);
@@ -256,6 +231,27 @@
             this.lbl_Cadastro.Size = new System.Drawing.Size(341, 32);
             this.lbl_Cadastro.TabIndex = 37;
             this.lbl_Cadastro.Text = "Cadastro de Funcionário";
+            // 
+            // txt_cpfFunc
+            // 
+            this.txt_cpfFunc.Location = new System.Drawing.Point(15, 132);
+            this.txt_cpfFunc.Name = "txt_cpfFunc";
+            this.txt_cpfFunc.Size = new System.Drawing.Size(185, 20);
+            this.txt_cpfFunc.TabIndex = 38;
+            // 
+            // txt_telefoneFunc
+            // 
+            this.txt_telefoneFunc.Location = new System.Drawing.Point(15, 216);
+            this.txt_telefoneFunc.Name = "txt_telefoneFunc";
+            this.txt_telefoneFunc.Size = new System.Drawing.Size(185, 20);
+            this.txt_telefoneFunc.TabIndex = 39;
+            // 
+            // txt_dataFunc
+            // 
+            this.txt_dataFunc.Location = new System.Drawing.Point(15, 258);
+            this.txt_dataFunc.Name = "txt_dataFunc";
+            this.txt_dataFunc.Size = new System.Drawing.Size(185, 20);
+            this.txt_dataFunc.TabIndex = 40;
             // 
             // Form_cadastroFuncionario
             // 
@@ -285,9 +281,6 @@
         private System.Windows.Forms.TextBox txt_registroFunc;
         private System.Windows.Forms.Button btn_confirmar;
         private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_cpfFunc;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_telefoneFunc;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_dataFunc;
         private System.Windows.Forms.TextBox txt_funcaoFunc;
         private System.Windows.Forms.Label lbl_telefone;
         private System.Windows.Forms.Label lbl_data;
@@ -296,5 +289,8 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel_cadastro;
         private System.Windows.Forms.Label lbl_Cadastro;
+        private System.Windows.Forms.TextBox txt_dataFunc;
+        private System.Windows.Forms.TextBox txt_telefoneFunc;
+        private System.Windows.Forms.TextBox txt_cpfFunc;
     }
 }
