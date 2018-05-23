@@ -68,14 +68,14 @@
             // btn_voltar
             // 
             this.btn_voltar.BackColor = System.Drawing.Color.Black;
-            this.btn_voltar.BackgroundImage = global::Trabalgo_LP2.Properties.Resources._2018_05_11_11_13_45_Quant_UX___Prototype__Test_and_Learn___1_6;
+            this.btn_voltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_voltar.BackgroundImage")));
             this.btn_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(517, 30);
+            this.btn_voltar.Location = new System.Drawing.Point(527, 30);
             this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(67, 34);
+            this.btn_voltar.Size = new System.Drawing.Size(57, 34);
             this.btn_voltar.TabIndex = 15;
             this.btn_voltar.Text = "Voltar";
             this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -84,7 +84,7 @@
             // 
             // pictureBox_logo
             // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
             this.pictureBox_logo.Location = new System.Drawing.Point(0, 7);
             this.pictureBox_logo.Name = "pictureBox_logo";
             this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);

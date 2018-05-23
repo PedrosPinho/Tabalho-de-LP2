@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_login));
             this.panel_login = new System.Windows.Forms.Panel();
             this.linklbl_cadastrar = new System.Windows.Forms.LinkLabel();
             this.btn_login = new System.Windows.Forms.Button();
@@ -102,7 +103,7 @@
             // 
             // pictureBox_login
             // 
-            this.pictureBox_login.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_login.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_login.Image")));
             this.pictureBox_login.Location = new System.Drawing.Point(3, 12);
             this.pictureBox_login.Name = "pictureBox_login";
             this.pictureBox_login.Size = new System.Drawing.Size(305, 255);

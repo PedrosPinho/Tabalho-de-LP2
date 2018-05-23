@@ -94,12 +94,12 @@
             // 
             this.btn_logoff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btn_logoff.BackColor = System.Drawing.Color.Black;
-            this.btn_logoff.BackgroundImage = global::Trabalgo_LP2.Properties.Resources.logout1;
+            this.btn_logoff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_logoff.BackgroundImage")));
             this.btn_logoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_logoff.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_logoff.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_logoff.ForeColor = System.Drawing.Color.White;
-            this.btn_logoff.Location = new System.Drawing.Point(1069, 31);
+            this.btn_logoff.Location = new System.Drawing.Point(1088, 34);
             this.btn_logoff.Name = "btn_logoff";
             this.btn_logoff.Size = new System.Drawing.Size(113, 36);
             this.btn_logoff.TabIndex = 3;

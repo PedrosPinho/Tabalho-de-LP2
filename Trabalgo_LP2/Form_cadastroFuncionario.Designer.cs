@@ -201,7 +201,7 @@
             // 
             // pictureBox_logo
             // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.logo;
+            this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
             this.pictureBox_logo.Location = new System.Drawing.Point(0, 0);
             this.pictureBox_logo.Name = "pictureBox_logo";
             this.pictureBox_logo.Size = new System.Drawing.Size(124, 54);
