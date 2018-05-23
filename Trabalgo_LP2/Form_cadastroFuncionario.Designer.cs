@@ -33,14 +33,14 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.lbl_cpf = new System.Windows.Forms.Label();
             this.lbl_registro = new System.Windows.Forms.Label();
-            this.txt_nome = new System.Windows.Forms.TextBox();
-            this.txt_registro = new System.Windows.Forms.TextBox();
+            this.txt_nomeFunc = new System.Windows.Forms.TextBox();
+            this.txt_registroFunc = new System.Windows.Forms.TextBox();
             this.btn_confirmar = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            this.maskedTextBox_cpf = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox_telefone = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox_data = new System.Windows.Forms.MaskedTextBox();
-            this.txt_funcao = new System.Windows.Forms.TextBox();
+            this.maskedTextBox_cpfFunc = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_telefoneFunc = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox_dataFunc = new System.Windows.Forms.MaskedTextBox();
+            this.txt_funcaoFunc = new System.Windows.Forms.TextBox();
             this.lbl_telefone = new System.Windows.Forms.Label();
             this.lbl_data = new System.Windows.Forms.Label();
             this.lbl_funcao = new System.Windows.Forms.Label();
@@ -95,19 +95,19 @@
             this.lbl_registro.TabIndex = 4;
             this.lbl_registro.Text = "Registro:";
             // 
-            // txt_nome
+            // txt_nomeFunc
             // 
-            this.txt_nome.Location = new System.Drawing.Point(15, 89);
-            this.txt_nome.Name = "txt_nome";
-            this.txt_nome.Size = new System.Drawing.Size(294, 20);
-            this.txt_nome.TabIndex = 5;
+            this.txt_nomeFunc.Location = new System.Drawing.Point(15, 89);
+            this.txt_nomeFunc.Name = "txt_nomeFunc";
+            this.txt_nomeFunc.Size = new System.Drawing.Size(294, 20);
+            this.txt_nomeFunc.TabIndex = 5;
             // 
-            // txt_registro
+            // txt_registroFunc
             // 
-            this.txt_registro.Location = new System.Drawing.Point(15, 173);
-            this.txt_registro.Name = "txt_registro";
-            this.txt_registro.Size = new System.Drawing.Size(185, 20);
-            this.txt_registro.TabIndex = 7;
+            this.txt_registroFunc.Location = new System.Drawing.Point(15, 173);
+            this.txt_registroFunc.Name = "txt_registroFunc";
+            this.txt_registroFunc.Size = new System.Drawing.Size(185, 20);
+            this.txt_registroFunc.TabIndex = 7;
             // 
             // btn_confirmar
             // 
@@ -137,37 +137,37 @@
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
-            // maskedTextBox_cpf
+            // maskedTextBox_cpfFunc
             // 
-            this.maskedTextBox_cpf.Location = new System.Drawing.Point(15, 131);
-            this.maskedTextBox_cpf.Mask = "000.000.000-00";
-            this.maskedTextBox_cpf.Name = "maskedTextBox_cpf";
-            this.maskedTextBox_cpf.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_cpf.TabIndex = 10;
-            this.maskedTextBox_cpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox_cpf_MaskInputRejected);
+            this.maskedTextBox_cpfFunc.Location = new System.Drawing.Point(15, 131);
+            this.maskedTextBox_cpfFunc.Mask = "000.000.000-00";
+            this.maskedTextBox_cpfFunc.Name = "maskedTextBox_cpfFunc";
+            this.maskedTextBox_cpfFunc.Size = new System.Drawing.Size(185, 20);
+            this.maskedTextBox_cpfFunc.TabIndex = 10;
+            this.maskedTextBox_cpfFunc.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox_cpf_MaskInputRejected);
             // 
-            // maskedTextBox_telefone
+            // maskedTextBox_telefoneFunc
             // 
-            this.maskedTextBox_telefone.Location = new System.Drawing.Point(15, 215);
-            this.maskedTextBox_telefone.Mask = "(00) 00000-0000";
-            this.maskedTextBox_telefone.Name = "maskedTextBox_telefone";
-            this.maskedTextBox_telefone.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_telefone.TabIndex = 11;
+            this.maskedTextBox_telefoneFunc.Location = new System.Drawing.Point(15, 215);
+            this.maskedTextBox_telefoneFunc.Mask = "(00) 00000-0000";
+            this.maskedTextBox_telefoneFunc.Name = "maskedTextBox_telefoneFunc";
+            this.maskedTextBox_telefoneFunc.Size = new System.Drawing.Size(185, 20);
+            this.maskedTextBox_telefoneFunc.TabIndex = 11;
             // 
-            // maskedTextBox_data
+            // maskedTextBox_dataFunc
             // 
-            this.maskedTextBox_data.Location = new System.Drawing.Point(15, 257);
-            this.maskedTextBox_data.Mask = "00/00/0000";
-            this.maskedTextBox_data.Name = "maskedTextBox_data";
-            this.maskedTextBox_data.Size = new System.Drawing.Size(185, 20);
-            this.maskedTextBox_data.TabIndex = 12;
+            this.maskedTextBox_dataFunc.Location = new System.Drawing.Point(15, 257);
+            this.maskedTextBox_dataFunc.Mask = "00/00/0000";
+            this.maskedTextBox_dataFunc.Name = "maskedTextBox_dataFunc";
+            this.maskedTextBox_dataFunc.Size = new System.Drawing.Size(185, 20);
+            this.maskedTextBox_dataFunc.TabIndex = 12;
             // 
-            // txt_funcao
+            // txt_funcaoFunc
             // 
-            this.txt_funcao.Location = new System.Drawing.Point(15, 299);
-            this.txt_funcao.Name = "txt_funcao";
-            this.txt_funcao.Size = new System.Drawing.Size(185, 20);
-            this.txt_funcao.TabIndex = 13;
+            this.txt_funcaoFunc.Location = new System.Drawing.Point(15, 299);
+            this.txt_funcaoFunc.Name = "txt_funcaoFunc";
+            this.txt_funcaoFunc.Size = new System.Drawing.Size(185, 20);
+            this.txt_funcaoFunc.TabIndex = 13;
             // 
             // lbl_telefone
             // 
@@ -228,14 +228,14 @@
             this.panel_cadastro.Controls.Add(this.lbl_funcao);
             this.panel_cadastro.Controls.Add(this.lbl_data);
             this.panel_cadastro.Controls.Add(this.lbl_telefone);
-            this.panel_cadastro.Controls.Add(this.txt_funcao);
-            this.panel_cadastro.Controls.Add(this.maskedTextBox_data);
-            this.panel_cadastro.Controls.Add(this.maskedTextBox_telefone);
-            this.panel_cadastro.Controls.Add(this.maskedTextBox_cpf);
+            this.panel_cadastro.Controls.Add(this.txt_funcaoFunc);
+            this.panel_cadastro.Controls.Add(this.maskedTextBox_dataFunc);
+            this.panel_cadastro.Controls.Add(this.maskedTextBox_telefoneFunc);
+            this.panel_cadastro.Controls.Add(this.maskedTextBox_cpfFunc);
             this.panel_cadastro.Controls.Add(this.btn_cancelar);
             this.panel_cadastro.Controls.Add(this.btn_confirmar);
-            this.panel_cadastro.Controls.Add(this.txt_registro);
-            this.panel_cadastro.Controls.Add(this.txt_nome);
+            this.panel_cadastro.Controls.Add(this.txt_registroFunc);
+            this.panel_cadastro.Controls.Add(this.txt_nomeFunc);
             this.panel_cadastro.Controls.Add(this.lbl_registro);
             this.panel_cadastro.Controls.Add(this.lbl_cpf);
             this.panel_cadastro.Controls.Add(this.lbl_nome);
@@ -281,14 +281,14 @@
         private System.Windows.Forms.Label lbl_nome;
         private System.Windows.Forms.Label lbl_cpf;
         private System.Windows.Forms.Label lbl_registro;
-        private System.Windows.Forms.TextBox txt_nome;
-        private System.Windows.Forms.TextBox txt_registro;
+        private System.Windows.Forms.TextBox txt_nomeFunc;
+        private System.Windows.Forms.TextBox txt_registroFunc;
         private System.Windows.Forms.Button btn_confirmar;
         private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_cpf;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_telefone;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_data;
-        private System.Windows.Forms.TextBox txt_funcao;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_cpfFunc;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_telefoneFunc;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_dataFunc;
+        private System.Windows.Forms.TextBox txt_funcaoFunc;
         private System.Windows.Forms.Label lbl_telefone;
         private System.Windows.Forms.Label lbl_data;
         private System.Windows.Forms.Label lbl_funcao;

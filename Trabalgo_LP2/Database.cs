@@ -57,10 +57,33 @@ namespace Trabalgo_LP2
             //CRIA TABELA CLIENTE
 
             StringBuilder sql = new StringBuilder();
-            sql.AppendLine("CREATE TABLE IF NOT EXISTS Cliente ([Cpf] TEXT PRIMARY KEY NOT NULL UNIQUE,");
-            sql.AppendLine("[Nome] TEXT, [Telefone] TEXT)");
+            sql.AppendLine("CREATE TABLE IF NOT EXISTS Cliente (");
+            sql.AppendLine("[Cpf] TEXT PRIMARY KEY NOT NULL UNIQUE,");
+            sql.AppendLine("[Nome] TEXT,");
+            sql.AppendLine("[Telefone] TEXT);");
 
             SQLiteCommand cmd = new SQLiteCommand(sql.ToString(), conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao criar banco de dados: " + ex.Message);
+            }
+
+            // CRIA TABELA FUNCIONARIO
+
+            sql.Clear();
+            sql.AppendLine("CREATE TABLE IF NOT EXISTS Funcionario (");
+            sql.AppendLine("[Registro] INTEGER PRIMARY KEY NOT NULL UNIQUE,");
+            sql.AppendLine("[Nome] TEXT,");
+            sql.AppendLine("[Cpf] INTEGER UNIQUE,");
+            sql.AppendLine("[Funcao] TEXT,");
+            sql.AppendLine("[Data_inicio] DATE,");
+            sql.AppendLine("[Telefone] TEXT);");
+
+            cmd = new SQLiteCommand(sql.ToString(), conn);
             try
             {
                 cmd.ExecuteNonQuery();

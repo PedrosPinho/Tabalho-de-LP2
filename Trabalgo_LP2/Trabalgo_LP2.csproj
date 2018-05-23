@@ -141,6 +141,7 @@
     <Compile Include="Form_login.Designer.cs">
       <DependentUpon>Form_login.cs</DependentUpon>
     </Compile>
+    <Compile Include="FuncionarioDAO.cs" />
     <Compile Include="Mesa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

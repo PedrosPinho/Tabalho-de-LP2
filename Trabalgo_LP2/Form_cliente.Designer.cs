@@ -229,6 +229,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_cliente";
             this.Text = "Form_cliente";
+            this.Load += new System.EventHandler(this.Form_cliente_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();

@@ -9,9 +9,14 @@ namespace Trabalgo_LP2
     class Funcionario
     {
         private String nome, funcao;
-        private long cpf, registro, telefone, data_inicio;
+        private String cpf, registro, telefone;
+        private String data_inicio;
 
-        public Funcionario(string nome, string funcao, long cpf, long registro, long telefone, long data_inicio)
+        public Funcionario()
+        {
+        }
+
+        public Funcionario(string nome, string funcao, string cpf, string registro, string telefone, string data_inicio)
         {
             this.nome = nome;
             this.funcao = funcao;
@@ -47,7 +52,7 @@ namespace Trabalgo_LP2
             }
         }
 
-        public long Cpf
+        public string Cpf
         {
             get
             {
@@ -60,7 +65,7 @@ namespace Trabalgo_LP2
             }
         }
 
-        public long Registro
+        public string Registro
         {
             get
             {
@@ -73,7 +78,7 @@ namespace Trabalgo_LP2
             }
         }
 
-        public long Telefone
+        public string Telefone
         {
             get
             {
@@ -86,7 +91,7 @@ namespace Trabalgo_LP2
             }
         }
 
-        public long Data_inicio
+        public string Data_inicio
         {
             get
             {

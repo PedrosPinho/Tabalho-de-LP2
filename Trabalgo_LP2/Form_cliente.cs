@@ -40,5 +40,10 @@ namespace Trabalgo_LP2
         {
             Close();
         }
+
+        private void Form_cliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
