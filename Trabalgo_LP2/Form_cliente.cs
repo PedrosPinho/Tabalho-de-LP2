@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace Trabalgo_LP2
 {
@@ -29,6 +30,7 @@ namespace Trabalgo_LP2
             form.ShowDialog(this);
         }
 
+
         private void btn_alterar_Click(object sender, EventArgs e)
         {
             Form_cadastroCliente form = new Form_cadastroCliente();
@@ -43,7 +45,8 @@ namespace Trabalgo_LP2
 
         private void Form_cliente_Load(object sender, EventArgs e)
         {
-
+            ClienteDAO clientedao = new ClienteDAO();
+            dataGridView_cliente.DataSource = clientedao.ListAll();
         }
     }
 }

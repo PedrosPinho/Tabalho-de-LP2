@@ -14,9 +14,6 @@ namespace Trabalgo_LP2
 {
     public partial class Form_cadastroCliente : Form
     {
-        //private static string conexao = "Data Source = VannerBD.db";
-        //private static string nomebanco = "VannerBD.db";
-
         public Form_cadastroCliente()
         {
             InitializeComponent();
@@ -62,9 +59,11 @@ namespace Trabalgo_LP2
                 ClienteDAO clienteDAO = new ClienteDAO();
                 Cliente cliente = GetDTO();
                 clienteDAO.Create(cliente);
+
+                MessageBox.Show("Cliente criado com sucesso!", "Cliente criado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
-            
+
         }
     }
 }

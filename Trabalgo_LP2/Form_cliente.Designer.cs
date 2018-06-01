@@ -35,15 +35,15 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.dataGridView_cliente = new System.Windows.Forms.DataGridView();
-            this.Column_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_frequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_filtrar = new System.Windows.Forms.TextBox();
             this.lbl_filtrar = new System.Windows.Forms.Label();
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
+            this.Column_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_frequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -125,30 +125,6 @@
             this.dataGridView_cliente.TabIndex = 3;
             this.dataGridView_cliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // Column_Nome
-            // 
-            this.Column_Nome.HeaderText = "Nome";
-            this.Column_Nome.Name = "Column_Nome";
-            this.Column_Nome.ReadOnly = true;
-            // 
-            // Column_cpf
-            // 
-            this.Column_cpf.HeaderText = "CPF";
-            this.Column_cpf.Name = "Column_cpf";
-            this.Column_cpf.ReadOnly = true;
-            // 
-            // Column_telefone
-            // 
-            this.Column_telefone.HeaderText = "Telefone";
-            this.Column_telefone.Name = "Column_telefone";
-            this.Column_telefone.ReadOnly = true;
-            // 
-            // Column_frequencia
-            // 
-            this.Column_frequencia.HeaderText = "Frequência";
-            this.Column_frequencia.Name = "Column_frequencia";
-            this.Column_frequencia.ReadOnly = true;
-            // 
             // txt_filtrar
             // 
             this.txt_filtrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -214,6 +190,34 @@
             this.btn_alterar.UseVisualStyleBackColor = false;
             this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
+            // Column_Nome
+            // 
+            this.Column_Nome.DataPropertyName = "Nome";
+            this.Column_Nome.HeaderText = "Nome";
+            this.Column_Nome.Name = "Column_Nome";
+            this.Column_Nome.ReadOnly = true;
+            // 
+            // Column_cpf
+            // 
+            this.Column_cpf.DataPropertyName = "Cpf";
+            this.Column_cpf.HeaderText = "CPF";
+            this.Column_cpf.Name = "Column_cpf";
+            this.Column_cpf.ReadOnly = true;
+            // 
+            // Column_telefone
+            // 
+            this.Column_telefone.DataPropertyName = "Telefone";
+            this.Column_telefone.HeaderText = "Telefone";
+            this.Column_telefone.Name = "Column_telefone";
+            this.Column_telefone.ReadOnly = true;
+            // 
+            // Column_frequencia
+            // 
+            this.Column_frequencia.DataPropertyName = "Frequencia";
+            this.Column_frequencia.HeaderText = "Frequência";
+            this.Column_frequencia.Name = "Column_frequencia";
+            this.Column_frequencia.ReadOnly = true;
+            // 
             // Form_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,10 +256,10 @@
         private System.Windows.Forms.TextBox txt_filtrar;
         private System.Windows.Forms.Label lbl_filtrar;
         private System.Windows.Forms.Button btn_pesquisar;
+        private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_frequencia;
-        private System.Windows.Forms.Button btn_voltar;
     }
 }

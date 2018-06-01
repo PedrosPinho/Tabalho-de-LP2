@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace Trabalgo_LP2
 {
@@ -15,6 +16,11 @@ namespace Trabalgo_LP2
         public Form_funcionario()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView_funcionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void btn_adicionar_Click(object sender, EventArgs e)
@@ -35,5 +41,12 @@ namespace Trabalgo_LP2
         {
             Close();
         }
+
+        private void Form_funcionario_Load(object sender, EventArgs e)
+        {
+            FuncionarioDAO funcionariodao = new FuncionarioDAO();
+            dataGridView_funcionario.DataSource = funcionariodao.ListAll();
+        }
+
     }
 }

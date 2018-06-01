@@ -186,7 +186,6 @@
             // 
             // btn_funcionario
             // 
-            this.btn_funcionario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_funcionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
             this.btn_funcionario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_funcionario.BackgroundImage")));
             this.btn_funcionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -245,6 +244,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form_menu";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form_menu";
             this.Load += new System.EventHandler(this.Form_menu_Load);
             this.panel1.ResumeLayout(false);
