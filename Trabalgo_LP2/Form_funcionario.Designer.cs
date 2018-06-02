@@ -64,6 +64,7 @@
             this.btn_pesquisar.TabIndex = 20;
             this.btn_pesquisar.Text = "Pesquisar";
             this.btn_pesquisar.UseVisualStyleBackColor = false;
+            this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
             // txt_filtrar
             // 
@@ -227,7 +228,7 @@
             // Data_inicio
             // 
             this.Data_inicio.DataPropertyName = "Data_inicio";
-            this.Data_inicio.HeaderText = "Data_inicio";
+            this.Data_inicio.HeaderText = "Ano Inicio";
             this.Data_inicio.Name = "Data_inicio";
             this.Data_inicio.ReadOnly = true;
             // 

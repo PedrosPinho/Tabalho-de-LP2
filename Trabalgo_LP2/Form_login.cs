@@ -28,7 +28,7 @@ namespace Trabalgo_LP2
 
         private void linklbl_cadastrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Form_cadastroFuncionario form = new Form_cadastroFuncionario();
+            Form_cadastroFuncionario form = new Form_cadastroFuncionario(1);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
         }

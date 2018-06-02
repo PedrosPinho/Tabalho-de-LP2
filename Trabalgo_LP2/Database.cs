@@ -80,7 +80,7 @@ namespace Trabalgo_LP2
             sql.AppendLine("[Nome] TEXT,");
             sql.AppendLine("[Cpf] TEXT UNIQUE,");
             sql.AppendLine("[Funcao] TEXT,");
-            sql.AppendLine("[Data_inicio] DATE,");
+            sql.AppendLine("[Data_inicio] TEXT,");
             sql.AppendLine("[Telefone] TEXT);");
 
             cmd = new SQLiteCommand(sql.ToString(), conn);

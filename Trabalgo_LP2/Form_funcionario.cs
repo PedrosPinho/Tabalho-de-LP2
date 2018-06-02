@@ -16,6 +16,7 @@ namespace Trabalgo_LP2
         public Form_funcionario()
         {
             InitializeComponent();
+
         }
 
         private void dataGridView_funcionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -25,16 +26,20 @@ namespace Trabalgo_LP2
 
         private void btn_adicionar_Click(object sender, EventArgs e)
         {
-            Form_cadastroFuncionario form = new Form_cadastroFuncionario();
+            Form_cadastroFuncionario form = new Form_cadastroFuncionario(1);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
+            FuncionarioDAO funcionariodao = new FuncionarioDAO();
+            dataGridView_funcionario.DataSource = funcionariodao.ListAll();
         }
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            Form_cadastroFuncionario form = new Form_cadastroFuncionario();
+            Form_cadastroFuncionario form = new Form_cadastroFuncionario(2);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
+            FuncionarioDAO funcionariodao = new FuncionarioDAO();
+            dataGridView_funcionario.DataSource = funcionariodao.ListAll();
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
@@ -48,5 +53,10 @@ namespace Trabalgo_LP2
             dataGridView_funcionario.DataSource = funcionariodao.ListAll();
         }
 
+        private void btn_pesquisar_Click(object sender, EventArgs e)
+        {
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            dataGridView_funcionario.DataSource = funcionarioDAO.FindByName(txt_filtrar.Text);
+        }
     }
 }

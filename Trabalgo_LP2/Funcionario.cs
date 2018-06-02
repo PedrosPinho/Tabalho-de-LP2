@@ -8,15 +8,15 @@ namespace Trabalgo_LP2
 {
     class Funcionario
     {
-        private String nome, funcao;
-        private String cpf, registro, telefone;
-        private DateTime data_inicio;
+        private string nome, funcao;
+        private string cpf, registro, telefone;
+        private string data_inicio;
 
         public Funcionario()
         {
         }
 
-        public Funcionario(string nome, string funcao, string cpf, string registro, string telefone, DateTime data_inicio)
+        public Funcionario(string nome, string funcao, string cpf, string registro, string telefone, string data_inicio)
         {
             this.nome = nome;
             this.funcao = funcao;
@@ -91,7 +91,7 @@ namespace Trabalgo_LP2
             }
         }
 
-        public DateTime Data_inicio
+        public string Data_inicio
         {
             get
             {
