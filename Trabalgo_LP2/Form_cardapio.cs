@@ -78,6 +78,12 @@ namespace Trabalgo_LP2
             CardapioDAO cardapiodao = new CardapioDAO();
             dataGridView_cardapio.DataSource = cardapiodao.listAll();
 
+            //esvazia os campos para uma nova inserção
+            txt_id_adicionar.Text = "";
+            txt_nome_adicionar.Text = "";
+            txt_descricao.Text = "";
+            txt_preco_adicionar.Text = "";
+
         }
 
         private void Form_cardapio_Load(object sender, EventArgs e)
@@ -92,6 +98,8 @@ namespace Trabalgo_LP2
             //pesquisa por NOME
             CardapioDAO cardapioDAO = new CardapioDAO();
             dataGridView_cardapio.DataSource = cardapioDAO.Find(txt_procurar.Text);
+
+            txt_procurar.Text = ""; // esvazia o campo, para proximo uso
 
         }
 

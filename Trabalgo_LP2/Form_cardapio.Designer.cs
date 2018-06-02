@@ -55,6 +55,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_adicionar = new System.Windows.Forms.Label();
             this.btn_pesquisar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -191,6 +192,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btn_remover_adicionar);
             this.panel2.Controls.Add(this.btn_adicionar_adicionar);
             this.panel2.Controls.Add(this.txt_descricao);
@@ -341,6 +343,16 @@
             this.btn_pesquisar.UseVisualStyleBackColor = false;
             this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 288);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(181, 17);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "(Para remover digite apenas o id)";
+            // 
             // Form_cardapio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,5 +410,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn preco_item_cardapio;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao_item_cardapio;
         private System.Windows.Forms.Button btn_pesquisar;
+        private System.Windows.Forms.Label label1;
     }
 }
