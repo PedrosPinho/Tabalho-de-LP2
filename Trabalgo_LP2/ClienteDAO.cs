@@ -12,6 +12,7 @@ namespace Trabalgo_LP2
     {
         public void Create(Cliente c)
         {
+            //insere na tabela um cliente
             Database VannerDB = Database.GetInstance();
 
             string qry =
@@ -22,6 +23,7 @@ namespace Trabalgo_LP2
 
         public Cliente Read(int cpf)
         {
+            //retorna a partir do cpf um cliente
             Cliente cliente = null;
             SQLiteConnection conexao = Database.GetInstance().GetConnection();
 
@@ -52,6 +54,7 @@ namespace Trabalgo_LP2
 
         public void Update(Cliente c)
         {
+            //atualiza no banco um cliente especifico
             Database VannerDB = Database.GetInstance();
 
             string qry = string.Format("UPDATE Cliente SET Nome='{0}', Telefone='{1}' WHERE Cpf like '{2}'", c.Nome, c.Telefone, c.Cpf);
@@ -62,6 +65,7 @@ namespace Trabalgo_LP2
 
         public List<Cliente> ListAll()
         {
+            //cria e retorna uma lista com todos os clientes
             List<Cliente> lista = new List<Cliente>();
             Cliente cliente = null;
             SQLiteConnection conexao = Database.GetInstance().GetConnection();
@@ -95,6 +99,8 @@ namespace Trabalgo_LP2
 
         public List<Cliente> FindByName(string nome)
         {
+            //lista e retorna uma lista com todos os clientes que 
+            //tiverem a STRING NOME em seu nome
             List<Cliente> lista = new List<Cliente>();
             Cliente cliente = null;
 

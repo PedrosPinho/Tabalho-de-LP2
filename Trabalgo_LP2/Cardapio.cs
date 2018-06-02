@@ -10,9 +10,13 @@ namespace Trabalgo_LP2
     {
         int id;
         string nome, descricao;
-        float preco;
+        double preco;
 
-        public Cardapio(int id, string nome, string descricao, float preco)
+        public Cardapio()
+        {
+
+        }
+        public Cardapio(int id, string nome, string descricao, double preco)
         {
             this.id = id;
             this.nome = nome;
@@ -59,7 +63,7 @@ namespace Trabalgo_LP2
             }
         }
 
-        public float Preco
+        public double Preco
         {
             get
             {

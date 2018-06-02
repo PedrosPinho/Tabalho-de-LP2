@@ -92,6 +92,25 @@ namespace Trabalgo_LP2
             {
                 MessageBox.Show("Erro ao criar banco de dados: " + ex.Message);
             }
+
+            //CRIA TABELA CARDÁPIO
+            sql.Clear();
+            sql.AppendLine("CREATE TABLE IF NOT EXISTS Cardapio (");
+            sql.AppendLine("[Id] INTERGER PRIMARY KEY NOT NULL UNIQUE,");
+            sql.AppendLine("[Nome] TEXT,");
+            sql.AppendLine("[Descricao] TEXT,");
+            sql.AppendLine("[preco] REAL,");
+            
+
+            cmd = new SQLiteCommand(sql.ToString(), conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao criar banco de dados: " + ex.Message);
+            }
             conn.Close();
         }
     }

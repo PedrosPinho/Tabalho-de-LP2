@@ -17,19 +17,103 @@ namespace Trabalgo_LP2
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private Cardapio GetDTO()
         {
+            //Pega as informações da tela
+            Cardapio cardapio = new Cardapio();
+            cardapio.Id = Convert.ToInt32(txt_id_adicionar.Text);
+            cardapio.Nome = txt_nome_adicionar.Text;
+            cardapio.Descricao = txt_descricao.Text;
+            cardapio.Preco = Convert.ToDouble(txt_preco_adicionar.Text);
 
+            return cardapio;
         }
 
-        private void lbl_adicao_Click(object sender, EventArgs e)
+        private void SetDTO(Cardapio c)
         {
-
+            //Insere as informações na tela
+            txt_id_adicionar.Text = c.Id.ToString();
+            txt_nome_adicionar.Text = c.Nome;
+            txt_descricao.Text = c.Descricao;
+            txt_preco_adicionar.Text = c.Preco.ToString();
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
         {
+            //Fecha form
             Close();
+        }
+
+        private void btn_remover_adicionar_Click(object sender, EventArgs e)
+        {
+            //Quando pressionado remove um item usando o id
+            if (txt_id_adicionar.Text.Equals(""))
+            {
+                MessageBox.Show("Certifique-se de que ID está preenchido", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                CardapioDAO cardapioDAO = new CardapioDAO();
+                cardapioDAO.Delete(Convert.ToInt32(txt_id_adicionar.Text));
+                MessageBox.Show("Item removido com sucesso!", "Item removido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            CardapioDAO cardapiodao = new CardapioDAO();
+            dataGridView_cardapio.DataSource = cardapiodao.listAll();
+        }
+
+        private void btn_adicionar_adicionar_Click(object sender, EventArgs e)
+        {   //Se alguma txt  não estiver preenchida, cria uma mensagem de aviso
+            if(txt_id_adicionar.Text.Equals("") || txt_nome_adicionar.Text.Equals("") ||
+               txt_descricao.Text.Equals("") || txt_preco_adicionar.Text.Equals(""))
+                     MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                //Se tudo estiver preenchido cria o DTO e insere no bd
+                CardapioDAO cardapioDAO = new CardapioDAO();
+                Cardapio cardapio = GetDTO();
+                cardapioDAO.Create(cardapio);
+
+                MessageBox.Show("Item inserido com sucesso!", "Item inserido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            CardapioDAO cardapiodao = new CardapioDAO();
+            dataGridView_cardapio.DataSource = cardapiodao.listAll();
+
+        }
+
+        private void Form_cardapio_Load(object sender, EventArgs e)
+        {
+            //preenche o grid quando carrega a tela
+            CardapioDAO cardapioDAO = new CardapioDAO();
+            dataGridView_cardapio.DataSource = cardapioDAO.listAll();
+        }
+
+        private void btn_pesquisar_Click(object sender, EventArgs e)
+        {
+            //pesquisa por NOME
+            CardapioDAO cardapioDAO = new CardapioDAO();
+            dataGridView_cardapio.DataSource = cardapioDAO.Find(txt_procurar.Text);
+
+        }
+
+        private void btn_remover_adicionar_MouseHover(object sender, EventArgs e)
+        {
+            //tentei fazer algo para ficar mais intuitivo o remover e add com TOOLTIPS
+            //bem interessante mas ta dando bug estranho entao tirei de lá mas continua aq
+            ToolTip tt = new ToolTip();
+
+            tt.Show("Somente o ID é necessário para remover", btn_remover_adicionar, 200);
+          
+            
+        }
+
+        private void btn_adicionar_adicionar_MouseHover(object sender, EventArgs e)
+        {
+            //tentei fazer algo para ficar mais intuitivo o remover e add com TOOLTIPS
+            //bem interessante mas ta dando bug estranho entao tirei de lá mas continua aq
+            ToolTip tt = new ToolTip();
+
+            tt.Show("Todos os campos são necessários para adicionar", btn_adicionar_adicionar);
+            
         }
     }
 }

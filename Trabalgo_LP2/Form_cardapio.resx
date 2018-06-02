@@ -121,7 +121,7 @@
   <data name="btn_voltar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQQAAABQCAIAAABwApwIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAASdEVYdFNvZnR3YXJlAEdyZWVuc2hvdF5VCAUAAANiSURB
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAASdEVYdFNvZnR3YXJlAEdyZWVuc2hvdF5VCAUAAANiSURB
         VHhe7dlHTiRBGEThuRNLzsZxsMJ7D8cAGu+9OQHzC2JGzEA33VRGVpb0vlXWPp5KqfzVB+ANMQBCDIAQ
         AyDNi6G/v18nIKmGxbC9vT06OqoPIKkmxRAlvL6+EgNMGhPDewnEAJ9mxPC3hEAMMGlADB9LCMQAk9Jj
         +K+EQAwwKTqGzyUEYoBJuTF8WUIgBpgUGkO7EgIxwKTEGDqUEIgBJsXF0LmEQAwwKSuGra0tTb49YoBJ
@@ -142,7 +142,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAC4AAAAwCAYAAABuZUjcAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wQAADsEBuJFr7QAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAAHpSURBVGhD7ZlN
+        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUATWljcm9zb2Z0IE9mZmljZX/tNXEAAAHpSURBVGhD7ZlN
         UsMwDIUdh3swrBi65xDs2RfCGdiwy0nYs+cQ7LkPRMo4lRXVleufiWey+DyNKum9Zmyndc04jk2yCgzG
         HAZz81gWc+C6sXgXg7FPg+2/Xrr+pySgAVpUO5blBTR667rvoev/qoDmr7/zOOD0gEaSQCHwzk/ThhvS
         ggM0wEaCQCl249z4a2d/IeaAa/r+x/3DKicE5L7f3i31EMtuHE0ae4T4CXuk5uWcEH59EeNSU01OiNR6
@@ -1497,6 +1497,18 @@
         +MNi+T+N+akl+pXxxQAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="id_item_cardapio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="nome_item_cardapio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="preco_item_cardapio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="descricao_item_cardapio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="id_item_cardapio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

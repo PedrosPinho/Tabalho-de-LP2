@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cardapio.cs" />
+    <Compile Include="CardapioDAO.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteDAO.cs" />
     <Compile Include="Database.cs" />
