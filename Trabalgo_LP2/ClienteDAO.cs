@@ -26,7 +26,7 @@ namespace Trabalgo_LP2
             SQLiteConnection conexao = Database.GetInstance().GetConnection();
 
             string qry = "SELECT Cpf, Nome, Telefone FROM Cliente WHERE Cpf = " +
-                         cpf;
+                         cpf ;
 
             if (conexao.State != System.Data.ConnectionState.Open)
                 conexao.Open();
@@ -48,6 +48,16 @@ namespace Trabalgo_LP2
             conexao.Close();
 
             return cliente;
+        }
+
+        public void Update(Cliente c)
+        {
+            Database VannerDB = Database.GetInstance();
+
+            string qry = string.Format("UPDATE Cliente SET Nome='{0}', Telefone='{1}' WHERE Cpf like '{2}'", c.Nome, c.Telefone, c.Cpf);
+            
+            VannerDB.ExecuteSQL(qry);
+
         }
 
         public List<Cliente> ListAll()
@@ -82,5 +92,43 @@ namespace Trabalgo_LP2
 
             return lista;
         }
+
+        public List<Cliente> FindByName(string nome)
+        {
+            List<Cliente> lista = new List<Cliente>();
+            Cliente cliente = null;
+
+            SQLiteConnection conexao = Database.GetInstance().GetConnection();
+
+            string qry;
+
+            if (nome != "") // verifica se a consulta não é vazia
+                qry = string.Format("SELECT Cpf, Nome, Telefone FROM Cliente WHERE nome LIKE '%{0}%'", nome);
+            else
+                qry = "SELECT Cpf, Nome, Telefone FROM Cliente";
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            SQLiteCommand comm = new SQLiteCommand(qry, conexao);
+            SQLiteDataReader dr = comm.ExecuteReader();
+
+            while (dr.Read())
+            {
+                cliente = new Cliente();
+                cliente.Cpf = dr.GetString(0);
+                cliente.Nome = dr.GetString(1);
+                cliente.Telefone = dr.GetString(2);
+
+                lista.Add(cliente);
+
+            }
+
+            dr.Close(); // para nao dar erro de database locked
+            conexao.Close();
+            return lista;
+
+        }
+
     }
 }

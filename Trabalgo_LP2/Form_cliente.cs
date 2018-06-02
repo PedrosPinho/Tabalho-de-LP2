@@ -25,17 +25,21 @@ namespace Trabalgo_LP2
 
         private void btn_adicionar_Click(object sender, EventArgs e)
         {
-            Form_cadastroCliente form = new Form_cadastroCliente();
+            Form_cadastroCliente form = new Form_cadastroCliente(1);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
+            ClienteDAO clientedao = new ClienteDAO();
+            dataGridView_cliente.DataSource = clientedao.ListAll();
         }
 
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            Form_cadastroCliente form = new Form_cadastroCliente();
+            Form_cadastroCliente form = new Form_cadastroCliente(2);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
+            ClienteDAO clientedao = new ClienteDAO();
+            dataGridView_cliente.DataSource = clientedao.ListAll();
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
@@ -47,6 +51,12 @@ namespace Trabalgo_LP2
         {
             ClienteDAO clientedao = new ClienteDAO();
             dataGridView_cliente.DataSource = clientedao.ListAll();
+        }
+
+        private void btn_pesquisar_Click(object sender, EventArgs e)
+        {
+            ClienteDAO clientedao = new ClienteDAO();
+            dataGridView_cliente.DataSource = clientedao.FindByName(txt_filtrar.Text);
         }
     }
 }

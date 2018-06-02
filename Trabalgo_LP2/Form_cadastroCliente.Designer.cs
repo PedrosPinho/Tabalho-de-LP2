@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_cadastroCliente));
             this.lbl_telefone = new System.Windows.Forms.Label();
             this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_confirmar = new System.Windows.Forms.Button();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.lbl_cpf = new System.Windows.Forms.Label();
             this.lbl_nome = new System.Windows.Forms.Label();
@@ -41,6 +40,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txt_cpf = new System.Windows.Forms.TextBox();
             this.txt_telefone = new System.Windows.Forms.TextBox();
+            this.btn_confirmar = new System.Windows.Forms.Button();
+            this.btn_atualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -69,20 +70,6 @@
             this.btn_cancelar.Text = "Cancelar";
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // btn_confirmar
-            // 
-            this.btn_confirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_confirmar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_confirmar.ForeColor = System.Drawing.Color.White;
-            this.btn_confirmar.Location = new System.Drawing.Point(156, 239);
-            this.btn_confirmar.Name = "btn_confirmar";
-            this.btn_confirmar.Size = new System.Drawing.Size(89, 34);
-            this.btn_confirmar.TabIndex = 23;
-            this.btn_confirmar.Text = "Confirmar";
-            this.btn_confirmar.UseVisualStyleBackColor = false;
-            this.btn_confirmar.Click += new System.EventHandler(this.btn_confirmar_Click);
             // 
             // txt_nome
             // 
@@ -165,12 +152,41 @@
             this.txt_telefone.Size = new System.Drawing.Size(142, 20);
             this.txt_telefone.TabIndex = 37;
             // 
+            // btn_confirmar
+            // 
+            this.btn_confirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_confirmar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_confirmar.ForeColor = System.Drawing.Color.White;
+            this.btn_confirmar.Location = new System.Drawing.Point(156, 239);
+            this.btn_confirmar.Name = "btn_confirmar";
+            this.btn_confirmar.Size = new System.Drawing.Size(89, 34);
+            this.btn_confirmar.TabIndex = 23;
+            this.btn_confirmar.Text = "Confirmar";
+            this.btn_confirmar.UseVisualStyleBackColor = false;
+            this.btn_confirmar.Click += new System.EventHandler(this.btn_confirmar_Click);
+            // 
+            // btn_atualizar
+            // 
+            this.btn_atualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_atualizar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_atualizar.ForeColor = System.Drawing.Color.White;
+            this.btn_atualizar.Location = new System.Drawing.Point(156, 239);
+            this.btn_atualizar.Name = "btn_atualizar";
+            this.btn_atualizar.Size = new System.Drawing.Size(89, 34);
+            this.btn_atualizar.TabIndex = 38;
+            this.btn_atualizar.Text = "Atualizar";
+            this.btn_atualizar.UseVisualStyleBackColor = false;
+            this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
+            // 
             // Form_cadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
             this.ClientSize = new System.Drawing.Size(553, 282);
+            this.Controls.Add(this.btn_atualizar);
             this.Controls.Add(this.txt_telefone);
             this.Controls.Add(this.txt_cpf);
             this.Controls.Add(this.pictureBox3);
@@ -198,7 +214,6 @@
         #endregion
         private System.Windows.Forms.Label lbl_telefone;
         private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_confirmar;
         private System.Windows.Forms.TextBox txt_nome;
         private System.Windows.Forms.Label lbl_cpf;
         private System.Windows.Forms.Label lbl_nome;
@@ -208,5 +223,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txt_cpf;
         private System.Windows.Forms.TextBox txt_telefone;
+        private System.Windows.Forms.Button btn_confirmar;
+        private System.Windows.Forms.Button btn_atualizar;
     }
 }

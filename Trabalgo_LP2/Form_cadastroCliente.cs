@@ -14,9 +14,19 @@ namespace Trabalgo_LP2
 {
     public partial class Form_cadastroCliente : Form
     {
-        public Form_cadastroCliente()
+        public Form_cadastroCliente(int modo)
         {
             InitializeComponent();
+
+            switch (modo)//FORM INICIA DE DUAS FORMAS 1 PARA CRIAR CLIENTE 2 PARA ATUALIZAR
+            {
+                case 1://ADICIONAR
+                    btn_atualizar.Hide();
+                    break;
+                case 2://ATUALIZAR
+                    btn_confirmar.Hide();
+                    break;
+            } 
         }
 
         private Cliente GetDTO()
@@ -64,6 +74,22 @@ namespace Trabalgo_LP2
                 this.Close();
             }
 
+        }
+
+        private void btn_atualizar_Click(object sender, EventArgs e)
+        {
+            if (txt_nome.Text.Equals("") || txt_cpf.Text.Equals("") ||
+                txt_telefone.Text.Equals(""))
+                MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                ClienteDAO clienteDAO = new ClienteDAO();
+                Cliente cliente = GetDTO();
+                clienteDAO.Update(cliente);
+                MessageBox.Show("Cliente alterado com sucesso!", "Cliente alterado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
         }
     }
 }
