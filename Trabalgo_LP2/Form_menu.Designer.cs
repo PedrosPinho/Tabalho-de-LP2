@@ -39,7 +39,6 @@
             this.btn_mesa = new System.Windows.Forms.Button();
             this.btn_cliente = new System.Windows.Forms.Button();
             this.btn_funcionario = new System.Windows.Forms.Button();
-            this.btn_fornecedor = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -118,7 +117,7 @@
             this.btn_fidelidade.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_fidelidade.ForeColor = System.Drawing.Color.White;
             this.btn_fidelidade.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btn_fidelidade.Location = new System.Drawing.Point(312, 402);
+            this.btn_fidelidade.Location = new System.Drawing.Point(471, 406);
             this.btn_fidelidade.Name = "btn_fidelidade";
             this.btn_fidelidade.Size = new System.Drawing.Size(245, 108);
             this.btn_fidelidade.TabIndex = 12;
@@ -204,24 +203,6 @@
             this.btn_funcionario.UseVisualStyleBackColor = false;
             this.btn_funcionario.Click += new System.EventHandler(this.btn_funcionario_Click);
             // 
-            // btn_fornecedor
-            // 
-            this.btn_fornecedor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_fornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_fornecedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_fornecedor.BackgroundImage")));
-            this.btn_fornecedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_fornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_fornecedor.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_fornecedor.ForeColor = System.Drawing.Color.White;
-            this.btn_fornecedor.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.btn_fornecedor.Location = new System.Drawing.Point(635, 402);
-            this.btn_fornecedor.Name = "btn_fornecedor";
-            this.btn_fornecedor.Size = new System.Drawing.Size(245, 108);
-            this.btn_fornecedor.TabIndex = 13;
-            this.btn_fornecedor.Text = "Fornecedor";
-            this.btn_fornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_fornecedor.UseVisualStyleBackColor = false;
-            // 
             // Form_menu
             // 
             this.AllowDrop = true;
@@ -238,7 +219,6 @@
             this.Controls.Add(this.btn_mesa);
             this.Controls.Add(this.btn_cliente);
             this.Controls.Add(this.btn_funcionario);
-            this.Controls.Add(this.btn_fornecedor);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -266,7 +246,6 @@
         private System.Windows.Forms.Button btn_mesa;
         private System.Windows.Forms.Button btn_cliente;
         private System.Windows.Forms.Button btn_funcionario;
-        private System.Windows.Forms.Button btn_fornecedor;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

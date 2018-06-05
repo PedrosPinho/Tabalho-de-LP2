@@ -99,7 +99,7 @@ namespace Trabalgo_LP2
             sql.AppendLine("[Id] INTERGER PRIMARY KEY NOT NULL UNIQUE,");
             sql.AppendLine("[Nome] TEXT,");
             sql.AppendLine("[Descricao] TEXT,");
-            sql.AppendLine("[preco] REAL,");
+            sql.AppendLine("[preco] REAL);");
             
 
             cmd = new SQLiteCommand(sql.ToString(), conn);
