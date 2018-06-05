@@ -136,5 +136,15 @@ namespace Trabalgo_LP2
 
         }
 
+        public void Delete(int cpf)
+        {
+            //deleta do banco um cliente referente ao seu cpf
+            Database VannerDB = Database.GetInstance();
+
+            string qry = string.Format("DELETE FROM Cliente WHERE cpf = {0}", cpf);
+
+            VannerDB.ExecuteSQL(qry);
+        }
+
     }
 }

@@ -58,5 +58,22 @@ namespace Trabalgo_LP2
             ClienteDAO clientedao = new ClienteDAO();
             dataGridView_cliente.DataSource = clientedao.FindByName(txt_filtrar.Text);
         }
+
+        private void btn_remover_Click(object sender, EventArgs e)
+        {
+            //Quando pressionado remove um cliente usando o cpf
+            if (txt_filtrar.Text.Equals(""))
+            {
+                MessageBox.Show("Certifique-se de que a aba 'Filtrar' está preenchida", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                ClienteDAO clienteDAO = new ClienteDAO();
+                clienteDAO.Delete(Convert.ToInt32(txt_filtrar.Text));
+                MessageBox.Show("Cliente removido com sucesso!", "Cliente removido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            ClienteDAO clientedao = new ClienteDAO();
+            dataGridView_cliente.DataSource = clientedao.ListAll();
+        }
     }
 }

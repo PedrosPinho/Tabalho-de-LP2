@@ -44,6 +44,7 @@
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
+            this.btn_remover = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -193,7 +194,7 @@
             this.btn_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_adicionar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_adicionar.ForeColor = System.Drawing.Color.White;
-            this.btn_adicionar.Location = new System.Drawing.Point(475, 215);
+            this.btn_adicionar.Location = new System.Drawing.Point(475, 143);
             this.btn_adicionar.Name = "btn_adicionar";
             this.btn_adicionar.Size = new System.Drawing.Size(122, 46);
             this.btn_adicionar.TabIndex = 11;
@@ -210,7 +211,7 @@
             this.btn_alterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_alterar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_alterar.ForeColor = System.Drawing.Color.White;
-            this.btn_alterar.Location = new System.Drawing.Point(475, 312);
+            this.btn_alterar.Location = new System.Drawing.Point(475, 252);
             this.btn_alterar.Name = "btn_alterar";
             this.btn_alterar.Size = new System.Drawing.Size(122, 46);
             this.btn_alterar.TabIndex = 10;
@@ -219,11 +220,29 @@
             this.btn_alterar.UseVisualStyleBackColor = false;
             this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
+            // btn_remover
+            // 
+            this.btn_remover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_remover.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_remover.BackgroundImage")));
+            this.btn_remover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_remover.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_remover.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_remover.ForeColor = System.Drawing.Color.White;
+            this.btn_remover.Location = new System.Drawing.Point(475, 361);
+            this.btn_remover.Name = "btn_remover";
+            this.btn_remover.Size = new System.Drawing.Size(122, 46);
+            this.btn_remover.TabIndex = 15;
+            this.btn_remover.Text = "Remover";
+            this.btn_remover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_remover.UseVisualStyleBackColor = false;
+            this.btn_remover.Click += new System.EventHandler(this.btn_remover_Click);
+            // 
             // Form_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 468);
+            this.Controls.Add(this.btn_remover);
             this.Controls.Add(this.btn_pesquisar);
             this.Controls.Add(this.lbl_filtrar);
             this.Controls.Add(this.txt_filtrar);
@@ -262,5 +281,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_cpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_frequencia;
+        private System.Windows.Forms.Button btn_remover;
     }
 }

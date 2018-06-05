@@ -103,5 +103,14 @@ namespace Trabalgo_LP2
             VannerDB.ExecuteSQL(qry);
 
         }
+        public void Delete(int reg)
+        {
+            //deleta do banco um funcionario referente ao seu registro
+            Database VannerDB = Database.GetInstance();
+
+            string qry = string.Format("DELETE FROM Funcionario WHERE Registro = {0}", reg);
+
+            VannerDB.ExecuteSQL(qry);
+        }
     }
 }

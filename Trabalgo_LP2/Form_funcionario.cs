@@ -58,5 +58,22 @@ namespace Trabalgo_LP2
             FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
             dataGridView_funcionario.DataSource = funcionarioDAO.FindByName(txt_filtrar.Text);
         }
+
+        private void btn_remover_Click(object sender, EventArgs e)
+        {
+            //Quando pressionado remove um funcionario usando o registro
+            if (txt_filtrar.Text.Equals(""))
+            {
+                MessageBox.Show("Certifique-se de que a aba 'Filtrar' está preenchida", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                funcionarioDAO.Delete(Convert.ToInt32(txt_filtrar.Text));
+                MessageBox.Show("Funcionario removido com sucesso!", "Item removido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            FuncionarioDAO funcionariodao = new FuncionarioDAO();
+            dataGridView_funcionario.DataSource = funcionariodao.ListAll();
+        }
     }
 }
