@@ -35,16 +35,16 @@
             this.lbl_cpf = new System.Windows.Forms.Label();
             this.lbl_nome = new System.Windows.Forms.Label();
             this.lbl_Cadastro = new System.Windows.Forms.Label();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
-            this.pictureBox_cadastro = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txt_cpf = new System.Windows.Forms.TextBox();
             this.txt_telefone = new System.Windows.Forms.TextBox();
             this.btn_confirmar = new System.Windows.Forms.Button();
             this.btn_atualizar = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
+            this.pictureBox_cadastro = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_telefone
@@ -108,36 +108,6 @@
             this.lbl_Cadastro.TabIndex = 32;
             this.lbl_Cadastro.Text = "Cadastro de cliente";
             // 
-            // pictureBox_logo
-            // 
-            this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(124, 54);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 34;
-            this.pictureBox_logo.TabStop = false;
-            // 
-            // pictureBox_cadastro
-            // 
-            this.pictureBox_cadastro.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cadastro.Image")));
-            this.pictureBox_cadastro.Location = new System.Drawing.Point(350, 94);
-            this.pictureBox_cadastro.Name = "pictureBox_cadastro";
-            this.pictureBox_cadastro.Size = new System.Drawing.Size(182, 179);
-            this.pictureBox_cadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_cadastro.TabIndex = 17;
-            this.pictureBox_cadastro.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(130, 9);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 45);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 35;
-            this.pictureBox3.TabStop = false;
-            // 
             // txt_cpf
             // 
             this.txt_cpf.Location = new System.Drawing.Point(18, 147);
@@ -180,6 +150,36 @@
             this.btn_atualizar.UseVisualStyleBackColor = false;
             this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Trabalgo_LP2.Properties.Resources.student;
+            this.pictureBox3.Location = new System.Drawing.Point(130, 9);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(46, 45);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 35;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox_logo
+            // 
+            this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(124, 54);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 34;
+            this.pictureBox_logo.TabStop = false;
+            // 
+            // pictureBox_cadastro
+            // 
+            this.pictureBox_cadastro.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cadastro.Image")));
+            this.pictureBox_cadastro.Location = new System.Drawing.Point(350, 94);
+            this.pictureBox_cadastro.Name = "pictureBox_cadastro";
+            this.pictureBox_cadastro.Size = new System.Drawing.Size(182, 179);
+            this.pictureBox_cadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_cadastro.TabIndex = 17;
+            this.pictureBox_cadastro.TabStop = false;
+            // 
             // Form_cadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,9 +203,9 @@
             this.Name = "Form_cadastroCliente";
             this.Text = "Form_cadastroCliente";
             this.Load += new System.EventHandler(this.Form_cadastroCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

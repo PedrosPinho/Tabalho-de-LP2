@@ -30,10 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_cardapio));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_voltar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_cardapio = new System.Windows.Forms.Label();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.dataGridView_cardapio = new System.Windows.Forms.DataGridView();
             this.id_item_cardapio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome_item_cardapio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +39,7 @@
             this.lbl_procurar = new System.Windows.Forms.Label();
             this.txt_procurar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.btn_remover_adicionar = new System.Windows.Forms.Button();
             this.btn_adicionar_adicionar = new System.Windows.Forms.Button();
             this.txt_descricao = new System.Windows.Forms.TextBox();
@@ -55,13 +53,15 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_adicionar = new System.Windows.Forms.Label();
             this.btn_pesquisar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btn_voltar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_cardapio)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -76,32 +76,6 @@
             this.panel1.Size = new System.Drawing.Size(690, 103);
             this.panel1.TabIndex = 8;
             // 
-            // btn_voltar
-            // 
-            this.btn_voltar.BackColor = System.Drawing.Color.Black;
-            this.btn_voltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_voltar.BackgroundImage")));
-            this.btn_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(600, 26);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(74, 34);
-            this.btn_voltar.TabIndex = 14;
-            this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_voltar.UseVisualStyleBackColor = false;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(249, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(47, 44);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // lbl_cardapio
             // 
             this.lbl_cardapio.AutoSize = true;
@@ -111,16 +85,6 @@
             this.lbl_cardapio.Size = new System.Drawing.Size(144, 42);
             this.lbl_cardapio.TabIndex = 2;
             this.lbl_cardapio.Text = "Cardápio";
-            // 
-            // pictureBox_logo
-            // 
-            this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 0;
-            this.pictureBox_logo.TabStop = false;
             // 
             // dataGridView_cardapio
             // 
@@ -208,6 +172,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(208, 345);
             this.panel2.TabIndex = 12;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 288);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(181, 17);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "(Para remover digite apenas o id)";
             // 
             // btn_remover_adicionar
             // 
@@ -343,15 +317,42 @@
             this.btn_pesquisar.UseVisualStyleBackColor = false;
             this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
-            // label1
+            // btn_voltar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 288);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 17);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "(Para remover digite apenas o id)";
+            this.btn_voltar.BackColor = System.Drawing.Color.Black;
+            this.btn_voltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_voltar.BackgroundImage")));
+            this.btn_voltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.ForeColor = System.Drawing.Color.White;
+            this.btn_voltar.Location = new System.Drawing.Point(600, 26);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(74, 34);
+            this.btn_voltar.TabIndex = 14;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_voltar.UseVisualStyleBackColor = false;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Trabalgo_LP2.Properties.Resources.fast_food;
+            this.pictureBox1.Location = new System.Drawing.Point(249, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(47, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox_logo
+            // 
+            this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 6);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 0;
+            this.pictureBox_logo.TabStop = false;
             // 
             // Form_cardapio
             // 
@@ -370,13 +371,13 @@
             this.Load += new System.EventHandler(this.Form_cardapio_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_cardapio)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -63,6 +63,38 @@ namespace Trabalgo_LP2
 
         }
 
+        public List<Cliente> Fidelidade()
+        {
+            List<Cliente> lista = new List<Cliente>();
+            Cliente cliente = null;
+            SQLiteConnection conexao = Database.GetInstance().GetConnection();
+
+            string qry = "Select Nome, Telefone From Cliente";
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            SQLiteCommand comm = new SQLiteCommand(qry, conexao);
+
+            SQLiteDataReader dr = comm.ExecuteReader();
+
+            while (dr.Read())
+            {
+                // Cria um objeto Cliente para transferir os dados 
+                // do banco para a aplicação (DTO)
+                cliente = new Cliente();
+                cliente.Nome = dr.GetString(0);
+                cliente.Telefone = dr.GetString(1);
+
+                lista.Add(cliente); // Adiciona o objeto na lista de resultados
+            }
+
+            dr.Close(); // para nao dar erro de database locked
+            conexao.Close(); // Não esqueça de fechar a conexão
+
+            return lista;
+        }
+
         public List<Cliente> ListAll()
         {
             //cria e retorna uma lista com todos os clientes

@@ -21,5 +21,11 @@ namespace Trabalgo_LP2
         {
             Close();
         }
+
+        private void Form_fidelidade_Load(object sender, EventArgs e)
+        {
+            ClienteDAO clientedao = new ClienteDAO();
+            dataGridView_fidelidade.DataSource = clientedao.Fidelidade();
+        }
     }
 }

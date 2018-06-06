@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_fidelidade));
             this.dataGridView_fidelidade = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lbl_fidelidade = new System.Windows.Forms.Label();
+            this.panel_fidelidade = new System.Windows.Forms.Panel();
             this.Column_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_frequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbl_fidelidade = new System.Windows.Forms.Label();
-            this.panel_fidelidade = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fidelidade)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -55,29 +55,11 @@
             this.Column_Nome,
             this.Column_telefone,
             this.Column_frequencia});
-            this.dataGridView_fidelidade.Location = new System.Drawing.Point(253, 137);
+            this.dataGridView_fidelidade.Location = new System.Drawing.Point(240, 123);
             this.dataGridView_fidelidade.Name = "dataGridView_fidelidade";
             this.dataGridView_fidelidade.ReadOnly = true;
-            this.dataGridView_fidelidade.Size = new System.Drawing.Size(344, 319);
+            this.dataGridView_fidelidade.Size = new System.Drawing.Size(357, 319);
             this.dataGridView_fidelidade.TabIndex = 5;
-            // 
-            // Column_Nome
-            // 
-            this.Column_Nome.HeaderText = "Nome";
-            this.Column_Nome.Name = "Column_Nome";
-            this.Column_Nome.ReadOnly = true;
-            // 
-            // Column_telefone
-            // 
-            this.Column_telefone.HeaderText = "Telefone";
-            this.Column_telefone.Name = "Column_telefone";
-            this.Column_telefone.ReadOnly = true;
-            // 
-            // Column_frequencia
-            // 
-            this.Column_frequencia.HeaderText = "Frequência";
-            this.Column_frequencia.Name = "Column_frequencia";
-            this.Column_frequencia.ReadOnly = true;
             // 
             // panel2
             // 
@@ -90,6 +72,44 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(612, 106);
             this.panel2.TabIndex = 4;
+            // 
+            // lbl_fidelidade
+            // 
+            this.lbl_fidelidade.AutoSize = true;
+            this.lbl_fidelidade.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fidelidade.Location = new System.Drawing.Point(255, 30);
+            this.lbl_fidelidade.Name = "lbl_fidelidade";
+            this.lbl_fidelidade.Size = new System.Drawing.Size(186, 41);
+            this.lbl_fidelidade.TabIndex = 0;
+            this.lbl_fidelidade.Text = "Fidelidade";
+            // 
+            // panel_fidelidade
+            // 
+            this.panel_fidelidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
+            this.panel_fidelidade.Location = new System.Drawing.Point(12, 123);
+            this.panel_fidelidade.Name = "panel_fidelidade";
+            this.panel_fidelidade.Size = new System.Drawing.Size(218, 319);
+            this.panel_fidelidade.TabIndex = 6;
+            // 
+            // Column_Nome
+            // 
+            this.Column_Nome.DataPropertyName = "Nome";
+            this.Column_Nome.HeaderText = "Nome";
+            this.Column_Nome.Name = "Column_Nome";
+            this.Column_Nome.ReadOnly = true;
+            // 
+            // Column_telefone
+            // 
+            this.Column_telefone.DataPropertyName = "Telefone";
+            this.Column_telefone.HeaderText = "Telefone";
+            this.Column_telefone.Name = "Column_telefone";
+            this.Column_telefone.ReadOnly = true;
+            // 
+            // Column_frequencia
+            // 
+            this.Column_frequencia.HeaderText = "Frequência";
+            this.Column_frequencia.Name = "Column_frequencia";
+            this.Column_frequencia.ReadOnly = true;
             // 
             // btn_voltar
             // 
@@ -120,31 +140,13 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(217, 27);
+            this.pictureBox3.Image = global::Trabalgo_LP2.Properties.Resources._039_tag;
+            this.pictureBox3.Location = new System.Drawing.Point(210, 30);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(55, 37);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.Size = new System.Drawing.Size(49, 41);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
-            // 
-            // lbl_fidelidade
-            // 
-            this.lbl_fidelidade.AutoSize = true;
-            this.lbl_fidelidade.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fidelidade.Location = new System.Drawing.Point(265, 30);
-            this.lbl_fidelidade.Name = "lbl_fidelidade";
-            this.lbl_fidelidade.Size = new System.Drawing.Size(186, 41);
-            this.lbl_fidelidade.TabIndex = 0;
-            this.lbl_fidelidade.Text = "Fidelidade";
-            // 
-            // panel_fidelidade
-            // 
-            this.panel_fidelidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
-            this.panel_fidelidade.Location = new System.Drawing.Point(12, 137);
-            this.panel_fidelidade.Name = "panel_fidelidade";
-            this.panel_fidelidade.Size = new System.Drawing.Size(218, 319);
-            this.panel_fidelidade.TabIndex = 6;
             // 
             // Form_fidelidade
             // 
@@ -157,6 +159,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_fidelidade";
             this.Text = "Form_fidelidade";
+            this.Load += new System.EventHandler(this.Form_fidelidade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fidelidade)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -174,9 +177,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lbl_fidelidade;
         private System.Windows.Forms.Panel panel_fidelidade;
+        private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_frequencia;
-        private System.Windows.Forms.Button btn_voltar;
     }
 }
