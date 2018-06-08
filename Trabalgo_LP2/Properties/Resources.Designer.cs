@@ -173,6 +173,16 @@ namespace Trabalgo_LP2.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fundomenu {
+            get {
+                object obj = ResourceManager.GetObject("fundomenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home {
             get {
                 object obj = ResourceManager.GetObject("home", resourceCulture);
@@ -186,6 +196,26 @@ namespace Trabalgo_LP2.Properties {
         internal static System.Drawing.Bitmap logofeito {
             get {
                 object obj = ResourceManager.GetObject("logofeito", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logonovo {
+            get {
+                object obj = ResourceManager.GetObject("Logonovo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logonovo1 {
+            get {
+                object obj = ResourceManager.GetObject("Logonovo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

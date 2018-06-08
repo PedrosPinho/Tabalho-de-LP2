@@ -96,5 +96,10 @@ namespace Trabalgo_LP2
                 this.Close();
             }
         }
+
+        private void pictureBox_logo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

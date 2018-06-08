@@ -174,13 +174,14 @@
             // 
             // pictureBox_logo
             // 
-            this.pictureBox_logo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_logo.Image")));
+            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.Logonovo1;
             this.pictureBox_logo.Location = new System.Drawing.Point(-1, -3);
             this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(124, 54);
+            this.pictureBox_logo.Size = new System.Drawing.Size(124, 64);
             this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_logo.TabIndex = 35;
             this.pictureBox_logo.TabStop = false;
+            this.pictureBox_logo.Click += new System.EventHandler(this.pictureBox_logo_Click);
             // 
             // pictureBox3
             // 

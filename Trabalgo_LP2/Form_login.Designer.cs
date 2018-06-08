@@ -102,7 +102,7 @@
             // 
             // pictureBox_login
             // 
-            this.pictureBox_login.Image = global::Trabalgo_LP2.Properties.Resources.logofeito;
+            this.pictureBox_login.Image = global::Trabalgo_LP2.Properties.Resources.Logonovo1;
             this.pictureBox_login.Location = new System.Drawing.Point(3, 12);
             this.pictureBox_login.Name = "pictureBox_login";
             this.pictureBox_login.Size = new System.Drawing.Size(330, 255);
@@ -116,8 +116,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(559, 279);
             this.Controls.Add(this.panel_login);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.Name = "Form_login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Login";
             this.panel_login.ResumeLayout(false);
             this.panel_login.PerformLayout();
