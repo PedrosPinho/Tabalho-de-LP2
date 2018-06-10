@@ -29,57 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_fidelidade));
-            this.dataGridView_fidelidade = new System.Windows.Forms.DataGridView();
-            this.Column_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_frequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_fidelidade = new System.Windows.Forms.Label();
             this.panel_fidelidade = new System.Windows.Forms.Panel();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fidelidade)).BeginInit();
+            this.dataGridView_fidelidade = new System.Windows.Forms.DataGridView();
+            this.Column_Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_frequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fidelidade)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView_fidelidade
-            // 
-            this.dataGridView_fidelidade.AllowUserToAddRows = false;
-            this.dataGridView_fidelidade.AllowUserToDeleteRows = false;
-            this.dataGridView_fidelidade.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView_fidelidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_fidelidade.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column_Nome,
-            this.Column_telefone,
-            this.Column_frequencia});
-            this.dataGridView_fidelidade.Location = new System.Drawing.Point(240, 123);
-            this.dataGridView_fidelidade.Name = "dataGridView_fidelidade";
-            this.dataGridView_fidelidade.ReadOnly = true;
-            this.dataGridView_fidelidade.Size = new System.Drawing.Size(357, 319);
-            this.dataGridView_fidelidade.TabIndex = 5;
-            // 
-            // Column_Nome
-            // 
-            this.Column_Nome.DataPropertyName = "Nome";
-            this.Column_Nome.HeaderText = "Nome";
-            this.Column_Nome.Name = "Column_Nome";
-            this.Column_Nome.ReadOnly = true;
-            // 
-            // Column_telefone
-            // 
-            this.Column_telefone.DataPropertyName = "Telefone";
-            this.Column_telefone.HeaderText = "Telefone";
-            this.Column_telefone.Name = "Column_telefone";
-            this.Column_telefone.ReadOnly = true;
-            // 
-            // Column_frequencia
-            // 
-            this.Column_frequencia.HeaderText = "Frequência";
-            this.Column_frequencia.Name = "Column_frequencia";
-            this.Column_frequencia.ReadOnly = true;
             // 
             // panel2
             // 
@@ -92,6 +57,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(612, 106);
             this.panel2.TabIndex = 4;
+            // 
+            // pictureBox_logo
+            // 
+            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.Logonovo1;
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(126, 97);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 16;
+            this.pictureBox_logo.TabStop = false;
             // 
             // btn_voltar
             // 
@@ -133,53 +108,87 @@
             // panel_fidelidade
             // 
             this.panel_fidelidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
-            this.panel_fidelidade.Location = new System.Drawing.Point(12, 123);
+            this.panel_fidelidade.Location = new System.Drawing.Point(12, 126);
             this.panel_fidelidade.Name = "panel_fidelidade";
-            this.panel_fidelidade.Size = new System.Drawing.Size(218, 319);
+            this.panel_fidelidade.Size = new System.Drawing.Size(136, 316);
             this.panel_fidelidade.TabIndex = 6;
             // 
-            // pictureBox_logo
+            // dataGridView_fidelidade
             // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.Logonovo1;
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 9);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(126, 97);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 16;
-            this.pictureBox_logo.TabStop = false;
+            this.dataGridView_fidelidade.AllowUserToAddRows = false;
+            this.dataGridView_fidelidade.AllowUserToDeleteRows = false;
+            this.dataGridView_fidelidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_fidelidade.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column_Nome,
+            this.Column_cpf,
+            this.Column_frequencia,
+            this.Telefone});
+            this.dataGridView_fidelidade.Location = new System.Drawing.Point(154, 126);
+            this.dataGridView_fidelidade.Name = "dataGridView_fidelidade";
+            this.dataGridView_fidelidade.ReadOnly = true;
+            this.dataGridView_fidelidade.Size = new System.Drawing.Size(443, 313);
+            this.dataGridView_fidelidade.TabIndex = 7;
+            // 
+            // Column_Nome
+            // 
+            this.Column_Nome.DataPropertyName = "Nome";
+            this.Column_Nome.HeaderText = "Nome";
+            this.Column_Nome.Name = "Column_Nome";
+            this.Column_Nome.ReadOnly = true;
+            // 
+            // Column_cpf
+            // 
+            this.Column_cpf.DataPropertyName = "Cpf";
+            this.Column_cpf.HeaderText = "CPF";
+            this.Column_cpf.Name = "Column_cpf";
+            this.Column_cpf.ReadOnly = true;
+            // 
+            // Column_frequencia
+            // 
+            this.Column_frequencia.DataPropertyName = "Frequencia";
+            this.Column_frequencia.HeaderText = "Frequência";
+            this.Column_frequencia.Name = "Column_frequencia";
+            this.Column_frequencia.ReadOnly = true;
+            // 
+            // Telefone
+            // 
+            this.Telefone.DataPropertyName = "Telefone";
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            this.Telefone.ReadOnly = true;
             // 
             // Form_fidelidade
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 468);
-            this.Controls.Add(this.panel_fidelidade);
             this.Controls.Add(this.dataGridView_fidelidade);
+            this.Controls.Add(this.panel_fidelidade);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_fidelidade";
             this.Text = "Form_fidelidade";
             this.Load += new System.EventHandler(this.Form_fidelidade_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fidelidade)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_fidelidade)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView_fidelidade;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lbl_fidelidade;
         private System.Windows.Forms.Panel panel_fidelidade;
         private System.Windows.Forms.Button btn_voltar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_telefone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_frequencia;
         private System.Windows.Forms.PictureBox pictureBox_logo;
+        private System.Windows.Forms.DataGridView dataGridView_fidelidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_cpf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_frequencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
     }
 }

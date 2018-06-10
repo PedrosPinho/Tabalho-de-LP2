@@ -14,6 +14,12 @@ namespace Trabalgo_LP2
 
         public Cliente()
         { }
+        public Cliente(string nome, string cpf, int frequencia)
+        {
+            this.nome = nome;
+            this.cpf = cpf;
+            this.frequencia = frequencia;
+        }
         public Cliente(string nome, string cpf, string telefone, int frequencia)
         {
             this.nome = nome;

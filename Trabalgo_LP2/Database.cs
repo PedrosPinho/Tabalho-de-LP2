@@ -60,7 +60,8 @@ namespace Trabalgo_LP2
             sql.AppendLine("CREATE TABLE IF NOT EXISTS Cliente (");
             sql.AppendLine("[Cpf] TEXT PRIMARY KEY NOT NULL UNIQUE,");
             sql.AppendLine("[Nome] TEXT,");
-            sql.AppendLine("[Telefone] TEXT);");
+            sql.AppendLine("[Telefone] TEXT,");
+            sql.AppendLine("[Frequencia] INTERGER);");
 
             SQLiteCommand cmd = new SQLiteCommand(sql.ToString(), conn);
             try
