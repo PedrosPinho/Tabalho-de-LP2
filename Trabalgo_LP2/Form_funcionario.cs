@@ -62,15 +62,16 @@ namespace Trabalgo_LP2
         private void btn_remover_Click(object sender, EventArgs e)
         {
             //Quando pressionado remove um funcionario usando o registro
-            if (txt_filtrar.Text.Equals(""))
+            if (txt_reg_rmv.Text.Equals(""))
             {
-                MessageBox.Show("Certifique-se de que a aba 'Filtrar' está preenchida", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Certifique-se de que a aba remover está preenchida", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-                funcionarioDAO.Delete(Convert.ToInt32(txt_filtrar.Text));
-                MessageBox.Show("Funcionario removido com sucesso!", "Item removido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                funcionarioDAO.Delete(txt_reg_rmv.Text);
+                MessageBox.Show("Funcionario removido com sucesso!", "Funcionario removido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txt_reg_rmv.Text = null;
             }
             FuncionarioDAO funcionariodao = new FuncionarioDAO();
             dataGridView_funcionario.DataSource = funcionariodao.ListAll();

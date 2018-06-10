@@ -21,37 +21,6 @@ namespace Trabalgo_LP2
             VannerDB.ExecuteSQL(qry);
         }
 
-        public Cliente Read(int cpf)
-        {
-            //retorna a partir do cpf um cliente
-            Cliente cliente = null;
-            SQLiteConnection conexao = Database.GetInstance().GetConnection();
-
-            string qry = "SELECT Cpf, Nome, Telefone FROM Cliente WHERE Cpf = " +
-                         cpf ;
-
-            if (conexao.State != System.Data.ConnectionState.Open)
-                conexao.Open();
-
-            SQLiteCommand comm = new SQLiteCommand(qry, conexao);
-            SQLiteDataReader dr = comm.ExecuteReader();
-
-            if (dr.Read()) // A busca por chave primária só retorna um objeto
-            {
-                // Cria um objeto Cliente para transferir os dados 
-                // do banco para a aplicação (DTO)
-                cliente = new Cliente();
-                cliente.Cpf = dr.GetString(0);
-                cliente.Nome = dr.GetString(1);
-                cliente.Telefone = dr.GetString(2);
-            }
-
-            dr.Close();  // precisa fechar o datareader para nao dar database locked
-            conexao.Close();
-
-            return cliente;
-        }
-
         public void Update(Cliente c)
         {
             //atualiza no banco um cliente especifico
@@ -168,7 +137,7 @@ namespace Trabalgo_LP2
 
         }
 
-        public void Delete(int cpf)
+        public void Delete(string cpf)
         {
             //deleta do banco um cliente referente ao seu cpf
             Database VannerDB = Database.GetInstance();

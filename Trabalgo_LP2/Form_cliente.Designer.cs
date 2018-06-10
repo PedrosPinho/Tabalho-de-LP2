@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_cliente));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_cliente = new System.Windows.Forms.Label();
@@ -44,11 +45,12 @@
             this.btn_remover = new System.Windows.Forms.Button();
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
-            this.pictureBox_logo = new System.Windows.Forms.PictureBox();
+            this.txt_cpf_rmv = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_cliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -62,6 +64,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(612, 106);
             this.panel2.TabIndex = 2;
+            // 
+            // pictureBox_logo
+            // 
+            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.Logonovo1;
+            this.pictureBox_logo.Location = new System.Drawing.Point(0, 9);
+            this.pictureBox_logo.Name = "pictureBox_logo";
+            this.pictureBox_logo.Size = new System.Drawing.Size(126, 97);
+            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_logo.TabIndex = 16;
+            this.pictureBox_logo.TabStop = false;
             // 
             // btn_voltar
             // 
@@ -228,21 +240,31 @@
             this.btn_alterar.UseVisualStyleBackColor = false;
             this.btn_alterar.Click += new System.EventHandler(this.btn_alterar_Click);
             // 
-            // pictureBox_logo
+            // txt_cpf_rmv
             // 
-            this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.Logonovo1;
-            this.pictureBox_logo.Location = new System.Drawing.Point(0, 9);
-            this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(126, 97);
-            this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_logo.TabIndex = 16;
-            this.pictureBox_logo.TabStop = false;
+            this.txt_cpf_rmv.Location = new System.Drawing.Point(475, 413);
+            this.txt_cpf_rmv.Mask = "00000000000";
+            this.txt_cpf_rmv.Name = "txt_cpf_rmv";
+            this.txt_cpf_rmv.Size = new System.Drawing.Size(122, 20);
+            this.txt_cpf_rmv.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(458, 436);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 17);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "(Para remover digite o cpf)";
             // 
             // Form_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 468);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt_cpf_rmv);
             this.Controls.Add(this.btn_remover);
             this.Controls.Add(this.btn_pesquisar);
             this.Controls.Add(this.lbl_filtrar);
@@ -257,9 +279,9 @@
             this.Load += new System.EventHandler(this.Form_cliente_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_cliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +305,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_frequencia;
         private System.Windows.Forms.Button btn_remover;
         private System.Windows.Forms.PictureBox pictureBox_logo;
+        private System.Windows.Forms.MaskedTextBox txt_cpf_rmv;
+        private System.Windows.Forms.Label label1;
     }
 }
