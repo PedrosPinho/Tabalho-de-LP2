@@ -19,11 +19,24 @@ namespace Trabalgo_LP2
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form_menu form = new Form_menu();
-            form.StartPosition = FormStartPosition.CenterParent;
-            form.ShowDialog(this);
-            Close();
+            FuncionarioDAO funcionariodao = new FuncionarioDAO();
+            if (txt_registro.Text == "")
+            {
+                MessageBox.Show("Certifique que o campo regitro esta preenchido!", "Aviso!", MessageBoxButtons.OK);
+            }
+            else if (funcionariodao.ValidaLogin(txt_registro.Text) == false)
+            {
+                MessageBox.Show("Funcionario inexistente!", "Aviso!", MessageBoxButtons.OK);
+                txt_registro.Text = null;
+            }
+            else
+            {
+                this.Hide();
+                Form_menu form = new Form_menu();
+                form.StartPosition = FormStartPosition.CenterParent;
+                form.ShowDialog(this);
+                Close();
+            }
         }
 
         private void linklbl_cadastrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

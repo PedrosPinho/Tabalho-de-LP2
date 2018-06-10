@@ -32,7 +32,7 @@
             this.linklbl_cadastrar = new System.Windows.Forms.LinkLabel();
             this.btn_login = new System.Windows.Forms.Button();
             this.lbl_registro = new System.Windows.Forms.Label();
-            this.maskedTextBox_registro = new System.Windows.Forms.MaskedTextBox();
+            this.txt_registro = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox_login = new System.Windows.Forms.PictureBox();
             this.panel_login.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_login)).BeginInit();
@@ -44,7 +44,7 @@
             this.panel_login.Controls.Add(this.linklbl_cadastrar);
             this.panel_login.Controls.Add(this.btn_login);
             this.panel_login.Controls.Add(this.lbl_registro);
-            this.panel_login.Controls.Add(this.maskedTextBox_registro);
+            this.panel_login.Controls.Add(this.txt_registro);
             this.panel_login.Controls.Add(this.pictureBox_login);
             this.panel_login.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,13 +92,13 @@
             this.lbl_registro.TabIndex = 2;
             this.lbl_registro.Text = "Registro:";
             // 
-            // maskedTextBox_registro
+            // txt_registro
             // 
-            this.maskedTextBox_registro.Location = new System.Drawing.Point(357, 106);
-            this.maskedTextBox_registro.Mask = "0000000000";
-            this.maskedTextBox_registro.Name = "maskedTextBox_registro";
-            this.maskedTextBox_registro.Size = new System.Drawing.Size(181, 20);
-            this.maskedTextBox_registro.TabIndex = 1;
+            this.txt_registro.Location = new System.Drawing.Point(357, 106);
+            this.txt_registro.Mask = "0000000000";
+            this.txt_registro.Name = "txt_registro";
+            this.txt_registro.Size = new System.Drawing.Size(181, 20);
+            this.txt_registro.TabIndex = 1;
             // 
             // pictureBox_login
             // 
@@ -134,7 +134,7 @@
         private System.Windows.Forms.PictureBox pictureBox_login;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Label lbl_registro;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox_registro;
+        private System.Windows.Forms.MaskedTextBox txt_registro;
         private System.Windows.Forms.LinkLabel linklbl_cadastrar;
     }
 }

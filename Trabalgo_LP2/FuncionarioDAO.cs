@@ -91,6 +91,39 @@ namespace Trabalgo_LP2
             return lista;
         }
 
+        public Boolean ValidaLogin(string reg)
+        {
+            List<string> lista = new List<string>();
+            Funcionario funcionario = null;
+            SQLiteConnection conexao = Database.GetInstance().GetConnection();
+            //Seleciona todos registros do banco
+            string qry = string.Format("SELECT Registro FROM Funcionario");
+            
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            SQLiteCommand comm = new SQLiteCommand(qry, conexao);
+
+            SQLiteDataReader dr = comm.ExecuteReader();
+            //coloca todos os registros na lista
+            while (dr.Read())
+            {
+                funcionario = new Funcionario();
+                funcionario.Registro = dr.GetString(0);
+                lista.Add(funcionario.Registro);
+            }
+
+            dr.Close(); // para nao dar erro de database locked
+            conexao.Close(); // Não esqueça de fechar a conexão
+
+            //compara o registro do usuario com a lista
+            foreach (string l in lista)
+                if(reg == l)
+                    return true;
+
+            return false;
+        }
+
         public void Update(Funcionario f)
         {
             //atualiza no banco um cliente especifico
