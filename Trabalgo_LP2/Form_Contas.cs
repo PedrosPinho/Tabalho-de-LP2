@@ -12,7 +12,7 @@ namespace Trabalgo_LP2
 {
     public partial class Form_contas : Form
     {
-        public Form_contas()
+        public Form_contas(int num_mesa, int num_pessoas)
         {
             InitializeComponent();
         }

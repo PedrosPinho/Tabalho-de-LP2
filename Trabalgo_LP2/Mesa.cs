@@ -8,37 +8,39 @@ namespace Trabalgo_LP2
 {
     class Mesa
     {
-        int numero_mesa, numero_pessoas;
+        int num_mesa, num_pessoas;
 
+        public Mesa()
+        { }
         public Mesa(int numero_mesa, int numero_pessoas)
         {
-            this.numero_mesa = numero_mesa;
-            this.numero_pessoas = numero_pessoas;
+            this.num_mesa = numero_mesa;
+            this.num_pessoas = numero_pessoas;
         }
 
-        public int Numero_mesa
+        public int Num_mesa
         {
             get
             {
-                return numero_mesa;
+                return num_mesa;
             }
 
             set
             {
-                numero_mesa = value;
+                num_mesa = value;
             }
         }
 
-        public int Numero_pessoas
+        public int Num_pessoas
         {
             get
             {
-                return numero_pessoas;
+                return num_pessoas;
             }
 
             set
             {
-                numero_pessoas = value;
+                num_pessoas = value;
             }
         }
     }

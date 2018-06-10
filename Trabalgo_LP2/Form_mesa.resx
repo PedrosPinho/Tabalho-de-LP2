@@ -121,7 +121,7 @@
   <data name="btn_voltar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQQAAABQCAIAAABwApwIAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wgAADsIBFShKgAAAABJ0RVh0U29mdHdhcmUAR3JlZW5zaG90XlUIBQAAA2JJREFUeF7t2UdOJEEYROG5
+        vQAADr0BR/uQrQAAABJ0RVh0U29mdHdhcmUAR3JlZW5zaG90XlUIBQAAA2JJREFUeF7t2UdOJEEYROG5
         E0vOxnGwwnsPxwAa7705AfMLYkbMQDfdVEZWlvS+VdY+nkqp/NUH4A0xAEIMgBADIM2Lob+/XycgqYbF
         sL29PTo6qg8gqSbFECW8vr4SA0waE8N7CcQAn2bE8LeEQAwwaUAMH0sIxACT0mP4r4RADDApOobPJQRi
         gEm5MXxZQiAGmBQaQ7sSAjHApMQYOpQQiAEmxcXQuYRADDApK4atrS1Nvj1igElBMWxubmrvHREDTEqJ
@@ -139,6 +139,12 @@
         IKnmxQBY9PX9BjqJlfe4WeaqAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="Mesa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Pessoas.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Mesa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

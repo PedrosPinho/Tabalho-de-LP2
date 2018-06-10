@@ -112,6 +112,29 @@ namespace Trabalgo_LP2
             {
                 MessageBox.Show("Erro ao criar banco de dados: " + ex.Message);
             }
+
+            //CRIA TABELA MESA
+            sql.Clear();
+            sql.AppendLine("CREATE TABLE IF NOT EXISTS Mesa (");
+            sql.AppendLine("[num_mesa] INTERGER PRIMARY KEY NOT NULL UNIQUE,");
+            sql.AppendLine("[num_pessoas] INTERGER);");
+            sql.Clear();
+            //CRIA AS 10 MESAS
+            for(int i = 0; i < 10; i++)
+            {
+                string qry =
+                string.Format("INSERT INTO  Mesa (num_mesa, num_pessoas) VALUES ('{0}', 0)", i+1);
+            }
+
+            cmd = new SQLiteCommand(sql.ToString(), conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao criar banco de dados: " + ex.Message);
+            }
             conn.Close();
         }
     }
