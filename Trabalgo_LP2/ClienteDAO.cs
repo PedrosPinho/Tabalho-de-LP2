@@ -17,7 +17,7 @@ namespace Trabalgo_LP2
 
             string qry =
             string.Format("INSERT INTO Cliente (CPF, NOME, TELEFONE, FREQUENCIA) VALUES ('{0}','{1}', '{2}',  '{3}')",
-                c.Cpf, c.Nome, c.Telefone, 0);
+                c.Cpf, c.Nome, c.Telefone, 2);
             VannerDB.ExecuteSQL(qry);
         }
 
@@ -38,7 +38,7 @@ namespace Trabalgo_LP2
             Cliente cliente = null;
             SQLiteConnection conexao = Database.GetInstance().GetConnection();
 
-            string qry = "Select Nome, Cpf, Frequencia, Telefone From Cliente ORDER BY Frequencia";
+            string qry = "Select Nome, Cpf, Frequencia, Telefone From Cliente ORDER BY Frequencia DESC";
 
             if (conexao.State != System.Data.ConnectionState.Open)
                 conexao.Open();
@@ -73,7 +73,7 @@ namespace Trabalgo_LP2
             Cliente cliente = null;
             SQLiteConnection conexao = Database.GetInstance().GetConnection();
 
-            string qry = "SELECT Cpf, Nome, Telefone FROM Cliente";
+            string qry = "SELECT Cpf, Nome, Telefone, Frequencia FROM Cliente";
 
             if (conexao.State != System.Data.ConnectionState.Open)
                 conexao.Open();
@@ -90,6 +90,7 @@ namespace Trabalgo_LP2
                 cliente.Cpf = dr.GetString(0);
                 cliente.Nome = dr.GetString(1);
                 cliente.Telefone = dr.GetString(2);
+                cliente.Frequencia = dr.GetInt32(3);
 
                 lista.Add(cliente); // Adiciona o objeto na lista de resultados
             }
