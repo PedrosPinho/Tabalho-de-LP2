@@ -27,5 +27,42 @@ namespace Trabalgo_LP2
             ClienteDAO clientedao = new ClienteDAO();
             dataGridView_fidelidade.DataSource = clientedao.Fidelidade();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.lbl_Mdesconto.Visible = !this.lbl_Mdesconto.Visible;
+            this.lbl_Mfreq.Visible = !this.lbl_Mfreq.Visible;
+            this.txt_Mdesconto.Visible = !this.txt_Mdesconto.Visible;
+            this.txt_Mfreq.Visible = !this.txt_Mfreq.Visible;
+            this.btn_criar.Visible = !this.btn_criar.Visible;
+        }
+
+        private void btn_criar_Click(object sender, EventArgs e)
+        {
+            //TA MEIO MERDA MAS eh o que tem pra hj, jaja arrumo ¯\_(ツ)_/¯
+            try
+            { 
+                int desc = Convert.ToInt32(txt_Mdesconto.Text);
+                int freq = Convert.ToInt32(txt_Mfreq.Text);
+                DescontoDAO desconto = new DescontoDAO();
+                desconto.Create(desc, freq);
+                this.label3.Text = txt_Mdesconto.Text + '%';
+                this.label4.Text = txt_Mfreq.Text;
+            }
+            catch(System.Exception)
+            {
+                MessageBox.Show("deu merda", "vdd", MessageBoxButtons.OK);
+            }
+            finally
+            {
+                this.lbl_Mdesconto.Visible = !this.lbl_Mdesconto.Visible;
+                this.lbl_Mfreq.Visible = !this.lbl_Mfreq.Visible;
+                this.txt_Mdesconto.Visible = !this.txt_Mdesconto.Visible;
+                this.txt_Mfreq.Visible = !this.txt_Mfreq.Visible;
+                this.btn_criar.Visible = !this.btn_criar.Visible;
+            }
+
+
+}
     }
 }

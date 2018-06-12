@@ -139,7 +139,23 @@ namespace Trabalgo_LP2
                 VannerDB.ExecuteSQL(qry);
             }
 
-            
+            sql.Clear();
+            sql.AppendLine("CREATE TABLE IF NOT EXISTS Desconto (");
+            sql.AppendLine("[porcentagem] INTERGER ,");
+            sql.AppendLine("[frequencia] INTERGER);");
+
+            cmd = new SQLiteCommand(sql.ToString(), conn);
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao criar banco de dados: " + ex.Message);
+            }
+            string qry2 =
+                string.Format("INSERT INTO  Desconto (Porcentagem, Frequencia) VALUES (0, 0)");
+            VannerDB.ExecuteSQL(qry2);
             conn.Close();
         }
     }

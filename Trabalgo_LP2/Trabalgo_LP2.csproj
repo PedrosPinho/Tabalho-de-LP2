@@ -74,6 +74,7 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteDAO.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="DescontoDAO.cs" />
     <Compile Include="Form_cadastroFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
