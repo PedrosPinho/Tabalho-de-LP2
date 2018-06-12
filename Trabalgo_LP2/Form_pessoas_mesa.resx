@@ -117,35 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_voltar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQQAAABQCAIAAABwApwIAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABJ0RVh0U29mdHdhcmUAR3JlZW5zaG90XlUIBQAAA2JJREFUeF7t2UdOJEEYROG5
-        E0vOxnGwwnsPxwAa7705AfMLYkbMQDfdVEZWlvS+VdY+nkqp/NUH4A0xAEIMgBADIM2Lob+/XycgqYbF
-        sL29PTo6qg8gqSbFECW8vr4SA0waE8N7CcQAn2bE8LeEQAwwaUAMH0sIxACT0mP4r4RADDApOobPJQRi
-        gEm5MXxZQiAGmBQaQ7sSAjHApMQYOpQQiAEmxcXQuYRADDApK4atrS1Nvj1igElBMWxubmrvHREDTEqJ
-        YWNjQ2P/DjHApIgY1tfXtfQuEANM6o9hbW1NM+8OMcCk5hhWV1e18a4RA0zqjGFlZUUD7wUxwKS2GJaX
-        l7XuHhEDTOqJYWlpSdPuHTHApIYYFhcXtesfIQaY5I5hYWFBo/4pYoBJ1hjm5+e16AqIASb5Ypibm9Oc
-        qyEGmGSKYXZ2VluujBhgkiOGmZkZDTkFYoCJPYbp6WmtOBFigIk3hqmpKU04HWKAiTGGyclJ7TcpYoCJ
-        K4aJiQmNNzVigIklhvHxcS3XgBhgkj6GsbExzdaDGGCSOIZYqjZrQwwwSRnDyMiIButEDDBJFsPw8LDW
-        akYMMEkTw9DQkKbqRwwwSRDD4OCgdpoFMcAkzZ9hb29PU/UjBpgkuzPs7u5qrWbEAJNkMYQ8PRADTFLG
-        EDL0QAwwSRxD2NnZ0Ww9iAEm6WMI1h6IASaWGIKvB2KAiSuGYOqBGGBijCE47tPEABNvDCH5exwxwMQe
-        Q2i1WhpyCsQAkxwxhP39fW25MmKASaYYwsHBgeZcDTHAJF8M4fDwUIuugBhgkjWGcHR0pFH/FDHAJHcM
-        oWIPxACTGmIIx8fHmnbviAEm9cQQTk5OtO4eEQNMaoshnJ6eauC9IAaY1BlDODs708a7RgwwqTmGcH5+
-        rpl3hxhgUn8M4eLiQkvvAjHApIgYwuXlpcb+HWKASSkxhKurK+29I2KASUExhOvra02+PWKASVkxhG97
-        IAaYFBdDuLm50fC/QgwwKTGGcHt7q+1/QgwwKTSGcHd3p/n/ixhgUm4M4f7+XgV8QAwwKTqG8PDwoAj+
-        IAaYlB5DeHx8VAdviAEmDYghPD09KQVigE0zYgjPz8/EAKvGxBDeeyAGmDQphvDy8kIMMGlYDGFgYEAn
-        IKnmxQBY9PX9BjqJlfe4WeaqAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <metadata name="id_item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="nome_item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="preco_item.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

@@ -134,6 +134,12 @@
     <Compile Include="Form_mesa.Designer.cs">
       <DependentUpon>Form_mesa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_pessoas_mesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_pessoas_mesa.Designer.cs">
+      <DependentUpon>Form_pessoas_mesa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fornecedor.cs" />
     <Compile Include="Funcionario.cs" />
     <Compile Include="Form_login.cs">
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_login.resx">
       <DependentUpon>Form_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_pessoas_mesa.resx">
+      <DependentUpon>Form_pessoas_mesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

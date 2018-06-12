@@ -132,10 +132,10 @@ namespace Trabalgo_LP2
             }
 
             //CRIA AS 10 MESAS
-            for (int i = 0; i < 10; i++)
+            for (int i = 1; i < 11; i++)
             {
                 string qry =
-                string.Format("INSERT INTO  Mesa (num_mesa, num_pessoas) VALUES ('{0}', 0)", i+1);
+                string.Format("INSERT INTO  Mesa (num_mesa, num_pessoas) VALUES ('{0}', 0)", i);
                 VannerDB.ExecuteSQL(qry);
             }
 

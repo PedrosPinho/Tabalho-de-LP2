@@ -20,19 +20,22 @@ namespace Trabalgo_LP2
         {
             //RETORNA O NUMERO D MESA PARA O FORM CONTAS
             var cell = dataGridView_mesas.Rows[e.RowIndex].Cells[0].Value;
-            MessageBox.Show(cell.ToString());
 
+            //SE NUM PESSOAS FOR > 0 SAIR DAQ
             if (Convert.ToInt32(dataGridView_mesas.Rows[e.RowIndex].Cells[1].Value) == 0)
             {
-                this.lbl_informe.Visible = true;
-                this.comboBox_numero.Visible = true;
+                Form_pessoas_mesa form = new Form_pessoas_mesa(Convert.ToInt32(cell));
+                form.StartPosition = FormStartPosition.CenterParent;
+                form.ShowDialog(this);
             }
-            MessageBox.Show(comboBox_numero.SelectedIndex.ToString());
-
-            /*Form_contas form = new Form_contas(Convert.ToInt32(cell), comboBox_numero.SelectedIndex);
-            form.StartPosition = FormStartPosition.CenterParent;
-            form.ShowDialog(this);*/
-
+            else
+            {
+                Form_contas form = new Form_contas(Convert.ToInt32(cell));
+                form.StartPosition = FormStartPosition.CenterParent;
+                form.ShowDialog(this);
+            }
+            MesaDAO mesadao = new MesaDAO();
+            dataGridView_mesas.DataSource = mesadao.ListAll();
         }
 
         private void Form_mesa_Load(object sender, EventArgs e)
@@ -45,10 +48,6 @@ namespace Trabalgo_LP2
         {
             Close();
         }
-        
-        private void comboBox_numero_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+
     }
 }

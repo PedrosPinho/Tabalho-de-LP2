@@ -12,9 +12,10 @@ namespace Trabalgo_LP2
 {
     public partial class Form_contas : Form
     {
-        public Form_contas(int num_mesa, int num_pessoas)
+        public Form_contas(int num_mesa)
         {
             InitializeComponent();
+            label2.Text = num_mesa.ToString();
         }
 
         private void Form_contas_Load(object sender, EventArgs e)
@@ -32,6 +33,11 @@ namespace Trabalgo_LP2
         private void btn_voltar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btn_adicionar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

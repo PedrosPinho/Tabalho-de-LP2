@@ -39,8 +39,6 @@
             this.Mesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pessoas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.comboBox_numero = new System.Windows.Forms.ComboBox();
-            this.lbl_informe = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -156,51 +154,18 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(353, 227);
+            this.pictureBox2.Location = new System.Drawing.Point(353, 245);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(222, 187);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // comboBox_numero
-            // 
-            this.comboBox_numero.FormattingEnabled = true;
-            this.comboBox_numero.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "09",
-            "10"});
-            this.comboBox_numero.Location = new System.Drawing.Point(534, 161);
-            this.comboBox_numero.Name = "comboBox_numero";
-            this.comboBox_numero.Size = new System.Drawing.Size(48, 21);
-            this.comboBox_numero.TabIndex = 11;
-            this.comboBox_numero.Visible = false;
-            this.comboBox_numero.SelectedIndexChanged += new System.EventHandler(this.comboBox_numero_SelectedIndexChanged);
-            // 
-            // lbl_informe
-            // 
-            this.lbl_informe.AutoSize = true;
-            this.lbl_informe.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_informe.Location = new System.Drawing.Point(329, 159);
-            this.lbl_informe.Name = "lbl_informe";
-            this.lbl_informe.Size = new System.Drawing.Size(199, 20);
-            this.lbl_informe.TabIndex = 12;
-            this.lbl_informe.Text = "Informe o numero de pessoas:";
-            this.lbl_informe.Visible = false;
-            // 
             // Form_mesa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 468);
-            this.Controls.Add(this.lbl_informe);
-            this.Controls.Add(this.comboBox_numero);
             this.Controls.Add(this.txt_mesa);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView_mesas);
@@ -232,7 +197,5 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Mesa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pessoas;
-        private System.Windows.Forms.ComboBox comboBox_numero;
-        private System.Windows.Forms.Label lbl_informe;
     }
 }

@@ -41,12 +41,12 @@ namespace Trabalgo_LP2
 
             return lista;
         }
-        public void Update(Cliente c)
+        public void Update(Mesa m)
         {
             //atualiza no banco um cliente especifico
             Database VannerDB = Database.GetInstance();
 
-            string qry = string.Format("UPDATE Cliente SET Nome='{0}', Telefone='{1}' WHERE Cpf like '{2}'", c.Nome, c.Telefone, c.Cpf);
+            string qry = string.Format("UPDATE Mesa SET Num_pessoas='{0}' WHERE Num_mesa = '{1}'", m.Num_pessoas, m.Num_mesa);
 
             VannerDB.ExecuteSQL(qry);
 
