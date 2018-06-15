@@ -17,6 +17,10 @@ namespace Trabalgo_LP2
         //private static string conexao = "Data Source = VannerBD.db";
         //private static string nomebanco = "VannerBD.db";
 
+        private int registroFunc;
+
+        public int RegistroFunc { get { return registroFunc; } set { registroFunc = value; } }
+
         public Form_cadastroFuncionario(int modo)
         {
             InitializeComponent();
@@ -27,9 +31,29 @@ namespace Trabalgo_LP2
                     break;
                 case 2://ATUALIZAR
                     btn_confirmar.Hide();
+                    txt_registroFunc.Enabled = false;
                     break;
             }
         }
+
+        public bool exibirAluno()
+        {
+            FuncionarioDAO funcionariodao = new FuncionarioDAO();
+            Funcionario a = funcionariodao.Read(registroFunc);
+
+            if (a == null)
+            {
+                MessageBox.Show("Este funcionário não existe!", "ERRO!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                SetDTO(a);
+                return true;
+            }
+        }
+
         private Funcionario GetDTO()
         {
             Funcionario funcionario = new Funcionario();
@@ -94,10 +118,20 @@ namespace Trabalgo_LP2
                 funcionarioDAO.Update(funcionario);
                 MessageBox.Show("Funcionario atualizado", "Aviso", MessageBoxButtons.OK);
                 this.Close();
+
+                Form_funcionario form = new Form_funcionario();
+                form.StartPosition = FormStartPosition.CenterParent;
+                form.ShowDialog(this);
+                
             }
         }
 
         private void pictureBox_logo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_cadastroFuncionario_Load(object sender, EventArgs e)
         {
 
         }

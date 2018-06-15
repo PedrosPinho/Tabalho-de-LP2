@@ -145,5 +145,38 @@ namespace Trabalgo_LP2
 
             VannerDB.ExecuteSQL(qry);
         }
+
+        public Funcionario Read(int registro)
+        {
+            Funcionario funcionario = null;
+            SQLiteConnection conexao = Database.GetInstance().GetConnection();
+
+            string qry = "SELECT Registro, Nome, Cpf, Funcao, Data_inicio, Telefone FROM Funcionario WHERE registro = " +
+                         registro;
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            SQLiteCommand comm = new SQLiteCommand(qry, conexao);
+            SQLiteDataReader dr = comm.ExecuteReader();
+
+            if (dr.Read()) // A busca por chave primária só retorna um objeto
+            {
+                // Cria um objeto Aluno para transferir os dados 
+                // do banco para a aplicação (DTO)
+                funcionario = new Funcionario();
+                funcionario.Registro = dr.GetString(0);
+                funcionario.Nome = dr.GetString(1);
+                funcionario.Cpf = dr.GetString(2);
+                funcionario.Funcao = dr.GetString(3);
+                funcionario.Data_inicio = dr.GetString(4);
+                funcionario.Telefone = dr.GetString(5);
+            }
+
+            dr.Close();  // precisa fechar o datareader para nao dar database locked
+            conexao.Close();
+
+            return funcionario;
+        }
     }
 }

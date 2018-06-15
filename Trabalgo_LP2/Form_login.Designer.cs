@@ -94,6 +94,7 @@
             // 
             // txt_registro
             // 
+            this.txt_registro.BeepOnError = true;
             this.txt_registro.Location = new System.Drawing.Point(357, 106);
             this.txt_registro.Mask = "0000000000";
             this.txt_registro.Name = "txt_registro";

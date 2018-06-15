@@ -35,11 +35,25 @@ namespace Trabalgo_LP2
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            Form_cadastroFuncionario form = new Form_cadastroFuncionario(2);
+            Form_confirmaFuncionario entrada = new Form_confirmaFuncionario("Registro do funcionário", "Digite o registro do funcionário:");
+            entrada.ShowDialog();
+            this.Hide();
+
+            if (entrada.Valor != null)
+            {
+                // abrindo a janela de alunos no modo 3 (alterar)
+                Form_cadastroFuncionario janelaFuncionario = new Form_cadastroFuncionario(3);
+                janelaFuncionario.RegistroFunc = int.Parse(entrada.Valor);
+                if (janelaFuncionario.exibirAluno())
+                    janelaFuncionario.StartPosition = FormStartPosition.CenterParent;
+                    janelaFuncionario.ShowDialog();
+            }
+            
+            /*Form_cadastroFuncionario form = new Form_cadastroFuncionario(2);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
             FuncionarioDAO funcionariodao = new FuncionarioDAO();
-            dataGridView_funcionario.DataSource = funcionariodao.ListAll();
+            dataGridView_funcionario.DataSource = funcionariodao.ListAll();*/
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)

@@ -266,6 +266,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_cadastroFuncionario";
             this.Text = "Form_cadastro";
+            this.Load += new System.EventHandler(this.Form_cadastroFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
