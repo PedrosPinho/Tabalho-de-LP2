@@ -31,12 +31,12 @@ namespace Trabalgo_LP2
                     break;
                 case 2://ATUALIZAR
                     btn_confirmar.Hide();
-                    txt_registroFunc.Enabled = false;
+                    txt_registroFunc.Hide();
                     break;
             }
         }
 
-        public bool exibirAluno()
+        public bool exibirFuncionario()
         {
             FuncionarioDAO funcionariodao = new FuncionarioDAO();
             Funcionario a = funcionariodao.Read(registroFunc);
@@ -84,6 +84,9 @@ namespace Trabalgo_LP2
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             Close();
+            Form_funcionario form = new Form_funcionario();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog(this);
         }
 
         private void btn_confirmar_Click(object sender, EventArgs e)

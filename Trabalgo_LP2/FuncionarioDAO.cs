@@ -162,8 +162,6 @@ namespace Trabalgo_LP2
 
             if (dr.Read()) // A busca por chave primária só retorna um objeto
             {
-                // Cria um objeto Aluno para transferir os dados 
-                // do banco para a aplicação (DTO)
                 funcionario = new Funcionario();
                 funcionario.Registro = dr.GetString(0);
                 funcionario.Nome = dr.GetString(1);

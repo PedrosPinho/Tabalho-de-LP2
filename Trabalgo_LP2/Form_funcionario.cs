@@ -35,7 +35,7 @@ namespace Trabalgo_LP2
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            Form_confirmaFuncionario entrada = new Form_confirmaFuncionario("Registro do funcionário", "Digite o registro do funcionário:");
+            Form_confirma entrada = new Form_confirma("Registro do funcionário", "Digite o registro:");
             entrada.ShowDialog();
             this.Hide();
 
@@ -44,7 +44,7 @@ namespace Trabalgo_LP2
                 // abrindo a janela de alunos no modo 3 (alterar)
                 Form_cadastroFuncionario janelaFuncionario = new Form_cadastroFuncionario(3);
                 janelaFuncionario.RegistroFunc = int.Parse(entrada.Valor);
-                if (janelaFuncionario.exibirAluno())
+                if (janelaFuncionario.exibirFuncionario())
                     janelaFuncionario.StartPosition = FormStartPosition.CenterParent;
                     janelaFuncionario.ShowDialog();
             }

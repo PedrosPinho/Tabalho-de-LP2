@@ -99,11 +99,11 @@
     <Compile Include="Form_cliente.Designer.cs">
       <DependentUpon>Form_cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_confirmaFuncionario.cs">
+    <Compile Include="Form_confirma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_confirmaFuncionario.Designer.cs">
-      <DependentUpon>Form_confirmaFuncionario.cs</DependentUpon>
+    <Compile Include="Form_confirma.Designer.cs">
+      <DependentUpon>Form_confirma.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_contas.cs">
       <SubType>Form</SubType>
@@ -172,8 +172,8 @@
     <EmbeddedResource Include="Form_cliente.resx">
       <DependentUpon>Form_cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_confirmaFuncionario.resx">
-      <DependentUpon>Form_confirmaFuncionario.cs</DependentUpon>
+    <EmbeddedResource Include="Form_confirma.resx">
+      <DependentUpon>Form_confirma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_contas.resx">
       <DependentUpon>Form_contas.cs</DependentUpon>

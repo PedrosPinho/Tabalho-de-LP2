@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace Trabalgo_LP2
 {
-    public partial class Form_confirmaFuncionario : Form
+    public partial class Form_confirma : Form
     {
         private string valor = null;
 
         public string Valor { get { return valor; } set { valor = value; } }
 
-        public Form_confirmaFuncionario(string titulo, string mensagem)
+        public Form_confirma(string titulo, string mensagem)
         {
             InitializeComponent();
 
             this.Text = titulo;
-            lbl_confirmaRegistro.Text = mensagem;
+            lbl_confirmacao.Text = mensagem;
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -32,12 +32,12 @@ namespace Trabalgo_LP2
 
         private void btn_ok_Click(object sender, EventArgs e)
         {
-            if (txt_registro.Text.Equals(""))
+            if (txt_confirmacao.Text.Equals(""))
                 MessageBox.Show("Obrigatório informar um valor!", "ERRO!",
                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                Valor = txt_registro.Text;
+                Valor = txt_confirmacao.Text;
                 this.Close();
             }
         }

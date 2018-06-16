@@ -14,6 +14,10 @@ namespace Trabalgo_LP2
 {
     public partial class Form_cadastroCliente : Form
     {
+        private int cpfCliente;
+
+        public int CpfCliente { get { return cpfCliente; } set { cpfCliente = value; } }
+
         public Form_cadastroCliente(int modo)
         {
             InitializeComponent();
@@ -27,6 +31,24 @@ namespace Trabalgo_LP2
                     btn_confirmar.Hide();
                     break;
             } 
+        }
+
+        public bool exibirCliente()
+        {
+            ClienteDAO clientedao = new ClienteDAO();
+            Cliente a = clientedao.Read(cpfCliente);
+
+            if (a == null)
+            {
+                MessageBox.Show("Este cliente não existe!", "ERRO!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                SetDTO(a);
+                return true;
+            }
         }
 
         private Cliente GetDTO()
@@ -50,6 +72,9 @@ namespace Trabalgo_LP2
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+            Form_cliente form = new Form_cliente();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog(this);
         }
 
         private void Form_cadastroCliente_Load(object sender, EventArgs e)
@@ -89,6 +114,10 @@ namespace Trabalgo_LP2
                 clienteDAO.Update(cliente);
                 MessageBox.Show("Cliente alterado com sucesso!", "Cliente alterado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+
+                Form_cliente form = new Form_cliente();
+                form.StartPosition = FormStartPosition.CenterParent;
+                form.ShowDialog(this);
             }
         }
     }

@@ -150,5 +150,34 @@ namespace Trabalgo_LP2
             VannerDB.ExecuteSQL(qry);
         }
 
+        public Cliente Read(int cpf)
+        {
+            Cliente cliente = null;
+            SQLiteConnection conexao = Database.GetInstance().GetConnection();
+
+            string qry = "SELECT Cpf, Nome, Telefone, Frequencia FROM Cliente WHERE cpf = " +
+                         cpf;
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            SQLiteCommand comm = new SQLiteCommand(qry, conexao);
+            SQLiteDataReader dr = comm.ExecuteReader();
+
+            if (dr.Read()) // A busca por chave primária só retorna um objeto
+            {
+                cliente = new Cliente();
+                cliente.Cpf = dr.GetString(0);
+                cliente.Nome = dr.GetString(1);
+                cliente.Telefone = dr.GetString(2);
+                cliente.Frequencia = dr.GetInt32(3);
+            }
+
+            dr.Close();  // precisa fechar o datareader para nao dar database locked
+            conexao.Close();
+
+            return cliente;
+        }
     }
+
 }

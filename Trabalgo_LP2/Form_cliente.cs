@@ -35,11 +35,25 @@ namespace Trabalgo_LP2
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
-            Form_cadastroCliente form = new Form_cadastroCliente(2);
+            Form_confirma entrada = new Form_confirma("CPF do Cliente", "Digite o CPF do Cliente:");
+            entrada.ShowDialog();
+            this.Hide();
+
+            if (entrada.Valor != null)
+            {
+                // abrindo a janela de alunos no modo 3 (alterar)
+                Form_cadastroCliente janelaCliente = new Form_cadastroCliente(3);
+                janelaCliente.CpfCliente = int.Parse(entrada.Valor);
+                if (janelaCliente.exibirCliente())
+                    janelaCliente.StartPosition = FormStartPosition.CenterParent;
+                janelaCliente.ShowDialog();
+            }
+
+            /*Form_cadastroCliente form = new Form_cadastroCliente(2);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
             ClienteDAO clientedao = new ClienteDAO();
-            dataGridView_cliente.DataSource = clientedao.ListAll();
+            dataGridView_cliente.DataSource = clientedao.ListAll();*/
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
