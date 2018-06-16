@@ -49,6 +49,7 @@
             this.btn_alterar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_reg_rmv = new System.Windows.Forms.MaskedTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -61,7 +62,7 @@
             this.btn_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_pesquisar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_pesquisar.ForeColor = System.Drawing.Color.White;
-            this.btn_pesquisar.Location = new System.Drawing.Point(556, 115);
+            this.btn_pesquisar.Location = new System.Drawing.Point(556, 118);
             this.btn_pesquisar.Name = "btn_pesquisar";
             this.btn_pesquisar.Size = new System.Drawing.Size(99, 26);
             this.btn_pesquisar.TabIndex = 20;
@@ -72,7 +73,7 @@
             // txt_filtrar
             // 
             this.txt_filtrar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_filtrar.Location = new System.Drawing.Point(66, 115);
+            this.txt_filtrar.Location = new System.Drawing.Point(66, 118);
             this.txt_filtrar.Name = "txt_filtrar";
             this.txt_filtrar.Size = new System.Drawing.Size(484, 26);
             this.txt_filtrar.TabIndex = 19;
@@ -142,7 +143,7 @@
             // 
             this.lbl_filtrar.AutoSize = true;
             this.lbl_filtrar.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_filtrar.Location = new System.Drawing.Point(12, 118);
+            this.lbl_filtrar.Location = new System.Drawing.Point(12, 121);
             this.lbl_filtrar.Name = "lbl_filtrar";
             this.lbl_filtrar.Size = new System.Drawing.Size(54, 23);
             this.lbl_filtrar.TabIndex = 21;
@@ -277,11 +278,22 @@
             this.txt_reg_rmv.Size = new System.Drawing.Size(122, 20);
             this.txt_reg_rmv.TabIndex = 24;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel1.Location = new System.Drawing.Point(0, 104);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(669, 11);
+            this.panel1.TabIndex = 26;
+            // 
             // Form_funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 468);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_reg_rmv);
             this.Controls.Add(this.btn_remover);
@@ -328,5 +340,6 @@
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MaskedTextBox txt_reg_rmv;
+        private System.Windows.Forms.Panel panel1;
     }
 }

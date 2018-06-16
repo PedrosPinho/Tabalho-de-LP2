@@ -56,6 +56,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_adicionar = new System.Windows.Forms.Label();
             this.btn_pesquisar = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -354,11 +355,22 @@
             this.btn_pesquisar.UseVisualStyleBackColor = false;
             this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel4.Location = new System.Drawing.Point(0, 103);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(690, 10);
+            this.panel4.TabIndex = 20;
+            // 
             // Form_cardapio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 472);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.btn_pesquisar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txt_procurar);
@@ -412,5 +424,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao_item_cardapio;
         private System.Windows.Forms.Button btn_pesquisar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel4;
     }
 }

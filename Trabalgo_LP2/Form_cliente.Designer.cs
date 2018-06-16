@@ -47,6 +47,7 @@
             this.btn_alterar = new System.Windows.Forms.Button();
             this.txt_cpf_rmv = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -258,11 +259,22 @@
             this.label1.TabIndex = 17;
             this.label1.Text = "(Para remover digite o cpf)";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel1.Location = new System.Drawing.Point(0, 103);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(610, 10);
+            this.panel1.TabIndex = 20;
+            // 
             // Form_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 468);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_cpf_rmv);
             this.Controls.Add(this.btn_remover);
@@ -307,5 +319,6 @@
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.MaskedTextBox txt_cpf_rmv;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }

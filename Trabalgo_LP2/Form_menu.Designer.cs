@@ -38,6 +38,7 @@
             this.btn_mesa = new System.Windows.Forms.Button();
             this.btn_cliente = new System.Windows.Forms.Button();
             this.btn_funcionario = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +47,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lbl_menu);
             this.panel1.Controls.Add(this.btn_logoff);
@@ -186,6 +187,16 @@
             this.btn_funcionario.UseVisualStyleBackColor = false;
             this.btn_funcionario.Click += new System.EventHandler(this.btn_funcionario_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel2.Location = new System.Drawing.Point(0, 93);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1213, 20);
+            this.panel2.TabIndex = 21;
+            // 
             // Form_menu
             // 
             this.AllowDrop = true;
@@ -196,6 +207,7 @@
             this.BackgroundImage = global::Trabalgo_LP2.Properties.Resources.fundomenu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1213, 571);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_fidelidade);
             this.Controls.Add(this.btn_cardapio);
@@ -229,5 +241,6 @@
         private System.Windows.Forms.Button btn_cliente;
         private System.Windows.Forms.Button btn_funcionario;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
