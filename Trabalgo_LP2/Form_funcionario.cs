@@ -37,7 +37,6 @@ namespace Trabalgo_LP2
         {
             Form_confirma entrada = new Form_confirma("Registro do funcionário", "Digite o registro:");
             entrada.ShowDialog();
-            this.Hide();
 
             if (entrada.Valor != null)
             {
@@ -45,8 +44,10 @@ namespace Trabalgo_LP2
                 Form_cadastroFuncionario janelaFuncionario = new Form_cadastroFuncionario(3);
                 janelaFuncionario.RegistroFunc = int.Parse(entrada.Valor);
                 if (janelaFuncionario.exibirFuncionario())
+                {
                     janelaFuncionario.StartPosition = FormStartPosition.CenterParent;
                     janelaFuncionario.ShowDialog();
+                }
             }
             
             /*Form_cadastroFuncionario form = new Form_cadastroFuncionario(2);

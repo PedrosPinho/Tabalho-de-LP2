@@ -45,6 +45,7 @@ namespace Trabalgo_LP2
             {
                 MessageBox.Show("Este funcionário não existe!", "ERRO!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
                 return false;
             }
             else
