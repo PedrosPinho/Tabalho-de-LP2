@@ -27,7 +27,7 @@ namespace Trabalgo_LP2
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             Valor = null;
-            this.Close();
+            Close();
         }
 
         private void btn_ok_Click(object sender, EventArgs e)

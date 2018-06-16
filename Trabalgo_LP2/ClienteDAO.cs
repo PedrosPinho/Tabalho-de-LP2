@@ -150,7 +150,7 @@ namespace Trabalgo_LP2
             VannerDB.ExecuteSQL(qry);
         }
 
-        public Cliente Read(int cpf)
+        public Cliente Read(string cpf)
         {
             Cliente cliente = null;
             SQLiteConnection conexao = Database.GetInstance().GetConnection();

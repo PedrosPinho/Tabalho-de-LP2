@@ -37,13 +37,12 @@ namespace Trabalgo_LP2
         {
             Form_confirma entrada = new Form_confirma("CPF do Cliente", "Digite o CPF do Cliente:");
             entrada.ShowDialog();
-            this.Hide();
 
             if (entrada.Valor != null)
             {
                 // abrindo a janela de alunos no modo 3 (alterar)
                 Form_cadastroCliente janelaCliente = new Form_cadastroCliente(3);
-                janelaCliente.CpfCliente = int.Parse(entrada.Valor);
+                janelaCliente.CpfCliente = entrada.Valor;
                 if (janelaCliente.exibirCliente())
                     janelaCliente.StartPosition = FormStartPosition.CenterParent;
                 janelaCliente.ShowDialog();

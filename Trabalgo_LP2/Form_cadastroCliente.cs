@@ -14,9 +14,9 @@ namespace Trabalgo_LP2
 {
     public partial class Form_cadastroCliente : Form
     {
-        private int cpfCliente;
+        private string cpfCliente;
 
-        public int CpfCliente { get { return cpfCliente; } set { cpfCliente = value; } }
+        public string CpfCliente { get { return cpfCliente; } set { cpfCliente = value; } }
 
         public Form_cadastroCliente(int modo)
         {

@@ -61,7 +61,7 @@
             // 
             this.txt_confirmacao.BeepOnError = true;
             this.txt_confirmacao.Location = new System.Drawing.Point(192, 70);
-            this.txt_confirmacao.Mask = "0000000000";
+            this.txt_confirmacao.Mask = "00000000000";
             this.txt_confirmacao.Name = "txt_confirmacao";
             this.txt_confirmacao.Size = new System.Drawing.Size(177, 20);
             this.txt_confirmacao.TabIndex = 26;
