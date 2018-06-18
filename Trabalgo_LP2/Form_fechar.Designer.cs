@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_fechar));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new System.Windows.Forms.Button();
@@ -52,8 +54,6 @@
             this.lbl_div_contas = new System.Windows.Forms.Label();
             this.txt_num_pessoas = new System.Windows.Forms.TextBox();
             this.btn_calcular = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -76,6 +76,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(612, 104);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.label1.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(287, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 41);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Mesa";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(425, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 41);
+            this.label2.TabIndex = 22;
             // 
             // pictureBox_logo
             // 
@@ -209,7 +229,7 @@
             this.btn_nao_quer_cadastrar.Name = "btn_nao_quer_cadastrar";
             this.btn_nao_quer_cadastrar.Size = new System.Drawing.Size(112, 38);
             this.btn_nao_quer_cadastrar.TabIndex = 15;
-            this.btn_nao_quer_cadastrar.Text = "Pagar sem cadastro";
+            this.btn_nao_quer_cadastrar.Text = "Pagar";
             this.btn_nao_quer_cadastrar.UseVisualStyleBackColor = false;
             this.btn_nao_quer_cadastrar.Click += new System.EventHandler(this.btn_nao_quer_cadastrar_Click);
             // 
@@ -244,6 +264,7 @@
             this.btn_cadastrado.TabIndex = 12;
             this.btn_cadastrado.Text = " Cadastrado";
             this.btn_cadastrado.UseVisualStyleBackColor = false;
+            this.btn_cadastrado.Click += new System.EventHandler(this.btn_cadastrado_Click);
             // 
             // lbl_pergunta
             // 
@@ -267,6 +288,7 @@
             this.btn_nao_cadastrado.TabIndex = 10;
             this.btn_nao_cadastrado.Text = "Não Cadastrado";
             this.btn_nao_cadastrado.UseVisualStyleBackColor = false;
+            this.btn_nao_cadastrado.Click += new System.EventHandler(this.btn_nao_cadastrado_Click);
             // 
             // panel6
             // 
@@ -309,26 +331,6 @@
             this.btn_calcular.Text = "Calcular";
             this.btn_calcular.UseVisualStyleBackColor = false;
             this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
-            this.label1.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(287, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 41);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "Mesa";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(425, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 41);
-            this.label2.TabIndex = 22;
             // 
             // Form_fechar
             // 

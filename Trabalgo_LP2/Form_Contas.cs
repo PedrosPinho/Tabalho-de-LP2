@@ -26,6 +26,7 @@ namespace Trabalgo_LP2
         private void btn_fechar_Click(object sender, EventArgs e)
         {
             int mesa = Convert.ToInt32(label2.Text);
+            Close();
 
             Form_fechar form = new Form_fechar(mesa);
             form.StartPosition = FormStartPosition.CenterParent;

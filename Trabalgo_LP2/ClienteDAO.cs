@@ -17,7 +17,16 @@ namespace Trabalgo_LP2
 
             string qry =
             string.Format("INSERT INTO Cliente (CPF, NOME, TELEFONE, FREQUENCIA) VALUES ('{0}','{1}', '{2}',  '{3}')",
-                c.Cpf, c.Nome, c.Telefone, 2);
+                c.Cpf, c.Nome, c.Telefone, 0);
+            VannerDB.ExecuteSQL(qry);
+        }
+
+        public void UpdateF(Cliente c)
+        {
+            Database VannerDB = Database.GetInstance();
+
+            string qry = string.Format("UPDATE Cliente SET Frequencia='{0}' WHERE Cpf like '{1}'", c.Frequencia+1, c.Cpf);
+
             VannerDB.ExecuteSQL(qry);
         }
 

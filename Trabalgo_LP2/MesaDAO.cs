@@ -43,7 +43,6 @@ namespace Trabalgo_LP2
         }
         public void Update(Mesa m)
         {
-            //atualiza no banco um cliente especifico
             Database VannerDB = Database.GetInstance();
 
             string qry = string.Format("UPDATE Mesa SET Num_pessoas='{0}' WHERE Num_mesa = '{1}'", m.Num_pessoas, m.Num_mesa);
@@ -51,10 +50,18 @@ namespace Trabalgo_LP2
             VannerDB.ExecuteSQL(qry);
 
         }
+        public void UpdateF(int num_mesa)
+        {
+            Database VannerDB = Database.GetInstance();
+
+            string qry = string.Format("UPDATE Mesa SET Num_pessoas='{0}' WHERE Num_mesa = '{1}'", 0, num_mesa);
+
+            VannerDB.ExecuteSQL(qry);
+        }
         public int NumPessoas(int i)
         {
+            int num_pessoas = 0;
             SQLiteConnection conexao = Database.GetInstance().GetConnection();
-
             string qry = string.Format("SELECT num_pessoas FROM Mesa WHERE num_mesa = {0}", i);
 
             if (conexao.State != System.Data.ConnectionState.Open)
@@ -63,8 +70,10 @@ namespace Trabalgo_LP2
             SQLiteCommand comm = new SQLiteCommand(qry, conexao);
 
             SQLiteDataReader dr = comm.ExecuteReader();
-
-            int num_pessoas = dr.GetInt32(0);
+            while (dr.Read())
+            {
+                num_pessoas = dr.GetInt32(0);
+            }
             
             dr.Close(); // para nao dar erro de database locked
             conexao.Close(); // Não esqueça de fechar a conexão

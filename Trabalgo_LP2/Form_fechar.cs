@@ -16,6 +16,8 @@ namespace Trabalgo_LP2
         {
             InitializeComponent();
             label2.Text = mesa.ToString();
+            txt_total.ReadOnly = true;
+            txt_val_pessoa.ReadOnly = true;
 
         }
 
@@ -24,9 +26,8 @@ namespace Trabalgo_LP2
             ConsumidosDAO c = new ConsumidosDAO();
             MesaDAO m = new MesaDAO();
             txt_total.Text = c.GetConsumidos(Convert.ToInt32(label2.Text)).ToString();
-            //int num_pessoas = m.NumPessoas(Convert.ToInt32(label2.Text));
-            //double precopessoa = (Convert.ToDouble(txt_total.Text)) / num_pessoas;
-            //txt_val_pessoa.Text = precopessoa.ToString();
+            
+            txt_num_pessoas.Text = m.NumPessoas(Convert.ToInt32(label2.Text)).ToString();
         }
 
         private void lbl_cpf_fechar_Click(object sender, EventArgs e)
@@ -43,6 +44,7 @@ namespace Trabalgo_LP2
         {
             float total, por_pessoa;
             int num_pessoas;
+            MesaDAO mesa = new MesaDAO();
             try
             {
                 total = float.Parse(txt_total.Text);
@@ -51,9 +53,10 @@ namespace Trabalgo_LP2
 
                 txt_total.Text = (total - por_pessoa).ToString();
                 txt_num_pessoas.Text = (num_pessoas - 1).ToString();
-                if (int.Parse(txt_num_pessoas.Text) == 0)
+                if (int.Parse(txt_num_pessoas.Text) == 0 && int.Parse(txt_total.Text) == 0)
                 {
                     MessageBox.Show("Conta foi paga com sucesso!", "Aviso", MessageBoxButtons.OK);
+                    mesa.UpdateF(Convert.ToInt32(label2.Text));
                     Close();
                 }
             }
@@ -79,6 +82,40 @@ namespace Trabalgo_LP2
             catch (System.Exception)
             {
                 MessageBox.Show("Certifique que os campos 'Total' e 'Dividir conta' estão preenchidos", "Aviso!", MessageBoxButtons.OK);
+            }
+        }
+
+        private void btn_nao_cadastrado_Click(object sender, EventArgs e)
+        {
+            Form_cadastroCliente form = new Form_cadastroCliente(1);
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.ShowDialog(this);
+        }
+
+        private void btn_cadastrado_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                DescontoDAO d = new DescontoDAO();
+                ClienteDAO c = new ClienteDAO();
+                Cliente cliente = c.Read(txt_cpf_fechar.Text);
+                float desconto = d.GetDesconto(cliente);
+
+                MessageBox.Show("Desconto de " + desconto + "% concedido", "Aviso", MessageBoxButtons.OK);
+                txt_cpf_fechar.Text = null;
+                if (desconto > 0)
+                {
+                    double total = Convert.ToDouble(txt_total.Text);
+                    total -= total * (desconto / 100);
+                    txt_total.Text = total.ToString();
+                }
+                c.UpdateF(cliente);
+
+            }
+            catch(System.Exception)
+            {
+                MessageBox.Show("Certifique-se que CPF esta corretamente preenchido", "Errou", MessageBoxButtons.OK);
             }
         }
     }
