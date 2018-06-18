@@ -51,7 +51,7 @@ namespace Trabalgo_LP2
             }
             catch(System.Exception)
             {
-                MessageBox.Show("deu merda", "vdd", MessageBoxButtons.OK);
+                MessageBox.Show("Certifique-se que todos os campos estao preenchidos corretamente", "Erro", MessageBoxButtons.OK);
             }
             finally
             {

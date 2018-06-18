@@ -145,7 +145,7 @@ namespace Trabalgo_LP2
                 sql.Clear();
                 string query =
                 string.Format("CREATE TABLE IF NOT EXISTS Consumidos{0} ([id] INTERGER NOT NULL UNIQUE, [quantidade] INTERGER);", i);
-
+                VannerDB.ExecuteSQL(query);
                 cmd = new SQLiteCommand(sql.ToString(), conn);
                 try
                 {
