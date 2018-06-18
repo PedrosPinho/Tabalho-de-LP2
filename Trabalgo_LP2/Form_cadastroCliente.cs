@@ -26,9 +26,11 @@ namespace Trabalgo_LP2
             {
                 case 1://ADICIONAR
                     btn_atualizar.Hide();
+                    txt_cpf.Enabled = true;
                     break;
                 case 2://ATUALIZAR
                     btn_confirmar.Hide();
+                    txt_cpf.Enabled = false;
                     break;
             } 
         }
@@ -72,9 +74,6 @@ namespace Trabalgo_LP2
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
-            Form_cliente form = new Form_cliente();
-            form.StartPosition = FormStartPosition.CenterParent;
-            form.ShowDialog(this);
         }
 
         private void Form_cadastroCliente_Load(object sender, EventArgs e)
@@ -114,10 +113,6 @@ namespace Trabalgo_LP2
                 clienteDAO.Update(cliente);
                 MessageBox.Show("Cliente alterado com sucesso!", "Cliente alterado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
-
-                Form_cliente form = new Form_cliente();
-                form.StartPosition = FormStartPosition.CenterParent;
-                form.ShowDialog(this);
             }
         }
     }

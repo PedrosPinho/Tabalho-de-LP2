@@ -73,6 +73,8 @@
     <Compile Include="CardapioDAO.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteDAO.cs" />
+    <Compile Include="Consumidos.cs" />
+    <Compile Include="ConsumidosDAO.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="DescontoDAO.cs" />
     <Compile Include="Form_cadastroFuncionario.cs">

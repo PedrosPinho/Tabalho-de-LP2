@@ -138,7 +138,27 @@ namespace Trabalgo_LP2
                 string.Format("INSERT INTO  Mesa (num_mesa, num_pessoas) VALUES ('{0}', 0)", i);
                 VannerDB.ExecuteSQL(qry);
             }
+            //CRIA TABELA CONSUMIDOS (PENSEI EM FAZER ESSES DADOS ESTATICOS,
+            // MAS SE O PROGRAMA FECHAR PERDE TODOS OS DADOS E ISSO EH MT RUIM)
+            for (int i = 1; i < 11; i++)
+            {
+                sql.Clear();
+                string query =
+                string.Format("CREATE TABLE IF NOT EXISTS Consumidos{0} ([id] INTERGER NOT NULL UNIQUE, [quantidade] INTERGER);", i);
 
+                cmd = new SQLiteCommand(sql.ToString(), conn);
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao criar banco de dados: " + ex.Message);
+                }
+
+            }
+
+            //CRIA TABELA DESCONTO
             sql.Clear();
             sql.AppendLine("CREATE TABLE IF NOT EXISTS Desconto (");
             sql.AppendLine("[porcentagem] INTERGER ,");
@@ -153,6 +173,7 @@ namespace Trabalgo_LP2
             {
                 MessageBox.Show("Erro ao criar banco de dados: " + ex.Message);
             }
+            //SO VAI EXISTIR 1 DESCONTO, E VAMOS ATT ELE, NAO CRIANDO NOVOS OK?
             string qry2 =
                 string.Format("INSERT INTO  Desconto (Porcentagem, Frequencia) VALUES (0, 0)");
             VannerDB.ExecuteSQL(qry2);

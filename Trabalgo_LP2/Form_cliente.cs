@@ -44,8 +44,10 @@ namespace Trabalgo_LP2
                 Form_cadastroCliente janelaCliente = new Form_cadastroCliente(3);
                 janelaCliente.CpfCliente = entrada.Valor;
                 if (janelaCliente.exibirCliente())
+                {
                     janelaCliente.StartPosition = FormStartPosition.CenterParent;
-                janelaCliente.ShowDialog();
+                    janelaCliente.ShowDialog();
+                }
             }
 
             /*Form_cadastroCliente form = new Form_cadastroCliente(2);

@@ -12,14 +12,22 @@ namespace Trabalgo_LP2
 {
     public partial class Form_fechar : Form
     {
-        public Form_fechar()
+        public Form_fechar(int mesa)
         {
             InitializeComponent();
+            label2.Text = mesa.ToString();
+
         }
 
         private void Form_fechar_Load(object sender, EventArgs e)
         {
-
+            ConsumidosDAO c = new ConsumidosDAO();
+            MesaDAO m = new MesaDAO();
+            int mesa = Convert.ToInt32(label2.Text);
+            txt_total.Text = c.GetConsumidos(mesa).ToString();
+            int num_pessoas = m.NumPessoas(mesa);
+            double precopessoa = (Convert.ToDouble(txt_total.Text)) / num_pessoas;
+            txt_val_pessoa.Text = precopessoa.ToString();
         }
 
         private void lbl_cpf_fechar_Click(object sender, EventArgs e)
@@ -59,6 +67,8 @@ namespace Trabalgo_LP2
 
         private void btn_calcular_Click(object sender, EventArgs e)
         {
+
+            /*
             float total;
             int num_pessoas;
             try
@@ -72,7 +82,7 @@ namespace Trabalgo_LP2
             catch (System.Exception)
             {
                 MessageBox.Show("Certifique que os campos 'Total' e 'Dividir conta' estão preenchidos", "Aviso!", MessageBoxButtons.OK);
-            }
+            }*/
         }
     }
 }

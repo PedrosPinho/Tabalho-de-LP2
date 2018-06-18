@@ -25,7 +25,9 @@ namespace Trabalgo_LP2
 
         private void btn_fechar_Click(object sender, EventArgs e)
         {
-            Form_fechar form = new Form_fechar();
+            int mesa = Convert.ToInt32(label2.Text);
+
+            Form_fechar form = new Form_fechar(mesa);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
         }
@@ -37,11 +39,26 @@ namespace Trabalgo_LP2
 
         private void btn_adicionar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
+            try
+            {
+                int id = Convert.ToInt32(txt_id_item.Text);
+                int qtd = Convert.ToInt32(txt_qtd.Text);
+                int mesa = Convert.ToInt32(label2.Text);
+                ConsumidosDAO consumido = new ConsumidosDAO();
+                consumido.Add(id, qtd, mesa);
+                //DA PRA 'ADICIONAR' ID INEXISTENTE, ELE NAO DA AVISO OK?
+            }
+            catch (System.Exception)
+            {
+                MessageBox.Show("Erro", "Errroou", MessageBoxButtons.OK);
+            }
+            finally
+            {
+                txt_id_item.Text = null;
+                txt_qtd.Text = null;
+            }
+            
+            
 
         }
     }

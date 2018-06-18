@@ -110,6 +110,7 @@
             // 
             // txt_cpf
             // 
+            this.txt_cpf.Enabled = false;
             this.txt_cpf.Location = new System.Drawing.Point(18, 147);
             this.txt_cpf.Name = "txt_cpf";
             this.txt_cpf.Size = new System.Drawing.Size(142, 20);

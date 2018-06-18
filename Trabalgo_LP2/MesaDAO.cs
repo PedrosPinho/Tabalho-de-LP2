@@ -51,5 +51,25 @@ namespace Trabalgo_LP2
             VannerDB.ExecuteSQL(qry);
 
         }
+        public int NumPessoas(int i)
+        {
+            SQLiteConnection conexao = Database.GetInstance().GetConnection();
+
+            string qry = string.Format("SELECT num_pessoas FROM Mesa WHERE num_mesa = {0}", i);
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            SQLiteCommand comm = new SQLiteCommand(qry, conexao);
+
+            SQLiteDataReader dr = comm.ExecuteReader();
+
+            int num_pessoas = dr.GetInt32(0);
+            
+            dr.Close(); // para nao dar erro de database locked
+            conexao.Close(); // Não esqueça de fechar a conexão
+
+            return num_pessoas;
+        }
     }
 }

@@ -39,9 +39,6 @@
             this.lbl_fechar = new System.Windows.Forms.Label();
             this.lbl_total = new System.Windows.Forms.Label();
             this.txt_total = new System.Windows.Forms.TextBox();
-            this.lbl_div_contas = new System.Windows.Forms.Label();
-            this.txt_num_pessoas = new System.Windows.Forms.TextBox();
-            this.btn_calcular = new System.Windows.Forms.Button();
             this.lbl_valor_por_pessoa = new System.Windows.Forms.Label();
             this.txt_val_pessoa = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -52,6 +49,11 @@
             this.lbl_pergunta = new System.Windows.Forms.Label();
             this.btn_nao_cadastrado = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lbl_div_contas = new System.Windows.Forms.Label();
+            this.txt_num_pessoas = new System.Windows.Forms.TextBox();
+            this.btn_calcular = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,6 +64,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pictureBox_logo);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.btn_voltar);
@@ -137,7 +141,7 @@
             // 
             this.lbl_fechar.AutoSize = true;
             this.lbl_fechar.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fechar.Location = new System.Drawing.Point(287, 29);
+            this.lbl_fechar.Location = new System.Drawing.Point(299, 29);
             this.lbl_fechar.Name = "lbl_fechar";
             this.lbl_fechar.Size = new System.Drawing.Size(130, 41);
             this.lbl_fechar.TabIndex = 4;
@@ -161,38 +165,6 @@
             this.txt_total.Name = "txt_total";
             this.txt_total.Size = new System.Drawing.Size(223, 63);
             this.txt_total.TabIndex = 2;
-            // 
-            // lbl_div_contas
-            // 
-            this.lbl_div_contas.AutoSize = true;
-            this.lbl_div_contas.Font = new System.Drawing.Font("Arial Narrow", 15.75F);
-            this.lbl_div_contas.Location = new System.Drawing.Point(17, 240);
-            this.lbl_div_contas.Name = "lbl_div_contas";
-            this.lbl_div_contas.Size = new System.Drawing.Size(245, 25);
-            this.lbl_div_contas.TabIndex = 3;
-            this.lbl_div_contas.Text = "Dividir conta (nº de pessoas):";
-            // 
-            // txt_num_pessoas
-            // 
-            this.txt_num_pessoas.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_num_pessoas.Location = new System.Drawing.Point(22, 268);
-            this.txt_num_pessoas.Name = "txt_num_pessoas";
-            this.txt_num_pessoas.Size = new System.Drawing.Size(189, 32);
-            this.txt_num_pessoas.TabIndex = 4;
-            // 
-            // btn_calcular
-            // 
-            this.btn_calcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_calcular.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_calcular.ForeColor = System.Drawing.Color.White;
-            this.btn_calcular.Location = new System.Drawing.Point(272, 268);
-            this.btn_calcular.Name = "btn_calcular";
-            this.btn_calcular.Size = new System.Drawing.Size(89, 32);
-            this.btn_calcular.TabIndex = 10;
-            this.btn_calcular.Text = "Calcular";
-            this.btn_calcular.UseVisualStyleBackColor = false;
-            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
             // 
             // lbl_valor_por_pessoa
             // 
@@ -306,6 +278,58 @@
             this.panel6.Size = new System.Drawing.Size(622, 12);
             this.panel6.TabIndex = 21;
             // 
+            // lbl_div_contas
+            // 
+            this.lbl_div_contas.AutoSize = true;
+            this.lbl_div_contas.Font = new System.Drawing.Font("Arial Narrow", 15.75F);
+            this.lbl_div_contas.Location = new System.Drawing.Point(17, 240);
+            this.lbl_div_contas.Name = "lbl_div_contas";
+            this.lbl_div_contas.Size = new System.Drawing.Size(245, 25);
+            this.lbl_div_contas.TabIndex = 3;
+            this.lbl_div_contas.Text = "Dividir conta (nº de pessoas):";
+            // 
+            // txt_num_pessoas
+            // 
+            this.txt_num_pessoas.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_num_pessoas.Location = new System.Drawing.Point(22, 268);
+            this.txt_num_pessoas.Name = "txt_num_pessoas";
+            this.txt_num_pessoas.Size = new System.Drawing.Size(189, 32);
+            this.txt_num_pessoas.TabIndex = 4;
+            // 
+            // btn_calcular
+            // 
+            this.btn_calcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_calcular.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_calcular.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_calcular.ForeColor = System.Drawing.Color.White;
+            this.btn_calcular.Location = new System.Drawing.Point(272, 268);
+            this.btn_calcular.Name = "btn_calcular";
+            this.btn_calcular.Size = new System.Drawing.Size(89, 32);
+            this.btn_calcular.TabIndex = 10;
+            this.btn_calcular.Text = "Calcular";
+            this.btn_calcular.UseVisualStyleBackColor = false;
+            this.btn_calcular.Click += new System.EventHandler(this.btn_calcular_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.label1.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(287, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 41);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Mesa";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(425, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 41);
+            this.label2.TabIndex = 22;
+            // 
             // Form_fechar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,12 +369,9 @@
         private System.Windows.Forms.Label lbl_fechar;
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.TextBox txt_total;
-        private System.Windows.Forms.Label lbl_div_contas;
-        private System.Windows.Forms.TextBox txt_num_pessoas;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btn_calcular;
         private System.Windows.Forms.Label lbl_valor_por_pessoa;
         private System.Windows.Forms.TextBox txt_val_pessoa;
         private System.Windows.Forms.Panel panel5;
@@ -364,5 +385,10 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Label lbl_div_contas;
+        private System.Windows.Forms.TextBox txt_num_pessoas;
+        private System.Windows.Forms.Button btn_calcular;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -29,18 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_contas));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.lbl_contas = new System.Windows.Forms.Label();
             this.grid_contas = new System.Windows.Forms.DataGridView();
-            this.id_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_id_item = new System.Windows.Forms.Label();
             this.txt_id_item = new System.Windows.Forms.TextBox();
             this.lbl_qtd = new System.Windows.Forms.Label();
@@ -49,7 +47,10 @@
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.column_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -69,6 +70,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(613, 104);
             this.panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.label1.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(248, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 41);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Mesa";
             // 
             // label2
             // 
@@ -132,45 +144,26 @@
             this.grid_contas.AllowUserToDeleteRows = false;
             this.grid_contas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_contas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grid_contas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grid_contas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grid_contas.ColumnHeadersHeight = 25;
             this.grid_contas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_item,
+            this.column_id,
             this.nome_item,
-            this.preco_item});
+            this.preco_item,
+            this.Column_quantidade});
             this.grid_contas.GridColor = System.Drawing.Color.Black;
             this.grid_contas.Location = new System.Drawing.Point(44, 129);
             this.grid_contas.Name = "grid_contas";
             this.grid_contas.ReadOnly = true;
             this.grid_contas.Size = new System.Drawing.Size(361, 294);
             this.grid_contas.TabIndex = 3;
-            // 
-            // id_item
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id_item.DefaultCellStyle = dataGridViewCellStyle4;
-            this.id_item.HeaderText = "Id ";
-            this.id_item.Name = "id_item";
-            this.id_item.ReadOnly = true;
-            // 
-            // nome_item
-            // 
-            this.nome_item.HeaderText = "Nome";
-            this.nome_item.Name = "nome_item";
-            this.nome_item.ReadOnly = true;
-            // 
-            // preco_item
-            // 
-            this.preco_item.HeaderText = "Preço";
-            this.preco_item.Name = "preco_item";
-            this.preco_item.ReadOnly = true;
             // 
             // lbl_id_item
             // 
@@ -184,7 +177,7 @@
             // 
             // txt_id_item
             // 
-            this.txt_id_item.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_id_item.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_id_item.Location = new System.Drawing.Point(433, 152);
             this.txt_id_item.Name = "txt_id_item";
             this.txt_id_item.Size = new System.Drawing.Size(127, 26);
@@ -202,7 +195,7 @@
             // 
             // txt_qtd
             // 
-            this.txt_qtd.Font = new System.Drawing.Font("Arial Narrow", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_qtd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_qtd.Location = new System.Drawing.Point(433, 217);
             this.txt_qtd.Name = "txt_qtd";
             this.txt_qtd.Size = new System.Drawing.Size(127, 26);
@@ -259,16 +252,32 @@
             this.panel1.Size = new System.Drawing.Size(610, 11);
             this.panel1.TabIndex = 20;
             // 
-            // label1
+            // column_id
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
-            this.label1.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(248, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 41);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Mesa";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.column_id.DefaultCellStyle = dataGridViewCellStyle2;
+            this.column_id.HeaderText = "Id ";
+            this.column_id.Name = "column_id";
+            this.column_id.ReadOnly = true;
+            // 
+            // nome_item
+            // 
+            this.nome_item.HeaderText = "Nome";
+            this.nome_item.Name = "nome_item";
+            this.nome_item.ReadOnly = true;
+            // 
+            // preco_item
+            // 
+            this.preco_item.HeaderText = "Preço";
+            this.preco_item.Name = "preco_item";
+            this.preco_item.ReadOnly = true;
+            // 
+            // Column_quantidade
+            // 
+            this.Column_quantidade.DataPropertyName = "quantidade";
+            this.Column_quantidade.HeaderText = "Qtd";
+            this.Column_quantidade.Name = "Column_quantidade";
+            this.Column_quantidade.ReadOnly = true;
             // 
             // Form_contas
             // 
@@ -311,14 +320,15 @@
         private System.Windows.Forms.Button btn_adicionar;
         private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.Button btn_fechar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome_item;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preco_item;
         private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn column_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome_item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn preco_item;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_quantidade;
     }
 }
