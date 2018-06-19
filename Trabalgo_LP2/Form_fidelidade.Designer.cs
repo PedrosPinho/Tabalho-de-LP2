@@ -153,11 +153,11 @@
             // lbl_Mfreq
             // 
             this.lbl_Mfreq.AutoSize = true;
-            this.lbl_Mfreq.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Mfreq.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Mfreq.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbl_Mfreq.Location = new System.Drawing.Point(4, 222);
             this.lbl_Mfreq.Name = "lbl_Mfreq";
-            this.lbl_Mfreq.Size = new System.Drawing.Size(90, 16);
+            this.lbl_Mfreq.Size = new System.Drawing.Size(96, 18);
             this.lbl_Mfreq.TabIndex = 8;
             this.lbl_Mfreq.Text = "Frequência:";
             this.lbl_Mfreq.Visible = false;
@@ -165,11 +165,11 @@
             // lbl_Mdesconto
             // 
             this.lbl_Mdesconto.AutoSize = true;
-            this.lbl_Mdesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Mdesconto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Mdesconto.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbl_Mdesconto.Location = new System.Drawing.Point(4, 171);
             this.lbl_Mdesconto.Name = "lbl_Mdesconto";
-            this.lbl_Mdesconto.Size = new System.Drawing.Size(78, 16);
+            this.lbl_Mdesconto.Size = new System.Drawing.Size(82, 18);
             this.lbl_Mdesconto.TabIndex = 7;
             this.lbl_Mdesconto.Text = "Desconto:";
             this.lbl_Mdesconto.Visible = false;
@@ -193,28 +193,36 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(98, 50);
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(98, 46);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 13);
+            this.label4.Size = new System.Drawing.Size(21, 19);
             this.label4.TabIndex = 4;
+            this.label4.Text = "...";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 18);
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(92, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
+            this.label3.Size = new System.Drawing.Size(21, 19);
             this.label3.TabIndex = 3;
+            this.label3.Text = "...";
             // 
             // btn_novo
             // 
             this.btn_novo.BackColor = System.Drawing.Color.Black;
             this.btn_novo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_novo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_novo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_novo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_novo.Location = new System.Drawing.Point(3, 85);
+            this.btn_novo.Location = new System.Drawing.Point(0, 85);
             this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(130, 68);
+            this.btn_novo.Size = new System.Drawing.Size(133, 68);
             this.btn_novo.TabIndex = 2;
             this.btn_novo.Text = "Novo desconto";
             this.btn_novo.UseVisualStyleBackColor = false;
@@ -223,22 +231,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(3, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 19);
+            this.label2.Size = new System.Drawing.Size(96, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Frequência:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 19);
+            this.label1.Size = new System.Drawing.Size(84, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Desconto:";
             // 

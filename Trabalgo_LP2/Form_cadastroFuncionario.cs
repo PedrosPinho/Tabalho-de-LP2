@@ -28,10 +28,14 @@ namespace Trabalgo_LP2
             {
                 case 1://ADICIONAR
                     btn_atualizar.Hide();
+                    txt_cpfFunc.Enabled = true;
+                    txt_registroFunc.Enabled = true;
                     break;
                 case 2://ATUALIZAR
                     btn_confirmar.Hide();
                     txt_registroFunc.Hide();
+                    txt_cpfFunc.Enabled = false;
+                    txt_registroFunc.Enabled = false;
                     break;
             }
         }

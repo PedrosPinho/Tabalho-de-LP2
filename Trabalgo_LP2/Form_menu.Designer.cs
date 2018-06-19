@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,6 +40,9 @@
             this.btn_cliente = new System.Windows.Forms.Button();
             this.btn_funcionario = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbl_Relogio = new System.Windows.Forms.Label();
+            this.lbl_teste = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +52,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ControlText;
+            this.panel1.Controls.Add(this.lbl_teste);
+            this.panel1.Controls.Add(this.lbl_Relogio);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lbl_menu);
             this.panel1.Controls.Add(this.btn_logoff);
@@ -68,7 +74,7 @@
             // 
             // lbl_menu
             // 
-            this.lbl_menu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.lbl_menu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_menu.AutoSize = true;
             this.lbl_menu.Font = new System.Drawing.Font("Century Gothic", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_menu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -80,7 +86,7 @@
             // 
             // btn_logoff
             // 
-            this.btn_logoff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btn_logoff.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_logoff.BackColor = System.Drawing.Color.Black;
             this.btn_logoff.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_logoff.BackgroundImage")));
             this.btn_logoff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -170,6 +176,7 @@
             // 
             // btn_funcionario
             // 
+            this.btn_funcionario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_funcionario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
             this.btn_funcionario.BackgroundImage = global::Trabalgo_LP2.Properties.Resources.funcionario;
             this.btn_funcionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -196,6 +203,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1213, 20);
             this.panel2.TabIndex = 21;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lbl_Relogio
+            // 
+            this.lbl_Relogio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Relogio.AutoSize = true;
+            this.lbl_Relogio.Font = new System.Drawing.Font("Century Gothic", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Relogio.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_Relogio.Location = new System.Drawing.Point(36, 7);
+            this.lbl_Relogio.Name = "lbl_Relogio";
+            this.lbl_Relogio.Size = new System.Drawing.Size(237, 63);
+            this.lbl_Relogio.TabIndex = 5;
+            this.lbl_Relogio.Text = "00:00:00";
+            // 
+            // lbl_teste
+            // 
+            this.lbl_teste.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_teste.AutoSize = true;
+            this.lbl_teste.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_teste.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_teste.Location = new System.Drawing.Point(44, 67);
+            this.lbl_teste.Name = "lbl_teste";
+            this.lbl_teste.Size = new System.Drawing.Size(211, 16);
+            this.lbl_teste.TabIndex = 6;
+            this.lbl_teste.Text = "xxxx-xxxxx, 00 de xxxxx de 0000";
             // 
             // Form_menu
             // 
@@ -242,5 +279,8 @@
         private System.Windows.Forms.Button btn_funcionario;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbl_Relogio;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbl_teste;
     }
 }

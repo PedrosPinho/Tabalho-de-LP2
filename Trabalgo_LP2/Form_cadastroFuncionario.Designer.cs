@@ -48,6 +48,7 @@
             this.txt_telefoneFunc = new System.Windows.Forms.TextBox();
             this.txt_dataFunc = new System.Windows.Forms.TextBox();
             this.btn_atualizar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -56,7 +57,7 @@
             // pictureBox_cadastro
             // 
             this.pictureBox_cadastro.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cadastro.Image")));
-            this.pictureBox_cadastro.Location = new System.Drawing.Point(282, 135);
+            this.pictureBox_cadastro.Location = new System.Drawing.Point(278, 148);
             this.pictureBox_cadastro.Name = "pictureBox_cadastro";
             this.pictureBox_cadastro.Size = new System.Drawing.Size(227, 179);
             this.pictureBox_cadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -67,7 +68,7 @@
             // 
             this.lbl_nome.AutoSize = true;
             this.lbl_nome.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nome.Location = new System.Drawing.Point(26, 73);
+            this.lbl_nome.Location = new System.Drawing.Point(22, 86);
             this.lbl_nome.Name = "lbl_nome";
             this.lbl_nome.Size = new System.Drawing.Size(52, 16);
             this.lbl_nome.TabIndex = 2;
@@ -77,7 +78,7 @@
             // 
             this.lbl_cpf.AutoSize = true;
             this.lbl_cpf.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cpf.Location = new System.Drawing.Point(26, 115);
+            this.lbl_cpf.Location = new System.Drawing.Point(22, 128);
             this.lbl_cpf.Name = "lbl_cpf";
             this.lbl_cpf.Size = new System.Drawing.Size(40, 16);
             this.lbl_cpf.TabIndex = 3;
@@ -87,7 +88,7 @@
             // 
             this.lbl_registro.AutoSize = true;
             this.lbl_registro.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_registro.Location = new System.Drawing.Point(26, 157);
+            this.lbl_registro.Location = new System.Drawing.Point(22, 170);
             this.lbl_registro.Name = "lbl_registro";
             this.lbl_registro.Size = new System.Drawing.Size(72, 16);
             this.lbl_registro.TabIndex = 4;
@@ -95,14 +96,15 @@
             // 
             // txt_nomeFunc
             // 
-            this.txt_nomeFunc.Location = new System.Drawing.Point(29, 92);
+            this.txt_nomeFunc.Location = new System.Drawing.Point(25, 105);
             this.txt_nomeFunc.Name = "txt_nomeFunc";
             this.txt_nomeFunc.Size = new System.Drawing.Size(294, 20);
             this.txt_nomeFunc.TabIndex = 5;
             // 
             // txt_registroFunc
             // 
-            this.txt_registroFunc.Location = new System.Drawing.Point(29, 176);
+            this.txt_registroFunc.Enabled = false;
+            this.txt_registroFunc.Location = new System.Drawing.Point(25, 189);
             this.txt_registroFunc.Name = "txt_registroFunc";
             this.txt_registroFunc.Size = new System.Drawing.Size(185, 20);
             this.txt_registroFunc.TabIndex = 7;
@@ -113,7 +115,7 @@
             this.btn_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_confirmar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirmar.ForeColor = System.Drawing.Color.White;
-            this.btn_confirmar.Location = new System.Drawing.Point(160, 344);
+            this.btn_confirmar.Location = new System.Drawing.Point(156, 357);
             this.btn_confirmar.Name = "btn_confirmar";
             this.btn_confirmar.Size = new System.Drawing.Size(89, 34);
             this.btn_confirmar.TabIndex = 8;
@@ -127,7 +129,7 @@
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(29, 344);
+            this.btn_cancelar.Location = new System.Drawing.Point(25, 357);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(89, 34);
             this.btn_cancelar.TabIndex = 9;
@@ -137,7 +139,7 @@
             // 
             // txt_funcaoFunc
             // 
-            this.txt_funcaoFunc.Location = new System.Drawing.Point(29, 302);
+            this.txt_funcaoFunc.Location = new System.Drawing.Point(25, 315);
             this.txt_funcaoFunc.Name = "txt_funcaoFunc";
             this.txt_funcaoFunc.Size = new System.Drawing.Size(185, 20);
             this.txt_funcaoFunc.TabIndex = 13;
@@ -146,7 +148,7 @@
             // 
             this.lbl_telefone.AutoSize = true;
             this.lbl_telefone.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefone.Location = new System.Drawing.Point(26, 199);
+            this.lbl_telefone.Location = new System.Drawing.Point(22, 212);
             this.lbl_telefone.Name = "lbl_telefone";
             this.lbl_telefone.Size = new System.Drawing.Size(73, 16);
             this.lbl_telefone.TabIndex = 14;
@@ -156,7 +158,7 @@
             // 
             this.lbl_data.AutoSize = true;
             this.lbl_data.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_data.Location = new System.Drawing.Point(26, 241);
+            this.lbl_data.Location = new System.Drawing.Point(22, 254);
             this.lbl_data.Name = "lbl_data";
             this.lbl_data.Size = new System.Drawing.Size(103, 16);
             this.lbl_data.TabIndex = 15;
@@ -166,7 +168,7 @@
             // 
             this.lbl_funcao.AutoSize = true;
             this.lbl_funcao.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_funcao.Location = new System.Drawing.Point(29, 283);
+            this.lbl_funcao.Location = new System.Drawing.Point(25, 296);
             this.lbl_funcao.Name = "lbl_funcao";
             this.lbl_funcao.Size = new System.Drawing.Size(64, 16);
             this.lbl_funcao.TabIndex = 16;
@@ -175,9 +177,9 @@
             // pictureBox_logo
             // 
             this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.Logonovo1;
-            this.pictureBox_logo.Location = new System.Drawing.Point(-1, -3);
+            this.pictureBox_logo.Location = new System.Drawing.Point(-1, 0);
             this.pictureBox_logo.Name = "pictureBox_logo";
-            this.pictureBox_logo.Size = new System.Drawing.Size(124, 64);
+            this.pictureBox_logo.Size = new System.Drawing.Size(115, 70);
             this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_logo.TabIndex = 35;
             this.pictureBox_logo.TabStop = false;
@@ -205,21 +207,22 @@
             // 
             // txt_cpfFunc
             // 
-            this.txt_cpfFunc.Location = new System.Drawing.Point(29, 135);
+            this.txt_cpfFunc.Enabled = false;
+            this.txt_cpfFunc.Location = new System.Drawing.Point(25, 148);
             this.txt_cpfFunc.Name = "txt_cpfFunc";
             this.txt_cpfFunc.Size = new System.Drawing.Size(185, 20);
             this.txt_cpfFunc.TabIndex = 38;
             // 
             // txt_telefoneFunc
             // 
-            this.txt_telefoneFunc.Location = new System.Drawing.Point(29, 219);
+            this.txt_telefoneFunc.Location = new System.Drawing.Point(25, 232);
             this.txt_telefoneFunc.Name = "txt_telefoneFunc";
             this.txt_telefoneFunc.Size = new System.Drawing.Size(185, 20);
             this.txt_telefoneFunc.TabIndex = 39;
             // 
             // txt_dataFunc
             // 
-            this.txt_dataFunc.Location = new System.Drawing.Point(29, 261);
+            this.txt_dataFunc.Location = new System.Drawing.Point(25, 274);
             this.txt_dataFunc.Name = "txt_dataFunc";
             this.txt_dataFunc.Size = new System.Drawing.Size(185, 20);
             this.txt_dataFunc.TabIndex = 40;
@@ -230,7 +233,7 @@
             this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_atualizar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_atualizar.ForeColor = System.Drawing.Color.White;
-            this.btn_atualizar.Location = new System.Drawing.Point(160, 344);
+            this.btn_atualizar.Location = new System.Drawing.Point(156, 357);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(89, 34);
             this.btn_atualizar.TabIndex = 41;
@@ -238,12 +241,23 @@
             this.btn_atualizar.UseVisualStyleBackColor = false;
             this.btn_atualizar.Click += new System.EventHandler(this.btn_atualizar_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel1.Location = new System.Drawing.Point(-1, 69);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(540, 14);
+            this.panel1.TabIndex = 42;
+            // 
             // Form_cadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
             this.ClientSize = new System.Drawing.Size(539, 404);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_atualizar);
             this.Controls.Add(this.txt_dataFunc);
             this.Controls.Add(this.txt_telefoneFunc);
@@ -296,5 +310,6 @@
         private System.Windows.Forms.TextBox txt_telefoneFunc;
         private System.Windows.Forms.TextBox txt_dataFunc;
         private System.Windows.Forms.Button btn_atualizar;
+        private System.Windows.Forms.Panel panel1;
     }
 }

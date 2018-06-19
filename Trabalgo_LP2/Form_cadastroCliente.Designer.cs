@@ -42,6 +42,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.pictureBox_cadastro = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).BeginInit();
@@ -51,7 +52,7 @@
             // 
             this.lbl_telefone.AutoSize = true;
             this.lbl_telefone.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefone.Location = new System.Drawing.Point(12, 182);
+            this.lbl_telefone.Location = new System.Drawing.Point(9, 212);
             this.lbl_telefone.Name = "lbl_telefone";
             this.lbl_telefone.Size = new System.Drawing.Size(73, 16);
             this.lbl_telefone.TabIndex = 29;
@@ -63,7 +64,7 @@
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_cancelar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.White;
-            this.btn_cancelar.Location = new System.Drawing.Point(15, 239);
+            this.btn_cancelar.Location = new System.Drawing.Point(12, 269);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(89, 34);
             this.btn_cancelar.TabIndex = 24;
@@ -73,7 +74,7 @@
             // 
             // txt_nome
             // 
-            this.txt_nome.Location = new System.Drawing.Point(15, 94);
+            this.txt_nome.Location = new System.Drawing.Point(12, 124);
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(294, 20);
             this.txt_nome.TabIndex = 21;
@@ -82,7 +83,7 @@
             // 
             this.lbl_cpf.AutoSize = true;
             this.lbl_cpf.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cpf.Location = new System.Drawing.Point(15, 127);
+            this.lbl_cpf.Location = new System.Drawing.Point(12, 157);
             this.lbl_cpf.Name = "lbl_cpf";
             this.lbl_cpf.Size = new System.Drawing.Size(40, 16);
             this.lbl_cpf.TabIndex = 19;
@@ -92,7 +93,7 @@
             // 
             this.lbl_nome.AutoSize = true;
             this.lbl_nome.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nome.Location = new System.Drawing.Point(15, 75);
+            this.lbl_nome.Location = new System.Drawing.Point(12, 105);
             this.lbl_nome.Name = "lbl_nome";
             this.lbl_nome.Size = new System.Drawing.Size(52, 16);
             this.lbl_nome.TabIndex = 18;
@@ -111,14 +112,14 @@
             // txt_cpf
             // 
             this.txt_cpf.Enabled = false;
-            this.txt_cpf.Location = new System.Drawing.Point(18, 147);
+            this.txt_cpf.Location = new System.Drawing.Point(15, 177);
             this.txt_cpf.Name = "txt_cpf";
             this.txt_cpf.Size = new System.Drawing.Size(142, 20);
             this.txt_cpf.TabIndex = 36;
             // 
             // txt_telefone
             // 
-            this.txt_telefone.Location = new System.Drawing.Point(18, 202);
+            this.txt_telefone.Location = new System.Drawing.Point(15, 232);
             this.txt_telefone.Name = "txt_telefone";
             this.txt_telefone.Size = new System.Drawing.Size(142, 20);
             this.txt_telefone.TabIndex = 37;
@@ -129,7 +130,7 @@
             this.btn_confirmar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_confirmar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirmar.ForeColor = System.Drawing.Color.White;
-            this.btn_confirmar.Location = new System.Drawing.Point(156, 239);
+            this.btn_confirmar.Location = new System.Drawing.Point(153, 269);
             this.btn_confirmar.Name = "btn_confirmar";
             this.btn_confirmar.Size = new System.Drawing.Size(89, 34);
             this.btn_confirmar.TabIndex = 23;
@@ -143,7 +144,7 @@
             this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_atualizar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_atualizar.ForeColor = System.Drawing.Color.White;
-            this.btn_atualizar.Location = new System.Drawing.Point(156, 239);
+            this.btn_atualizar.Location = new System.Drawing.Point(153, 269);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(89, 34);
             this.btn_atualizar.TabIndex = 38;
@@ -174,19 +175,30 @@
             // pictureBox_cadastro
             // 
             this.pictureBox_cadastro.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_cadastro.Image")));
-            this.pictureBox_cadastro.Location = new System.Drawing.Point(350, 94);
+            this.pictureBox_cadastro.Location = new System.Drawing.Point(347, 124);
             this.pictureBox_cadastro.Name = "pictureBox_cadastro";
             this.pictureBox_cadastro.Size = new System.Drawing.Size(182, 179);
             this.pictureBox_cadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_cadastro.TabIndex = 17;
             this.pictureBox_cadastro.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel1.Location = new System.Drawing.Point(0, 71);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(537, 13);
+            this.panel1.TabIndex = 39;
+            // 
             // Form_cadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
-            this.ClientSize = new System.Drawing.Size(553, 282);
+            this.ClientSize = new System.Drawing.Size(535, 316);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_atualizar);
             this.Controls.Add(this.txt_telefone);
             this.Controls.Add(this.txt_cpf);
@@ -226,5 +238,6 @@
         private System.Windows.Forms.TextBox txt_telefone;
         private System.Windows.Forms.Button btn_confirmar;
         private System.Windows.Forms.Button btn_atualizar;
+        private System.Windows.Forms.Panel panel1;
     }
 }
