@@ -48,8 +48,8 @@
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_reg_rmv = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_reg_rmv = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -270,14 +270,6 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "(Para remover digite o registro)";
             // 
-            // txt_reg_rmv
-            // 
-            this.txt_reg_rmv.Location = new System.Drawing.Point(163, 427);
-            this.txt_reg_rmv.Mask = "00000000000";
-            this.txt_reg_rmv.Name = "txt_reg_rmv";
-            this.txt_reg_rmv.Size = new System.Drawing.Size(122, 20);
-            this.txt_reg_rmv.TabIndex = 24;
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -287,6 +279,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(669, 11);
             this.panel1.TabIndex = 26;
+            // 
+            // txt_reg_rmv
+            // 
+            this.txt_reg_rmv.Location = new System.Drawing.Point(163, 427);
+            this.txt_reg_rmv.Name = "txt_reg_rmv";
+            this.txt_reg_rmv.Size = new System.Drawing.Size(122, 20);
+            this.txt_reg_rmv.TabIndex = 24;
             // 
             // Form_funcionario
             // 
@@ -339,7 +338,7 @@
         private System.Windows.Forms.Button btn_remover;
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MaskedTextBox txt_reg_rmv;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MaskedTextBox txt_reg_rmv;
     }
 }

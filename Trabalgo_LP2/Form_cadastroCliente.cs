@@ -42,8 +42,8 @@ namespace Trabalgo_LP2
 
             if (a == null)
             {
-                MessageBox.Show("Este cliente não existe!", "ERRO!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Este cliente não existe!", "Ops",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else
@@ -84,23 +84,31 @@ namespace Trabalgo_LP2
         private void btn_confirmar_Click(object sender, EventArgs e)
         {
             //ADICIONAR EXCESSÃO AQUI, VLW
-            if (txt_nome.Text.Equals("") || txt_cpf.Text.Equals("") ||
-                txt_telefone.Text.Equals(""))
-                MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if (!Validar.ValCPF(txt_cpf.Text))
+            try
             {
-                MessageBox.Show("CPF Inválido! Verifique novamente!", "ERRO!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                ClienteDAO clienteDAO = new ClienteDAO();
-                Cliente cliente = GetDTO();
-                clienteDAO.Create(cliente);
+                if (txt_nome.Text.Equals("") || txt_cpf.Text.Equals("") ||
+                    txt_telefone.Text.Equals(""))
+                    MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (!Validar.ValCPF(txt_cpf.Text))
+                {
+                    MessageBox.Show("CPF Inválido! Verifique novamente!", "ERRO!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    ClienteDAO clienteDAO = new ClienteDAO();
+                    Cliente cliente = GetDTO();
+                    clienteDAO.Create(cliente);
 
-                MessageBox.Show("Cliente criado com sucesso!", "Cliente criado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                    MessageBox.Show("Cliente criado com sucesso!", "Cliente criado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Já existe o CPF digitado em nosso Banco de Dados", "ERRO",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -109,8 +117,8 @@ namespace Trabalgo_LP2
         {
             if (txt_nome.Text.Equals("") || txt_cpf.Text.Equals("") ||
                 txt_telefone.Text.Equals(""))
-                MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Todos os campos precisam estar preenchidos!", "Ops",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 ClienteDAO clienteDAO = new ClienteDAO();

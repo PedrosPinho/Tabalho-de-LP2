@@ -77,13 +77,18 @@ namespace Trabalgo_LP2
         private void btn_remover_Click(object sender, EventArgs e)
         {
             //Quando pressionado remove um funcionario usando o registro
-            if (txt_reg_rmv.Text.Equals(""))
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            if (txt_reg_rmv.Text == "")
             {
                 MessageBox.Show("Certifique-se de que a aba remover está preenchida", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else if(funcionarioDAO.ValidaLogin(txt_reg_rmv.Text) == false)
+            {
+                MessageBox.Show("Funcionario inexistente!", "Aviso!", MessageBoxButtons.OK);
+                txt_reg_rmv.Text = null;
+            }
             else
             {
-                FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
                 funcionarioDAO.Delete(txt_reg_rmv.Text);
                 MessageBox.Show("Funcionario removido com sucesso!", "Funcionario removido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txt_reg_rmv.Text = null;

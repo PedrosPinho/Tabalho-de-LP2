@@ -64,8 +64,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox_logo);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.btn_voltar);
@@ -92,10 +92,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(425, 69);
+            this.label2.Location = new System.Drawing.Point(378, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 41);
+            this.label2.Size = new System.Drawing.Size(48, 41);
             this.label2.TabIndex = 22;
+            this.label2.Text = "...";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox_logo
             // 

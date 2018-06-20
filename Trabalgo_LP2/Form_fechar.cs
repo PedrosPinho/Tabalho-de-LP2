@@ -25,7 +25,7 @@ namespace Trabalgo_LP2
         {
             ConsumidosDAO c = new ConsumidosDAO();
             MesaDAO m = new MesaDAO();
-            txt_total.Text = c.GetConsumidos(Convert.ToInt32(label2.Text)).ToString();
+            txt_total.Text = /*"R$" +*/ c.GetConsumidos(Convert.ToInt32(label2.Text)).ToString();
             
             txt_num_pessoas.Text = m.NumPessoas(Convert.ToInt32(label2.Text)).ToString();
         }
@@ -117,6 +117,11 @@ namespace Trabalgo_LP2
             {
                 MessageBox.Show("Certifique-se que CPF esta corretamente preenchido", "Errou", MessageBoxButtons.OK);
             }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

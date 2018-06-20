@@ -77,13 +77,19 @@ namespace Trabalgo_LP2
         private void btn_remover_Click(object sender, EventArgs e)
         {
             //Quando pressionado remove um cliente usando o cpf
+            ClienteDAO clienteDAO = new ClienteDAO();
             if (txt_cpf_rmv.Text.Equals(""))
             {
                 MessageBox.Show("Certifique-se de que a aba remover está preenchida", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else if(clienteDAO.ValidaDelecao(txt_cpf_rmv.Text) == false)
+            {
+                MessageBox.Show("Cliente inexistente!", "Aviso!", MessageBoxButtons.OK);
+                txt_cpf_rmv.Text = null;
+            }
             else
             {
-                ClienteDAO clienteDAO = new ClienteDAO();
+                
                 clienteDAO.Delete(txt_cpf_rmv.Text);
                 MessageBox.Show("Cliente removido com sucesso!", "Cliente removido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txt_cpf_rmv.Text = null;

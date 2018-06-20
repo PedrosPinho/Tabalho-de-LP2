@@ -62,27 +62,36 @@ namespace Trabalgo_LP2
         }
 
         private void btn_adicionar_adicionar_Click(object sender, EventArgs e)
-        {   //Se alguma txt  não estiver preenchida, cria uma mensagem de aviso
-            if(txt_id_adicionar.Text.Equals("") || txt_nome_adicionar.Text.Equals("") ||
-               txt_descricao.Text.Equals("") || txt_preco_adicionar.Text.Equals(""))
-                     MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
+        {
+            try
             {
-                //Se tudo estiver preenchido cria o DTO e insere no bd
-                CardapioDAO cardapioDAO = new CardapioDAO();
-                Cardapio cardapio = GetDTO();
-                cardapioDAO.Create(cardapio);
+                //Se alguma txt  não estiver preenchida, cria uma mensagem de aviso
+                if (txt_id_adicionar.Text.Equals("") || txt_nome_adicionar.Text.Equals("") ||
+                   txt_descricao.Text.Equals("") || txt_preco_adicionar.Text.Equals(""))
+                    MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    //Se tudo estiver preenchido cria o DTO e insere no bd
+                    CardapioDAO cardapioDAO = new CardapioDAO();
+                    Cardapio cardapio = GetDTO();
+                    cardapioDAO.Create(cardapio);
 
-                MessageBox.Show("Item inserido com sucesso!", "Item inserido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Item inserido com sucesso!", "Item inserido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                CardapioDAO cardapiodao = new CardapioDAO();
+                dataGridView_cardapio.DataSource = cardapiodao.listAll();
+
+                //esvazia os campos para uma nova inserção
+                txt_id_adicionar.Text = "";
+                txt_nome_adicionar.Text = "";
+                txt_descricao.Text = "";
+                txt_preco_adicionar.Text = "";
             }
-            CardapioDAO cardapiodao = new CardapioDAO();
-            dataGridView_cardapio.DataSource = cardapiodao.listAll();
-
-            //esvazia os campos para uma nova inserção
-            txt_id_adicionar.Text = "";
-            txt_nome_adicionar.Text = "";
-            txt_descricao.Text = "";
-            txt_preco_adicionar.Text = "";
+            catch (Exception)
+            {
+                MessageBox.Show("Já existe o ID digitado em nosso Banco de Dados", "ERRO",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 

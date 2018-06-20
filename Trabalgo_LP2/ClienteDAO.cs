@@ -187,6 +187,39 @@ namespace Trabalgo_LP2
 
             return cliente;
         }
+
+        public Boolean ValidaDelecao(string cpf)
+        {
+            List<string> lista = new List<string>();
+            Cliente cliente = null;
+            SQLiteConnection conexao = Database.GetInstance().GetConnection();
+            //Seleciona todos registros do banco
+            string qry = string.Format("SELECT Cpf FROM Cliente");
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            SQLiteCommand comm = new SQLiteCommand(qry, conexao);
+
+            SQLiteDataReader dr = comm.ExecuteReader();
+            //coloca todos os registros na lista
+            while (dr.Read())
+            {
+                cliente = new Cliente();
+                cliente.Cpf = dr.GetString(0);
+                lista.Add(cliente.Cpf);
+            }
+
+            dr.Close(); // para nao dar erro de database locked
+            conexao.Close(); // Não esqueça de fechar a conexão
+
+            //compara o registro do usuario com a lista
+            foreach (string l in lista)
+                if (cpf == l)
+                    return true;
+
+            return false;
+        }
     }
 
 }

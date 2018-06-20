@@ -47,8 +47,8 @@ namespace Trabalgo_LP2
 
             if (a == null)
             {
-                MessageBox.Show("Este funcionário não existe!", "ERRO!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Este funcionário não existe!", "Ops",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Close();
                 return false;
             }
@@ -97,23 +97,31 @@ namespace Trabalgo_LP2
         private void btn_confirmar_Click(object sender, EventArgs e)
         {
             //CADASTRAR FUNCIONARIO FAZER OK?
-            if (txt_registroFunc.Text.Equals("") || txt_cpfFunc.Text.Equals("") ||
-                txt_telefoneFunc.Text.Equals("") || txt_funcaoFunc.Text.Equals("") ||
-                txt_nomeFunc.Text.Equals("") || txt_dataFunc.Text.Equals("")) 
-                MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if (!Validar.ValCPF(txt_cpfFunc.Text))
+            try
             {
-                MessageBox.Show("CPF Inválido! Verifique novamente!", "ERRO!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (txt_registroFunc.Text.Equals("") || txt_cpfFunc.Text.Equals("") ||
+                    txt_telefoneFunc.Text.Equals("") || txt_funcaoFunc.Text.Equals("") ||
+                    txt_nomeFunc.Text.Equals("") || txt_dataFunc.Text.Equals(""))
+                    MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (!Validar.ValCPF(txt_cpfFunc.Text))
+                {
+                    MessageBox.Show("CPF Inválido! Verifique novamente!", "ERRO!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+                    Funcionario funcionario = GetDTO();
+                    funcionarioDAO.Create(funcionario);
+                    MessageBox.Show("Funcionario cadastrado", "Aviso", MessageBoxButtons.OK);
+                    this.Close();
+                }
             }
-            else
+            catch(Exception)
             {
-                FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-                Funcionario funcionario = GetDTO();
-                funcionarioDAO.Create(funcionario);
-                MessageBox.Show("Funcionario cadastrado", "Aviso", MessageBoxButtons.OK);
-                this.Close();
+                MessageBox.Show("Já existe o CPF/Registro digitado em nosso Banco de Dados", "ERRO",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         
@@ -122,8 +130,8 @@ namespace Trabalgo_LP2
             if (txt_registroFunc.Text.Equals("") || txt_cpfFunc.Text.Equals("") ||
                 txt_telefoneFunc.Text.Equals("") || txt_funcaoFunc.Text.Equals("") ||
                 txt_nomeFunc.Text.Equals("") || txt_dataFunc.Text.Equals(""))
-                MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Todos os campos precisam estar preenchidos!", "Ops",
+                                MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
