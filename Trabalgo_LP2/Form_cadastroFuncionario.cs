@@ -102,6 +102,11 @@ namespace Trabalgo_LP2
                 txt_nomeFunc.Text.Equals("") || txt_dataFunc.Text.Equals("")) 
                 MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (!Validar.ValCPF(txt_cpfFunc.Text))
+            {
+                MessageBox.Show("CPF Inválido! Verifique novamente!", "ERRO!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 FuncionarioDAO funcionarioDAO = new FuncionarioDAO();

@@ -162,6 +162,7 @@
     <Compile Include="MesaDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validar.cs" />
     <EmbeddedResource Include="Form_cadastroFuncionario.resx">
       <DependentUpon>Form_cadastroFuncionario.cs</DependentUpon>
     </EmbeddedResource>

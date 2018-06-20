@@ -40,7 +40,7 @@ namespace Trabalgo_LP2
 
             if (entrada.Valor != null)
             {
-                // abrindo a janela de alunos no modo 3 (alterar)
+                // Dando erro de excessão aqui
                 Form_cadastroFuncionario janelaFuncionario = new Form_cadastroFuncionario(3);
                 janelaFuncionario.RegistroFunc = int.Parse(entrada.Valor);
                 if (janelaFuncionario.exibirFuncionario())

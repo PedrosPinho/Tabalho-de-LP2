@@ -88,6 +88,11 @@ namespace Trabalgo_LP2
                 txt_telefone.Text.Equals(""))
                 MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (!Validar.ValCPF(txt_cpf.Text))
+            {
+                MessageBox.Show("CPF Inválido! Verifique novamente!", "ERRO!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 ClienteDAO clienteDAO = new ClienteDAO();
