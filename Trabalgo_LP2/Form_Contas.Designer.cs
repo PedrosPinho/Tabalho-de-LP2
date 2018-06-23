@@ -39,10 +39,6 @@
             this.btn_voltar = new System.Windows.Forms.Button();
             this.lbl_contas = new System.Windows.Forms.Label();
             this.grid_contas = new System.Windows.Forms.DataGridView();
-            this.column_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_id_item = new System.Windows.Forms.Label();
             this.txt_id_item = new System.Windows.Forms.TextBox();
             this.lbl_qtd = new System.Windows.Forms.Label();
@@ -51,6 +47,10 @@
             this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.column_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -165,33 +165,6 @@
             this.grid_contas.Size = new System.Drawing.Size(361, 294);
             this.grid_contas.TabIndex = 3;
             // 
-            // column_id
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.column_id.DefaultCellStyle = dataGridViewCellStyle2;
-            this.column_id.HeaderText = "Id ";
-            this.column_id.Name = "column_id";
-            this.column_id.ReadOnly = true;
-            // 
-            // nome_item
-            // 
-            this.nome_item.HeaderText = "Nome";
-            this.nome_item.Name = "nome_item";
-            this.nome_item.ReadOnly = true;
-            // 
-            // preco_item
-            // 
-            this.preco_item.HeaderText = "Preço";
-            this.preco_item.Name = "preco_item";
-            this.preco_item.ReadOnly = true;
-            // 
-            // Column_quantidade
-            // 
-            this.Column_quantidade.DataPropertyName = "quantidade";
-            this.Column_quantidade.HeaderText = "Qtd";
-            this.Column_quantidade.Name = "Column_quantidade";
-            this.Column_quantidade.ReadOnly = true;
-            // 
             // lbl_id_item
             // 
             this.lbl_id_item.AutoSize = true;
@@ -279,6 +252,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(610, 11);
             this.panel1.TabIndex = 20;
+            // 
+            // column_id
+            // 
+            this.column_id.DataPropertyName = "Id";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.column_id.DefaultCellStyle = dataGridViewCellStyle2;
+            this.column_id.HeaderText = "Id ";
+            this.column_id.Name = "column_id";
+            this.column_id.ReadOnly = true;
+            // 
+            // nome_item
+            // 
+            this.nome_item.DataPropertyName = "Nome";
+            this.nome_item.HeaderText = "Nome";
+            this.nome_item.Name = "nome_item";
+            this.nome_item.ReadOnly = true;
+            // 
+            // preco_item
+            // 
+            this.preco_item.DataPropertyName = "Preco";
+            this.preco_item.HeaderText = "Preço";
+            this.preco_item.Name = "preco_item";
+            this.preco_item.ReadOnly = true;
+            // 
+            // Column_quantidade
+            // 
+            this.Column_quantidade.DataPropertyName = "quantidade";
+            this.Column_quantidade.HeaderText = "Qtd";
+            this.Column_quantidade.Name = "Column_quantidade";
+            this.Column_quantidade.ReadOnly = true;
             // 
             // Form_contas
             // 

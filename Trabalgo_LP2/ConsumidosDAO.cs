@@ -17,23 +17,22 @@ namespace Trabalgo_LP2
 
             SQLiteConnection conexao = Database.GetInstance().GetConnection();
 
-            string qry = string.Format("SELECT * FROM Consumidos{0}", i);
+            string qry = string.Format("SELECT ca.id, c.quantidade, ca.nome, ca.preco from consumidos{0} c inner join cardapio ca on c.id = ca.id", i);
 
             if (conexao.State != System.Data.ConnectionState.Open)
                 conexao.Open();
-
+            
             SQLiteCommand comm = new SQLiteCommand(qry, conexao);
 
             SQLiteDataReader dr = comm.ExecuteReader();
 
             while (dr.Read())
             {
-                // Cria um objeto Cliente para transferir os dados 
-                // do banco para a aplicação (DTO)
                 consumido = new Consumidos();
                 consumido.Id = dr.GetInt32(0);
                 consumido.Quantidade = dr.GetInt32(1);
-
+                consumido.Nome = dr.GetString(2);
+                consumido.Preco = (dr.GetDouble(3)) * consumido.Quantidade;
                 lista.Add(consumido); // Adiciona o objeto na lista de resultados
             }
 
@@ -58,12 +57,12 @@ namespace Trabalgo_LP2
             return false;
         }
 
-        public float GetConsumidos(int i)
+        public double GetConsumidos(int i)
         {
             List<Consumidos> listaCons = new List<Consumidos>();
             CardapioDAO cardapio = new CardapioDAO();
             Consumidos consumido = null;
-            float total = 0;
+            double total = 0;
             List<Cardapio> lista = cardapio.listAll();
 
             SQLiteConnection conexao = Database.GetInstance().GetConnection();

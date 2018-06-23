@@ -20,7 +20,8 @@ namespace Trabalgo_LP2
 
         private void Form_contas_Load(object sender, EventArgs e)
         {
-
+            ConsumidosDAO c = new ConsumidosDAO();
+            grid_contas.DataSource = c.listAll(Convert.ToInt32(label2.Text));
         }
 
         private void btn_fechar_Click(object sender, EventArgs e)

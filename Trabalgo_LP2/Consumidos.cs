@@ -9,7 +9,8 @@ namespace Trabalgo_LP2
     class Consumidos
     {
         int id, quantidade;
-        float preco;
+        string nome;
+        double preco;
 
         public int Id
         {
@@ -24,7 +25,20 @@ namespace Trabalgo_LP2
             }
         }
 
-        public float Preco
+        public string Nome
+        {
+            get
+            {
+                return nome;
+            }
+
+            set
+            {
+                nome = value;
+            }
+        }
+
+        public double Preco
         {
             get
             {

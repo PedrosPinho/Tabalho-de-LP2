@@ -114,7 +114,7 @@ namespace Trabalgo_LP2
             }
             catch (Exception)
             {
-                MessageBox.Show("Já existe o CPF digitado em nosso Banco de Dados", "ERRO",
+                MessageBox.Show("CPF Inválido! ou o mesmo já existe em nosso Banco de Dados tente novamente", "ERRO",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
