@@ -88,7 +88,7 @@
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(516, 30);
+            this.btn_voltar.Location = new System.Drawing.Point(516, 33);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(69, 34);
             this.btn_voltar.TabIndex = 15;
@@ -100,7 +100,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Trabalgo_LP2.Properties.Resources._039_tag;
-            this.pictureBox3.Location = new System.Drawing.Point(210, 30);
+            this.pictureBox3.Location = new System.Drawing.Point(186, 30);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(49, 41);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,10 +110,10 @@
             // lbl_fidelidade
             // 
             this.lbl_fidelidade.AutoSize = true;
-            this.lbl_fidelidade.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fidelidade.Location = new System.Drawing.Point(255, 30);
+            this.lbl_fidelidade.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fidelidade.Location = new System.Drawing.Point(241, 27);
             this.lbl_fidelidade.Name = "lbl_fidelidade";
-            this.lbl_fidelidade.Size = new System.Drawing.Size(186, 41);
+            this.lbl_fidelidade.Size = new System.Drawing.Size(225, 47);
             this.lbl_fidelidade.TabIndex = 0;
             this.lbl_fidelidade.Text = "Fidelidade";
             // 
@@ -194,10 +194,6 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(98, 50);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 19);
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -210,10 +206,6 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(98, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 19);
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -229,9 +221,9 @@
             this.btn_novo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_novo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_novo.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_novo.Location = new System.Drawing.Point(0, 85);
+            this.btn_novo.Location = new System.Drawing.Point(3, 85);
             this.btn_novo.Name = "btn_novo";
-            this.btn_novo.Size = new System.Drawing.Size(133, 68);
+            this.btn_novo.Size = new System.Drawing.Size(130, 68);
             this.btn_novo.TabIndex = 2;
             this.btn_novo.Text = "Novo desconto";
             this.btn_novo.UseVisualStyleBackColor = false;
@@ -240,7 +232,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(3, 47);
@@ -252,7 +243,6 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(3, 16);

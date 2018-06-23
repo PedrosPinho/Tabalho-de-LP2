@@ -50,10 +50,10 @@
             // txt_mesa
             // 
             this.txt_mesa.AutoSize = true;
-            this.txt_mesa.Font = new System.Drawing.Font("Arial Narrow", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_mesa.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_mesa.Location = new System.Drawing.Point(12, 115);
             this.txt_mesa.Name = "txt_mesa";
-            this.txt_mesa.Size = new System.Drawing.Size(534, 29);
+            this.txt_mesa.Size = new System.Drawing.Size(588, 25);
             this.txt_mesa.TabIndex = 8;
             this.txt_mesa.Text = "Para acessar, clique sob o número da mesa que desejar";
             // 
@@ -87,7 +87,7 @@
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(503, 30);
+            this.btn_voltar.Location = new System.Drawing.Point(503, 28);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(72, 34);
             this.btn_voltar.TabIndex = 15;
@@ -99,7 +99,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Trabalgo_LP2.Properties.Resources.meeting;
-            this.pictureBox3.Location = new System.Drawing.Point(227, 20);
+            this.pictureBox3.Location = new System.Drawing.Point(206, 20);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(58, 51);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,10 +109,10 @@
             // lbl_mesa
             // 
             this.lbl_mesa.AutoSize = true;
-            this.lbl_mesa.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mesa.Location = new System.Drawing.Point(280, 30);
+            this.lbl_mesa.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_mesa.Location = new System.Drawing.Point(261, 22);
             this.lbl_mesa.Name = "lbl_mesa";
-            this.lbl_mesa.Size = new System.Drawing.Size(123, 41);
+            this.lbl_mesa.Size = new System.Drawing.Size(144, 47);
             this.lbl_mesa.TabIndex = 0;
             this.lbl_mesa.Text = "Mesas";
             // 

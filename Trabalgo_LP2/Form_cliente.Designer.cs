@@ -84,7 +84,7 @@
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(513, 30);
+            this.btn_voltar.Location = new System.Drawing.Point(518, 32);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(65, 34);
             this.btn_voltar.TabIndex = 15;
@@ -96,7 +96,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Trabalgo_LP2.Properties.Resources.student;
-            this.pictureBox3.Location = new System.Drawing.Point(240, 26);
+            this.pictureBox3.Location = new System.Drawing.Point(230, 27);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(44, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,10 +106,10 @@
             // lbl_cliente
             // 
             this.lbl_cliente.AutoSize = true;
-            this.lbl_cliente.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cliente.Location = new System.Drawing.Point(280, 30);
+            this.lbl_cliente.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cliente.Location = new System.Drawing.Point(271, 26);
             this.lbl_cliente.Name = "lbl_cliente";
-            this.lbl_cliente.Size = new System.Drawing.Size(131, 41);
+            this.lbl_cliente.Size = new System.Drawing.Size(159, 47);
             this.lbl_cliente.TabIndex = 0;
             this.lbl_cliente.Text = "Cliente";
             // 

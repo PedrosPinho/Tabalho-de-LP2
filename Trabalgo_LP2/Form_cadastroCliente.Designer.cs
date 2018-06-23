@@ -36,13 +36,14 @@
             this.lbl_nome = new System.Windows.Forms.Label();
             this.lbl_Cadastro = new System.Windows.Forms.Label();
             this.txt_cpf = new System.Windows.Forms.TextBox();
-            this.txt_telefone = new System.Windows.Forms.TextBox();
             this.btn_confirmar = new System.Windows.Forms.Button();
             this.btn_atualizar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.pictureBox_cadastro = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_telefone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).BeginInit();
@@ -102,10 +103,10 @@
             // lbl_Cadastro
             // 
             this.lbl_Cadastro.AutoSize = true;
-            this.lbl_Cadastro.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cadastro.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_Cadastro.Location = new System.Drawing.Point(171, 13);
             this.lbl_Cadastro.Name = "lbl_Cadastro";
-            this.lbl_Cadastro.Size = new System.Drawing.Size(269, 32);
+            this.lbl_Cadastro.Size = new System.Drawing.Size(323, 38);
             this.lbl_Cadastro.TabIndex = 32;
             this.lbl_Cadastro.Text = "Cadastro de cliente";
             // 
@@ -116,13 +117,6 @@
             this.txt_cpf.Name = "txt_cpf";
             this.txt_cpf.Size = new System.Drawing.Size(142, 20);
             this.txt_cpf.TabIndex = 36;
-            // 
-            // txt_telefone
-            // 
-            this.txt_telefone.Location = new System.Drawing.Point(15, 232);
-            this.txt_telefone.Name = "txt_telefone";
-            this.txt_telefone.Size = new System.Drawing.Size(142, 20);
-            this.txt_telefone.TabIndex = 37;
             // 
             // btn_confirmar
             // 
@@ -155,7 +149,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Trabalgo_LP2.Properties.Resources.student;
-            this.pictureBox3.Location = new System.Drawing.Point(130, 9);
+            this.pictureBox3.Location = new System.Drawing.Point(130, 10);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(46, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -192,15 +186,34 @@
             this.panel1.Size = new System.Drawing.Size(537, 13);
             this.panel1.TabIndex = 39;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel2.Location = new System.Drawing.Point(0, 319);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(537, 13);
+            this.panel2.TabIndex = 40;
+            // 
+            // txt_telefone
+            // 
+            this.txt_telefone.Location = new System.Drawing.Point(12, 231);
+            this.txt_telefone.Mask = "(00) 000000000";
+            this.txt_telefone.Name = "txt_telefone";
+            this.txt_telefone.Size = new System.Drawing.Size(145, 20);
+            this.txt_telefone.TabIndex = 41;
+            // 
             // Form_cadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
-            this.ClientSize = new System.Drawing.Size(535, 316);
+            this.ClientSize = new System.Drawing.Size(535, 332);
+            this.Controls.Add(this.txt_telefone);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_atualizar);
-            this.Controls.Add(this.txt_telefone);
             this.Controls.Add(this.txt_cpf);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txt_nome);
@@ -235,9 +248,10 @@
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox txt_cpf;
-        private System.Windows.Forms.TextBox txt_telefone;
         private System.Windows.Forms.Button btn_confirmar;
         private System.Windows.Forms.Button btn_atualizar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.MaskedTextBox txt_telefone;
     }
 }

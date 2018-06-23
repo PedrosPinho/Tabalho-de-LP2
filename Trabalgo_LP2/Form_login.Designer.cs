@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel_login = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.linklbl_cadastrar = new System.Windows.Forms.LinkLabel();
             this.btn_login = new System.Windows.Forms.Button();
             this.lbl_registro = new System.Windows.Forms.Label();
@@ -41,6 +43,8 @@
             // panel_login
             // 
             this.panel_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel_login.Controls.Add(this.panel1);
+            this.panel_login.Controls.Add(this.panel8);
             this.panel_login.Controls.Add(this.linklbl_cadastrar);
             this.panel_login.Controls.Add(this.btn_login);
             this.panel_login.Controls.Add(this.lbl_registro);
@@ -52,6 +56,26 @@
             this.panel_login.Name = "panel_login";
             this.panel_login.Size = new System.Drawing.Size(559, 279);
             this.panel_login.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(559, 12);
+            this.panel1.TabIndex = 25;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel8.Location = new System.Drawing.Point(0, 267);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(559, 12);
+            this.panel8.TabIndex = 24;
             // 
             // linklbl_cadastrar
             // 
@@ -72,7 +96,7 @@
             this.btn_login.BackColor = System.Drawing.Color.Black;
             this.btn_login.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_login.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_login.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_login.Location = new System.Drawing.Point(357, 132);
             this.btn_login.Name = "btn_login";
@@ -85,10 +109,10 @@
             // lbl_registro
             // 
             this.lbl_registro.AutoSize = true;
-            this.lbl_registro.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_registro.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_registro.Location = new System.Drawing.Point(354, 85);
             this.lbl_registro.Name = "lbl_registro";
-            this.lbl_registro.Size = new System.Drawing.Size(73, 18);
+            this.lbl_registro.Size = new System.Drawing.Size(70, 18);
             this.lbl_registro.TabIndex = 2;
             this.lbl_registro.Text = "Registro:";
             // 
@@ -137,6 +161,8 @@
         private System.Windows.Forms.Label lbl_registro;
         private System.Windows.Forms.MaskedTextBox txt_registro;
         private System.Windows.Forms.LinkLabel linklbl_cadastrar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel8;
     }
 }
 

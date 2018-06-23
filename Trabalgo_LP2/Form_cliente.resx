@@ -121,7 +121,7 @@
   <data name="btn_voltar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQQAAABQCAIAAABwApwIAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABJ0RVh0U29mdHdhcmUAR3JlZW5zaG90XlUIBQAAA2JJREFUeF7t2UdOJEEYROG5
+        vAAADrwBlbxySQAAABJ0RVh0U29mdHdhcmUAR3JlZW5zaG90XlUIBQAAA2JJREFUeF7t2UdOJEEYROG5
         E0vOxnGwwnsPxwAa7705AfMLYkbMQDfdVEZWlvS+VdY+nkqp/NUH4A0xAEIMgBADIM2Lob+/XycgqYbF
         sL29PTo6qg8gqSbFECW8vr4SA0waE8N7CcQAn2bE8LeEQAwwaUAMH0sIxACT0mP4r4RADDApOobPJQRi
         gEm5MXxZQiAGmBQaQ7sSAjHApMQYOpQQiAEmxcXQuYRADDApK4atrS1Nvj1igElBMWxubmrvHREDTEqJ
@@ -191,7 +191,7 @@
   <data name="btn_adicionar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQQAAABQCAIAAABwApwIAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABJ0RVh0U29mdHdhcmUAR3JlZW5zaG90XlUIBQAABE9JREFUeF7t3e9PGmcAwHGW
+        vAAADrwBlbxySQAAABJ0RVh0U29mdHdhcmUAR3JlZW5zaG90XlUIBQAABE9JREFUeF7t3e9PGmcAwHGW
         WZBWRSH2yJQ5bIuIr9olbRrfmSXNliUmy+KSZcm0CbWNlkmttEhlzNbhDyAgLoshvu7b/We+6muG6TPB
         54qedw+9W/kmn1cIz92L5+txP7hzvTs+fruS/P32nYeffQ50oVR4vJFAvV53/ZP7Q/ob0IUaPbgaWUiv
         Al1oeSjgkl4CuhYxAAIxAAIxAAIxAAIxAAIxAAIxAAIxAILDYvB5nn/nzy5+kU+Nnnqz4E9P9z726t4M
@@ -216,7 +216,7 @@
   <data name="btn_alterar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQQAAABQCAIAAABwApwIAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAABJ0RVh0U29mdHdhcmUAR3JlZW5zaG90XlUIBQAAByRJREFUeF7t3V1PGlkcBnBM
+        vAAADrwBlbxySQAAABJ0RVh0U29mdHdhcmUAR3JlZW5zaG90XlUIBQAAByRJREFUeF7t3V1PGlkcBnBM
         EZ1FRCSIrVJfhoLgze42aWOaZqPZ7Ka9adY0dtOYTZcEX4KilAULVJaiiFBUcFwbQzabbHqz36bX7VU/
         Q7/AilKFM8AMM8PwMk/yu8I5c+biPM7bOf9Rff746V/P2p/ffu/qugGgQMGJyffrG1++fFH9FwoTf5NI
         t8dO+eYGthcGtx/3ee2UR09sANBC3ns3VIHxSeJXMdxD2sjyaCYzxfw9fcLC/EWnPabQfY2b1RCgudYM

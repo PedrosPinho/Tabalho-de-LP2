@@ -85,7 +85,7 @@
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(600, 26);
+            this.btn_voltar.Location = new System.Drawing.Point(600, 33);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(74, 34);
             this.btn_voltar.TabIndex = 14;
@@ -97,7 +97,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Trabalgo_LP2.Properties.Resources.fast_food;
-            this.pictureBox1.Location = new System.Drawing.Point(249, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(227, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -107,10 +107,10 @@
             // lbl_cardapio
             // 
             this.lbl_cardapio.AutoSize = true;
-            this.lbl_cardapio.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cardapio.Location = new System.Drawing.Point(292, 31);
+            this.lbl_cardapio.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cardapio.Location = new System.Drawing.Point(280, 27);
             this.lbl_cardapio.Name = "lbl_cardapio";
-            this.lbl_cardapio.Size = new System.Drawing.Size(144, 42);
+            this.lbl_cardapio.Size = new System.Drawing.Size(204, 47);
             this.lbl_cardapio.TabIndex = 2;
             this.lbl_cardapio.Text = "Cardápio";
             // 

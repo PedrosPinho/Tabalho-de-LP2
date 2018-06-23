@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Trabalgo_LP2
 {
@@ -93,6 +94,12 @@ namespace Trabalgo_LP2
                 else if (!Validar.ValCPF(txt_cpf.Text))
                 {
                     MessageBox.Show("CPF Inválido! Verifique novamente!", "ERRO!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (!Regex.Match(txt_telefone.Text, @"^\([1-9]\d\)\s\d{8,9}$").Success)
+                {
+                    MessageBox.Show("Erro: O telefone deve ter o formato (XX)XXXXXXXX!" +
+                                    " O DDD não pode começar com zero e o número deve ter oito ou nove dígitos!\n", "ERRO!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else

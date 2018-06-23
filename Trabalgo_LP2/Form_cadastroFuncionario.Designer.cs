@@ -45,10 +45,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_Cadastro = new System.Windows.Forms.Label();
             this.txt_cpfFunc = new System.Windows.Forms.TextBox();
-            this.txt_telefoneFunc = new System.Windows.Forms.TextBox();
             this.txt_dataFunc = new System.Windows.Forms.TextBox();
             this.btn_atualizar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_telefoneFunc = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cadastro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -188,7 +189,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Trabalgo_LP2.Properties.Resources._030_manager;
-            this.pictureBox3.Location = new System.Drawing.Point(129, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(129, 11);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(44, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,10 +199,10 @@
             // lbl_Cadastro
             // 
             this.lbl_Cadastro.AutoSize = true;
-            this.lbl_Cadastro.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Cadastro.Location = new System.Drawing.Point(168, 9);
+            this.lbl_Cadastro.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Cadastro.Location = new System.Drawing.Point(173, 15);
             this.lbl_Cadastro.Name = "lbl_Cadastro";
-            this.lbl_Cadastro.Size = new System.Drawing.Size(341, 32);
+            this.lbl_Cadastro.Size = new System.Drawing.Size(363, 36);
             this.lbl_Cadastro.TabIndex = 37;
             this.lbl_Cadastro.Text = "Cadastro de Funcionário";
             // 
@@ -212,13 +213,6 @@
             this.txt_cpfFunc.Name = "txt_cpfFunc";
             this.txt_cpfFunc.Size = new System.Drawing.Size(185, 20);
             this.txt_cpfFunc.TabIndex = 38;
-            // 
-            // txt_telefoneFunc
-            // 
-            this.txt_telefoneFunc.Location = new System.Drawing.Point(25, 232);
-            this.txt_telefoneFunc.Name = "txt_telefoneFunc";
-            this.txt_telefoneFunc.Size = new System.Drawing.Size(185, 20);
-            this.txt_telefoneFunc.TabIndex = 39;
             // 
             // txt_dataFunc
             // 
@@ -251,16 +245,35 @@
             this.panel1.Size = new System.Drawing.Size(540, 14);
             this.panel1.TabIndex = 42;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel2.Location = new System.Drawing.Point(-1, 397);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(537, 13);
+            this.panel2.TabIndex = 43;
+            // 
+            // txt_telefoneFunc
+            // 
+            this.txt_telefoneFunc.Location = new System.Drawing.Point(25, 231);
+            this.txt_telefoneFunc.Mask = "(00) 000000000";
+            this.txt_telefoneFunc.Name = "txt_telefoneFunc";
+            this.txt_telefoneFunc.Size = new System.Drawing.Size(185, 20);
+            this.txt_telefoneFunc.TabIndex = 44;
+            // 
             // Form_cadastroFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
-            this.ClientSize = new System.Drawing.Size(539, 404);
+            this.ClientSize = new System.Drawing.Size(539, 409);
+            this.Controls.Add(this.txt_telefoneFunc);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_atualizar);
             this.Controls.Add(this.txt_dataFunc);
-            this.Controls.Add(this.txt_telefoneFunc);
             this.Controls.Add(this.pictureBox_cadastro);
             this.Controls.Add(this.txt_cpfFunc);
             this.Controls.Add(this.lbl_Cadastro);
@@ -307,9 +320,10 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lbl_Cadastro;
         private System.Windows.Forms.TextBox txt_cpfFunc;
-        private System.Windows.Forms.TextBox txt_telefoneFunc;
         private System.Windows.Forms.TextBox txt_dataFunc;
         private System.Windows.Forms.Button btn_atualizar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.MaskedTextBox txt_telefoneFunc;
     }
 }

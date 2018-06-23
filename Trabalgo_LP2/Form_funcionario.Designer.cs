@@ -83,9 +83,9 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox_logo);
             this.panel2.Controls.Add(this.btn_voltar);
-            this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.lbl_funcionario);
             this.panel2.Location = new System.Drawing.Point(0, -2);
             this.panel2.Name = "panel2";
@@ -110,7 +110,7 @@
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(559, 28);
+            this.btn_voltar.Location = new System.Drawing.Point(559, 33);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(67, 34);
             this.btn_voltar.TabIndex = 22;
@@ -122,7 +122,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::Trabalgo_LP2.Properties.Resources._030_manager;
-            this.pictureBox3.Location = new System.Drawing.Point(232, 24);
+            this.pictureBox3.Location = new System.Drawing.Point(193, 28);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(45, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -132,10 +132,10 @@
             // lbl_funcionario
             // 
             this.lbl_funcionario.AutoSize = true;
-            this.lbl_funcionario.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_funcionario.Location = new System.Drawing.Point(268, 28);
+            this.lbl_funcionario.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_funcionario.Location = new System.Drawing.Point(231, 28);
             this.lbl_funcionario.Name = "lbl_funcionario";
-            this.lbl_funcionario.Size = new System.Drawing.Size(211, 41);
+            this.lbl_funcionario.Size = new System.Drawing.Size(248, 47);
             this.lbl_funcionario.TabIndex = 0;
             this.lbl_funcionario.Text = "Funcionário";
             // 

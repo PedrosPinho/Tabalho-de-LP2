@@ -49,10 +49,10 @@
             // lbl_confirmacao
             // 
             this.lbl_confirmacao.AutoSize = true;
-            this.lbl_confirmacao.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_confirmacao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_confirmacao.Location = new System.Drawing.Point(188, 38);
             this.lbl_confirmacao.Name = "lbl_confirmacao";
-            this.lbl_confirmacao.Size = new System.Drawing.Size(179, 19);
+            this.lbl_confirmacao.Size = new System.Drawing.Size(170, 19);
             this.lbl_confirmacao.TabIndex = 25;
             this.lbl_confirmacao.Text = "Digite o Registro/CPF:";
             this.lbl_confirmacao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

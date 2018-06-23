@@ -54,10 +54,10 @@
             // lbl_info
             // 
             this.lbl_info.AutoSize = true;
-            this.lbl_info.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_info.Location = new System.Drawing.Point(144, 49);
+            this.lbl_info.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_info.Location = new System.Drawing.Point(136, 46);
             this.lbl_info.Name = "lbl_info";
-            this.lbl_info.Size = new System.Drawing.Size(65, 20);
+            this.lbl_info.Size = new System.Drawing.Size(71, 19);
             this.lbl_info.TabIndex = 15;
             this.lbl_info.Text = "Pessoas:";
             // 
@@ -90,10 +90,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(144, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 20);
+            this.label1.Size = new System.Drawing.Size(54, 19);
             this.label1.TabIndex = 18;
             this.label1.Text = "Mesa:";
             // 
