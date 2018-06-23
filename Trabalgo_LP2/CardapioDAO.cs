@@ -159,5 +159,39 @@ namespace Trabalgo_LP2
 
             return lista;
         }
+
+        public List<Cardapio> listItens()
+        {
+            //Lista todos os itens do banco no grid
+            List<Cardapio> itens = new List<Cardapio>();
+            Cardapio cardapio = null;
+
+            SQLiteConnection conexao = Database.GetInstance().GetConnection();
+
+            string qry = "SELECT Id, Nome FROM Cardapio ORDER BY Id ASC";
+
+            if (conexao.State != System.Data.ConnectionState.Open)
+                conexao.Open();
+
+            SQLiteCommand comm = new SQLiteCommand(qry, conexao);
+
+            SQLiteDataReader dr = comm.ExecuteReader();
+
+            while (dr.Read())
+            {
+                // Cria um objeto Cliente para transferir os dados 
+                // do banco para a aplicação (DTO)
+                cardapio = new Cardapio();
+                cardapio.Id = dr.GetInt32(0);
+                cardapio.Nome = dr.GetString(1);
+
+                itens.Add(cardapio); // Adiciona o objeto na lista de resultados
+            }
+
+            dr.Close(); // para nao dar erro de database locked
+            conexao.Close(); // Não esqueça de fechar a conexão
+
+            return itens;
+        }
     }
 }

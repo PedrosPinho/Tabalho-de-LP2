@@ -22,6 +22,9 @@ namespace Trabalgo_LP2
         {
             ConsumidosDAO c = new ConsumidosDAO();
             grid_contas.DataSource = c.listAll(Convert.ToInt32(label2.Text));
+
+            CardapioDAO ca = new CardapioDAO();
+            grid_itensTotais.DataSource = ca.listItens();
         }
 
         private void btn_fechar_Click(object sender, EventArgs e)
@@ -63,6 +66,11 @@ namespace Trabalgo_LP2
             }
             
             
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

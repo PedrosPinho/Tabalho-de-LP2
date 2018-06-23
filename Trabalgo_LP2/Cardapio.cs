@@ -16,6 +16,13 @@ namespace Trabalgo_LP2
         {
 
         }
+
+        public Cardapio(int id, string nome)
+        {
+            this.id = id;
+            this.nome = nome;
+        }
+
         public Cardapio(int id, string nome, string descricao, double preco)
         {
             this.id = id;

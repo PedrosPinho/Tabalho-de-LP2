@@ -39,22 +39,28 @@
             this.btn_voltar = new System.Windows.Forms.Button();
             this.lbl_contas = new System.Windows.Forms.Label();
             this.grid_contas = new System.Windows.Forms.DataGridView();
-            this.column_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_id_item = new System.Windows.Forms.Label();
             this.txt_id_item = new System.Windows.Forms.TextBox();
             this.lbl_qtd = new System.Windows.Forms.Label();
             this.txt_qtd = new System.Windows.Forms.TextBox();
             this.btn_adicionar = new System.Windows.Forms.Button();
-            this.btn_excluir = new System.Windows.Forms.Button();
             this.btn_fechar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.grid_itensTotais = new System.Windows.Forms.DataGridView();
+            this.column_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_contas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_itensTotais)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -68,7 +74,7 @@
             this.panel3.Controls.Add(this.lbl_contas);
             this.panel3.Location = new System.Drawing.Point(-2, -2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(613, 104);
+            this.panel3.Size = new System.Drawing.Size(637, 104);
             this.panel3.TabIndex = 2;
             // 
             // label1
@@ -119,7 +125,7 @@
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_voltar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_voltar.ForeColor = System.Drawing.Color.White;
-            this.btn_voltar.Location = new System.Drawing.Point(527, 30);
+            this.btn_voltar.Location = new System.Drawing.Point(517, 27);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(57, 34);
             this.btn_voltar.TabIndex = 15;
@@ -160,20 +166,113 @@
             this.preco_item,
             this.Column_quantidade});
             this.grid_contas.GridColor = System.Drawing.Color.Black;
-            this.grid_contas.Location = new System.Drawing.Point(44, 129);
+            this.grid_contas.Location = new System.Drawing.Point(12, 160);
             this.grid_contas.Name = "grid_contas";
             this.grid_contas.ReadOnly = true;
-            this.grid_contas.Size = new System.Drawing.Size(361, 294);
+            this.grid_contas.Size = new System.Drawing.Size(326, 164);
             this.grid_contas.TabIndex = 3;
+            // 
+            // lbl_id_item
+            // 
+            this.lbl_id_item.AutoSize = true;
+            this.lbl_id_item.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.lbl_id_item.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_id_item.Location = new System.Drawing.Point(12, 334);
+            this.lbl_id_item.Name = "lbl_id_item";
+            this.lbl_id_item.Size = new System.Drawing.Size(64, 20);
+            this.lbl_id_item.TabIndex = 4;
+            this.lbl_id_item.Text = "Item (id):";
+            // 
+            // txt_id_item
+            // 
+            this.txt_id_item.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_id_item.Location = new System.Drawing.Point(82, 332);
+            this.txt_id_item.Name = "txt_id_item";
+            this.txt_id_item.Size = new System.Drawing.Size(34, 26);
+            this.txt_id_item.TabIndex = 5;
+            // 
+            // lbl_qtd
+            // 
+            this.lbl_qtd.AutoSize = true;
+            this.lbl_qtd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.lbl_qtd.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_qtd.Location = new System.Drawing.Point(133, 334);
+            this.lbl_qtd.Name = "lbl_qtd";
+            this.lbl_qtd.Size = new System.Drawing.Size(84, 20);
+            this.lbl_qtd.TabIndex = 6;
+            this.lbl_qtd.Text = "Quantidade:";
+            // 
+            // txt_qtd
+            // 
+            this.txt_qtd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_qtd.Location = new System.Drawing.Point(223, 332);
+            this.txt_qtd.Name = "txt_qtd";
+            this.txt_qtd.Size = new System.Drawing.Size(34, 26);
+            this.txt_qtd.TabIndex = 7;
+            // 
+            // btn_adicionar
+            // 
+            this.btn_adicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_adicionar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_adicionar.ForeColor = System.Drawing.Color.White;
+            this.btn_adicionar.Location = new System.Drawing.Point(263, 328);
+            this.btn_adicionar.Name = "btn_adicionar";
+            this.btn_adicionar.Size = new System.Drawing.Size(75, 34);
+            this.btn_adicionar.TabIndex = 9;
+            this.btn_adicionar.Text = "Adicionar";
+            this.btn_adicionar.UseVisualStyleBackColor = false;
+            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
+            // 
+            // btn_fechar
+            // 
+            this.btn_fechar.BackColor = System.Drawing.Color.Black;
+            this.btn_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_fechar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_fechar.ForeColor = System.Drawing.Color.White;
+            this.btn_fechar.Location = new System.Drawing.Point(479, 328);
+            this.btn_fechar.Name = "btn_fechar";
+            this.btn_fechar.Size = new System.Drawing.Size(93, 34);
+            this.btn_fechar.TabIndex = 11;
+            this.btn_fechar.Text = "Fechar conta";
+            this.btn_fechar.UseVisualStyleBackColor = false;
+            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.panel1.Location = new System.Drawing.Point(1, 102);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(587, 11);
+            this.panel1.TabIndex = 20;
+            // 
+            // grid_itensTotais
+            // 
+            this.grid_itensTotais.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grid_itensTotais.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.grid_itensTotais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_itensTotais.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Nome});
+            this.grid_itensTotais.Location = new System.Drawing.Point(348, 160);
+            this.grid_itensTotais.Name = "grid_itensTotais";
+            this.grid_itensTotais.RowHeadersWidth = 20;
+            this.grid_itensTotais.Size = new System.Drawing.Size(224, 164);
+            this.grid_itensTotais.TabIndex = 21;
+            this.grid_itensTotais.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // column_id
             // 
+            this.column_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.column_id.DataPropertyName = "Id";
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.column_id.DefaultCellStyle = dataGridViewCellStyle2;
             this.column_id.HeaderText = "Id ";
             this.column_id.Name = "column_id";
             this.column_id.ReadOnly = true;
+            this.column_id.Width = 42;
             // 
             // nome_item
             // 
@@ -196,109 +295,71 @@
             this.Column_quantidade.Name = "Column_quantidade";
             this.Column_quantidade.ReadOnly = true;
             // 
-            // lbl_id_item
+            // label3
             // 
-            this.lbl_id_item.AutoSize = true;
-            this.lbl_id_item.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_id_item.Location = new System.Drawing.Point(429, 129);
-            this.lbl_id_item.Name = "lbl_id_item";
-            this.lbl_id_item.Size = new System.Drawing.Size(64, 20);
-            this.lbl_id_item.TabIndex = 4;
-            this.lbl_id_item.Text = "Item (id):";
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 116);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(249, 41);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Itens Pedidos:";
             // 
-            // txt_id_item
+            // Id
             // 
-            this.txt_id_item.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id_item.Location = new System.Drawing.Point(433, 152);
-            this.txt_id_item.Name = "txt_id_item";
-            this.txt_id_item.Size = new System.Drawing.Size(127, 26);
-            this.txt_id_item.TabIndex = 5;
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Width = 41;
             // 
-            // lbl_qtd
+            // Nome
             // 
-            this.lbl_qtd.AutoSize = true;
-            this.lbl_qtd.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_qtd.Location = new System.Drawing.Point(429, 194);
-            this.lbl_qtd.Name = "lbl_qtd";
-            this.lbl_qtd.Size = new System.Drawing.Size(84, 20);
-            this.lbl_qtd.TabIndex = 6;
-            this.lbl_qtd.Text = "Quantidade:";
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
             // 
-            // txt_qtd
+            // btn_buscar
             // 
-            this.txt_qtd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_qtd.Location = new System.Drawing.Point(433, 217);
-            this.txt_qtd.Name = "txt_qtd";
-            this.txt_qtd.Size = new System.Drawing.Size(127, 26);
-            this.txt_qtd.TabIndex = 7;
+            this.btn_buscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_buscar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar.ForeColor = System.Drawing.Color.White;
+            this.btn_buscar.Location = new System.Drawing.Point(348, 128);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(60, 27);
+            this.btn_buscar.TabIndex = 22;
+            this.btn_buscar.Text = "Buscar";
+            this.btn_buscar.UseVisualStyleBackColor = false;
             // 
-            // btn_adicionar
+            // textBox1
             // 
-            this.btn_adicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_adicionar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_adicionar.ForeColor = System.Drawing.Color.White;
-            this.btn_adicionar.Location = new System.Drawing.Point(454, 262);
-            this.btn_adicionar.Name = "btn_adicionar";
-            this.btn_adicionar.Size = new System.Drawing.Size(89, 34);
-            this.btn_adicionar.TabIndex = 9;
-            this.btn_adicionar.Text = "Adicionar";
-            this.btn_adicionar.UseVisualStyleBackColor = false;
-            this.btn_adicionar.Click += new System.EventHandler(this.btn_adicionar_Click);
-            // 
-            // btn_excluir
-            // 
-            this.btn_excluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_excluir.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_excluir.ForeColor = System.Drawing.Color.White;
-            this.btn_excluir.Location = new System.Drawing.Point(454, 378);
-            this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(89, 34);
-            this.btn_excluir.TabIndex = 10;
-            this.btn_excluir.Text = "Excluir";
-            this.btn_excluir.UseVisualStyleBackColor = false;
-            this.btn_excluir.Visible = false;
-            // 
-            // btn_fechar
-            // 
-            this.btn_fechar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_fechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_fechar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_fechar.ForeColor = System.Drawing.Color.White;
-            this.btn_fechar.Location = new System.Drawing.Point(454, 320);
-            this.btn_fechar.Name = "btn_fechar";
-            this.btn_fechar.Size = new System.Drawing.Size(89, 34);
-            this.btn_fechar.TabIndex = 11;
-            this.btn_fechar.Text = "Fechar conta";
-            this.btn_fechar.UseVisualStyleBackColor = false;
-            this.btn_fechar.Click += new System.EventHandler(this.btn_fechar_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(179)))), ((int)(((byte)(48)))));
-            this.panel1.Location = new System.Drawing.Point(1, 102);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(610, 11);
-            this.panel1.TabIndex = 20;
+            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(406, 128);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 26);
+            this.textBox1.TabIndex = 23;
             // 
             // Form_contas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 435);
+            this.ClientSize = new System.Drawing.Size(585, 374);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_buscar);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.grid_itensTotais);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_fechar);
-            this.Controls.Add(this.btn_excluir);
             this.Controls.Add(this.btn_adicionar);
-            this.Controls.Add(this.txt_qtd);
-            this.Controls.Add(this.lbl_qtd);
-            this.Controls.Add(this.txt_id_item);
-            this.Controls.Add(this.lbl_id_item);
             this.Controls.Add(this.grid_contas);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.txt_qtd);
+            this.Controls.Add(this.lbl_id_item);
+            this.Controls.Add(this.lbl_qtd);
+            this.Controls.Add(this.txt_id_item);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_contas";
             this.Text = "Form_Contas";
@@ -308,6 +369,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_contas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_itensTotais)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,7 +385,6 @@
         private System.Windows.Forms.Label lbl_qtd;
         private System.Windows.Forms.TextBox txt_qtd;
         private System.Windows.Forms.Button btn_adicionar;
-        private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.Button btn_fechar;
         private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -335,5 +396,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nome_item;
         private System.Windows.Forms.DataGridViewTextBoxColumn preco_item;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_quantidade;
+        private System.Windows.Forms.DataGridView grid_itensTotais;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
