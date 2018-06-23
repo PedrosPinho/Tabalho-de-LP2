@@ -116,6 +116,11 @@ namespace Trabalgo_LP2
                                     " O DDD não pode começar com zero e o número deve ter oito ou nove dígitos!\n", "ERRO!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (!Regex.Match(txt_nomeFunc.Text, @"^([\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+((\s[\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+)?$").Success)
+                {
+                    MessageBox.Show("Erro: A primeira letra do nome deve ser maiúscula! Somente letras são permitidas!", "ERRO!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
@@ -139,6 +144,17 @@ namespace Trabalgo_LP2
                 txt_nomeFunc.Text.Equals("") || txt_dataFunc.Text.Equals(""))
                 MessageBox.Show("Todos os campos precisam estar preenchidos!", "Ops",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else if (!Regex.Match(txt_telefoneFunc.Text, @"^\([1-9]\d\)\s\d{8,9}$").Success)
+            {
+                MessageBox.Show("Erro: O telefone deve ter o formato (XX)XXXXXXXX!" +
+                                " O DDD não pode começar com zero e o número deve ter oito ou nove dígitos!\n", "ERRO!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!Regex.Match(txt_nomeFunc.Text, @"^([\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+((\s[\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+)?$").Success)
+            {
+                MessageBox.Show("Erro: A primeira letra do nome deve ser maiúscula! Somente letras são permitidas!", "ERRO!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
