@@ -134,6 +134,7 @@
             this.panel_fidelidade.Name = "panel_fidelidade";
             this.panel_fidelidade.Size = new System.Drawing.Size(136, 316);
             this.panel_fidelidade.TabIndex = 6;
+            this.panel_fidelidade.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_fidelidade_Paint);
             // 
             // btn_criar
             // 
@@ -193,24 +194,38 @@
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< HEAD
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(98, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 19);
+=======
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label4.Location = new System.Drawing.Point(98, 46);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(21, 19);
+>>>>>>> 1cc80d192b3745caba0b70807918e30aba584a03
             this.label4.TabIndex = 4;
             this.label4.Text = "...";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< HEAD
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(98, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 19);
+=======
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(92, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(21, 19);
+>>>>>>> 1cc80d192b3745caba0b70807918e30aba584a03
             this.label3.TabIndex = 3;
             this.label3.Text = "...";
             // 
@@ -231,7 +246,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+=======
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> 1cc80d192b3745caba0b70807918e30aba584a03
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(3, 47);
             this.label2.Name = "label2";
@@ -242,7 +261,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+=======
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+>>>>>>> 1cc80d192b3745caba0b70807918e30aba584a03
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(3, 16);
             this.label1.Name = "label1";

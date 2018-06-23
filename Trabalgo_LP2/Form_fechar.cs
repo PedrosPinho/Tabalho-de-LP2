@@ -45,6 +45,7 @@ namespace Trabalgo_LP2
             float total, por_pessoa;
             int num_pessoas;
             MesaDAO mesa = new MesaDAO();
+            ConsumidosDAO consumidos = new ConsumidosDAO();
             try
             {
                 total = float.Parse(txt_total.Text);
@@ -55,7 +56,9 @@ namespace Trabalgo_LP2
                 txt_num_pessoas.Text = (num_pessoas - 1).ToString();
                 if (int.Parse(txt_num_pessoas.Text) == 0 && int.Parse(txt_total.Text) == 0)
                 {
+                    txt_val_pessoa.Text = "";
                     MessageBox.Show("Conta foi paga com sucesso!", "Aviso", MessageBoxButtons.OK);
+                    consumidos.Clear(Convert.ToInt32(label2.Text));
                     mesa.UpdateF(Convert.ToInt32(label2.Text));
                     Close();
                 }
@@ -109,8 +112,10 @@ namespace Trabalgo_LP2
                     double total = Convert.ToDouble(txt_total.Text);
                     total -= total * (desconto / 100);
                     txt_total.Text = total.ToString();
+                    c.UpdateF(cliente, true);
                 }
-                c.UpdateF(cliente);
+                else c.UpdateF(cliente, false);
+
 
             }
             catch(System.Exception)

@@ -21,11 +21,16 @@ namespace Trabalgo_LP2
             VannerDB.ExecuteSQL(qry);
         }
 
-        public void UpdateF(Cliente c)
+        public void UpdateF(Cliente c, bool i)
         {
             Database VannerDB = Database.GetInstance();
-
-            string qry = string.Format("UPDATE Cliente SET Frequencia='{0}' WHERE Cpf like '{1}'", c.Frequencia+1, c.Cpf);
+            string qry;
+            if (i == false)
+            {
+                qry = string.Format("UPDATE Cliente SET Frequencia='{0}' WHERE Cpf like '{1}'", c.Frequencia + 1, c.Cpf);
+            }
+            else
+                qry = string.Format("UPDATE Cliente SET Frequencia='{0}' WHERE Cpf like '{1}'", 0, c.Cpf);
 
             VannerDB.ExecuteSQL(qry);
         }

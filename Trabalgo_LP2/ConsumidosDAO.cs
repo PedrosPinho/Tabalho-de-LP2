@@ -102,6 +102,16 @@ namespace Trabalgo_LP2
 
         }
 
+        public void Clear(int id)
+        {
+            //JA OUVIU FALAR NO UPDATE SEM WHERE??? TO USANDO A MESMA PREMISSA AQUI COM ESSE DELETE SEM WHERE HEHE
+            Database VannerDB = Database.GetInstance();
+
+            string qry = string.Format("DELETE FROM Consumidos{0}", id);
+
+            VannerDB.ExecuteSQL(qry);
+        }
+
         public void Add(int id, int qtd, int mesa)
         {
             Database VannerDB = Database.GetInstance();
@@ -118,7 +128,7 @@ namespace Trabalgo_LP2
                 }
                 else if(c.Id == id && AlreadyIn(mesa, id))
                 {
-                    string qry0 = string.Format("UPDATE Consumidos{1} SET quantidade = '{2}' WHERE id = '{0}'", id, mesa, qtd);
+                    string qry0 = string.Format("UPDATE Consumidos{1} SET quantidade = '{2}'+quantidade WHERE id = '{0}'", id, mesa, qtd);
                     VannerDB.ExecuteSQL(qry0);
                     return;
                 }

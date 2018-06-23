@@ -173,19 +173,19 @@
             // 
             this.lbl_total.AutoSize = true;
             this.lbl_total.Font = new System.Drawing.Font("Arial Narrow", 36F);
-            this.lbl_total.Location = new System.Drawing.Point(12, 151);
+            this.lbl_total.Location = new System.Drawing.Point(8, 151);
             this.lbl_total.Name = "lbl_total";
-            this.lbl_total.Size = new System.Drawing.Size(124, 57);
+            this.lbl_total.Size = new System.Drawing.Size(185, 57);
             this.lbl_total.TabIndex = 1;
-            this.lbl_total.Text = "Total:";
+            this.lbl_total.Text = "Total: R$";
             // 
             // txt_total
             // 
             this.txt_total.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_total.ForeColor = System.Drawing.Color.Green;
-            this.txt_total.Location = new System.Drawing.Point(138, 145);
+            this.txt_total.Location = new System.Drawing.Point(182, 145);
             this.txt_total.Name = "txt_total";
-            this.txt_total.Size = new System.Drawing.Size(223, 63);
+            this.txt_total.Size = new System.Drawing.Size(179, 63);
             this.txt_total.TabIndex = 2;
             // 
             // lbl_valor_por_pessoa
@@ -194,17 +194,17 @@
             this.lbl_valor_por_pessoa.Font = new System.Drawing.Font("Arial Narrow", 22F);
             this.lbl_valor_por_pessoa.Location = new System.Drawing.Point(12, 355);
             this.lbl_valor_por_pessoa.Name = "lbl_valor_por_pessoa";
-            this.lbl_valor_por_pessoa.Size = new System.Drawing.Size(209, 35);
+            this.lbl_valor_por_pessoa.Size = new System.Drawing.Size(248, 35);
             this.lbl_valor_por_pessoa.TabIndex = 11;
-            this.lbl_valor_por_pessoa.Text = "Valor por pessoa:";
+            this.lbl_valor_por_pessoa.Text = "Valor por pessoa: R$";
             // 
             // txt_val_pessoa
             // 
             this.txt_val_pessoa.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_val_pessoa.ForeColor = System.Drawing.Color.Green;
-            this.txt_val_pessoa.Location = new System.Drawing.Point(227, 340);
+            this.txt_val_pessoa.Location = new System.Drawing.Point(262, 340);
             this.txt_val_pessoa.Name = "txt_val_pessoa";
-            this.txt_val_pessoa.Size = new System.Drawing.Size(134, 63);
+            this.txt_val_pessoa.Size = new System.Drawing.Size(99, 63);
             this.txt_val_pessoa.TabIndex = 12;
             // 
             // panel5

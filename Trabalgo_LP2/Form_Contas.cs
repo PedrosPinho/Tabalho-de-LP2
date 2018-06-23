@@ -51,7 +51,7 @@ namespace Trabalgo_LP2
             }
             catch (System.Exception)
             {
-                MessageBox.Show("Erro", "Errroou", MessageBoxButtons.OK);
+                MessageBox.Show("Certifique-se que os campos estao preenchidos coretamente", "Erro", MessageBoxButtons.OK);
             }
             finally
             {

@@ -25,7 +25,13 @@ namespace Trabalgo_LP2
         private void Form_fidelidade_Load(object sender, EventArgs e)
         {
             ClienteDAO clientedao = new ClienteDAO();
+            DescontoDAO descDAO = new DescontoDAO();
+            Desconto desc = descDAO.Info();
+            label3.Text = desc.Porcentagem.ToString() + "%";
+            label4.Text = desc.Frequencia.ToString();
+
             dataGridView_fidelidade.DataSource = clientedao.Fidelidade();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -64,5 +70,10 @@ namespace Trabalgo_LP2
 
 
 }
+
+        private void panel_fidelidade_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
