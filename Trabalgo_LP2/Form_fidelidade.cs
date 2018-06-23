@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Trabalgo_LP2
 {
@@ -54,6 +55,12 @@ namespace Trabalgo_LP2
                 desconto.Create(desc, freq);
                 this.label3.Text = txt_Mdesconto.Text + '%';
                 this.label4.Text = txt_Mfreq.Text;
+
+                /*if (!Regex.Match(txt_Mdesconto.Text, @"^\d+$").Success && !Regex.Match(txt_Mfreq.Text, @"^\d+$").Success)
+                {
+                    MessageBox.Show("Só é possível adicionar números inteiros!", "ERRO!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }*/
             }
             catch(System.Exception)
             {

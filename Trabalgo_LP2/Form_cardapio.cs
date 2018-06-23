@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Trabalgo_LP2
 {
@@ -69,6 +70,11 @@ namespace Trabalgo_LP2
                 if (txt_id_adicionar.Text.Equals("") || txt_nome_adicionar.Text.Equals("") ||
                    txt_descricao.Text.Equals("") || txt_preco_adicionar.Text.Equals(""))
                     MessageBox.Show("Todos os campos precisam estar preenchidos!", "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (!Regex.Match(txt_id_adicionar.Text, @"^\d+$").Success)
+                {
+                    MessageBox.Show("Erro: Só é possível adicionar números inteiros!", "ERRO!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     //Se tudo estiver preenchido cria o DTO e insere no bd
