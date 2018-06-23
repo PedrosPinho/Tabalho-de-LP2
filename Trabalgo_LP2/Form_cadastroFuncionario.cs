@@ -90,9 +90,6 @@ namespace Trabalgo_LP2
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             Close();
-            Form_funcionario form = new Form_funcionario();
-            form.StartPosition = FormStartPosition.CenterParent;
-            form.ShowDialog(this);
         }
 
         private void btn_confirmar_Click(object sender, EventArgs e)

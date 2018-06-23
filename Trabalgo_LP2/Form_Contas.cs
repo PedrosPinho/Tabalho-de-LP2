@@ -48,6 +48,8 @@ namespace Trabalgo_LP2
                 int mesa = Convert.ToInt32(label2.Text);
                 ConsumidosDAO consumido = new ConsumidosDAO();
                 consumido.Add(id, qtd, mesa);
+                ConsumidosDAO c = new ConsumidosDAO();
+                grid_contas.DataSource = c.listAll(Convert.ToInt32(label2.Text));
                 //DA PRA 'ADICIONAR' ID INEXISTENTE, ELE NAO DA AVISO OK?
             }
             catch (System.Exception)
