@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_menu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_teste = new System.Windows.Forms.Label();
+            this.lbl_Relogio = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_menu = new System.Windows.Forms.Label();
             this.btn_logoff = new System.Windows.Forms.Button();
@@ -41,8 +43,6 @@
             this.btn_funcionario = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lbl_Relogio = new System.Windows.Forms.Label();
-            this.lbl_teste = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +61,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1213, 103);
             this.panel1.TabIndex = 7;
+            // 
+            // lbl_teste
+            // 
+            this.lbl_teste.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_teste.AutoSize = true;
+            this.lbl_teste.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_teste.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_teste.Location = new System.Drawing.Point(53, 61);
+            this.lbl_teste.Name = "lbl_teste";
+            this.lbl_teste.Size = new System.Drawing.Size(211, 16);
+            this.lbl_teste.TabIndex = 6;
+            this.lbl_teste.Text = "xxxx-xxxxx, 00 de xxxxx de 0000";
+            // 
+            // lbl_Relogio
+            // 
+            this.lbl_Relogio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_Relogio.AutoSize = true;
+            this.lbl_Relogio.Font = new System.Drawing.Font("Century Gothic", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Relogio.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbl_Relogio.Location = new System.Drawing.Point(36, 7);
+            this.lbl_Relogio.Name = "lbl_Relogio";
+            this.lbl_Relogio.Size = new System.Drawing.Size(237, 63);
+            this.lbl_Relogio.TabIndex = 5;
+            this.lbl_Relogio.Text = "00:00:00";
             // 
             // pictureBox1
             // 
@@ -209,30 +233,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lbl_Relogio
-            // 
-            this.lbl_Relogio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_Relogio.AutoSize = true;
-            this.lbl_Relogio.Font = new System.Drawing.Font("Century Gothic", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Relogio.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_Relogio.Location = new System.Drawing.Point(36, 7);
-            this.lbl_Relogio.Name = "lbl_Relogio";
-            this.lbl_Relogio.Size = new System.Drawing.Size(237, 63);
-            this.lbl_Relogio.TabIndex = 5;
-            this.lbl_Relogio.Text = "00:00:00";
-            // 
-            // lbl_teste
-            // 
-            this.lbl_teste.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_teste.AutoSize = true;
-            this.lbl_teste.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_teste.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbl_teste.Location = new System.Drawing.Point(44, 67);
-            this.lbl_teste.Name = "lbl_teste";
-            this.lbl_teste.Size = new System.Drawing.Size(211, 16);
-            this.lbl_teste.TabIndex = 6;
-            this.lbl_teste.Text = "xxxx-xxxxx, 00 de xxxxx de 0000";
             // 
             // Form_menu
             // 

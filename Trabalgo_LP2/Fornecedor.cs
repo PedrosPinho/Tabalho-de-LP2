@@ -10,9 +10,9 @@ namespace Trabalgo_LP2
     {
         long cnpj, cep, telefone;
         string nome, produto;
-        float preco;
+        double preco;
 
-        public Fornecedor(long cnpj, long cep, long telefone, string nome, string produto, float preco)
+        public Fornecedor(long cnpj, long cep, long telefone, string nome, string produto, double preco)
         {
             this.Cnpj = cnpj;
             this.Cep = cep;
@@ -61,7 +61,7 @@ namespace Trabalgo_LP2
             }
         }
 
-        public float Preco
+        public double Preco
         {
             get
             {

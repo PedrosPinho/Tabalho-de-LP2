@@ -57,6 +57,7 @@
             this.lbl_adicionar = new System.Windows.Forms.Label();
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -129,6 +130,7 @@
             this.dataGridView_cardapio.AllowUserToAddRows = false;
             this.dataGridView_cardapio.AllowUserToDeleteRows = false;
             this.dataGridView_cardapio.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_cardapio.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridView_cardapio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_cardapio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_item_cardapio,
@@ -194,12 +196,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel2.Controls.Add(this.txt_preco_adicionar);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btn_remover_adicionar);
             this.panel2.Controls.Add(this.btn_adicionar_adicionar);
             this.panel2.Controls.Add(this.txt_descricao);
             this.panel2.Controls.Add(this.lbl_descricao_adicionar);
-            this.panel2.Controls.Add(this.txt_preco_adicionar);
             this.panel2.Controls.Add(this.lbl_preco_adicionar);
             this.panel2.Controls.Add(this.txt_nome_adicionar);
             this.panel2.Controls.Add(this.lbl_nome_adicionar);
@@ -270,9 +273,9 @@
             // txt_preco_adicionar
             // 
             this.txt_preco_adicionar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_preco_adicionar.Location = new System.Drawing.Point(31, 190);
+            this.txt_preco_adicionar.Location = new System.Drawing.Point(51, 190);
             this.txt_preco_adicionar.Name = "txt_preco_adicionar";
-            this.txt_preco_adicionar.Size = new System.Drawing.Size(149, 26);
+            this.txt_preco_adicionar.Size = new System.Drawing.Size(129, 26);
             this.txt_preco_adicionar.TabIndex = 9;
             // 
             // lbl_preco_adicionar
@@ -365,6 +368,16 @@
             this.panel4.Size = new System.Drawing.Size(690, 10);
             this.panel4.TabIndex = 20;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(27, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 23);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "R$";
+            // 
             // Form_cardapio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,5 +438,6 @@
         private System.Windows.Forms.Button btn_pesquisar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label2;
     }
 }

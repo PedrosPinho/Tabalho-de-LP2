@@ -42,15 +42,15 @@ namespace Trabalgo_LP2
 
         private void btn_nao_quer_cadastrar_Click(object sender, EventArgs e)
         {
-            float total, por_pessoa;
+            double total, por_pessoa;
             int num_pessoas;
             MesaDAO mesa = new MesaDAO();
             ConsumidosDAO consumidos = new ConsumidosDAO();
             try
             {
-                total = float.Parse(txt_total.Text);
+                total = double.Parse(txt_total.Text);
                 num_pessoas = int.Parse(txt_num_pessoas.Text);
-                por_pessoa = float.Parse(txt_val_pessoa.Text);
+                por_pessoa = double.Parse(txt_val_pessoa.Text);
 
                 txt_total.Text = (total - por_pessoa).ToString();
                 txt_num_pessoas.Text = (num_pessoas - 1).ToString();
@@ -72,11 +72,11 @@ namespace Trabalgo_LP2
 
         private void btn_calcular_Click(object sender, EventArgs e)
         {
-            float total;
+            double total;
             int num_pessoas;
             try
             {
-                total = float.Parse(txt_total.Text);
+                total = double.Parse(txt_total.Text);
                 num_pessoas = int.Parse(txt_num_pessoas.Text);
 
                 txt_val_pessoa.Text = (total / num_pessoas).ToString();
@@ -103,7 +103,7 @@ namespace Trabalgo_LP2
                 DescontoDAO d = new DescontoDAO();
                 ClienteDAO c = new ClienteDAO();
                 Cliente cliente = c.Read(txt_cpf_fechar.Text);
-                float desconto = d.GetDesconto(cliente);
+                double desconto = d.GetDesconto(cliente);
 
                 MessageBox.Show("Desconto de " + desconto + "% concedido", "Aviso", MessageBoxButtons.OK);
                 txt_cpf_fechar.Text = null;
