@@ -35,11 +35,11 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_fidelidade = new System.Windows.Forms.Label();
             this.panel_fidelidade = new System.Windows.Forms.Panel();
+            this.txt_Mfreq = new System.Windows.Forms.MaskedTextBox();
             this.btn_criar = new System.Windows.Forms.Button();
+            this.txt_Mdesconto = new System.Windows.Forms.MaskedTextBox();
             this.lbl_Mfreq = new System.Windows.Forms.Label();
             this.lbl_Mdesconto = new System.Windows.Forms.Label();
-            this.txt_Mfreq = new System.Windows.Forms.TextBox();
-            this.txt_Mdesconto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_novo = new System.Windows.Forms.Button();
@@ -111,7 +111,7 @@
             // 
             this.lbl_fidelidade.AutoSize = true;
             this.lbl_fidelidade.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fidelidade.Location = new System.Drawing.Point(241, 27);
+            this.lbl_fidelidade.Location = new System.Drawing.Point(228, 27);
             this.lbl_fidelidade.Name = "lbl_fidelidade";
             this.lbl_fidelidade.Size = new System.Drawing.Size(225, 47);
             this.lbl_fidelidade.TabIndex = 0;
@@ -120,11 +120,11 @@
             // panel_fidelidade
             // 
             this.panel_fidelidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(3)))), ((int)(((byte)(1)))));
+            this.panel_fidelidade.Controls.Add(this.txt_Mfreq);
             this.panel_fidelidade.Controls.Add(this.btn_criar);
+            this.panel_fidelidade.Controls.Add(this.txt_Mdesconto);
             this.panel_fidelidade.Controls.Add(this.lbl_Mfreq);
             this.panel_fidelidade.Controls.Add(this.lbl_Mdesconto);
-            this.panel_fidelidade.Controls.Add(this.txt_Mfreq);
-            this.panel_fidelidade.Controls.Add(this.txt_Mdesconto);
             this.panel_fidelidade.Controls.Add(this.label4);
             this.panel_fidelidade.Controls.Add(this.label3);
             this.panel_fidelidade.Controls.Add(this.btn_novo);
@@ -135,6 +135,17 @@
             this.panel_fidelidade.Size = new System.Drawing.Size(136, 316);
             this.panel_fidelidade.TabIndex = 6;
             this.panel_fidelidade.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_fidelidade_Paint);
+            // 
+            // txt_Mfreq
+            // 
+            this.txt_Mfreq.Location = new System.Drawing.Point(7, 243);
+            this.txt_Mfreq.Mask = "00000";
+            this.txt_Mfreq.Name = "txt_Mfreq";
+            this.txt_Mfreq.Size = new System.Drawing.Size(100, 20);
+            this.txt_Mfreq.TabIndex = 22;
+            this.txt_Mfreq.UseWaitCursor = true;
+            this.txt_Mfreq.ValidatingType = typeof(int);
+            this.txt_Mfreq.Visible = false;
             // 
             // btn_criar
             // 
@@ -150,6 +161,16 @@
             this.btn_criar.UseVisualStyleBackColor = false;
             this.btn_criar.Visible = false;
             this.btn_criar.Click += new System.EventHandler(this.btn_criar_Click);
+            // 
+            // txt_Mdesconto
+            // 
+            this.txt_Mdesconto.Location = new System.Drawing.Point(6, 192);
+            this.txt_Mdesconto.Mask = "00000";
+            this.txt_Mdesconto.Name = "txt_Mdesconto";
+            this.txt_Mdesconto.Size = new System.Drawing.Size(101, 20);
+            this.txt_Mdesconto.TabIndex = 10;
+            this.txt_Mdesconto.ValidatingType = typeof(int);
+            this.txt_Mdesconto.Visible = false;
             // 
             // lbl_Mfreq
             // 
@@ -174,22 +195,6 @@
             this.lbl_Mdesconto.TabIndex = 7;
             this.lbl_Mdesconto.Text = "Desconto:";
             this.lbl_Mdesconto.Visible = false;
-            // 
-            // txt_Mfreq
-            // 
-            this.txt_Mfreq.Location = new System.Drawing.Point(7, 241);
-            this.txt_Mfreq.Name = "txt_Mfreq";
-            this.txt_Mfreq.Size = new System.Drawing.Size(100, 20);
-            this.txt_Mfreq.TabIndex = 6;
-            this.txt_Mfreq.Visible = false;
-            // 
-            // txt_Mdesconto
-            // 
-            this.txt_Mdesconto.Location = new System.Drawing.Point(7, 190);
-            this.txt_Mdesconto.Name = "txt_Mdesconto";
-            this.txt_Mdesconto.Size = new System.Drawing.Size(100, 20);
-            this.txt_Mdesconto.TabIndex = 5;
-            this.txt_Mdesconto.Visible = false;
             // 
             // label4
             // 
@@ -255,6 +260,7 @@
             // 
             this.dataGridView_fidelidade.AllowUserToAddRows = false;
             this.dataGridView_fidelidade.AllowUserToDeleteRows = false;
+            this.dataGridView_fidelidade.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridView_fidelidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_fidelidade.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column_Nome,
@@ -348,9 +354,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_Mfreq;
         private System.Windows.Forms.Label lbl_Mdesconto;
-        private System.Windows.Forms.TextBox txt_Mfreq;
-        private System.Windows.Forms.TextBox txt_Mdesconto;
         private System.Windows.Forms.Button btn_criar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.MaskedTextBox txt_Mfreq;
+        private System.Windows.Forms.MaskedTextBox txt_Mdesconto;
     }
 }

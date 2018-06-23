@@ -32,9 +32,9 @@
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.txt_filtrar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lbl_funcionario = new System.Windows.Forms.Label();
             this.lbl_filtrar = new System.Windows.Forms.Label();
             this.dataGridView_funcionario = new System.Windows.Forms.DataGridView();
@@ -51,8 +51,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_reg_rmv = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_funcionario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,6 +92,16 @@
             this.panel2.Size = new System.Drawing.Size(669, 106);
             this.panel2.TabIndex = 15;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Trabalgo_LP2.Properties.Resources._030_manager;
+            this.pictureBox3.Location = new System.Drawing.Point(193, 28);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
             // pictureBox_logo
             // 
             this.pictureBox_logo.Image = global::Trabalgo_LP2.Properties.Resources.Logonovo1;
@@ -119,16 +129,6 @@
             this.btn_voltar.UseVisualStyleBackColor = false;
             this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Trabalgo_LP2.Properties.Resources._030_manager;
-            this.pictureBox3.Location = new System.Drawing.Point(193, 28);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
             // lbl_funcionario
             // 
             this.lbl_funcionario.AutoSize = true;
@@ -153,6 +153,7 @@
             // 
             this.dataGridView_funcionario.AllowUserToAddRows = false;
             this.dataGridView_funcionario.AllowUserToDeleteRows = false;
+            this.dataGridView_funcionario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridView_funcionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_funcionario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Registro,
@@ -309,8 +310,8 @@
             this.Load += new System.EventHandler(this.Form_funcionario_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_funcionario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

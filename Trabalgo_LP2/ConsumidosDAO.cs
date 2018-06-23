@@ -84,7 +84,7 @@ namespace Trabalgo_LP2
                 consumido = new Consumidos();
                 consumido.Id = dr.GetInt32(0);
                 consumido.Quantidade = dr.GetInt32(1);
-                consumido.Preco = dr.GetFloat(2);
+                consumido.Preco = dr.GetDouble(2);
 
                 listaCons.Add(consumido);                
             }

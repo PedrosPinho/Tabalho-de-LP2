@@ -117,6 +117,7 @@
             // 
             this.dataGridView_cliente.AllowUserToAddRows = false;
             this.dataGridView_cliente.AllowUserToDeleteRows = false;
+            this.dataGridView_cliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridView_cliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_cliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column_Nome,
