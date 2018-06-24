@@ -26,15 +26,18 @@ namespace Trabalgo_LP2
 
         private void btn_adicionar_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             Form_cadastroFuncionario form = new Form_cadastroFuncionario(1);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
             FuncionarioDAO funcionariodao = new FuncionarioDAO();
             dataGridView_funcionario.DataSource = funcionariodao.ListAll();
+            this.Visible = true;
         }
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             Form_confirma entrada = new Form_confirma("Registro do funcionário", "Digite o registro:");
             entrada.ShowDialog();
 
@@ -49,6 +52,7 @@ namespace Trabalgo_LP2
                     janelaFuncionario.ShowDialog();
                 }
             }
+            this.Visible = true;
             
             /*Form_cadastroFuncionario form = new Form_cadastroFuncionario(2);
             form.StartPosition = FormStartPosition.CenterParent;

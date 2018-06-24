@@ -25,16 +25,21 @@ namespace Trabalgo_LP2
 
         private void btn_adicionar_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             Form_cadastroCliente form = new Form_cadastroCliente(1);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
+            
             ClienteDAO clientedao = new ClienteDAO();
             dataGridView_cliente.DataSource = clientedao.ListAll();
+            this.Visible = true;
+
         }
 
 
         private void btn_alterar_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             Form_confirma entrada = new Form_confirma("CPF do Cliente", "Digite o CPF do Cliente:");
             entrada.ShowDialog();
 
@@ -49,6 +54,7 @@ namespace Trabalgo_LP2
                     janelaCliente.ShowDialog();
                 }
             }
+            this.Visible = true;
 
             /*Form_cadastroCliente form = new Form_cadastroCliente(2);
             form.StartPosition = FormStartPosition.CenterParent;

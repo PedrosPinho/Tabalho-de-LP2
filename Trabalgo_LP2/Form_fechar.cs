@@ -90,9 +90,11 @@ namespace Trabalgo_LP2
 
         private void btn_nao_cadastrado_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             Form_cadastroCliente form = new Form_cadastroCliente(1);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
+            this.Visible = true;
         }
 
         private void btn_cadastrado_Click(object sender, EventArgs e)

@@ -15,8 +15,9 @@ namespace Trabalgo_LP2
         public Form_contas(int num_mesa)
         {
             InitializeComponent();
-            label2.Text = num_mesa.ToString();  
+            label2.Text = num_mesa.ToString();
         }
+
 
         private void Form_contas_Load(object sender, EventArgs e)
         {
@@ -29,12 +30,14 @@ namespace Trabalgo_LP2
 
         private void btn_fechar_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
             int mesa = Convert.ToInt32(label2.Text);
             Close();
 
             Form_fechar form = new Form_fechar(mesa);
             form.StartPosition = FormStartPosition.CenterParent;
             form.ShowDialog(this);
+            this.Visible = true;
         }
 
         private void btn_voltar_Click(object sender, EventArgs e)
@@ -64,13 +67,6 @@ namespace Trabalgo_LP2
                 txt_id_item.Text = null;
                 txt_qtd.Text = null;
             }
-            
-            
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
         }
 
         private void btn_buscar_Click(object sender, EventArgs e)
@@ -81,5 +77,11 @@ namespace Trabalgo_LP2
 
             txt_buscar.Text = ""; // esvazia o campo, para proximo uso
         }
+
+        private void grid_itensTotais_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

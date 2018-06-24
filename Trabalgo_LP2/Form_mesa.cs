@@ -22,6 +22,7 @@ namespace Trabalgo_LP2
             var cell = dataGridView_mesas.Rows[e.RowIndex].Cells[0].Value;
 
             //SE NUM PESSOAS FOR > 0 SAIR DAQ
+            this.Visible = false;
             if (Convert.ToInt32(dataGridView_mesas.Rows[e.RowIndex].Cells[1].Value) == 0)
             {
                 Form_pessoas_mesa form = new Form_pessoas_mesa(Convert.ToInt32(cell));
@@ -36,6 +37,7 @@ namespace Trabalgo_LP2
             }
             MesaDAO mesadao = new MesaDAO();
             dataGridView_mesas.DataSource = mesadao.ListAll();
+            this.Visible = true;
         }
 
         private void Form_mesa_Load(object sender, EventArgs e)
