@@ -25,7 +25,7 @@ namespace Trabalgo_LP2
             grid_contas.DataSource = c.listAll(Convert.ToInt32(label2.Text));
 
             CardapioDAO cardapiodao = new CardapioDAO();
-            grid_itensTotais.DataSource = cardapiodao.listItens();
+            grid_itensTotais.DataSource = cardapiodao.listAll();
         }
 
         private void btn_fechar_Click(object sender, EventArgs e)
@@ -82,6 +82,12 @@ namespace Trabalgo_LP2
         {
 
         }
+        
 
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+            CardapioDAO cardapioDAO = new CardapioDAO();
+            grid_itensTotais.DataSource = cardapioDAO.Find(txt_buscar.Text);
+        }
     }
 }

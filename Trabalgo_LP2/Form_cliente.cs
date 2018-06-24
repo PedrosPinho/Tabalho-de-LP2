@@ -74,12 +74,6 @@ namespace Trabalgo_LP2
             dataGridView_cliente.DataSource = clientedao.ListAll();
         }
 
-        private void btn_pesquisar_Click(object sender, EventArgs e)
-        {
-            ClienteDAO clientedao = new ClienteDAO();
-            dataGridView_cliente.DataSource = clientedao.FindByName(txt_filtrar.Text);
-        }
-
         private void btn_remover_Click(object sender, EventArgs e)
         {
             //Quando pressionado remove um cliente usando o cpf
@@ -102,6 +96,12 @@ namespace Trabalgo_LP2
             }
             ClienteDAO clientedao = new ClienteDAO();
             dataGridView_cliente.DataSource = clientedao.ListAll();
+        }
+
+        private void txt_filtrar_TextChanged(object sender, EventArgs e)
+        {
+            ClienteDAO clientedao = new ClienteDAO();
+            dataGridView_cliente.DataSource = clientedao.FindByName(txt_filtrar.Text);
         }
     }
 }

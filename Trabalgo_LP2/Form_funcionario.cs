@@ -72,12 +72,6 @@ namespace Trabalgo_LP2
             dataGridView_funcionario.DataSource = funcionariodao.ListAll();
         }
 
-        private void btn_pesquisar_Click(object sender, EventArgs e)
-        {
-            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
-            dataGridView_funcionario.DataSource = funcionarioDAO.FindByName(txt_filtrar.Text);
-        }
-
         private void btn_remover_Click(object sender, EventArgs e)
         {
             //Quando pressionado remove um funcionario usando o registro
@@ -99,6 +93,12 @@ namespace Trabalgo_LP2
             }
             FuncionarioDAO funcionariodao = new FuncionarioDAO();
             dataGridView_funcionario.DataSource = funcionariodao.ListAll();
+        }
+
+        private void txt_filtrar_TextChanged(object sender, EventArgs e)
+        {
+            FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
+            dataGridView_funcionario.DataSource = funcionarioDAO.FindByName(txt_filtrar.Text);
         }
     }
 }

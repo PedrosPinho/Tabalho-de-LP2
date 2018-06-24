@@ -53,9 +53,11 @@
             this.grid_itensTotais = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -289,7 +291,9 @@
             this.grid_itensTotais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_itensTotais.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
-            this.Nome});
+            this.Nome,
+            this.Column_preco,
+            this.Column_descricao});
             this.grid_itensTotais.Location = new System.Drawing.Point(348, 160);
             this.grid_itensTotais.Name = "grid_itensTotais";
             this.grid_itensTotais.ReadOnly = true;
@@ -315,6 +319,20 @@
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
             // 
+            // Column_preco
+            // 
+            this.Column_preco.DataPropertyName = "preco";
+            this.Column_preco.HeaderText = "Preco";
+            this.Column_preco.Name = "Column_preco";
+            this.Column_preco.ReadOnly = true;
+            // 
+            // Column_descricao
+            // 
+            this.Column_descricao.DataPropertyName = "descricao";
+            this.Column_descricao.HeaderText = "Descricao";
+            this.Column_descricao.Name = "Column_descricao";
+            this.Column_descricao.ReadOnly = true;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -325,6 +343,15 @@
             this.label3.Size = new System.Drawing.Size(249, 41);
             this.label3.TabIndex = 21;
             this.label3.Text = "Itens Pedidos:";
+            // 
+            // txt_buscar
+            // 
+            this.txt_buscar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_buscar.Location = new System.Drawing.Point(414, 128);
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(158, 26);
+            this.txt_buscar.TabIndex = 23;
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
             // 
             // btn_buscar
             // 
@@ -339,14 +366,6 @@
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = false;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
-            // 
-            // txt_buscar
-            // 
-            this.txt_buscar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_buscar.Location = new System.Drawing.Point(414, 128);
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(158, 26);
-            this.txt_buscar.TabIndex = 23;
             // 
             // Form_contas
             // 
@@ -404,9 +423,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_quantidade;
         private System.Windows.Forms.DataGridView grid_itensTotais;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_preco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column_descricao;
+        private System.Windows.Forms.Button btn_buscar;
     }
 }

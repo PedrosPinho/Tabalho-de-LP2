@@ -138,5 +138,11 @@ namespace Trabalgo_LP2
             tt.Show("Todos os campos são necessários para adicionar", btn_adicionar_adicionar);
             
         }
+
+        private void txt_procurar_TextChanged(object sender, EventArgs e)
+        {
+            CardapioDAO cardapioDAO = new CardapioDAO();
+            dataGridView_cardapio.DataSource = cardapioDAO.Find(txt_procurar.Text);
+        }
     }
 }

@@ -42,12 +42,13 @@
             this.lbl_procurar = new System.Windows.Forms.Label();
             this.txt_procurar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txt_preco_adicionar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_remover_adicionar = new System.Windows.Forms.Button();
             this.btn_adicionar_adicionar = new System.Windows.Forms.Button();
             this.txt_descricao = new System.Windows.Forms.TextBox();
             this.lbl_descricao_adicionar = new System.Windows.Forms.Label();
-            this.txt_preco_adicionar = new System.Windows.Forms.TextBox();
             this.lbl_preco_adicionar = new System.Windows.Forms.Label();
             this.txt_nome_adicionar = new System.Windows.Forms.TextBox();
             this.lbl_nome_adicionar = new System.Windows.Forms.Label();
@@ -55,9 +56,7 @@
             this.lbl_id_adicionar = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbl_adicionar = new System.Windows.Forms.Label();
-            this.btn_pesquisar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -190,8 +189,9 @@
             this.txt_procurar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_procurar.Location = new System.Drawing.Point(70, 119);
             this.txt_procurar.Name = "txt_procurar";
-            this.txt_procurar.Size = new System.Drawing.Size(287, 26);
+            this.txt_procurar.Size = new System.Drawing.Size(386, 26);
             this.txt_procurar.TabIndex = 11;
+            this.txt_procurar.TextChanged += new System.EventHandler(this.txt_procurar_TextChanged);
             // 
             // panel2
             // 
@@ -213,6 +213,24 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(208, 345);
             this.panel2.TabIndex = 12;
+            // 
+            // txt_preco_adicionar
+            // 
+            this.txt_preco_adicionar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_preco_adicionar.Location = new System.Drawing.Point(51, 190);
+            this.txt_preco_adicionar.Name = "txt_preco_adicionar";
+            this.txt_preco_adicionar.Size = new System.Drawing.Size(129, 26);
+            this.txt_preco_adicionar.TabIndex = 9;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(27, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 23);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "R$";
             // 
             // label1
             // 
@@ -269,14 +287,6 @@
             this.lbl_descricao_adicionar.Size = new System.Drawing.Size(74, 20);
             this.lbl_descricao_adicionar.TabIndex = 10;
             this.lbl_descricao_adicionar.Text = "Descrição:";
-            // 
-            // txt_preco_adicionar
-            // 
-            this.txt_preco_adicionar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_preco_adicionar.Location = new System.Drawing.Point(51, 190);
-            this.txt_preco_adicionar.Name = "txt_preco_adicionar";
-            this.txt_preco_adicionar.Size = new System.Drawing.Size(129, 26);
-            this.txt_preco_adicionar.TabIndex = 9;
             // 
             // lbl_preco_adicionar
             // 
@@ -344,20 +354,6 @@
             this.lbl_adicionar.TabIndex = 13;
             this.lbl_adicionar.Text = "Adicionar e Remover";
             // 
-            // btn_pesquisar
-            // 
-            this.btn_pesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_pesquisar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pesquisar.ForeColor = System.Drawing.Color.White;
-            this.btn_pesquisar.Location = new System.Drawing.Point(367, 120);
-            this.btn_pesquisar.Name = "btn_pesquisar";
-            this.btn_pesquisar.Size = new System.Drawing.Size(89, 25);
-            this.btn_pesquisar.TabIndex = 14;
-            this.btn_pesquisar.Text = "Pesquisar";
-            this.btn_pesquisar.UseVisualStyleBackColor = false;
-            this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
-            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -368,23 +364,12 @@
             this.panel4.Size = new System.Drawing.Size(690, 10);
             this.panel4.TabIndex = 20;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 190);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 23);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "R$";
-            // 
             // Form_cardapio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(690, 472);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.btn_pesquisar);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txt_procurar);
             this.Controls.Add(this.lbl_procurar);
@@ -435,7 +420,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nome_item_cardapio;
         private System.Windows.Forms.DataGridViewTextBoxColumn preco_item_cardapio;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao_item_cardapio;
-        private System.Windows.Forms.Button btn_pesquisar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;

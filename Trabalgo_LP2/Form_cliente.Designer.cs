@@ -41,7 +41,6 @@
             this.Column_frequencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_filtrar = new System.Windows.Forms.TextBox();
             this.lbl_filtrar = new System.Windows.Forms.Label();
-            this.btn_pesquisar = new System.Windows.Forms.Button();
             this.btn_remover = new System.Windows.Forms.Button();
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
@@ -164,8 +163,9 @@
             this.txt_filtrar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_filtrar.Location = new System.Drawing.Point(68, 115);
             this.txt_filtrar.Name = "txt_filtrar";
-            this.txt_filtrar.Size = new System.Drawing.Size(292, 26);
+            this.txt_filtrar.Size = new System.Drawing.Size(384, 26);
             this.txt_filtrar.TabIndex = 12;
+            this.txt_filtrar.TextChanged += new System.EventHandler(this.txt_filtrar_TextChanged);
             // 
             // lbl_filtrar
             // 
@@ -176,20 +176,6 @@
             this.lbl_filtrar.Size = new System.Drawing.Size(54, 23);
             this.lbl_filtrar.TabIndex = 13;
             this.lbl_filtrar.Text = "Filtrar";
-            // 
-            // btn_pesquisar
-            // 
-            this.btn_pesquisar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.btn_pesquisar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_pesquisar.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pesquisar.ForeColor = System.Drawing.Color.White;
-            this.btn_pesquisar.Location = new System.Drawing.Point(366, 116);
-            this.btn_pesquisar.Name = "btn_pesquisar";
-            this.btn_pesquisar.Size = new System.Drawing.Size(86, 24);
-            this.btn_pesquisar.TabIndex = 14;
-            this.btn_pesquisar.Text = "Pesquisar";
-            this.btn_pesquisar.UseVisualStyleBackColor = false;
-            this.btn_pesquisar.Click += new System.EventHandler(this.btn_pesquisar_Click);
             // 
             // btn_remover
             // 
@@ -279,7 +265,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_cpf_rmv);
             this.Controls.Add(this.btn_remover);
-            this.Controls.Add(this.btn_pesquisar);
             this.Controls.Add(this.lbl_filtrar);
             this.Controls.Add(this.txt_filtrar);
             this.Controls.Add(this.btn_adicionar);
@@ -310,7 +295,6 @@
         private System.Windows.Forms.Button btn_adicionar;
         private System.Windows.Forms.TextBox txt_filtrar;
         private System.Windows.Forms.Label lbl_filtrar;
-        private System.Windows.Forms.Button btn_pesquisar;
         private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_cpf;
