@@ -15,7 +15,7 @@ namespace Trabalgo_LP2
         public Form_contas(int num_mesa)
         {
             InitializeComponent();
-            label2.Text = num_mesa.ToString();
+            label2.Text = num_mesa.ToString();  
         }
 
         private void Form_contas_Load(object sender, EventArgs e)
@@ -23,8 +23,8 @@ namespace Trabalgo_LP2
             ConsumidosDAO c = new ConsumidosDAO();
             grid_contas.DataSource = c.listAll(Convert.ToInt32(label2.Text));
 
-            CardapioDAO ca = new CardapioDAO();
-            grid_itensTotais.DataSource = ca.listItens();
+            CardapioDAO cardapiodao = new CardapioDAO();
+            grid_itensTotais.DataSource = cardapiodao.listItens();
         }
 
         private void btn_fechar_Click(object sender, EventArgs e)
@@ -71,7 +71,15 @@ namespace Trabalgo_LP2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
 
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            //pesquisa por NOME
+            CardapioDAO cardapioDAO = new CardapioDAO();
+            grid_itensTotais.DataSource = cardapioDAO.Find(txt_buscar.Text);
+
+            txt_buscar.Text = ""; // esvazia o campo, para proximo uso
         }
     }
 }

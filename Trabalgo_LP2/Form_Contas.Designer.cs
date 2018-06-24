@@ -39,6 +39,10 @@
             this.btn_voltar = new System.Windows.Forms.Button();
             this.lbl_contas = new System.Windows.Forms.Label();
             this.grid_contas = new System.Windows.Forms.DataGridView();
+            this.column_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preco_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column_quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbl_id_item = new System.Windows.Forms.Label();
             this.txt_id_item = new System.Windows.Forms.TextBox();
             this.lbl_qtd = new System.Windows.Forms.Label();
@@ -47,15 +51,11 @@
             this.btn_fechar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.grid_itensTotais = new System.Windows.Forms.DataGridView();
-            this.column_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preco_item = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.txt_buscar = new System.Windows.Forms.TextBox();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_buscar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -172,6 +172,38 @@
             this.grid_contas.Size = new System.Drawing.Size(326, 164);
             this.grid_contas.TabIndex = 3;
             // 
+            // column_id
+            // 
+            this.column_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.column_id.DataPropertyName = "Id";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.column_id.DefaultCellStyle = dataGridViewCellStyle2;
+            this.column_id.HeaderText = "Id ";
+            this.column_id.Name = "column_id";
+            this.column_id.ReadOnly = true;
+            this.column_id.Width = 42;
+            // 
+            // nome_item
+            // 
+            this.nome_item.DataPropertyName = "Nome";
+            this.nome_item.HeaderText = "Nome";
+            this.nome_item.Name = "nome_item";
+            this.nome_item.ReadOnly = true;
+            // 
+            // preco_item
+            // 
+            this.preco_item.DataPropertyName = "Preco";
+            this.preco_item.HeaderText = "Preço";
+            this.preco_item.Name = "preco_item";
+            this.preco_item.ReadOnly = true;
+            // 
+            // Column_quantidade
+            // 
+            this.Column_quantidade.DataPropertyName = "quantidade";
+            this.Column_quantidade.HeaderText = "Qtd";
+            this.Column_quantidade.Name = "Column_quantidade";
+            this.Column_quantidade.ReadOnly = true;
+            // 
             // lbl_id_item
             // 
             this.lbl_id_item.AutoSize = true;
@@ -250,6 +282,8 @@
             // 
             // grid_itensTotais
             // 
+            this.grid_itensTotais.AllowUserToAddRows = false;
+            this.grid_itensTotais.AllowUserToDeleteRows = false;
             this.grid_itensTotais.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grid_itensTotais.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.grid_itensTotais.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -258,42 +292,11 @@
             this.Nome});
             this.grid_itensTotais.Location = new System.Drawing.Point(348, 160);
             this.grid_itensTotais.Name = "grid_itensTotais";
+            this.grid_itensTotais.ReadOnly = true;
             this.grid_itensTotais.RowHeadersWidth = 20;
             this.grid_itensTotais.Size = new System.Drawing.Size(224, 164);
             this.grid_itensTotais.TabIndex = 21;
-            this.grid_itensTotais.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // column_id
-            // 
-            this.column_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.column_id.DataPropertyName = "Id";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.column_id.DefaultCellStyle = dataGridViewCellStyle2;
-            this.column_id.HeaderText = "Id ";
-            this.column_id.Name = "column_id";
-            this.column_id.ReadOnly = true;
-            this.column_id.Width = 42;
-            // 
-            // nome_item
-            // 
-            this.nome_item.DataPropertyName = "Nome";
-            this.nome_item.HeaderText = "Nome";
-            this.nome_item.Name = "nome_item";
-            this.nome_item.ReadOnly = true;
-            // 
-            // preco_item
-            // 
-            this.preco_item.DataPropertyName = "Preco";
-            this.preco_item.HeaderText = "Preço";
-            this.preco_item.Name = "preco_item";
-            this.preco_item.ReadOnly = true;
-            // 
-            // Column_quantidade
-            // 
-            this.Column_quantidade.DataPropertyName = "quantidade";
-            this.Column_quantidade.HeaderText = "Qtd";
-            this.Column_quantidade.Name = "Column_quantidade";
-            this.Column_quantidade.ReadOnly = true;
+            this.grid_itensTotais.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label3
             // 
@@ -305,21 +308,6 @@
             this.label3.Size = new System.Drawing.Size(249, 41);
             this.label3.TabIndex = 21;
             this.label3.Text = "Itens Pedidos:";
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Width = 41;
-            // 
-            // Nome
-            // 
-            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
             // 
             // btn_buscar
             // 
@@ -333,21 +321,39 @@
             this.btn_buscar.TabIndex = 22;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = false;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
-            // textBox1
+            // txt_buscar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(406, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 26);
-            this.textBox1.TabIndex = 23;
+            this.txt_buscar.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_buscar.Location = new System.Drawing.Point(414, 128);
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(158, 26);
+            this.txt_buscar.TabIndex = 23;
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Id.DataPropertyName = "id";
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 41;
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.DataPropertyName = "nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
             // 
             // Form_contas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 374);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_buscar);
             this.Controls.Add(this.btn_buscar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.grid_itensTotais);
@@ -398,9 +404,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column_quantidade;
         private System.Windows.Forms.DataGridView grid_itensTotais;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.TextBox txt_buscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.Button btn_buscar;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

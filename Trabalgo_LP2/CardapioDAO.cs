@@ -162,7 +162,6 @@ namespace Trabalgo_LP2
 
         public List<Cardapio> listItens()
         {
-            //Lista todos os itens do banco no grid
             List<Cardapio> itens = new List<Cardapio>();
             Cardapio cardapio = null;
 
@@ -179,8 +178,6 @@ namespace Trabalgo_LP2
 
             while (dr.Read())
             {
-                // Cria um objeto Cliente para transferir os dados 
-                // do banco para a aplicação (DTO)
                 cardapio = new Cardapio();
                 cardapio.Id = dr.GetInt32(0);
                 cardapio.Nome = dr.GetString(1);
