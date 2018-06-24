@@ -128,7 +128,7 @@
             this.dataGridView_cliente.ReadOnly = true;
             this.dataGridView_cliente.Size = new System.Drawing.Size(440, 313);
             this.dataGridView_cliente.TabIndex = 3;
-            this.dataGridView_cliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView_cliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_cliente_CellDoubleClick);
             // 
             // Column_Nome
             // 

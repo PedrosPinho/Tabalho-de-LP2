@@ -77,17 +77,22 @@ namespace Trabalgo_LP2
 
             txt_buscar.Text = ""; // esvazia o campo, para proximo uso
         }
-
-        private void grid_itensTotais_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         
 
         private void txt_buscar_TextChanged(object sender, EventArgs e)
         {
             CardapioDAO cardapioDAO = new CardapioDAO();
             grid_itensTotais.DataSource = cardapioDAO.Find(txt_buscar.Text);
+        }
+
+        private void grid_itensTotais_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var cell = grid_itensTotais.Rows[e.RowIndex].Cells[1].Value;
+                txt_id_item.Text = cell.ToString();
+            }
+            catch (System.Exception) { }
         }
     }
 }

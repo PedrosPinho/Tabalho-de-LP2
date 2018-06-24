@@ -300,7 +300,7 @@
             this.grid_itensTotais.RowHeadersWidth = 20;
             this.grid_itensTotais.Size = new System.Drawing.Size(224, 164);
             this.grid_itensTotais.TabIndex = 21;
-            this.grid_itensTotais.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_itensTotais_CellContentClick);
+            this.grid_itensTotais.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_itensTotais_CellDoubleClick);
             // 
             // Id
             // 

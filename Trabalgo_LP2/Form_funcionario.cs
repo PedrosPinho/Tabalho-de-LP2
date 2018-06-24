@@ -100,5 +100,16 @@ namespace Trabalgo_LP2
             FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
             dataGridView_funcionario.DataSource = funcionarioDAO.FindByName(txt_filtrar.Text);
         }
+
+        private void dataGridView_funcionario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var cell = dataGridView_funcionario.Rows[e.RowIndex].Cells[3].Value;
+                txt_reg_rmv.Text = cell.ToString();
+            }
+            catch (System.Exception){
+            }
+        }
     }
 }

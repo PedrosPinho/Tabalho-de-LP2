@@ -141,6 +141,7 @@
             this.dataGridView_cardapio.ReadOnly = true;
             this.dataGridView_cardapio.Size = new System.Drawing.Size(444, 301);
             this.dataGridView_cardapio.TabIndex = 9;
+            this.dataGridView_cardapio.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_cardapio_CellDoubleClick);
             // 
             // id_item_cardapio
             // 

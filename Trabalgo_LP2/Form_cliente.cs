@@ -18,11 +18,6 @@ namespace Trabalgo_LP2
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btn_adicionar_Click(object sender, EventArgs e)
         {
             this.Visible = false;
@@ -102,6 +97,16 @@ namespace Trabalgo_LP2
         {
             ClienteDAO clientedao = new ClienteDAO();
             dataGridView_cliente.DataSource = clientedao.FindByName(txt_filtrar.Text);
+        }
+
+        private void dataGridView_cliente_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try { 
+            var cell = dataGridView_cliente.Rows[e.RowIndex].Cells[1].Value;
+            txt_cpf_rmv.Text = cell.ToString();
+            }
+            catch (System.Exception){
+            }
         }
     }
 }

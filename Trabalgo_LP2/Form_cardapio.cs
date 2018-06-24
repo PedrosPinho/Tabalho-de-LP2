@@ -144,5 +144,11 @@ namespace Trabalgo_LP2
             CardapioDAO cardapioDAO = new CardapioDAO();
             dataGridView_cardapio.DataSource = cardapioDAO.Find(txt_procurar.Text);
         }
+
+        private void dataGridView_cardapio_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var cell = dataGridView_cardapio.Rows[e.RowIndex].Cells[1].Value;
+            txt_id_adicionar.Text = cell.ToString();
+        }
     }
 }

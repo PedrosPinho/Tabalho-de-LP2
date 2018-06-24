@@ -37,18 +37,18 @@
             this.lbl_funcionario = new System.Windows.Forms.Label();
             this.lbl_filtrar = new System.Windows.Forms.Label();
             this.dataGridView_funcionario = new System.Windows.Forms.DataGridView();
-            this.Registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Função = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Data_inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_remover = new System.Windows.Forms.Button();
             this.btn_adicionar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_reg_rmv = new System.Windows.Forms.MaskedTextBox();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Função = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Data_inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -142,8 +142,8 @@
             this.dataGridView_funcionario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.dataGridView_funcionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_funcionario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Registro,
             this.Nome,
+            this.Registro,
             this.Cpf,
             this.Função,
             this.Data_inicio,
@@ -153,48 +153,7 @@
             this.dataGridView_funcionario.ReadOnly = true;
             this.dataGridView_funcionario.Size = new System.Drawing.Size(639, 244);
             this.dataGridView_funcionario.TabIndex = 22;
-            // 
-            // Registro
-            // 
-            this.Registro.DataPropertyName = "Registro";
-            this.Registro.HeaderText = "Registro";
-            this.Registro.Name = "Registro";
-            this.Registro.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // Cpf
-            // 
-            this.Cpf.DataPropertyName = "Cpf";
-            this.Cpf.HeaderText = "Cpf";
-            this.Cpf.Name = "Cpf";
-            this.Cpf.ReadOnly = true;
-            // 
-            // Função
-            // 
-            this.Função.DataPropertyName = "Funcao";
-            this.Função.HeaderText = "Funcao";
-            this.Função.Name = "Função";
-            this.Função.ReadOnly = true;
-            // 
-            // Data_inicio
-            // 
-            this.Data_inicio.DataPropertyName = "Data_inicio";
-            this.Data_inicio.HeaderText = "Ano Inicio";
-            this.Data_inicio.Name = "Data_inicio";
-            this.Data_inicio.ReadOnly = true;
-            // 
-            // Telefone
-            // 
-            this.Telefone.DataPropertyName = "Telefone";
-            this.Telefone.HeaderText = "Telefone";
-            this.Telefone.Name = "Telefone";
-            this.Telefone.ReadOnly = true;
+            this.dataGridView_funcionario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_funcionario_CellDoubleClick);
             // 
             // btn_remover
             // 
@@ -274,6 +233,48 @@
             this.txt_reg_rmv.Size = new System.Drawing.Size(122, 20);
             this.txt_reg_rmv.TabIndex = 24;
             // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Registro
+            // 
+            this.Registro.DataPropertyName = "Registro";
+            this.Registro.HeaderText = "Registro";
+            this.Registro.Name = "Registro";
+            this.Registro.ReadOnly = true;
+            // 
+            // Cpf
+            // 
+            this.Cpf.DataPropertyName = "Cpf";
+            this.Cpf.HeaderText = "Cpf";
+            this.Cpf.Name = "Cpf";
+            this.Cpf.ReadOnly = true;
+            // 
+            // Função
+            // 
+            this.Função.DataPropertyName = "Funcao";
+            this.Função.HeaderText = "Funcao";
+            this.Função.Name = "Função";
+            this.Função.ReadOnly = true;
+            // 
+            // Data_inicio
+            // 
+            this.Data_inicio.DataPropertyName = "Data_inicio";
+            this.Data_inicio.HeaderText = "Ano Inicio";
+            this.Data_inicio.Name = "Data_inicio";
+            this.Data_inicio.ReadOnly = true;
+            // 
+            // Telefone
+            // 
+            this.Telefone.DataPropertyName = "Telefone";
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            this.Telefone.ReadOnly = true;
+            // 
             // Form_funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,16 +314,16 @@
         private System.Windows.Forms.Label lbl_filtrar;
         private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.DataGridView dataGridView_funcionario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Registro;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Função;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Data_inicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
         private System.Windows.Forms.Button btn_remover;
         private System.Windows.Forms.PictureBox pictureBox_logo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MaskedTextBox txt_reg_rmv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Registro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cpf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Função;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Data_inicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
     }
 }
