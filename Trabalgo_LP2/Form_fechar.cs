@@ -53,7 +53,7 @@ namespace Trabalgo_LP2
                 por_pessoa = double.Parse(txt_val_pessoa.Text);
 
                 txt_total.Text = (total - por_pessoa).ToString();
-                txt_num_pessoas.Text = (num_pessoas - 1).ToString();
+                txt_num_pessoas.Text = (num_pessoas - 1).ToString(); 
                 if (int.Parse(txt_num_pessoas.Text) == 0 && int.Parse(txt_total.Text) == 0)
                 {
                     txt_val_pessoa.Text = "";
@@ -78,8 +78,9 @@ namespace Trabalgo_LP2
             {
                 total = double.Parse(txt_total.Text);
                 num_pessoas = int.Parse(txt_num_pessoas.Text);
-
-                txt_val_pessoa.Text = (total / num_pessoas).ToString();
+                double a = (total / num_pessoas);
+                string ab = string.Format("{0:N}", a);
+                txt_val_pessoa.Text = ab;
                 btn_calcular.Hide();
             }
             catch (System.Exception)
