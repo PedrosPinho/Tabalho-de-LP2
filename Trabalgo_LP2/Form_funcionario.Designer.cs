@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_funcionario));
             this.txt_filtrar = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox_logo = new System.Windows.Forms.PictureBox();
             this.btn_voltar = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_reg_rmv = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -70,7 +70,6 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
-            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox_logo);
             this.panel2.Controls.Add(this.btn_voltar);
@@ -79,6 +78,21 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(669, 106);
             this.panel2.TabIndex = 15;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(16, 401);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 55);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Gerar relatorio";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox3
             // 
@@ -207,9 +221,9 @@
             this.btn_remover.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_remover.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_remover.ForeColor = System.Drawing.Color.White;
-            this.btn_remover.Location = new System.Drawing.Point(16, 401);
+            this.btn_remover.Location = new System.Drawing.Point(166, 401);
             this.btn_remover.Name = "btn_remover";
-            this.btn_remover.Size = new System.Drawing.Size(138, 46);
+            this.btn_remover.Size = new System.Drawing.Size(122, 38);
             this.btn_remover.TabIndex = 23;
             this.btn_remover.Text = "Remover";
             this.btn_remover.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -224,9 +238,9 @@
             this.btn_adicionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_adicionar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_adicionar.ForeColor = System.Drawing.Color.White;
-            this.btn_adicionar.Location = new System.Drawing.Point(517, 401);
+            this.btn_adicionar.Location = new System.Drawing.Point(532, 401);
             this.btn_adicionar.Name = "btn_adicionar";
-            this.btn_adicionar.Size = new System.Drawing.Size(138, 46);
+            this.btn_adicionar.Size = new System.Drawing.Size(122, 38);
             this.btn_adicionar.TabIndex = 18;
             this.btn_adicionar.Text = "Adicionar";
             this.btn_adicionar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -241,9 +255,9 @@
             this.btn_alterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_alterar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_alterar.ForeColor = System.Drawing.Color.White;
-            this.btn_alterar.Location = new System.Drawing.Point(341, 401);
+            this.btn_alterar.Location = new System.Drawing.Point(349, 401);
             this.btn_alterar.Name = "btn_alterar";
-            this.btn_alterar.Size = new System.Drawing.Size(138, 46);
+            this.btn_alterar.Size = new System.Drawing.Size(122, 38);
             this.btn_alterar.TabIndex = 17;
             this.btn_alterar.Text = "Alterar";
             this.btn_alterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -254,7 +268,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Narrow", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(160, 401);
+            this.label1.Location = new System.Drawing.Point(163, 446);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(171, 17);
             this.label1.TabIndex = 25;
@@ -272,31 +286,17 @@
             // 
             // txt_reg_rmv
             // 
-            this.txt_reg_rmv.Location = new System.Drawing.Point(163, 427);
+            this.txt_reg_rmv.Location = new System.Drawing.Point(340, 445);
             this.txt_reg_rmv.Name = "txt_reg_rmv";
-            this.txt_reg_rmv.Size = new System.Drawing.Size(122, 20);
+            this.txt_reg_rmv.Size = new System.Drawing.Size(46, 20);
             this.txt_reg_rmv.TabIndex = 24;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(415, 60);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 46);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Gerar relatorio";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form_funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(667, 468);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_reg_rmv);
