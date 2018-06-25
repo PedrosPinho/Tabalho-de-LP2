@@ -108,5 +108,11 @@ namespace Trabalgo_LP2
             catch (System.Exception){
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form_relatorio form = new Form_relatorio();
+            form.ShowDialog(this);
+        }
     }
 }

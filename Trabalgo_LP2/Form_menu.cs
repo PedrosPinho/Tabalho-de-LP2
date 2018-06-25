@@ -87,5 +87,6 @@ namespace Trabalgo_LP2
             lbl_teste.Text = diasemana + ", " + dia + " de " + mes + " de " + ano;
 
         }
+        
     }
 }

@@ -37,18 +37,19 @@
             this.lbl_funcionario = new System.Windows.Forms.Label();
             this.lbl_filtrar = new System.Windows.Forms.Label();
             this.dataGridView_funcionario = new System.Windows.Forms.DataGridView();
-            this.btn_remover = new System.Windows.Forms.Button();
-            this.btn_adicionar = new System.Windows.Forms.Button();
-            this.btn_alterar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_reg_rmv = new System.Windows.Forms.MaskedTextBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Registro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Função = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data_inicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_remover = new System.Windows.Forms.Button();
+            this.btn_adicionar = new System.Windows.Forms.Button();
+            this.btn_alterar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_reg_rmv = new System.Windows.Forms.MaskedTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_logo)).BeginInit();
@@ -69,6 +70,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(133)))), ((int)(((byte)(132)))));
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox_logo);
             this.panel2.Controls.Add(this.btn_voltar);
@@ -155,6 +157,48 @@
             this.dataGridView_funcionario.TabIndex = 22;
             this.dataGridView_funcionario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_funcionario_CellDoubleClick);
             // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Registro
+            // 
+            this.Registro.DataPropertyName = "Registro";
+            this.Registro.HeaderText = "Registro";
+            this.Registro.Name = "Registro";
+            this.Registro.ReadOnly = true;
+            // 
+            // Cpf
+            // 
+            this.Cpf.DataPropertyName = "Cpf";
+            this.Cpf.HeaderText = "Cpf";
+            this.Cpf.Name = "Cpf";
+            this.Cpf.ReadOnly = true;
+            // 
+            // Função
+            // 
+            this.Função.DataPropertyName = "Funcao";
+            this.Função.HeaderText = "Funcao";
+            this.Função.Name = "Função";
+            this.Função.ReadOnly = true;
+            // 
+            // Data_inicio
+            // 
+            this.Data_inicio.DataPropertyName = "Data_inicio";
+            this.Data_inicio.HeaderText = "Ano Inicio";
+            this.Data_inicio.Name = "Data_inicio";
+            this.Data_inicio.ReadOnly = true;
+            // 
+            // Telefone
+            // 
+            this.Telefone.DataPropertyName = "Telefone";
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.Name = "Telefone";
+            this.Telefone.ReadOnly = true;
+            // 
             // btn_remover
             // 
             this.btn_remover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
@@ -233,47 +277,20 @@
             this.txt_reg_rmv.Size = new System.Drawing.Size(122, 20);
             this.txt_reg_rmv.TabIndex = 24;
             // 
-            // Nome
+            // button1
             // 
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // Registro
-            // 
-            this.Registro.DataPropertyName = "Registro";
-            this.Registro.HeaderText = "Registro";
-            this.Registro.Name = "Registro";
-            this.Registro.ReadOnly = true;
-            // 
-            // Cpf
-            // 
-            this.Cpf.DataPropertyName = "Cpf";
-            this.Cpf.HeaderText = "Cpf";
-            this.Cpf.Name = "Cpf";
-            this.Cpf.ReadOnly = true;
-            // 
-            // Função
-            // 
-            this.Função.DataPropertyName = "Funcao";
-            this.Função.HeaderText = "Funcao";
-            this.Função.Name = "Função";
-            this.Função.ReadOnly = true;
-            // 
-            // Data_inicio
-            // 
-            this.Data_inicio.DataPropertyName = "Data_inicio";
-            this.Data_inicio.HeaderText = "Ano Inicio";
-            this.Data_inicio.Name = "Data_inicio";
-            this.Data_inicio.ReadOnly = true;
-            // 
-            // Telefone
-            // 
-            this.Telefone.DataPropertyName = "Telefone";
-            this.Telefone.HeaderText = "Telefone";
-            this.Telefone.Name = "Telefone";
-            this.Telefone.ReadOnly = true;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(1)))), ((int)(((byte)(3)))));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(415, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(138, 46);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "Gerar relatorio";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form_funcionario
             // 
@@ -325,5 +342,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Função;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data_inicio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
+        private System.Windows.Forms.Button button1;
     }
 }
