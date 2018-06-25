@@ -11,12 +11,13 @@ namespace Trabalgo_LP2
     {
         public void Create(Cardapio c)
         {
+            var a = c.Preco.ToString().Replace(",", ".");
             //Insere um item no cardapio
             Database VannerDB = Database.GetInstance();
             
             string qry =
-            string.Format("INSERT INTO Cardapio (ID, NOME, DESCRICAO, PRECO) VALUES ('{0}','{1}','{2}','{3}')",
-                c.Id, c.Nome, c.Descricao, c.Preco);
+            string.Format("INSERT INTO Cardapio (ID, NOME, DESCRICAO, PRECO) VALUES ('{0}','{1}','{2}',{3})",
+                c.Id, c.Nome, c.Descricao, a);
             VannerDB.ExecuteSQL(qry);
         }
 

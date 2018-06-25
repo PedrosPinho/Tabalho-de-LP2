@@ -82,7 +82,7 @@ namespace Trabalgo_LP2
                     Cardapio cardapio = GetDTO();
                     cardapioDAO.Create(cardapio);
 
-                    MessageBox.Show("Item inserido com sucesso!", "Item inserido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Item inserido com sucesso", "Item inserido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 CardapioDAO cardapiodao = new CardapioDAO();
                 dataGridView_cardapio.DataSource = cardapiodao.listAll();
