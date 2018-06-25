@@ -94,7 +94,6 @@ namespace Trabalgo_LP2
 
         private void btn_confirmar_Click(object sender, EventArgs e)
         {
-            //CADASTRAR FUNCIONARIO FAZER OK?
             try
             {
                 if (txt_registroFunc.Text.Equals("") || txt_cpfFunc.Text.Equals("") ||
@@ -116,6 +115,11 @@ namespace Trabalgo_LP2
                 else if (!Regex.Match(txt_nomeFunc.Text, @"^([\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+((\s[\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+)?$").Success)
                 {
                     MessageBox.Show("Erro: A primeira letra do nome deve ser maiúscula! Somente letras são permitidas!", "ERRO!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (!Regex.Match(txt_dataFunc.Text, @"^\d{4}$").Success)
+                {
+                    MessageBox.Show("O ano deve possuir exatamente 4 dígitos!", "ERRO!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
@@ -150,6 +154,11 @@ namespace Trabalgo_LP2
             else if (!Regex.Match(txt_nomeFunc.Text, @"^([\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+((\s[\'\.\^\~\´\`\\áÁ\\àÀ\\ãÃ\\âÂ\\éÉ\\èÈ\\êÊ\\íÍ\\ìÌ\\óÓ\\òÒ\\õÕ\\ôÔ\\úÚ\\ùÙ\\çÇaA-zZ]+)+)?$").Success)
             {
                 MessageBox.Show("Erro: A primeira letra do nome deve ser maiúscula! Somente letras são permitidas!", "ERRO!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!Regex.Match(txt_dataFunc.Text, @"^\d{4}$").Success)
+            {
+                MessageBox.Show("O ano deve possuir exatamente 4 dígitos!", "ERRO!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else

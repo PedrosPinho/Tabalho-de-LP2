@@ -75,6 +75,11 @@ namespace Trabalgo_LP2
                     MessageBox.Show("Erro: Só é possível adicionar números inteiros!", "ERRO!",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (!Regex.Match(txt_preco_adicionar.Text, @"^(\d{1,3}(\.\d{3})*|\d+)(\,\d{2})?$").Success)
+                {
+                    MessageBox.Show("Erro: O formato permitido é XX,XX (possui vírgula e não ponto). Caracteres adicionais não são aceitos!", "ERRO!",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 else
                 {
                     //Se tudo estiver preenchido cria o DTO e insere no bd

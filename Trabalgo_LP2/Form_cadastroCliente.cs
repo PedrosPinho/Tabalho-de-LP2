@@ -36,6 +36,7 @@ namespace Trabalgo_LP2
             } 
         }
 
+        // Função que serve para chamar o cliente do DAO, caso não exista, aparece uma warning
         public bool exibirCliente()
         {
             ClienteDAO clientedao = new ClienteDAO();
@@ -54,6 +55,7 @@ namespace Trabalgo_LP2
             }
         }
 
+        // Dados de entrada no cadastro
         private Cliente GetDTO()
         {
             Cliente cliente = new Cliente();
@@ -65,6 +67,7 @@ namespace Trabalgo_LP2
             return cliente;
         }
         
+        // Dados de saída no cadastro
         private void SetDTO(Cliente c)
         {
             txt_nome.Text = c.Nome;
@@ -82,9 +85,9 @@ namespace Trabalgo_LP2
 
         }
 
+        // Ao clicar em confirmar, a função passa por um teste de exceções, caso passe, o cliente é criado
         private void btn_confirmar_Click(object sender, EventArgs e)
         {
-            //ADICIONAR EXCESSÃO AQUI, VLW
             try
             {
                 if (txt_nome.Text.Equals("") || txt_cpf.Text.Equals("") ||
@@ -125,6 +128,7 @@ namespace Trabalgo_LP2
 
         }
 
+        // A diferença do atualizar para criar é que no att não há o validador de cpf pois essa se trata de chave primária
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
             if (txt_nome.Text.Equals("") || txt_cpf.Text.Equals("") ||
