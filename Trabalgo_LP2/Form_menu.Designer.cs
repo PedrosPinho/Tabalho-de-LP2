@@ -88,6 +88,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Trabalgo_LP2.Properties.Resources.menu;
             this.pictureBox1.Location = new System.Drawing.Point(504, 15);
             this.pictureBox1.Name = "pictureBox1";

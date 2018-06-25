@@ -49,10 +49,8 @@ namespace Trabalgo_LP2
                 List<Consumidos> lista = listAll(mesa);
 
                 foreach (Consumidos c in lista)
-                {
                     if (c.Id == id)
                         return true;
-                }
             }
             return false;
         }
@@ -79,8 +77,6 @@ namespace Trabalgo_LP2
 
             while (dr.Read())
             {
-                // Cria um objeto Cliente para transferir os dados 
-                // do banco para a aplicação (DTO)
                 consumido = new Consumidos();
                 consumido.Id = dr.GetInt32(0);
                 consumido.Quantidade = dr.GetInt32(1);
