@@ -55,8 +55,12 @@ namespace Trabalgo_LP2
             else
             {
                 CardapioDAO cardapioDAO = new CardapioDAO();
-                cardapioDAO.Delete(Convert.ToInt32(txt_id_adicionar.Text));
-                MessageBox.Show("Item removido com sucesso!", "Item removido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(cardapioDAO.Delete(Convert.ToInt32(txt_id_adicionar.Text)))
+                    MessageBox.Show("Item removido com sucesso!", "Item removido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Item esta sendo consumido!", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
             }
             CardapioDAO cardapiodao = new CardapioDAO();
             dataGridView_cardapio.DataSource = cardapiodao.listAll();

@@ -33,14 +33,32 @@ namespace Trabalgo_LP2
 
         }
 
-        public void Delete(int id)
+        public bool Delete(int id)
         {
             //deleta do banco um item referente ao seu id
             Database VannerDB = Database.GetInstance();
+            SQLiteConnection conexao = Database.GetInstance().GetConnection();
+            List<int> lista = new List<int>();
+            for(int i = 1; i<11; i++)
+            {
+                string qry0 = string.Format("SELECT id FROM Consumidos{0} WHERE id = {1}", i, id);
+                if (conexao.State != System.Data.ConnectionState.Open)
+                    conexao.Open();
+
+                SQLiteCommand comm = new SQLiteCommand(qry0, conexao);
+
+                SQLiteDataReader dr = comm.ExecuteReader();
+                while (dr.Read())
+                    lista.Add(dr.GetInt32(0));
+            }
+            foreach(int l in lista)
+                if (l == id)
+                    return false;
 
             string qry = string.Format("DELETE FROM Cardapio WHERE id = {0}", id);
 
             VannerDB.ExecuteSQL(qry);
+            return true;
         }
 
         public List<Cardapio> listAll()

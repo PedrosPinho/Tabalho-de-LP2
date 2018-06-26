@@ -156,7 +156,7 @@ namespace Trabalgo_LP2
                 MessageBox.Show("Erro: A primeira letra do nome deve ser maiúscula! Somente letras são permitidas!", "ERRO!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (!Regex.Match(txt_dataFunc.Text, @"^\d{4}$").Success)
+            else if (!Regex.Match(txt_dataFunc.Text, @"^\d{4}$").Success || Convert.ToInt32(txt_dataFunc.Text) > DateTime.Now.Year || Convert.ToInt32(txt_dataFunc.Text) < 2010)
             {
                 MessageBox.Show("O ano deve possuir exatamente 4 dígitos!", "ERRO!",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
